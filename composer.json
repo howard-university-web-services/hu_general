@@ -14,8 +14,8 @@
       }
     ],
     "support": {
-      "issues": "http://idfive.com",
-      "source": "http://idfive.com"
+      "issues": "https://github.com/howard-university-web-services/hu_general/issues",
+      "source": "https://github.com/howard-university-web-services/hu_general"
     },
     "extra": {
       "branch-alias": {

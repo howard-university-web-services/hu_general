@@ -11,6 +11,13 @@ use Drupal\Core\Form;
 
 function hu_general_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state) {
 
+  // Remove some stock idfive stuff we arent using
+  unset($form['page_elements']);
+  unset($form['styles_scripts']);
+  unset($form['theme_ui']);
+  unset($form['search']);
+  unset($form['other']);
+
   // School/Department/Organization
   $form['hu_school_settings'] = array(
     '#type' => 'details',
