@@ -1,0 +1,21 @@
+{
+    "context": {
+        "carousels": [{
+                "carouselImg": "/img/graduates_talking.jpg",
+                "carouselLink": "#"
+            },
+            {
+                "carouselImg": "/img/graduates_talking.jpg",
+                "carouselLink": "#"
+            },
+            {
+                "carouselImg": "/img/graduates_talking.jpg",
+                "carouselLink": "#"
+            },
+            {
+                "carouselImg": "/img/graduates_talking.jpg",
+                "carouselLink": "#"
+            }
+        ]
+    }
+}

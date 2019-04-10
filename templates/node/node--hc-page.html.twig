@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Theme override to display an HC Page node.
+ */
+#}
+
+<!-- Internal Page Hero -->
+{% if show_hero_image %}
+  {% include directory ~ '/templates/_includes/global/content_header.html.twig' %}
+{% else %}
+  {% include directory ~ '/templates/_includes/global/content_header_no_image.html.twig' %}
+{% endif %}
+
+<!-- KS Widgets -->
+<section class="section--padded-top">
+  <div class="compartment">
+      <div class="silc-grid silc-grid--collapse">
+
+        <!-- Sidebar -->
+          <div class="silc-grid__col silc-grid__col--2-large">
+            <aside class="sidebar">
+              <!-- Nav -->
+              {{ page_sidebar }}
+            </aside>
+          </div>
+
+          <div class="silc-grid__col silc-grid__col--10-large kitchen-sink--main-col">
+
+              <!-- Main KS content -->
+              {{ content.field_hc_ks_widgets }}
+
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- Rounding out the page -->
+{{ content.field_hc_ks_widgets_full }}
+
+<!-- Render without, so quickedit/etc works -->
+{{ content|without('field_hc_header_image', 'field_hc_hide_header_image', 'field_hc_ks_widgets', 'field_hc_ks_widgets_full') }}

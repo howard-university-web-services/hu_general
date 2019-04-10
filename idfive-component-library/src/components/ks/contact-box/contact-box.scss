@@ -1,0 +1,45 @@
+.contact-box {
+    background: $white;
+    padding: rem(30);
+    display: block;
+    border-top: 5px solid $red;
+    box-shadow:  rem(1) rem(1) rem(9) 0 rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    line-height: 1.3rem;
+    @include media('medium') {
+        border-top: rem(10) solid $red;
+    }
+    span {
+        display: block;
+        @extend %serif-regular;
+        font-size: rem(16);
+        letter-spacing: 0;
+        line-height: rem(24);
+    }
+    p {
+        margin: rem(25) 0 0 0 0;
+        @extend %serif-regular;
+        font-size: 14px;
+        line-height:20px;
+    }
+    &--blue {
+        border-color: $yellow;
+        background: $navy;
+        color: $white;
+    }
+}
+
+.sidebar-title {
+    color: $mblue;
+    text-transform: uppercase;
+    @extend %sans-extra-bold;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    letter-spacing: rem(1.5);
+    @include media('medium') {
+        line-height: rem(24);
+        font-size: rem(18);
+        letter-spacing: rem(1.5);
+        margin: 0 0 rem(18) 0;
+    }
+}

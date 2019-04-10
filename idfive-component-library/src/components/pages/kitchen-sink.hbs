@@ -1,0 +1,114 @@
+ {{> @header}}
+<main class="main-content">
+  {{>@hero-image heroImgPath= "/img/graduates_talking.jpg"}} {{> @post-header}}
+  <div class="compartment">
+    <section id="people"  class="section--padded-top section--padded-bottom">
+      <div class="silc-grid silc-grid--collapse">
+        <div class="silc-grid__col silc-grid__col--2-large">
+          <aside class="sidebar">{{>@sidebar-nav}}</aside>
+        </div>
+        <div class="silc-grid__col silc-grid__col--7-large">
+          <p class="lead-in">Lead-In Text (32) Exercitationem nihil voluptatem.Nesciunt itaque optio corporis enim repudiandae
+            aliquam corporis.</p>
+          <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer
+            ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum
+            rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis
+            vestibulum.
+          </p>
+          <p>Sed sed ultricies arcu. Sed sit amet aliquet quam, sit amet lobortis turpis. Curabitur fringilla eget urna sit
+            amet cursus. Duis dapibus ante ac ex interdum, eget fermentum eros bibendum. Pellentesque facilisis iaculis lacus,
+            ut blandit leo rutrum sit amet. Pellentesque bibendum feugiat massa, ut euismod magna commodo sed. </p>
+
+          <p>
+            <ul class="body-text--list">
+              <li> Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.
+              </li>
+              <li> Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.
+              </li>
+              <li> Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat
+                pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum.</li>
+            </ul>
+          </p>
+        </div>
+        <div class="silc-grid__col silc-grid__col--3-large">{{>@contact-box}}</div>
+      </div>
+    </section>
+    <section id="academics">
+      <div class="silc-grid">
+        <div class="silc-grid__col silc-grid__col--2-large">
+
+        </div>
+        <div class="silc-grid__col silc-grid__col--10-large">
+          <h2 class="section--padded-bottom-mdm">Heading 2 (32)- In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+            justo. Nullam dictum felis eu pede mollis pretium. </h2>
+          <h3 class="section--padded-bottom-mdm">Heading 3 (24) - In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+            justo. Nullam dictum felis eu pede mollis pretium. </h3>
+          <h4 class="section--padded-bottom">Heading 4 (20) - In enim justo, rhoncus</h4>
+
+          <p class="section--padded-bottom-small"> {{>@button}} {{>@button}} {{>@button}}</p>
+          <p class="section--padded-bottom"> {{>@fancy-link}}</p>
+
+          <section class=" section--padded-bottom " aria-label="Announcements">
+
+            {{>@announcements}}
+          </section>
+          <section class=" section--padded-bottom" aria-label="Featured Blog Article">
+
+            {{>@featured-blog-article blockTitle= "Featured Blog Article" titleIcon= "paper"}}
+          </section>
+          <section class="section--padded-bottom" aria-label="Events">
+
+            {{>@events blockTitle= "Events" titleIcon= "calendar"}}
+          </section>
+          <section class="section--padded-bottom" aria-label="News">
+
+            {{>@news-feed blockTitle= "News" titleIcon= "news"}}
+          </section>
+          <section class="section--padded-bottom" aria-label="News">
+
+            {{>@news blockTitle= "News" titleIcon= "news"}}
+          </section>
+          <section class="section--padded-bottom" aria-label="Faculty Profile">
+
+            <div class="silc-grid">
+              <div class="silc-grid__col silc-grid__col--4-medium"> {{>@faculty-profile}}</div>
+              <div class="silc-grid__col silc-grid__col--4-medium"> {{>@faculty-profile}}</div>
+              <div class="silc-grid__col silc-grid__col--4-medium"> {{>@faculty-profile}}</div>
+            </div>
+          </section>
+          <section class="section--padded-bottom" aria-label="Giving Impact"> {{>@giving-impact }}</section>
+          <section class="section--padded-bottom" aria-label="Accordion"> {{>@accordion}}</section>
+
+          <section class="section--padded-bottom" aria-label="Tabs"> {{>@accordion--become-tabs }}</section>
+          <section class="section--padded-bottom" aria-label="Table"> {{>@table}}</section>
+          <section class="section--padded-bottom" aria-label="Alumni Profile"> {{>@alumni-profile }}</section>
+          <section class="section--padded-bottom" aria-label="Callouts"> {{>@three-column-callouts }}</section>
+
+
+
+
+          <section class="section--padded-bottom" aria-label="Callouts"> {{>@three-column-callouts--fancy }}</section>
+
+
+          <section class="section--padded-bottom" aria-label="Featured Image"> {{>@featured-image }}</section>
+          <section class="section--padded-bottom" aria-label="Carousel"> {{>@carousel }}</section>
+
+          <section class="section--padded-bottom" aria-label="Video"> {{>@video }}</section>
+          <section class="section--padded-bottom" aria-label="Audio File"> {{>@audio-file }}</section>
+          <section class="section--padded-bottom" aria-label="Map"> {{>@map }}</section>
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+  </div>
+
+  <section class="section--padded-bottom-small"> {{>@facebook-twitter-feed--facebook }}</section>
+  <section class="section--padded-bottom-small"> {{>@facebook-twitter-feed }}</section>
+  <section> {{>@full-width-image-banner }}</section>
+
+</main>
+{{>@footer}}

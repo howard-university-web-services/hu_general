@@ -1,0 +1,21 @@
+core: 8.x
+type: theme
+base theme: idfive
+name: Howard University General
+description: 'Howard University General (hu_general), is a child theme of the general idfive Drupal 8 theme.'
+package: Howard University
+
+libraries:
+  - hu_general/global
+regions:
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu (Top Bar)'
+  tertiary_menu: 'Tertiary menu (Mobile Menu)'
+  utility_menu: 'Utility menu'
+  admin_tabs: 'Admin Tabs'
+  alerts: 'Alerts'
+  breadcrumbs: 'Breadcrumbs'
+  page_sidebar: 'Page Sidebar'
+  content: 'Content'
+  footer_primary_menu: 'Footer Primary Menu'
+  footer_menu: 'Footer Secondary Menu'

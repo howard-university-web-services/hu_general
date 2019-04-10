@@ -1,0 +1,26 @@
+{{> @header}}
+<main class="main-content">
+  {{> @hero-image--large heroImgPath= "/img/gates.jpg"}} {{> @department-title}}
+  <div class="compartment">
+    <section class="section--padded-bottom section--padded-top"> {{> @information-for blockTitle= "information for" titleIcon=
+      "info"}}
+    </section>
+    <section class="section--padded-bottom"> {{> @announcements blockTitle= "Announcements" titleIcon= "announcement"}}</section>
+    <section class="section--padded-bottom"> {{> @announcements--single blockTitle= "Announcements" titleIcon= "announcement"}}</section>
+    <section class="section--padded-bottom"> {{> @promotional-space }}</section>
+  </div>
+  <section class="section--padded-bottom"> {{> @programs}}</section>
+  <div class="compartment">
+    <section class="section--padded-bottom">{{>@block-header--no-btn blockTitle= "Photogallery" titleIcon= "picture"}} {{>@carousel}}</section>
+    <section class="section--padded-bottom"> {{>@block-header--no-btn blockTitle= "Our People" titleIcon= "our-people"}}{{>@our-people}}
+    </section>
+    <section class="section--padded-bottom">{{>@news blockTitle= "Department News" titleIcon= "news"}}</section>
+    <section class="section--padded-bottom">{{>@alumni-profile}}</section>
+    <section class="section--padded-bottom">{{>@news-feed--department blockTitle= "Department News" titleIcon= "news"}}</section>
+    <section class="section--padded-bottom"> {{>@giving-impact }}</section>
+
+  </div>
+  <section> {{>@full-width-cta }}</section>
+
+</main>
+{{>@footer}}

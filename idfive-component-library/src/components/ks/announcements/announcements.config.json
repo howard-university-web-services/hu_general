@@ -1,0 +1,37 @@
+{
+  "context": {
+    "fancyLinktext": "Link to Page",
+    "blockTitle": "Announcements",
+    "titleIcon": "announcement",
+
+    "announcements": [
+
+      {
+        "featured": {
+          "title": "Featured Announcement Vivamus Elementum Semper Nisi Varius",
+          "content": "Proin finibus nibh orci, eu lobortis tortor pulvinar vel.Mauris feugiat pellentesque orci non varius. Aliquam sed facilisis lacus.In massa nulla,mollis sit amet elit id.",
+          "date": "May 21, 2018"
+        }
+      },
+      {
+        "title": "Featured Announcement Vivamus Elementum Semper Nisi Varius",
+        "content": "Proin finibus nibh orci, eu lobortis tortor pulvinar vel.Mauris feugiat pellentesque orci non varius. Aliquam sed facilisis lacus.In massa nulla,mollis sit amet elit id.",
+        "date": "May 21, 2018"
+      },
+      {
+        "title": "Featured Announcement Vivamus Elementum Semper Nisi Varius",
+        "content": "Proin finibus nibh orci, eu lobortis tortor pulvinar vel.Mauris feugiat pellentesque orci non varius. Aliquam sed facilisis lacus.In massa nulla,mollis sit amet elit id.",
+        "date": "May 21, 2018"
+      },
+      {
+        "title": "Featured Announcement Vivamus Elementum Semper Nisi Varius",
+        "content": "Proin finibus nibh orci, eu lobortis tortor pulvinar vel.Mauris feugiat pellentesque orci non varius. Aliquam sed facilisis lacus.In massa nulla,mollis sit amet elit id.",
+        "date": "May 21, 2018"
+      }
+
+
+
+    ]
+
+  }
+}

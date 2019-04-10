@@ -1,0 +1,94 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: rem(18);
+    @include media ('table') {
+        font-size: rem(16);
+    }
+    th {
+        @extend %sans-bold;
+        font-size: rem(16);
+        color: $white;
+        text-align: center;
+        background: $navy;
+        // font-family: $serif;
+        padding: rem(24);
+    }
+    .tablesaw thead th {
+        text-align: center;
+    }
+    &.tablesaw th,
+    &.tablesaw td,
+    td {
+        padding: rem(15);
+        @include media('table') {
+            padding: rem(15);
+            // border-bottom: 1px solid $gray4;
+            text-align: center;
+        }
+    }
+    tr {
+        &:nth-child(odd) {
+            td {
+                @extend %sans-regular;
+                font-size: rem(14);
+                letter-spacing: 0;
+                text-align: left;
+                line-height: rem(23);
+                background: $white;
+                @include media('table') {
+                    font-size: rem(16);
+                    text-align: center;
+                    border-left: solid rem(1) $gray4;
+                }
+                &:first-child {
+                    background: $white;
+                    border-left: none;
+                }
+                &:last-of-type {
+                    border-bottom: rem(1) solid $gray4;
+                    @include media('table') {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+        &:nth-child(even) {
+            td {
+                font-size: rem(14);
+                letter-spacing: 0;
+                text-align: left;
+                line-height: rem(23);
+                background: $gray5;
+                @include media('table') {
+                    font-size: rem(16);
+                    text-align: center;
+                    border-left: solid rem(1) $gray4;
+                }
+                &:first-child {
+                    background: $gray5;
+                    border-left: 0;
+                }
+                &:last-of-type {
+                    border-bottom: rem(1) solid $gray4;
+                    @include media('table') {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    &.tablesaw-stack td,
+    &.tablesaw-stack th {
+        text-align: left!important;
+        @include media('table') {
+            text-align: center!important;
+        }
+    }
+    &.tablesaw-stack td .tablesaw-cell-label,
+    &.tablesaw-stack th .tablesaw-cell-label {
+        @extend %sans-extra-bold;
+        font-size: rem(14);
+        color: $mblue;
+    }
+}

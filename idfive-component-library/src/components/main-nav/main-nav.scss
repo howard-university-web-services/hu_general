@@ -1,0 +1,357 @@
+.main-nav {
+
+  nav {
+    width: 100%;
+  }
+
+  @include media("medium") {
+    overflow: visible;
+  }
+
+  .silc-nav {
+    &__move {
+      display: none;
+    }
+
+    height: 100%;
+
+    &__items {
+      height: 100%;
+    }
+
+    &__item {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: rem(20) rem(30);
+      transition: background .15s ease-in-out;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background: $yellow;
+
+        a {
+          color: $black;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            cursor: pointer;
+          }
+        }
+      }
+
+      @include media("small") {
+        padding: rem(33) rem(30);
+      }
+
+      @include media("large") {
+        padding: rem(20);
+      }
+
+      &--home {
+        @extend %sans-bold;
+
+        font-size: rem(22) !important;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        padding-left: rem(73) !important;
+        position: relative;
+
+        &::before {
+          content: "\e923";
+          color: $white;
+          position: absolute;
+
+          @include icon;
+
+          left: rem(30);
+          font-size: rem(24);
+          top: 1.15rem;
+
+          @include media("small") {
+            top: rem(30);
+          }
+        }
+
+        @include media("large") {
+          display: none;
+        }
+      }
+    }
+
+    &__move--back {
+      display: none;
+    }
+
+    &__link {
+      @extend %sans-bold;
+
+      font-size: rem(14);
+      color: $white;
+      letter-spacing: 0;
+      transition: color .15s ease-in-out;
+
+      @include media("large") {
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  /*  Subnav Items */
+  .silc-nav__items {
+    .silc-nav__items {
+      background: $white;
+      z-index: 1000;
+      list-style-image: url(data:0);
+
+      @include media("medium") {
+        box-shadow: 0 rem(2) rem(4) 0 rgba(0, 0, 0, 0.5);
+        top: 100%;
+        height: auto;
+        padding-top: rem(20);
+      }
+
+      .silc-nav__item {
+        &:first-of-type {
+          display: none;
+        }
+
+        padding: 0;
+
+        &:hover,
+        &:focus {
+          background: transparent;
+
+          a {
+            color: $lightblue;
+          }
+        }
+      }
+
+      .silc-nav__link {
+        color: $navy;
+        letter-spacing: 0;
+
+        @extend %sans-bold;
+
+        padding: 0 rem(20) rem(20) rem(20);
+      }
+    }
+  }
+
+  a.silc-nav__link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .silc-nav__item .silc-nav__link:focus+.silc-nav__items {
+    display: block
+  }
+
+  .silc-nav__item:focus-within {
+    display: block;
+
+    .silc-nav__items {
+      display: block
+    }
+  }
+
+  .silc-nav__items .silc-nav__item:focus-within {
+    display: block
+  }
+}
+
+.main-header__nav {
+  nav {
+    display: flex;
+    align-items: center;
+    height: 100% !important;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        position: relative;
+        float: left;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: rem(20) rem(30);
+        transition: background .15s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+          cursor: pointer;
+          background: $yellow;
+
+          > a {
+            color:#1b1b1b !important;
+          }
+
+          a {
+            color: $navy;
+            text-decoration: none;
+          }
+
+          ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            list-style: none;
+            width: 200px;
+            box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.5);
+            top: calc(100% - 1px);
+            z-index: 1000;
+            background: $white;
+            height: auto;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .15s ease;
+
+            @include media('large') {
+              display: block;
+              visibility: visible;
+              opacity: 1;
+            }
+
+            li {
+              width: 100%;
+              &:first-of-type{
+                padding-top: rem(20);
+              }
+              padding: 0 rem(20) rem(20) rem(20);
+
+              &:hover,
+              &:focus,
+              &:focus-within {
+                cursor: pointer;
+                background: transparent;
+
+                a {
+                  color: $lightblue;
+                  text-decoration: none;
+                }
+              }
+            }
+
+            
+          }
+
+        }
+
+        @include media("small") {
+          padding: rem(33) rem(30);
+        }
+
+        @include media("large") {
+          padding: rem(22);
+        }
+
+        &--home {
+          @extend %sans-bold;
+
+          font-size: rem(22) !important;
+          text-transform: uppercase;
+          letter-spacing: 0;
+          padding-left: rem(73) !important;
+          position: relative;
+
+          &::before {
+            content: "\e923";
+            color: $white;
+            position: absolute;
+
+            @include icon;
+
+            left: rem(30);
+            font-size: rem(24);
+            top: 1.15rem;
+
+            @include media("small") {
+              top: rem(30);
+            }
+          }
+
+          @include media("large") {
+            display: none;
+          }
+        }
+
+        a {
+          @extend %sans-bold;
+
+          font-size: rem(14);
+          color: $white;
+          letter-spacing: 0;
+          transition: color .15s ease-in-out;
+
+          @include media("large") {
+            letter-spacing: 0;
+          }
+        }
+
+        ul {
+          visibility: hidden;
+          opacity: 0;
+          width: 0px;
+          height: 0px;
+        }
+      }
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+.nav-toggled {
+  .main-header__nav {
+    ul {
+      width: 100%;
+
+      li {
+        border-top: rem(1) solid $black;
+        float: none;
+
+        &:last-of-type {
+          border-bottom: rem(1) solid $black
+        }
+
+        &:hover {
+          background: transparent !important;
+
+          @include media('small') {
+            background: $lightblue !important;
+          }
+
+          a {
+            color: $white !important
+          }
+        }
+
+        a {
+          font-size: rem(16) !important;
+          width: 100%;
+
+          @include media('medium') {
+            font-size: rem(20) !important;
+          }
+        }
+      }
+    }
+  }
+
+}

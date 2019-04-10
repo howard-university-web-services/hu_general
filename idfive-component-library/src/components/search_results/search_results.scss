@@ -1,0 +1,38 @@
+.search_results {
+    &--section {
+        padding: 20px 0 10px 0;
+        border-bottom: 1px solid #dedede;
+        margin-bottom: 10px;
+        p {
+            @extend #{'.body-text--small'};
+        }
+    }
+}
+
+.search-form {
+    margin-bottom: 50px;
+    #edit-submit {
+        margin-top: 20px;
+    }
+}
+.pager {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    ul {
+        margin: 0px;
+        padding: 0px;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            a {
+                padding: 5px;
+            }
+            &.is-active {
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
+}

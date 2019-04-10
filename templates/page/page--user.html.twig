@@ -1,0 +1,22 @@
+{% include directory ~ '/templates/_includes/global/header.html.twig' %}
+
+	<main class="main-content" id="main-content">
+
+		{{ messages }}
+
+		{% if logged_in and page.admin_tabs  %}
+			<div class="admin--tabs">{{ page.admin_tabs }}</div>
+		{% endif %}
+
+		{{ page.help }}
+
+		<!-- Internal page Hero -->
+		{% include '/themes/contrib/hu_general/templates/_includes/global/content_header.html.twig' %}
+
+		<div class="compartment">
+			{{ page.content }}
+		</div>
+
+	</main>
+
+{% include directory ~ '/templates/_includes/global/footer.html.twig' %}

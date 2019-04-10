@@ -1,0 +1,64 @@
+.alumni-profile {
+  border-radius: rem(4);
+  &__img {
+    height: 100%;
+    min-height: rem(335);
+    position: relative;
+    @extend %image-bck;
+    @include media ('medium') {
+      min-height: rem(394);
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 0.7;
+      background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.06) 23%, #000000 96%);
+    }
+  }
+  h3 {
+    color: $white;
+    @extend %sans-extra-bold;
+    font-size: rem(24);
+    line-height: rem(30);
+    margin-bottom: rem(5);
+    @include media('large') {
+      font-size: rem(36);
+      line-height: rem(46);
+      margin-bottom: rem(10);
+    }
+  }
+  h4 {
+    color: $white;
+    @extend %sans-bold;
+    font-size: rem(12);
+    line-height: rem(20);
+    letter-spacing: rem(1);
+    margin-bottom: 0;
+    @include media('medium') {
+      font-size: rem(16);
+      line-height: rem(20);
+      margin-bottom: rem(10);
+    }
+  }
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 rem(15) rem(20) rem(15);
+    z-index: 1;
+    text-align: left;
+    @include media('medium') {
+      padding: 0 rem(33) rem(20) rem(33);
+    }
+  }
+  &__quote {
+    background: white;
+    padding: rem(15);
+    height: 100%;
+    @include media('medium') {
+      padding: rem(30);
+    }
+  }
+}

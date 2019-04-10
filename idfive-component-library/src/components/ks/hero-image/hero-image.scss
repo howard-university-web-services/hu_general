@@ -1,0 +1,18 @@
+.hero-image {
+  height: rem(166);
+  width: 100%;
+  position: relative;
+  @extend %image-bck;
+
+  @include media ('medium') {
+    height: rem(336)
+  }
+
+  &--large {
+    height: rem(272);
+
+    @include media ('medium') {
+      height: rem(442)
+    }
+  }
+}

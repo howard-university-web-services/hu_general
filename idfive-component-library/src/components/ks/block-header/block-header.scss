@@ -1,0 +1,101 @@
+.block-header {
+  background: $navy;
+  position: relative;
+  color: $white;
+  height: auto;
+  margin-bottom: rem(20);
+  display: block;
+  @include media('medium') {
+    min-height: rem(80);
+    height: auto;
+    margin-bottom: rem(30);
+  }
+  &__icon {
+    font-size: rem(18);
+    position: absolute;
+    left: rem(14);
+    top: 0.8rem;
+    @include media('medium') {
+      font-size: rem(27);
+      top: 32%;
+      left: rem(20);
+    }
+  }
+  &--red {
+    background: $red;
+    .icon-arrow-right {
+      background: $white !important
+    }
+  }
+  &--slim {
+    min-height: rem(35);
+    height: auto;
+    background: $mblue;
+    @include media('medium') {
+      min-height: rem(50);
+      height: auto;
+    }
+    h2, .h2 {
+      color: $white;
+      padding: 0.1rem rem(30) rem(4) rem(30) !important;
+      @include media('medium') {
+        padding: rem(5) rem(52) !important;
+      }
+    }
+    .block-header__icon {
+      top: 26%
+    }
+  }
+  &--light {
+    background: $lightblue;
+    .icon-arrow-right {
+      background: $white !important
+    }
+  }
+  h2, .h2 {
+    color: $white;
+    padding: rem(8) rem(30) rem(10) rem(30);
+    margin: 0;
+    @extend %sans-extra-bold;
+    font-size: rem(14);
+    text-transform: uppercase;
+    letter-spacing: rem(1.5);
+    line-height: 1.4rem;
+    @include media('medium') {
+      font-size: rem(18);
+      line-height: 2.5rem;
+      padding: rem(20) rem(52);
+    }
+  }
+  &__btn {
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    padding: 0 rem(14);
+    @include media('medium') {
+      float: right;
+      display: block;
+      padding: 0;
+    }
+    .fancy-link {
+      padding: rem(11) 0;
+      margin: 0;
+      justify-content: flex-end;
+      @include media('medium') {
+        padding: rem(28);
+      }
+    }
+  }
+  &__title {
+    padding-left: rem(14);
+    padding-top: rem(5);
+    position: relative;
+    &>* {
+      display: inline-block
+    }
+    @include media('medium') {
+      float: left;
+      padding-left: rem(25);
+      padding-top: 0;
+    }
+  }
+}

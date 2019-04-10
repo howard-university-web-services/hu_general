@@ -1,0 +1,170 @@
+.carousel {
+  background: #EEE;
+  position: relative;
+  overflow: hidden;
+
+  .flickity-prev-next-button {
+    color: $white;
+    transform: translateY(-50%);
+    top: 50%;
+    background: $black;
+    cursor: pointer;
+    transition: 0.2s background ease-out;
+    width: rem(48);
+    height: rem(48);
+    border-radius: 0;
+    border: 0;
+    position: absolute;
+    z-index: 1;
+
+    @include media('medium') {
+      width: rem(65);
+      height: rem(65);
+    }
+
+    &:hover {
+      &.next {
+        &:after {
+          color: $yellow
+        }
+      }
+
+      &.previous {
+        &:after {
+          color: $yellow
+        }
+      }
+    }
+
+    .arrow {
+      fill: #fff;
+    }
+
+    svg {
+      display: none;
+    }
+
+    &.next {
+      right: 0;
+
+      &:after {
+        content: "\e915";
+        @include icon();
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 26%;
+        color: $white;
+        display: block;
+        position: absolute;
+        transition: .3s color ease-out;
+        font-size: rem(26);
+
+        @include media('medium') {
+          top: 24%;
+          font-size: rem(33);
+        }
+      }
+    }
+
+    &.previous {
+      left: 0;
+
+      &:after {
+        content: "\e914";
+        @include icon();
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 26%;
+        color: $white;
+        font-size: rem(26);
+        display: block;
+        position: absolute;
+        transition: .3s color ease-out;
+
+        @include media('medium') {
+          top: 24%;
+          font-size: rem(33);
+        }
+      }
+    }
+  }
+
+  &__cell {
+    width: 100%; //height: rem(235);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 77.11%;
+    pointer-events: none;
+
+
+    @include media('medium') {
+      width: 34%;
+      padding-bottom: 28.5%;
+    }
+
+    
+
+    
+
+    &:hover {
+      &:after {
+        background: #183965;
+        opacity: .25;
+      }
+    }
+  }
+
+  .flickity-page-dots {
+    display: none
+  }
+
+  &__link {
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.lum-lightbox {
+  z-index: 10000000;
+}
+
+.js .carousel__cell {
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: $charcoal;
+    opacity: .75;
+    display: block;
+    position: absolute;
+    transition: .3s opacity ease-out;
+  }
+
+  &.is-selected {
+    pointer-events: all;
+
+    &:after {
+      opacity: 0;
+    }
+  }
+  
+}
+
+/* cell number */
+// .carousel-cell:before {
+//     display: block;
+//     text-align: center;
+//     content: counter(carousel-cell);
+//     line-height: 200px;
+//     font-size: 80px;
+//     color: white;
+// }

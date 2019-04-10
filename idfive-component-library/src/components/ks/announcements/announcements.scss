@@ -1,0 +1,47 @@
+.announcements {
+  &__title {
+    @extend %serif-regular;
+    font-size: rem(20);
+    line-height: rem(26);
+    color: $mblue;
+    letter-spacing: 0;
+    margin-bottom: rem(10);
+    @include media('medium') {
+      font-size: rem(24);
+      line-height: rem(29);
+    }
+  }
+  p {
+    // @extend %serif-bold;
+    // font-size: rem(16);
+    // color: $charcoal;
+    // letter-spacing: 0;
+    // line-height: rem(23);
+    // margin: rem(10) 0;
+  }
+  &__block {
+    &--featured {
+      margin-bottom: rem(25);
+      background: $white;
+      padding: rem(25);
+      border-left: rem(5) solid $red;
+      .announcements__title {
+        @extend %sans-extra-bold;
+        font-size: rem(18);
+        letter-spacing: 0;
+        line-height: rem(24);
+        @include media('medium') {
+          font-size: rem(22);
+          line-height: rem(29);
+        }
+      }
+
+      @include media('medium') {
+        border-left: rem(10) solid $red;
+      }
+    }
+  }
+  .body-text--date {
+    color: $mblue;
+  }
+}

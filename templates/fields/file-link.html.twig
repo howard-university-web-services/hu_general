@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override for a link to a file.
+ *
+ * Available variables:
+ * - attributes: The HTML attributes for the containing element.
+ * - link: A link to the file.
+ *
+ * @see template_preprocess_file_link()
+ */
+#}
+
+<a href="{{ link_url }}" class="fancy-link" target="_blank">
+    <span>{{ link_text }}</span>
+    <span class="icon-arrow-right"></span>
+</a>

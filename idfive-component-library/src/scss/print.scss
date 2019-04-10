@@ -1,0 +1,8 @@
+@media print {
+    header, 
+    footer,
+    .alerts-feed-wrapper,
+    .admin--tabs {
+        display: none;
+    }
+}

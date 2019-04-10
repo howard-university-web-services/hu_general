@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@font-face {
+  font-family: 'Serif12Beta';
+  src: url('../fonts/Serif12Beta-Regular.eot');
+  src: url('../fonts/Serif12Beta-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Serif12Beta-Regular.woff2') format('woff2'), url('../fonts/Serif12Beta-Regular.woff') format('woff'), url('../fonts/Serif12Beta-Regular.ttf') format('truetype'), url('../fonts/Serif12Beta-Regular.svg#Serif12Beta-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Serif12Beta';
+  src: url('../fonts/Serif12Beta-Italic.eot');
+  src: url('../fonts/Serif12Beta-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/Serif12Beta-Italic.woff2') format('woff2'), url('../fonts/Serif12Beta-Italic.woff') format('woff'), url('../fonts/Serif12Beta-Italic.ttf') format('truetype'), url('../fonts/Serif12Beta-Italic.svg#Serif12Beta-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Serif12Beta';
+  src: url('../fonts/Serif12Beta-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Serif12Beta-Bold.woff2') format('woff2'), url('../fonts/Serif12Beta-Bold.woff') format('woff'), url('../fonts/Serif12Beta-Bold.ttf') format('truetype'), url('../fonts/Serif12Beta-Bold.svg#Serif12Beta-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Serif12Beta';
+  src: url('../fonts/Serif12Beta-BoldItalic.eot');
+  src: url('../fonts/Serif12Beta-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Serif12Beta-BoldItalic.woff2') format('woff2'), url('../fonts/Serif12Beta-BoldItalic.woff') format('woff'), url('../fonts/Serif12Beta-BoldItalic.ttf') format('truetype'), url('../fonts/Serif12Beta-BoldItalic.svg#Serif12Beta-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?iunndt');
+  src: url('../fonts/icomoon.eot?iunndt#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?iunndt') format('truetype'), url('../fonts/icomoon.woff?iunndt') format('woff'), url('../fonts/icomoon.svg?iunndt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'serif12';
+//     src: url('../fonts/serif12beta-regular.eot');
+//     src: url('../fonts/serif12beta-regular.woff') format("woff"), url('../fonts/serif12beta-regular.ttf') format("truetype") , url('Serif12Beta-Regular.otf') format("truetype");
+//     font-weight: 400;
+//     font-style: normal
+// }
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon() {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Home:before {
+  content: "\e923";
+}
+
+.icon-chevron-right:before {
+  content: "\e901";
+}
+
+.icon-chevron-left:before {
+  content: "\e902";
+}
+
+.icon-chevron-down:before {
+  content: "\e903";
+}
+
+.icon-chevron-up:before {
+  content: "\e904";
+}
+
+.icon-home:before {
+  content: "\e905";
+}
+
+.icon-minus:before {
+  content: "\e906";
+}
+
+.icon-plus1:before {
+  content: "\e907";
+}
+
+.icon-menu:before {
+  content: "\e908";
+}
+
+.icon-arrow-right1:before {
+  content: "\e909";
+}
+
+.icon-play:before {
+  content: "\e90a";
+}
+
+.icon-play-button:before {
+  content: "\e90b";
+}
+
+.icon-envelope:before {
+  content: "\e90c";
+}
+
+.icon-quotes:before {
+  content: "\e90d";
+}
+
+.icon-plus:before {
+  content: "\e90e";
+}
+
+.icon-minus1:before {
+  content: "\e90f";
+}
+
+.icon-calendar:before {
+  content: "\e910";
+}
+
+.icon-news:before {
+  content: "\e911";
+}
+
+.icon-our-people:before {
+  content: "\e912";
+}
+
+.icon-hearth:before {
+  content: "\e913";
+}
+
+.icon-arrow-left:before {
+  content: "\e914";
+}
+
+.icon-arrow-right:before {
+  content: "\e915";
+}
+
+.icon-info:before {
+  content: "\e916";
+}
+
+.icon-arrow-down:before {
+  content: "\e917";
+}
+
+.icon-arrow-up:before {
+  content: "\e918";
+}
+
+.icon-paper:before {
+  content: "\e919";
+}
+
+.icon-picture:before {
+  content: "\e91a";
+}
+
+.icon-announcement:before {
+  content: "\e91b";
+}
+
+.icon-map-marker:before {
+  content: "\e91c";
+}
+
+.icon-arrow_upward:before {
+  content: "\e91d";
+}
+
+.icon-arrow_forward:before {
+  content: "\e91e";
+}
+
+.icon-arrow_downward:before {
+  content: "\e91f";
+}
+
+.icon-arrow_back:before {
+  content: "\e920";
+}
+
+.icon-x:before {
+  content: "\e921";
+}
+
+.icon-x1:before {
+  content: "\e922";
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+
+.icon-envelop:before {
+  content: "\e945";
+}
+
+.icon-search:before {
+  content: "\e986";
+}
+
+.icon-play3:before {
+  content: "\ea1c";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-instagram:before {
+  content: "\ea92";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-rss:before {
+  content: "\ea9b";
+}
+
+.icon-youtube:before {
+  content: "\ea9d";
+}
+
+.icon-vimeo:before {
+  content: "\eaa0";
+}
+
+.icon-flickr:before {
+  content: "\eaa3";
+}
+
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
+.icon-location:before {
+  content: "\e900";
+}

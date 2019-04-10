@@ -1,0 +1,60 @@
+.breadcrumb {
+    padding: rem(7) 0 0 0;
+    &__items {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        color: $mblue;
+        @extend %sans-regular;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: rem(12);
+        line-height: rem(22);
+        @include media('medium') {
+            font-size: rem(13);
+            line-height: rem(18);
+        }
+        a {
+            color: $gray3;
+            transition: color ease .3s;
+            font-size: rem(11);
+            line-height: rem(22);
+            @include media('medium') {
+                font-size: rem(13);
+                line-height: rem(18);
+            }
+        }
+        &:last-of-type {
+            &:after {
+                content: "";
+            }
+        }
+        // &:not(:last-child):hover {
+        //     padding: 0 rem(3) 0 rem(6);
+        //     &::after {
+        //         padding: 0 0 0 rem(3);
+        //     }
+        // }
+        &::after {
+            content: "\e901";
+            @include icon();
+            color: $lightblue;
+            margin: 0 rem(5);
+        }
+        &--active {
+            @extend %sans-bold;
+            a {
+                color: $mblue
+            }
+        }
+        &:hover {
+            a {
+                color: $lightblue
+            }
+        }
+    }
+}

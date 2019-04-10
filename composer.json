@@ -1,0 +1,25 @@
+{
+    "name": "howard/hu_general",
+    "type": "drupal-theme",
+    "description": "Base Drupal 8 theme for Howard University.",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "homepage": "https://github.com/howard-university-web-services/hu_general",
+    "minimum-stability": "dev",
+    "authors": [
+      {
+        "name": "Dan Rogers",
+        "homepage": "https://www.drupal.org/u/dan_rogers",
+        "role": "Maintainer"
+      }
+    ],
+    "support": {
+      "issues": "http://idfive.com",
+      "source": "http://idfive.com"
+    },
+    "extra": {
+      "branch-alias": {
+        "8.x-1.x": "1.x-dev"
+      }
+    }
+  }

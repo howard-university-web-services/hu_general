@@ -1,0 +1,105 @@
+.fancy-link {
+  @extend %sans-extra-bold;
+  font-size: rem(14);
+  color: $mblue;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: rem(15) 0;
+
+  span {
+    color: $mblue;
+    display: inline-block;
+  }
+
+  @include media('medium') {
+    font-size: rem(18);
+  }
+
+  .icon-arrow-right {
+    width: rem(18);
+    height: rem(18);
+    flex: 0 0 rem(18);
+    border-radius: rem(18);
+    background: $mblue;
+    text-align: center;
+    margin-left: rem(10);
+    transition: background .15s ease-in-out;
+
+    &:before {
+      font-size: rem(9);
+      color: $white;
+
+      @include media('medium') {
+        font-size: rem(15);
+        top: calc(50% - 7px);
+      }
+    }
+
+    @include media('medium') {
+      width: rem(23);
+      height: rem(23);
+      flex: 0 0 rem(23);
+      border-radius: rem(23);
+    }
+  }
+
+  &:hover {
+    text-decoration: none !important;
+
+    span {
+      text-decoration: underline;
+    }
+
+    .icon-arrow-right {
+      background: $yellow;
+      text-decoration: none;
+
+      &::before {
+        text-decoration: none;
+        color: $mblue
+      }
+    }
+  }
+
+  &--light {
+    color: $white;
+
+    span {
+      color: $white
+    }
+
+    .icon-arrow-right {
+      background: $white;
+
+      &::before {
+        color: $mblue
+      }
+    }
+  }
+
+  &--dark {
+    span {
+      color: $darkgray;
+    }
+
+    .icon-arrow-right {
+      background: $darkgray;
+
+      &::before {
+        color: $white
+      }
+    }
+
+    &:hover {
+      .icon-arrow-right {
+        background: $darkgray;
+
+        &::before {
+          color: $white
+        }
+      }
+    }
+  }
+}
+a.fancy-link:hover{text-decoration: none}

@@ -1,0 +1,9 @@
+global:
+  version: VERSION
+  css:
+    base:
+     idfive-component-library/build/css/index.css: {}
+     idfive-component-library/build/css/print.css: { media: print }
+  
+  js:
+    idfive-component-library/build/js/index.js: {}

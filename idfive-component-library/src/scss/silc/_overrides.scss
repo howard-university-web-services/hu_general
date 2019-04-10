@@ -1,0 +1,8 @@
+/*
+ * silc variable overrides
+ *
+ */
+
+$silc-grid--gutter:24px;
+$silc-core--breakpoints: ( ("small", "(min-width: 500px)"), ("table", "(min-width: 639px)"), ("medium", "(min-width: 800px)"),("medium-l", "(min-width: 1000px)"), ("large-s", "(min-width: 1099px)"),("large", "(min-width: 1250px)"),("big", "(min-width: 1600px)") ,("1220", "(min-width: 1220px)") ) !default;
+$silc-nav--options--expands: 1250px !default;

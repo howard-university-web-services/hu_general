@@ -1,0 +1,83 @@
+<?php
+
+use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\file\Entity\File;
+
+/**
+* Implements hook_preprocess_page().
+* @param $variables
+*/
+function hu_general_preprocess_page(&$variables) {
+  _hu_general_extend_theme_variables($variables);
+  $variables['hero_image'] = '/themes/contrib/hu_general/idfive-component-library/build/img/graduates_talking.jpg';
+}
+
+/**
+* Implements hook_preprocess_node().
+* @param $variables
+*/
+function hu_general_preprocess_node(&$variables) {
+  $node = $variables['elements']['#node'];
+  $node_id = $node->id();
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function hu_general_theme_suggestions_page_alter(&$suggestions, $variables, $hook) {
+  /**
+   * 404 template suggestion.
+   */
+  if (!is_null(Drupal::requestStack()->getCurrentRequest()->attributes->get('exception'))) {
+    $status_code = Drupal::requestStack()->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+    switch ($status_code) {
+      case 404: {
+        $suggestions[] = 'page__' . (string) $status_code;
+        break;
+      }
+      default:
+        break;
+    }
+  }
+}
+
+
+/**
+* Implements hook_preprocess_file_link().
+* @param $variables
+*/
+ function hu_general_preprocess_file_link(&$variables) {
+  $file = $variables['file'];
+  $options = array();
+  $file_entity = $file instanceof File ? $file : File::load($file->fid);
+
+  $url = file_create_url($file_entity
+    ->getFileUri());
+  $variables['#cache']['contexts'][] = 'url.site';
+
+  // Use the description as the link text if available.
+  if (empty($variables['description'])) {
+    $link_text = $file_entity
+      ->getFilename();
+  }
+  else {
+    $link_text = $variables['description'];
+    $options['attributes']['title'] = $file_entity
+      ->getFilename();
+  }
+  $variables['link_text'] = $link_text;
+  $variables['link_url'] = $url;
+}
+
+
+ // CUSTOM FUNCTIONS
+
+ // Make all theme settings available to insert in pages
+ function _hu_general_extend_theme_variables(&$variables){
+    $theme_name = \Drupal::theme()->getActiveTheme()->getName();
+    $theme_settings = \Drupal::config($theme_name . '.settings');
+    CacheableMetadata::createFromRenderArray($variables)
+      ->addCacheableDependency($theme_settings)
+      ->applyTo($variables);
+    $variables += $theme_settings->getOriginal();
+ }

@@ -1,0 +1,43 @@
+// .events {
+//     &__title {
+//         @extend %serif-regular;
+//         color: $navy;
+//         margin-top: rem(15);
+//         margin-bottom: rem(10);
+//     }
+//     &__block {
+//         display: block;
+//         background: $white;
+//         border-radius: rem(4);
+//         padding: rem(15) rem(20) rem(24) rem(20);
+//         text-decoration: none;
+//         transition: background .3s ease-in-out;
+//         &:hover {
+//             background: $yellow;
+//             span {
+//                 color: $darkgray
+//             }
+//             .events__title {
+//                 color: $darkgray
+//             }
+//         }
+//     }
+//     &__date {
+//         @extend %sans-extra-bold;
+//         display: block;
+//         font-size: rem(14);
+//         line-height: rem(18);
+//         color: $skyblue;
+//         text-transform: uppercase;
+//         letter-spacing: rem(1.8);
+//         margin-bottom: rem(5);
+//     }
+//     &__time {
+//         @extend %sans-regular;
+//         color: $skyblue;
+//         display: block;
+//         margin-bottom: rem(5);
+//         font-size: rem(14);
+//         line-height: rem(18);
+//     }
+// }

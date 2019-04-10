@@ -1,0 +1,217 @@
+.sidebar-nav {
+  width: 100%;
+  position: relative;
+  margin-bottom: rem(20);
+
+  a {
+    @extend %sans-bold;
+    font-size: rem(14);
+    letter-spacing: 0;
+    line-height: rem(19);
+  }
+
+  .sidebar-nav__parent {
+    background: $navy;
+    color: $white;
+    padding: rem(10) rem(10) rem(10) rem(38) !important;
+
+    &:before {
+      background: $white;
+      position: absolute;
+      height: rem(18);
+      width: rem(18);
+      border-radius: rem(18);
+      left: rem(10);
+      top: rem(10);
+      content: "\E914";
+      color: $navy;
+      font-size: rem(12);
+      position: absolute;
+      @include icon();
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .silc-nav {
+    &__move--back {
+      display: none
+    }
+
+    &__link {
+      padding: rem(10) rem(10) rem(10) rem(10);
+      text-decoration: none;
+      display: block;
+      position: relative;
+      border-bottom: rem(1) solid $gray4;
+
+      &.is-active {
+        background: #fff;
+
+        &:hover {
+          background: #fff;
+          cursor: default;
+        }
+
+      }
+
+      &:hover {
+        background: $yellow;
+        color: $darkgray;
+      }
+    }
+
+    .silc-nav__item {
+      float: none;
+    }
+
+    .silc-nav__items .silc-nav__items {
+      left: 0 !important;
+      width: 100%;
+      position: relative;
+      display: block;
+      background: #e8e8e8;
+
+      .silc-nav__items {
+        display: none
+      }
+
+      .silc-nav__link {
+        background: transparent;
+        @extend %sans-bold;
+        font-size: rem(13);
+        line-height: rem(18);
+        color: $navy;
+        border: none;
+      
+        padding: 6px 8px 6px 15px !important;
+
+        &::before{
+          display: none;
+        }
+
+        &:hover {
+          background: $yellow;
+          cursor: pointer;
+        }
+
+      }
+
+
+
+      >.silc-nav__item--parent {
+        >.silc-nav__link {
+          color: $navy;
+          background: transparent;
+
+          &:hover {
+            background: $yellow;
+            color: $darkgray;
+          }
+
+          &:active {
+            background: $white;
+            color: $darkgray;
+          }
+
+          &:after {
+            content: "\e901";
+            position: absolute;
+            right: rem(7);
+            @include icon();
+          }
+        }
+      }
+    }
+
+    &__move--forward {
+      display: none
+    }
+  }
+
+  &__display-child {
+    display: block !important;
+  }
+
+  .silc-offcanvas {
+    background: $white;
+
+    @include media('large') {
+      background: transparent
+    }
+  }
+
+  
+
+  .silc-offcanvas__trigger {
+    border-radius: rem(4);
+    background: $white;
+    color: $navy;
+    text-decoration: none;
+    position: relative;
+    padding: rem(18) rem(18) rem(18) rem(50);
+    @include media('medium') {
+        display:block !important;
+    }
+    @include media('large') {
+      display:none !important;
+    }
+  }
+
+  .silc-offcanvas__trigger--close {
+    position: absolute;
+    left: 0;
+    display: none;
+  }
+
+  .silc-offcanvas__trigger {
+    &:before {
+      font-size: rem(19);
+      position: absolute;
+      left: rem(18);
+      content: "\e907";
+      @include icon();
+      margin-right: rem(12);
+    }
+
+    &.sidebar-open {
+      &:before {
+        content: "\e906";
+      }
+    }
+  }
+
+  h3 {
+    a {
+      @extend %sans-extra-bold;
+    }
+
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+}
+
+.js .sidebar-nav .silc-offcanvas {
+  .silc-nav__items {
+    .silc-nav__items {
+        .silc-nav__item {
+          &:first-of-type {
+            display: none
+          }
+        }
+      }
+  }
+
+  position: relative;
+  display: none;
+  transform: none;
+
+  &--visible {
+    display: block
+  }
+
+  @include media('large') {
+    display: block
+  }
+}

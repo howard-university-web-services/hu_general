@@ -1,0 +1,10 @@
+{
+  "context": {
+
+    "programs": {
+      "fancyLinktext": ["Art History", "Ceramics", "Electronic Studio", "Fashion Design", "Graphic Design", "Interior Design", "Painting", "Photography", "Sculputure"],
+      "fancyLinktext2": ["Art History", "Ceramics", "Electronic Studio", "Fashion Design"]
+
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<a href="#content" class="skip-link">
+  Skip to content</a>
+  <header class="main-header" aria-label="main-header">
+  <div class="main-header__top">
+    <div class="main-header__logo">
+
+      <div class="main-header__logo-link">
+        <a class="main-header__hu-logo" href="#"><img src="{{path '/img/site-logo-white.svg'}}" alt="Howard Logo"> </a>
+        <a href="#"><span class="main-header__title">College of Arts and Sciences</span></a>
+      </div>
+
+    </div>
+    <div class="main-header__utility">{{>@utility-menu}}</div>
+  </div>
+  <div class="main-header__bottom">
+    <h2 class="main-header__dept"><a href="#">{{deptTitle}}</a></h2>
+    <div class="main-header__nav-wrap">
+
+      <div class="main-header__drawer">
+        <div class="main-header__nav">{{>@main-nav}}</div>
+        <div class="main-header__utility main-header__utility--mobile">{{>@utility-menu--mobile}}</div>
+      </div>
+    </div>
+    <div class="main-header__trigger-menu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </div>
+
+</header>

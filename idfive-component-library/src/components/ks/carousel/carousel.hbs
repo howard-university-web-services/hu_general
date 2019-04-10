@@ -1,0 +1,7 @@
+<div class="carousel" >
+  {{#each carousels}}
+  <div class="carousel__cell" style="background-image: url('{{path '{{carouselImg}}'}}')">
+  <a class="carousel__link lightbox" href="{{ path '{{carouselImg}}'}}" data-lightbox="carousel"> <span class="visible-for-screen-readers">link</span></a></div>
+{{/each}}
+</div>
+

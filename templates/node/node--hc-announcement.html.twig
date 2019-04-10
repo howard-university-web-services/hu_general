@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Theme override to display an HC Announcement node.
+ */
+#}
+
+<!-- Internal Page Hero, no image -->
+{% include directory ~ '/templates/_includes/global/content_header_no_image.html.twig' %}
+
+<!-- content -->
+<section class="section--padded-top">
+  <div class="compartment">
+      <div class="silc-grid silc-grid--collapse">
+
+        <!-- Sidebar -->
+          <div class="silc-grid__col silc-grid__col--2-large">
+            <aside class="sidebar">
+              <!-- Nav -->
+              {{ page_sidebar }}
+            </aside>
+          </div>
+
+          <div class="silc-grid__col silc-grid__col--10-large kitchen-sink--main-col">
+
+              <!-- Summary -->
+              <p>{{ content.field_hc_summary }}</p>
+
+              <!-- Render without, so quickedit/etc works -->
+              {{ content|without('field_hc_summary', 'field_hc_end_date', 'field_hc_featured', 'field_hc_links', 'field_hc_start_date') }}
+
+          </div>
+
+      </div>
+  </div>
+</section>

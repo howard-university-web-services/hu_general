@@ -1,0 +1,121 @@
+/*Primary Colors */
+
+$yellow: #EDC054; //secondary yellow
+$mblue:#002A47; //secondary dark navy
+$navy:#003A63; //primary Navy
+$lightblue:#2A6EBB; //secondary blue
+$lightblue2:#00A9E0; //secondary light blue
+$black:#000;
+$white:#FFF;
+$red:#E51937;
+$gray1:#5F6062; //primary gray
+$gray:#F2F2F2; //light gray
+$gray2:#CDCDCD;
+$gray3:#757575;
+$gray4:#D8D8D8;
+$gray5:#F8F8F8;
+$mediumgray:#767676; //medium gray
+$darkgray:#1B1B1B; //dark gray 2
+$charcoal:#2F2F2F; //dark gray 1
+$skyblue:#4C7290; //gray blue
+$darkblue:#031F33;
+$reset:#d5d9dd;
+/*Secondary Colors */
+
+$orange-a: rgba(248, 151, 33, 0.45);
+$base-font-color:$mblue;
+$base-font-size:16px;
+
+/* Fonts */
+
+$serif: 'Serif12Beta',
+serif;
+$sansSerif:'Open Sans',
+sans-serif;
+$body-padding-large:rem(116);
+$body-padding-medium:rem(56);
+$body-padding-small:rem(20);
+%sans-regular {
+    font-weight: 400;
+    font-style: normal;
+    font-family: $sansSerif;
+}
+
+%sans-bold {
+    font-weight: 700;
+    font-style: normal;
+    font-family: $sansSerif;
+}
+
+%sans-extra-bold {
+    font-weight: 800;
+    font-style: normal;
+    font-family: $sansSerif;
+}
+
+%sans-italic {
+    font-weight: 400;
+    font-style: italic;
+    font-family: $sansSerif;
+}
+
+%sans-italic-bold {
+    font-weight: 600;
+    font-style: italic;
+    font-family: $sansSerif;
+}
+
+%serif-regular {
+    font-weight: normal;
+    font-style: normal;
+    font-family: $serif;
+}
+
+%serif-bold {
+    font-weight: bold;
+    font-style: normal;
+    font-family: $serif;
+}
+
+%serif-italic {
+    font-weight: normal;
+    font-style: italic;
+    font-family: $serif;
+}
+
+%serif-italic-bold {
+    font-weight: bold;
+    font-style: italic;
+    font-family: $serif;
+}
+
+%image-bck {
+    background-size: cover;
+    background-position: center;
+}
+
+%body-text {
+    box-sizing: border-box;
+    font-size: $base-font-size;
+    color: $base-font-color;
+    @extend %sans-regular;
+}
+
+%body-text--list {
+    list-style-type: none;
+    li {
+        padding-left: rem(18);
+        position: relative;
+        @include media('medium') {
+            padding-left: rem(25)
+        }
+        &:before {
+            content: "•";
+            font-size: 1.4em;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<header class="main-header {% if light_header %}main-header--light{% endif %}" aria-label="main-header">
+    <div class="main-header__top">
+        <div class="main-header__logo">
+            <div class="main-header__logo-link">
+                <a class="main-header__hu-logo" href="http://howard.edu">
+                    <img src="{{ base_path ~ directory }}/idfive-component-library/build/img/site-logo-white3.svg" alt="Howard Logo"> 
+                </a>
+                {% if parent_school_college %}
+                    <span class="main-header__title"><a href="{{ parent_school_college_link }}">{{ parent_school_college }}</a></span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="main-header__utility">
+            {% include directory ~ '/templates/_includes/global/utility_menu.html.twig' with {'fid': 'mainSearch', 'sid': 'keyword', 'menu': page.secondary_menu} %}
+        </div>
+    </div>
+    <div class="main-header__bottom">
+        <h2 class="main-header__dept"><a href="{{front_page}}">{{ department }}</a></h2>
+        <div class="main-header__nav-wrap">
+            <div class="main-header__drawer">
+                <div class="main-header__nav">
+                    {{ page.primary_menu }}
+                </div>
+                <div class="main-header__utility main-header__utility--mobile">
+                    {% include directory ~ '/templates/_includes/global/utility_menu_mobile.html.twig' with {'fid': 'mainSearchMobile', 'sid': 'keyword', 'menu': page.tertiary_menu} %}
+                </div>
+            </div>
+        </div>
+        <div class="main-header__trigger-menu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+</header>

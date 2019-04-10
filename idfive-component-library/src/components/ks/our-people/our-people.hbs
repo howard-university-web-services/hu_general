@@ -1,0 +1,26 @@
+<div class="our-people">
+  {{#each carousels}}
+  <div class="our-people__cell">
+    <div class="silc-grid silc-grid--collapse">
+      <div class="silc-grid__col silc-grid__col--4-table">
+        <div class="our-people__img" style="background-image: url('{{path '{{carouselImg}}'}}')"></div>
+      </div>
+      <div class="silc-grid__col silc-grid__col--8-table">
+        <div class="our-people__desc">
+          <h2>Carla Brailey, Ph.D</h2>
+          <h4>Faculty</h4>
+          <p>Sed sed ultricies arcu. Sed sit amet aliquet quam, sit amet lobortis turpis. Curabitur fringilla eget urna sit
+            amet cursus. Duis dapibus ante ac ex interdum, eget fermentum eros bibendum.</p>
+          <p class="body-text--caption">Research Interests: Mathematical Theory, Logic</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="our-people__btn">
+      {{>@fancy-link--dark fancyLinktext="More Details"}}
+    </div>
+  </div>
+  {{/each}}
+</div>

@@ -1,0 +1,23 @@
+.programs {
+    p {
+        margin: rem(15) 0;
+        @extend %sans-regular;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: rem(23);
+    }
+    padding: rem(50) 0;
+    h4 {
+        @extend %serif-bold;
+        font-size: rem(20);
+        color: $white;
+        letter-spacing: rem(1);
+        border-bottom: rem(1) solid $white;
+        text-transform: uppercase;
+        padding-bottom: rem(10);
+        margin-top: rem(30);
+    }
+    &__nav {
+        margin-top: rem(28);
+    }
+}
