@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Theme override to display an HC Announcement node teaser.
+ */
+#}
+
+<!-- content -->
+<section class="section--padded-top">
+  <div class="compartment">
+      <div class="silc-grid silc-grid--collapse">
+          <div class="silc-grid__col silc-grid__col--12-large kitchen-sink--main-col">
+            <h3 class="news-and-events__title header--h3-small">{{node.title.value}}</h3>
+            <p class="body-text--small">{{ content.field_hc_summary }}</p>
+            <a href="{{ url }}" class="fancy-link">
+              <span>Read More</span>
+              <span class="icon-arrow-right"></span>
+            </a>
+            <!-- Render without, so quickedit/etc works -->
+            {{ content|without('field_hc_summary', 'links', 'field_hc_end_date', 'field_hc_featured', 'field_hc_links', 'field_hc_start_date') }}
+          </div>
+      </div>
+  </div>
+</section>
+
