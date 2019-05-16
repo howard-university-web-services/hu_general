@@ -1,8 +1,46 @@
 @media print {
     header, 
     footer,
+    .messages,
+    .hero-image,
+    .sidebar-nav,
     .alerts-feed-wrapper,
-    .admin--tabs {
+    .admin--tabs,
+    .btn--hide-print {
         display: none;
     }
+
+    h1, h2, h3, h4, h5,
+    .h1, .h2, .h3, .h4, .h5,
+    .block-header__icon {
+        color: #000 !important;
+    }
+
+    .silc-grid--faculty {
+        padding-left: 10px;
+        .silc-grid__col {
+            width: 31%;
+            float: left;
+            margin-right: 5px;
+            padding: 10px;
+            margin-bottom: 5px !important;
+            border: 1px solid #ccc;
+            height: auto !important;
+        }
+
+        .faculty-profile {
+            height: auto !important;
+            padding-bottom: 0px;
+            .faculty-profile__img,
+            .faculty-profile__btn,
+            .fancy-link,
+            .faculty-profile__divider {
+                display: none !important;
+            }
+            .faculty-profile__block {
+                padding: 0px !important;
+            }
+        }
+    }
+    
 }
