@@ -6726,6 +6726,7 @@ table {
 
 .pnf--primary > nav > ul {
   -webkit-column-count: 3;
+  -moz-column-count: 3;
   column-count: 3;
   font-weight: bold; }
   .pnf--primary > nav > ul li {
@@ -6733,9 +6734,9 @@ table {
     .pnf--primary > nav > ul li > ul {
       display: none; }
 
-/*! Tablesaw - v3.0.9 - 2018-02-14
+/*! Tablesaw - v3.1.2 - 2019-03-19
 * https://github.com/filamentgroup/tablesaw
-* Copyright (c) 2018 Filament Group; Licensed MIT */
+* Copyright (c) 2019 Filament Group; Licensed MIT */
 .tablesaw {
   width: 100%;
   max-width: 100%;
@@ -7240,13 +7241,13 @@ a.tablesaw-btn {
   .tablesaw-columntoggle td.tablesaw-toggle-cellvisible {
     display: table-cell; } }
 
-.tablesaw-columntoggle-popup .btn-group > label {
+.tablesaw-columntoggle-popup .tablesaw-btn-group > label {
   display: block;
   padding: .2em 0;
   white-space: nowrap;
   cursor: default; }
 
-.tablesaw-columntoggle-popup .btn-group > label input {
+.tablesaw-columntoggle-popup .tablesaw-btn-group > label input {
   margin-right: .8em; }
 
 .tablesaw-sortable-head {
@@ -7577,6 +7578,34 @@ a.tablesaw-btn {
   max-height: 100%;
   width: 60px;
   cursor: pointer; }
+
+.lum-close-button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3; }
+
+.lum-close-button:hover {
+  opacity: 1; }
+
+.lum-close-button:before,
+.lum-close-button:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #fff; }
+
+.lum-close-button:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.lum-close-button:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
 
 .lum-previous-button {
   left: 12px; }

@@ -23,6 +23,7 @@ export default class carousel {
       const gallery = new LuminousGallery(this.element.querySelectorAll('.lightbox'));
       const carousel = new Flickity(this.element, {
         wrapAround: true,
+        autoPlay: 6000,
         draggable: false, contain: true,
         prevNextButtons: true, groupCells: '80%',
         selectedAttraction: 0.15,
