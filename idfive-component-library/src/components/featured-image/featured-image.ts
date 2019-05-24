@@ -19,6 +19,7 @@ export default class featuredImage {
 
       const flkty = new Flickity(this.element, {
         wrapAround: true,
+        autoPlay: 6000,
         draggable: false, contain: true,
         prevNextButtons: true,
 

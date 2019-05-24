@@ -8646,6 +8646,7 @@ var featuredImage = /** @class */ (function () {
         if (this.element) {
             var flkty = new Flickity(this.element, {
                 wrapAround: true,
+                autoPlay: 6000,
                 draggable: false, contain: true,
                 prevNextButtons: true,
             });
