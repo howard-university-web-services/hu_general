@@ -7,8 +7,8 @@
 
 <div class="utility__search-mobile">
   <form action="/search/node" class="utility__search-form-mobile" id="{{ fid }}" method="get">
-    <label for="{{ sid }}" class="visible-for-screen-readers">Search this Site</label>
-    <input type="text" class="utility__search__mobile-input" name="keys" id="{{ sid }}" placeholder="Search...">
+    <label for="{{ fid }}-{{ sid }}" class="visible-for-screen-readers">Search this Site</label>
+    <input type="text" class="utility__search__mobile-input" name="keys" id="{{ fid }}-{{ sid }}" placeholder="Search...">
     <button type="submit" class="utility__search__mobile-submit">go</button>
   </form>
 </div>
