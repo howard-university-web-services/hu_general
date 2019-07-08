@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
   }
   
   .modal__container {
@@ -22,6 +23,7 @@
     border-radius: 4px;
     overflow-y: auto;
     box-sizing: border-box;
+    z-index: 10000;
   }
   
   .modal__header {
