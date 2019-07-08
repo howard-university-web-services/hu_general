@@ -20,6 +20,7 @@ import SlideDistance from "../js/SlideDistance";
 import * as Tablesaw from "tablesaw";
 import { JumpTo } from "../js/smooth-scroll";
 import focusWithin from 'focus-within';
+import MicroModal from 'micromodal';
 
 focusWithin(document);
 JumpTo();
@@ -32,6 +33,7 @@ silcAccordionInit();
 silcNavInit();
 silcOffcanvasInit();
 Tablesaw.init();
+MicroModal.init();
 
 function sidebarNavInit() {
   [].forEach.call(
