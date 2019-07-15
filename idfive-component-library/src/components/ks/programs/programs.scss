@@ -21,3 +21,21 @@
         margin-top: rem(28);
     }
 }
+
+.hp-programs-feed {
+    .programs {
+        padding: 40px;
+    }
+    .hp-programs-feed--meta {
+        margin-bottom: 0.9375rem;
+    }
+    .fancy-link {
+        margin-bottom: 0px;
+        text-decoration: underline !important;
+        span {
+            &:hover {
+                color: $yellow  !important;
+            }
+        }
+    }
+}
