@@ -70,10 +70,11 @@
     text-decoration: none;
     transition: background .3s ease-in-out;
 
-    &:hover,
-    &:focus {
+    &-link:hover,
+    &-link:focus {
       background: $yellow;
       text-decoration: none;
+      cursor: pointer;
 
       span {
         color: $darkgray
