@@ -12,6 +12,7 @@ import { silcNavInit } from "silc-nav";
 import { silcOffcanvasInit } from "silc-offcanvas";
 import { searchToggle } from "../components/utility-menu/utility-menu";
 
+import MainNav from "../components/main-nav/main-nav";
 import sidebarNav from "../components/sidebar-nav/sidebar-nav";
 import featuredImage from "../components/featured-image/featured-image";
 import carousel from "../components/ks/carousel/carousel";
@@ -42,6 +43,12 @@ function sidebarNavInit() {
       new sidebarNav(el);
     }
   );
+}
+function mainNavInit() {
+  const el = document.querySelector(".main-header__nav") as HTMLElement;
+  if (el) {
+    new MainNav(el);
+  }
 }
 function carouselInit() {
   [].forEach.call(document.querySelectorAll(".carousel"), el => {
@@ -136,6 +143,10 @@ window.addEventListener("load", function () {
   featuredImageInit();
   SliderDistanceInit();
   ourPeopleInit();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  mainNavInit();
 });
 
 // function juicer() {

@@ -175,46 +175,46 @@
 
       li {
         position: relative;
-        float: left;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        padding: rem(20) rem(30);
-        transition: background .15s ease-in-out;
+
+        @include media("large") {
+          display: flex;
+          align-items: center;
+          float: left;
+        }
+
+        &.active {
+          a {
+            background-color: $lightblue;
+            @include media("large") {
+              background-color: transparent;
+            }
+            &:hover {
+              background-color: $red;
+            }
+          }
+        }
 
         &:hover,
         &:focus,
         &:focus-within {
           cursor: pointer;
-          background: $yellow;
 
-          > a {
-            color:#1b1b1b !important;
+          > a,
+          > .nav__lists__container > a {
+            @include media("large") {
+              background: $yellow;
+              color:#1b1b1b !important;
+            }
           }
 
           a {
-            color: $navy;
             text-decoration: none;
+            @include media("large") {
+              color: $navy;
+            }
           }
 
           ul {
-            display: none;
-            position: absolute;
-            left: 0;
-            padding: 0;
-            margin: 0;
-            border: 0;
-            list-style: none;
-            width: 200px;
-            box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.5);
-            top: calc(100% - 1px);
-            z-index: 1000;
-            background: $white;
-            height: auto;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity .15s ease;
-
             @include media('large') {
               display: block;
               visibility: visible;
@@ -223,10 +223,6 @@
 
             li {
               width: 100%;
-              &:first-of-type{
-                padding-top: rem(20);
-              }
-              padding: 0 rem(20) rem(20) rem(20);
 
               &:hover,
               &:focus,
@@ -235,8 +231,11 @@
                 background: transparent;
 
                 a {
-                  color: $lightblue;
                   text-decoration: none;
+                  @include media("large") {
+                    background-color: transparent;
+                    color: $lightblue;
+                  }
                 }
               }
             }
@@ -246,12 +245,20 @@
 
         }
 
-        @include media("small") {
-          padding: rem(33) rem(30);
-        }
+        ul {
+          li {
+            &:not(:first-of-type) {
+              a {
+                @include media("large") {
+                  padding-top: 0;
+                }
+              }
+            }
 
-        @include media("large") {
-          padding: rem(22);
+            a {
+              padding: rem(20);
+            }
+          }
         }
 
         &--home {
@@ -286,11 +293,21 @@
 
         a {
           @extend %sans-bold;
-
+          padding: rem(20) rem(30);
           font-size: rem(14);
           color: $white;
           letter-spacing: 0;
-          transition: color .15s ease-in-out;
+          display: block;
+          position: relative;
+          transition: color .15s ease-in-out, background .15s ease-in-out;
+
+          @include media("small") {
+            padding: rem(33) rem(30);
+          }
+
+          @include media("large") {
+            padding: rem(22);
+          }
 
           @include media("large") {
             letter-spacing: 0;
@@ -298,13 +315,91 @@
         }
 
         ul {
-          visibility: hidden;
-          opacity: 0;
-          width: 0px;
-          height: 0px;
+          padding: 0;
+          margin: 0;
+          border: 0;
+          list-style: none;
+          overflow: hidden;
+          .js & {
+            height: 0;
+            transition: .3s height ease-in-out;
+            @include media("large") {
+              height: auto;
+            }
+          }
+          @include media("large") {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.5);
+            top: calc(100% - 1px);
+            z-index: 1000;
+            background: $white;
+            transition: opacity .15s ease, visibility .15s ease;
+            visibility: hidden;
+            opacity: 0;
+          }
         }
       }
     }
+  }
+}
+
+.nav__lists__container {
+  position: relative;
+}
+
+.nav__lists__trigger {
+  background-color: transparent;
+  border: 0;
+  border-left: 1px solid rgba(0, 0, 0, .3);
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+  cursor: pointer;
+  width: rem(75);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  transition: background-color .3s;
+
+  @include media("small") {
+    width: rem(108);
+  }
+
+  @include media("large") {
+    display: none;
+  }
+
+  &:hover {
+    background: $yellow;
+    &:after {
+      border-color: $navy;
+    }
+  }
+
+  li.active & {
+    background-color: $lightblue;
+    &:hover {
+      background-color: $yellow;
+    }
+    &:after {
+      transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+      top: 60%;
+    }
+  }
+
+  &:after {
+    content: "";
+    width: rem(19);
+    height: rem(19);
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    position: absolute;
+    transition: transform .3s, top .3s, border-color .3s;
   }
 }
 
@@ -331,11 +426,6 @@
         }
 
         &:hover {
-          background: transparent !important;
-
-          @include media('small') {
-            background: $lightblue !important;
-          }
 
           a {
             color: $white !important
