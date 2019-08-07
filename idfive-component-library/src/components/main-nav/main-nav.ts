@@ -23,6 +23,7 @@ export default class MainNav {
         if (dropdown) {
           const container = document.createElement("DIV") as HTMLElement;
           const button = document.createElement("BUTTON") as HTMLButtonElement;
+          button.innerHTML = "<span class='visible-for-screen-readers'>Trigger Subnavigation</span>";
   
           container.className = "nav__lists__container";
           button.className = "nav__lists__trigger";
