@@ -126,6 +126,7 @@
     margin-bottom: rem(5);
     font-size: rem(12);
     line-height: rem(16);
+    width: 100%;
 
     @include media('medium') {
       font-size: rem(14);
