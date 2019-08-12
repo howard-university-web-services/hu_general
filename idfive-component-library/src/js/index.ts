@@ -13,6 +13,7 @@ import { silcOffcanvasInit } from "silc-offcanvas";
 import { searchToggle } from "../components/utility-menu/utility-menu";
 
 import MainNav from "../components/main-nav/main-nav";
+import ModalPlaylist from "../components/modal/modal";
 import sidebarNav from "../components/sidebar-nav/sidebar-nav";
 import featuredImage from "../components/featured-image/featured-image";
 import carousel from "../components/ks/carousel/carousel";
@@ -34,7 +35,8 @@ silcAccordionInit();
 silcNavInit();
 silcOffcanvasInit();
 Tablesaw.init();
-MicroModal.init();
+
+
 
 function sidebarNavInit() {
   [].forEach.call(
@@ -55,13 +57,16 @@ function carouselInit() {
     new carousel(el);
   });
 }
-
+function modalPlaylistInit() {
+  [].forEach.call(document.querySelectorAll(".modal--playlist"), el => {
+    new ModalPlaylist(el);
+  });
+}
 function ourPeopleInit() {
   [].forEach.call(document.querySelectorAll(".our-people"), el => {
     new ourPeople(el);
   });
 }
-
 function SliderDistanceInit() {
   [].forEach.call(document.querySelectorAll(".slideshow"), el => {
     new SlideDistance(el);
@@ -137,7 +142,7 @@ window.addEventListener("load", function () {
     postHeader.classList.add("post-header--shadow");
   }
   carouselInit();
-
+  modalPlaylistInit();
   sidebarNavInit();
   searchToggle();
   featuredImageInit();
@@ -147,25 +152,5 @@ window.addEventListener("load", function () {
 
 window.addEventListener("DOMContentLoaded", () => {
   mainNavInit();
+  MicroModal.init();
 });
-
-// function juicer() {
-
-//   const juicerContainer = document.querySelector(".juicer-container");
-//   const head = document.querySelector("head");
-//   if (juicerContainer) {
-//     console.log(juicerContainer);
-
-//     document.head.innerHTML = document.head.innerHTML + " <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script><link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />";
-
-//     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-//       alert("data-per="5"");
-
-//       juicerContainer.innerHTML = "<ul class="juicer-feed" data-feed-id="howardulovestory" data-pages="1" data-per="5"></ul>";
-//     }
-//     else { juicerContainer.innerHTML = "<ul class="juicer-feed" data-feed-id="howardulovestory" data-pages="1" data-per="15"></ul>";alert("data-per="15""); }
-//   }
-
-// }
-
-// juicer();
