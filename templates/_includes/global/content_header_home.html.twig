@@ -1,3 +1,14 @@
-<!-- Hero -->
-
-<div class="hero-image hero-image--large" style="background-image:url('{{hero_image}}')"></div>
+<!-- Homepage Hero (image)-->
+<section class="hero-image-home section--blue-blend">
+    <div class="hero-image hero-image--large" style="background-image:url('{{hero_image}}')"></div>
+    <div class="blue-overlay--video-image"></div>
+    {% if content.field_hc_intro_image_text %}
+        <div class="compartment">
+            <div class="silc-grid silc-grid--collapse">
+                <div class="silc-grid__col silc-grid__col--8-medium">
+                    <h2 class=" header--white header--page-intro">{{ content.field_hc_intro_image_text }}</h2>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</section>

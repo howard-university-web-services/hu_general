@@ -1,0 +1,22 @@
+<!-- Homepage Hero (video)-->
+<section class="hero-video section--blue-blend" aria-label="Howard University">
+    <div class="blue-overlay--video-image"></div>
+    <div data-vimeo-id="353561784" data-vimeo-defer id="hcsh-hero-video"></div>
+    {% if content.field_hc_intro_image_text %}
+        <div class="compartment">
+            <div class="silc-grid silc-grid--collapse">
+                <div class="silc-grid__col silc-grid__col--8-medium">
+                    <h2 class=" header--white header--page-intro">{{ content.field_hc_intro_image_text }}</h2>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="hcsc_hero_video_controls">
+        <div class="hcsc_hero_video_control hcsc_hero_video_pause_control">
+            <div class="hcsc_hero_video_pause"><span class="visible-for-screen-readers">Pause</span></div>
+        </div>
+        <div class="hcsc_hero_video_control hcsc_hero_video_play_control visually-hidden">
+            <div class="hcsc_hero_video_play"><span class="visible-for-screen-readers">Play</span></div>
+        </div>
+    </div>
+</section>

@@ -23,6 +23,7 @@ import * as Tablesaw from "tablesaw";
 import { JumpTo } from "../js/smooth-scroll";
 import focusWithin from 'focus-within';
 import MicroModal from 'micromodal';
+import Player from '@vimeo/player';
 
 focusWithin(document);
 JumpTo();
@@ -34,10 +35,35 @@ silcCoreInit();
 silcAccordionInit();
 silcNavInit();
 silcOffcanvasInit();
+insertHomepageHeroVimeoEmbed();
 Tablesaw.init();
 
-
-
+function insertHomepageHeroVimeoEmbed() {
+  const hero_vid = document.querySelector(".hero-video");
+  if (hero_vid) {
+    var options = {
+      loop: true,
+      autopause: true,
+      autoplay: true,
+      background: true,
+      controls: false,
+      responsive: true
+    };
+    var hcsh_hero_video = new Player('hcsh-hero-video', options);
+    let hcsc_pause = document.querySelector(".hcsc_hero_video_pause_control");
+    let hcsc_play = document.querySelector(".hcsc_hero_video_play_control");
+    hcsc_pause.addEventListener("click", function (event) {
+      hcsh_hero_video.pause();
+      hcsc_pause.classList.toggle('visually-hidden');
+      hcsc_play.classList.toggle('visually-hidden');
+    });
+    hcsc_play.addEventListener("click", function (event) {
+      hcsh_hero_video.play();
+      hcsc_play.classList.toggle('visually-hidden');
+      hcsc_pause.classList.toggle('visually-hidden');
+    });
+  }
+}
 function sidebarNavInit() {
   [].forEach.call(
     document.querySelectorAll(".sidebar-nav .silc-nav__item--parent"),
