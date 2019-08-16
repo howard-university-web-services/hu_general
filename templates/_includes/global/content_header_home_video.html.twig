@@ -1,7 +1,9 @@
 <!-- Homepage Hero (video)-->
 <section class="hero-video section--blue-blend" aria-label="Howard University">
     <div class="blue-overlay--video-image"></div>
-    <div data-vimeo-id="353561784" data-vimeo-defer id="hcsh-hero-video"></div>
+    {% if hero_media_video %}
+        <div data-vimeo-id="{{ hero_media_video }}" data-vimeo-defer id="hcsh-hero-video"></div>
+    {% endif %}
     {% if content.field_hc_intro_image_text %}
         <div class="compartment">
             <div class="silc-grid silc-grid--collapse">
