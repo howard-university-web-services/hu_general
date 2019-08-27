@@ -339,6 +339,11 @@
             visibility: hidden;
             opacity: 0;
           }
+          ul {
+            @include media("large") {
+              display: none !important;
+            }
+          }
         }
       }
     }
