@@ -20,8 +20,25 @@
 
 .hero-image-home, .hero-video {
   .hero-image {
-    //max-height:90vh;
-    //height: 60vh;
+    height: auto;
+    width: 100%; 
+    padding-top: 56.25%;
+    max-height: calc(100vh - 115px);
+  }
+  #hcsh-hero-video {
+    max-height: calc(100vh - 115px);
+    > div {
+      max-height: 100%;
+      iframe {
+        left: 50% !important; 
+        top: 50% !important; 
+        transform: translate(-50%, -50%) !important;
+        height: auto !important; 
+        width: auto !important; 
+        min-width: 100% !important; 
+        min-height: 100% !important;
+      }
+    }
   }
   position: relative;
   .blue-overlay--video-image {
@@ -31,7 +48,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 58, 99, .5);
+    background-color: rgba(0, 58, 99, .35);
   }
   .compartment {
     z-index: 101;
@@ -45,45 +62,65 @@
       @include media ('medium') {
         border-left: 2px solid $yellow;
         padding: 0px 0px 0px 40px;
+        text-shadow: 0px 0px 10px rgba(0,0,0,0.65);
+      }
+      @media (min-width: 2100px) {
+        font-size: 3.5rem;
+        line-height: 4.75rem;
       }
     }
   }
   .hcsc_hero_video_controls {
     z-index: 101;
     position: absolute;
-    bottom: 0;
+    top: 56.25vw;
+    transform: translateY(-100%);
     right: 0;
     color: #fff;
     padding: 20px;
     .hcsc_hero_video_control {
       border: 2px solid #fff;
       border-radius: 50%;
-      padding: 20px;
+      padding: 14px;
       text-align: center;
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
       transition: background-color .3s ease-in-out;
+      @include media ('medium') {
+        padding: 20px;
+        width: 70px;
+        height: 70px;
+      }
       &:hover {
         background-color: rgba(0, 58, 99, .5);
         cursor: pointer;
       }
       .hcsc_hero_video_pause {
-        width: 20px;
-        height: 30px;
+        width: 8px;
+        height: 20px;
         margin-left: auto;
         margin-right: auto;
         border-style: solid;
-        border-width: 0px 0px 0px 20px;
+        border-width: 0px 0px 0px 18px;
         border-color: #fff;
         border-style: double;
+        @include media ('medium') {
+          height: 28px;
+          border-width: 0px 0px 0px 24px;
+        }
       }
       .hcsc_hero_video_play {
         box-sizing: border-box;
-        width: 30px;
-        height: 30px;
+        width: 8px;
+        height: 10px;
         border-style: solid;
-        border-width: 15px 0px 15px 30px;
+        border-width: 10px 0px 10px 20px;
+        margin-left: 2px;
         border-color: transparent transparent transparent #fff;
+        @include media ('medium') {
+          border-width: 15px 0px 15px 28px;
+          margin-left: 3px;
+        }
       }
     }
     
