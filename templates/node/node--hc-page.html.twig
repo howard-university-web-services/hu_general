@@ -18,17 +18,20 @@
       <div class="silc-grid silc-grid--collapse">
 
         <!-- Sidebar -->
+        {% if show_sidebar %}
           <div class="silc-grid__col silc-grid__col--2-large">
             <aside class="sidebar">
               <!-- Nav -->
               {{ page_sidebar }}
             </aside>
           </div>
-
           <div class="silc-grid__col silc-grid__col--10-large kitchen-sink--main-col">
+        {% else %}
+          <div class="silc-grid__col silc-grid__col--12-large kitchen-sink--main-col">
+        {% endif %}
 
-              <!-- Main KS content -->
-              {{ content.field_hc_ks_widgets }}
+            <!-- Main KS content -->
+            {{ content.field_hc_ks_widgets }}
 
           </div>
 
@@ -40,4 +43,4 @@
 {{ content.field_hc_ks_widgets_full }}
 
 <!-- Render without, so quickedit/etc works -->
-{{ content|without('field_hc_header_image', 'field_hc_hide_header_image', 'field_hc_ks_widgets', 'field_hc_ks_widgets_full') }}
+{{ content|without('field_hc_header_image', 'field_hc_hide_header_image', 'field_hc_ks_widgets', 'field_hc_ks_widgets_full', 'field_hc_hide_sidebar') }}
