@@ -28,6 +28,11 @@
   position: relative;
 }
 
+.modal__content .faculty-profile__img {
+  float: left;
+  margin-right: 1.25rem;
+}
+
 .modal__header {
   display: flex;
   justify-content: space-between;
