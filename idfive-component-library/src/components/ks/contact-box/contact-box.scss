@@ -17,10 +17,13 @@
         line-height: rem(24);
     }
     p {
-        margin: rem(25) 0 0 0 0;
+        margin: rem(25) 0 0 0;
         @extend %serif-regular;
         font-size: 14px;
         line-height:20px;
+        &:first-child {
+            margin: 0;
+        }
     }
     &--blue {
         border-color: $yellow;

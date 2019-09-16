@@ -170,6 +170,22 @@
     align-items: center;
     height: 100% !important;
 
+    > ul {
+      > li {
+        &:hover,
+        &:focus,
+        &:focus-within {
+          > a,
+          > .nav__lists__container > a {
+            @include media("large") {
+              background: $yellow;
+              color:#1b1b1b;
+            }
+          }
+        }
+      }
+    }
+
     ul {
       list-style-type: none;
 
@@ -198,14 +214,6 @@
         &:focus,
         &:focus-within {
           cursor: pointer;
-
-          > a,
-          > .nav__lists__container > a {
-            @include media("large") {
-              background: $yellow;
-              color:#1b1b1b !important;
-            }
-          }
 
           a {
             text-decoration: none;
@@ -255,6 +263,12 @@
               }
             }
 
+            &:hover {
+              a {
+                color: $lightblue;
+              }
+            }
+
             a {
               padding: rem(20);
             }
@@ -301,16 +315,9 @@
           position: relative;
           transition: color .15s ease-in-out, background .15s ease-in-out;
 
-          @include media("small") {
-            padding: rem(33) rem(30);
-          }
-
-          @include media("large") {
-            padding: rem(22);
-          }
-
           @include media("large") {
             letter-spacing: 0;
+            padding: rem(22);
           }
         }
 
@@ -367,10 +374,6 @@
   bottom: 0;
   z-index: 1000;
   transition: background-color .3s;
-
-  @include media("small") {
-    width: rem(108);
-  }
 
   @include media("large") {
     display: none;
@@ -448,6 +451,11 @@
           }
         }
 
+        > a,
+        > .nav__lists__container > a {
+          font-weight: 700;
+        }
+
         a {
           font-size: rem(17) !important;
           width: 100%;
@@ -460,9 +468,9 @@
         li {
           border-top: 0.0625rem solid #25568d;
           a {
-            @extend %serif-bold;
+            @extend %serif-regular;
             font-size: rem(16) !important;
-            padding-left: 2.0625rem ;
+            padding: rem(20) rem(20) rem(16) rem(33);
           }
         }
       }

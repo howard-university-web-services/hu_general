@@ -264,6 +264,9 @@
       box-shadow: 2px 0 rgba(0, 0, 0, .2);
       right: 33.333%;
       border-radius: 0 3px 0 0;
+      @include media("medium-l") {
+        border-right: 4px solid hsla(0, 0%, 100%, .8);
+      }
     }
   }
   &.prev {
@@ -274,6 +277,9 @@
       box-shadow: -2px 0 rgba(0, 0, 0, .2);
       left: 33.333%;
       border-radius: 3px 0 0 0;
+      @include media("medium-l") {
+        border-left: 4px solid hsla(0, 0%, 100%, .8);
+      }
     }
   }
   &[aria-hidden="false"] {
@@ -294,7 +300,7 @@
     @include media("medium-l") {
       height: 36px;
       width: 36px;
-      border-width: 4px;
+      border-top: 4px solid rgba(255, 255, 255, .8);
     }
   }
 }

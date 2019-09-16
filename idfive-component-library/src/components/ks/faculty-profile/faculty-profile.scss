@@ -4,6 +4,7 @@
   position: relative;
   border-radius: rem(4);
   padding-bottom: rem(48);
+  overflow: hidden;
   @include media('medium') {
     padding-bottom: rem(60);
   }
@@ -100,6 +101,10 @@
     position: absolute;
     width: 100%;
     bottom: 0;
+    .fancy-link {
+      margin: 0;
+      padding: rem(15) 0;
+    }
     a {
       text-align: center;
       justify-content: center;

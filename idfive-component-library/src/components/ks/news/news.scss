@@ -38,6 +38,10 @@
     @include media('medium') {
       padding: rem(15) rem(20) rem(14) rem(20);
     }
+
+    p {
+      color: $charcoal
+    }
   }
 
   &__main {
@@ -68,22 +72,6 @@
     background: $white;
     border-radius: rem(4);
     text-decoration: none;
-    transition: background .3s ease-in-out;
-
-    &-link:hover,
-    &-link:focus {
-      background: $yellow;
-      text-decoration: none;
-      cursor: pointer;
-
-      span {
-        color: $darkgray
-      }
-
-      .news-and-events__title {
-        color: $darkgray
-      }
-    }
 
     @include media('small') {
       display: flex;
@@ -152,6 +140,10 @@
       @include media('medium') {
         margin-bottom: rem(5);
       }
+    }
+
+    .news-and-events__btn {
+      width: 100%;
     }
   }
 
@@ -263,6 +255,26 @@
           border-bottom-right-radius: rem(4);
         }
       }
+    }
+  }
+}
+
+/* Styles for .news-and-events__block when element is an anchor instead of a div */
+a.news-and-events__block {
+  transition: background .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background: $yellow;
+    cursor: pointer;
+    text-decoration: none;
+
+    span {
+      color: $darkgray
+    }
+
+    .news-and-events__title {
+      color: $darkgray
     }
   }
 }

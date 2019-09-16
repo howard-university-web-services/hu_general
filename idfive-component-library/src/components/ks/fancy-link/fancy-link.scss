@@ -7,16 +7,25 @@
   align-items: center;
   margin: rem(15) 0;
 
+  @include media('medium') {
+    font-size: rem(18);
+  }
+
+  .embedded-entity & {
+    @include media('medium') {
+      font-size: rem(16);
+    }
+  }
+
   span {
     color: $mblue;
     display: inline-block;
   }
 
-  @include media('medium') {
-    font-size: rem(18);
-  }
-
   .icon-arrow-right {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: rem(18);
     height: rem(18);
     flex: 0 0 rem(18);

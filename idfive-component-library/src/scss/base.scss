@@ -175,6 +175,15 @@ ul {
   }
 }
 
+// Make sure last section always has extra bottom padding
+main>section:not(.section--padded-bottom) section:last-child:not(.section--padded-bottom) {
+  padding-bottom: rem(20);
+
+  @include media('medium') {
+    padding-bottom: rem(32);
+  }
+}
+
 .section {
   &--blue {
     background: $navy;
@@ -690,7 +699,8 @@ select {
   }
 }
 
-input {
+input,
+textarea {
   display: inline-block;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -879,6 +889,5 @@ iframe {
   }
   margin-top: 8px;
   padding-bottom: 14px;
-  border-bottom: 2px solid #e0e0e0;
 }
 

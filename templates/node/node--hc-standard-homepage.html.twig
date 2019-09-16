@@ -32,7 +32,9 @@
                 {% if show_intro_sidebar %}
                     <div class="silc-grid__col silc-grid__col--4-medium">
                         <div class="contact-box">
-                            <h3 class="sidebar-title">{{ content.field_hc_intro_sidebar_title }}</h3>
+                            {% if content.field_hc_intro_sidebar_title[0] %}
+                                <h3 class="sidebar-title">{{ content.field_hc_intro_sidebar_title }}</h3>
+                            {% endif %}
                             {{ content.field_hc_intro_sidebar_text }}
                         </div>
                     </div>
