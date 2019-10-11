@@ -30,6 +30,10 @@
           <div class="silc-grid__col silc-grid__col--12-large kitchen-sink--main-col">
         {% endif %}
 
+            {% if content.field_hc_lead_in|render  %}
+              <p class="lead-in">{{ content.field_hc_lead_in }}</p>
+            {% endif %}
+
             <!-- Main KS content -->
             {{ content.field_hc_ks_widgets }}
 
@@ -43,4 +47,4 @@
 {{ content.field_hc_ks_widgets_full }}
 
 <!-- Render without, so quickedit/etc works -->
-{{ content|without('field_hc_header_image', 'field_hc_hide_header_image', 'field_hc_ks_widgets', 'field_hc_ks_widgets_full', 'field_hc_hide_sidebar') }}
+{{ content|without('field_hc_lead_in', 'field_hc_header_image', 'field_hc_hide_header_image', 'field_hc_ks_widgets', 'field_hc_ks_widgets_full', 'field_hc_hide_sidebar') }}
