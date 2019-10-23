@@ -5,8 +5,21 @@
     max-width: 100%;
   }
   &__img {
-    
     @extend %image-bck;
+    min-height: rem(176);
+    width: 100%;
+
+    @include media('small') {
+      width: 40%
+    }
+       
+    @include media('medium') {
+      width: 100%;
+      display: block;
+    }
+      
+  }
+  &__img_portrait {
 
     @media screen and (max-width: 449px) {
       width: 90px;
