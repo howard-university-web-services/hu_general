@@ -427,7 +427,10 @@ strong {
 
   audio {
     width: 100%;
-    margin: 0 0 rem(20) 0;
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
   }
 }
 
@@ -884,10 +887,14 @@ iframe {
 }
 
 .media-caption {
+  margin-top: 8px;
+  padding-bottom: 14px;
+  .audio-file &,
+  .video__desc & {
+    padding-bottom: 0;
+  }
   p {
     margin: 0 !important;
   }
-  margin-top: 8px;
-  padding-bottom: 14px;
 }
 

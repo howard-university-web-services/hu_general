@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
     filename: "css/index.css"
@@ -88,7 +89,8 @@ const config = {
     },
     plugins: [
         extractSass,
-        copyImages
+        copyImages,
+        new UglifyJSPlugin()
     ]
 };
 
