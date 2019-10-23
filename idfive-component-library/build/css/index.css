@@ -6684,21 +6684,31 @@ a.fancy-link:hover {
   @media (min-width: 800px) {
     .news-and-events {
       max-width: 100%; } }
+  .news-and-events__img {
+    min-height: 11rem;
+    width: 100%; }
+    @media (min-width: 500px) {
+      .news-and-events__img {
+        width: 40%; } }
+    @media (min-width: 800px) {
+      .news-and-events__img {
+        width: 100%;
+        display: block; } }
   @media screen and (max-width: 449px) {
-    .news-and-events__img {
+    .news-and-events__img_portrait {
       width: 90px;
       height: 120px;
       margin: 15px 0 15px 15px; } }
   @media screen and (max-width: 499px) and (min-width: 450px) {
-    .news-and-events__img {
+    .news-and-events__img_portrait {
       width: 28%;
       padding-bottom: 36%; } }
   @media (min-width: 500px) {
-    .news-and-events__img {
+    .news-and-events__img_portrait {
       width: 140px;
       min-height: 13em; } }
   @media (min-width: 800px) {
-    .news-and-events__img {
+    .news-and-events__img_portrait {
       width: 100%;
       display: block;
       padding-bottom: 125%; } }
