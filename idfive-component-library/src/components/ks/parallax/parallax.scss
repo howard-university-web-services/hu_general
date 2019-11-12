@@ -61,10 +61,7 @@ image field when viewed on devices with a screen size of 767px and below
 		margin-bottom: 12px;
 		line-height: 1.1;
 	}
-	&:before {
-		content: inherit;
-		background: transparent !important;
-	}
+	
 	.h-100 {
 		height:100vh;
 		padding: initial;
@@ -94,6 +91,9 @@ image field when viewed on devices with a screen size of 767px and below
 			background-position: center;
 			background-attachment: fixed;
 			height: 100%;
+		}
+		&:before {
+			content: inherit;
 		}
 	}
 	.featurette {
