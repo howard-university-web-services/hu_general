@@ -7551,7 +7551,8 @@ image field when viewed on devices with a screen size of 767px and below
       background-attachment: fixed;
       height: 100%; }
     .hp_parallax_bundle .featurettes_image:before {
-      content: inherit; }
+      content: inherit;
+      background: transparent; }
   .hp_parallax_bundle .featurette {
     width: 100%;
     position: absolute;
