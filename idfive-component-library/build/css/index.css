@@ -7527,7 +7527,8 @@ image field when viewed on devices with a screen size of 767px and below
     margin-bottom: 12px;
     line-height: 1.1; }
   .hp_parallax_bundle:before {
-    content: inherit; }
+    content: inherit;
+    background: transparent !important; }
   .hp_parallax_bundle .h-100 {
     height: 100vh;
     padding: initial; }

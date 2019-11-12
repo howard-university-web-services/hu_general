@@ -63,6 +63,7 @@ image field when viewed on devices with a screen size of 767px and below
 	}
 	&:before {
 		content: inherit;
+		background: transparent !important;
 	}
 	.h-100 {
 		height:100vh;
