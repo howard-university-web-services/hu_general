@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const babelLoaderExcludeNodeModulesExcept = require('babel-loader-exclude-node-modules-except');
 
 const extractSass = new ExtractTextPlugin({
     filename: "css/index.css"
@@ -36,11 +37,15 @@ const config = {
             },
             {
                 test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: babelLoaderExcludeNodeModulesExcept([
+                    "micromodal"
+                ]),
                 use: {
-                    loader: 'babel-loader',
+                    loader: "babel-loader",
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: [
+                            "babel-preset-env"
+                        ].map(require.resolve)
                     }
                 }
             },
