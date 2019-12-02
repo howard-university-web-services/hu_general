@@ -7113,6 +7113,108 @@ table {
   width: 100%;
   height: auto; }
 
+/**Stylesheet***/
+/*Right aligns text fields used in Parallax Bundle***/
+/*Left aligns text fields used in Parallax Bundle***/
+/** Adjusts the width of the  Parallax Bundle's Image Field***/
+/** Creates Parallax effect for the Parallax Bundle's image field***/
+/** Removes Parallax effect for the Parallax Bundle's 
+image field when viewed on devices with a screen size of 767px and below
+***/
+.hp_parallax_bundle {
+  position: relative; }
+  .hp_parallax_bundle h1 {
+    font-size: 2.5rem !important;
+    margin-bottom: 25px; }
+  .hp_parallax_bundle .float_right {
+    float: none !important; }
+  .hp_parallax_bundle .float_left {
+    float: none !important; }
+  .hp_parallax_bundle .featurettes_image {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .hp_parallax_bundle .featurettes_image .background-image {
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: initial;
+      height: 100vh; }
+  .hp_parallax_bundle:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 3;
+    opacity: .65; }
+  .hp_parallax_bundle .featurettes_text {
+    width: 100%;
+    position: absolute;
+    color: #FFF;
+    text-align: center;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+
+@media (min-width: 800px) {
+  .hp_parallax_bundle h1 {
+    font-size: 3.5rem !important;
+    margin-bottom: 12px;
+    line-height: 1.1; }
+  .hp_parallax_bundle .h-100 {
+    height: 100vh;
+    padding: initial; }
+  .hp_parallax_bundle .lead {
+    font-size: 1.25rem;
+    font-weight: 300; }
+    .hp_parallax_bundle .lead br {
+      display: none; }
+  .hp_parallax_bundle .float_right {
+    float: right !important; }
+  .hp_parallax_bundle .float_left {
+    float: left !important; }
+  .hp_parallax_bundle .featurettes_image {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 4; }
+    .hp_parallax_bundle .featurettes_image .background-image {
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100%; }
+  .hp_parallax_bundle:before {
+    content: inherit;
+    background: transparent; }
+  .hp_parallax_bundle .featurette {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0px 15px; }
+  .hp_parallax_bundle .featurettes_text {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 4;
+    color: inherit;
+    -webkit-transform: none;
+            transform: none;
+    left: 0;
+    top: 0; }
+  .hp_parallax_bundle .icon .svg-inline--fa {
+    width: 4em;
+    height: 4em; } }
+
 .faculty-profile {
   background: white;
   height: 100%;
