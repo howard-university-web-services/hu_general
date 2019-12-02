@@ -1,0 +1,125 @@
+
+/**Stylesheet***/
+/*Right aligns text fields used in Parallax Bundle***/
+/*Left aligns text fields used in Parallax Bundle***/
+/** Adjusts the width of the  Parallax Bundle's Image Field***/
+/** Creates Parallax effect for the Parallax Bundle's image field***/
+/** Removes Parallax effect for the Parallax Bundle's 
+image field when viewed on devices with a screen size of 767px and below
+***/
+.hp_parallax_bundle {
+	position: relative;
+	h1 {
+		font-size: 2.5rem !important;
+		margin-bottom:25px;
+	}
+	.float_right {
+		float: none !important;
+	}
+	.float_left {
+		float: none !important;
+	}
+	.featurettes_image {
+		width: 100%;
+		height:100%;
+		position: relative;
+		.background-image {
+			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: initial;
+			height: 100vh;
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: $black;
+		z-index: 3;
+		opacity: .65;
+	}
+
+	.featurettes_text {
+		width: 100%;
+    	position: absolute;
+    	color: $white;
+    	text-align: center;
+    	z-index: 1001;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%,-50%);
+	}
+}
+@include media('medium'){
+.hp_parallax_bundle {
+	h1 {
+		font-size: 3.5rem !important;
+		margin-bottom: 12px;
+		line-height: 1.1;
+	}
+	
+	.h-100 {
+		height:100vh;
+		padding: initial;
+	}
+	.lead {
+		font-size: 1.25rem;
+		font-weight: 300;
+		br {
+			display: none;
+		}
+	}
+	.float_right {
+		float: right !important;
+	}
+	.float_left {
+		float: left !important;
+	}
+	.featurettes_image {
+		width: 50%;
+		height: 100%;
+		position: relative;
+		z-index: 4;
+		.background-image {
+			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			height: 100%;
+		}
+	}
+	&:before {
+		content: inherit;
+		background: transparent;
+	}
+	.featurette {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		padding: 0px 15px;
+	}
+	.featurettes_text {
+		width: 50%;
+		height: 100%;
+		position: relative;
+		z-index: 4;
+		color: inherit;
+		transform: none;
+		left: 0;
+		top: 0;
+	}
+	.icon {
+		.svg-inline--fa {
+			width: 4em;
+			height: 4em;
+		}
+	}
+}
+}
