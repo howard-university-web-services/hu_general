@@ -17,6 +17,7 @@ import ModalPlaylist from "../components/modal/modal";
 import sidebarNav from "../components/sidebar-nav/sidebar-nav";
 import featuredImage from "../components/featured-image/featured-image";
 import carousel from "../components/ks/carousel/carousel";
+import photoshelterGrid from "../components/ks/photoshelter-grid/photoshelter-grid";
 import ourPeople from "../components/ks/our-people/our-people";
 import SlideDistance from "../js/SlideDistance";
 import * as Tablesaw from "tablesaw";
@@ -83,6 +84,12 @@ function carouselInit() {
     new carousel(el);
   });
 }
+function photoshelterGridInit() {
+  [].forEach.call(document.querySelectorAll(".photoshelter-grid"), el => {
+    new photoshelterGrid(el);
+  });
+}
+
 function modalPlaylistInit() {
   [].forEach.call(document.querySelectorAll(".modal--playlist"), el => {
     new ModalPlaylist(el);
@@ -168,6 +175,7 @@ window.addEventListener("load", function () {
     postHeader.classList.add("post-header--shadow");
   }
   carouselInit();
+  photoshelterGridInit();
   modalPlaylistInit();
   sidebarNavInit();
   searchToggle();
