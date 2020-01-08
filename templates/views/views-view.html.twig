@@ -30,29 +30,35 @@
  * @see template_preprocess_views_view()
  */
 #}
+{%
+  set classes = [
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{attributes.addClass(classes)}}>
+    {{ title_prefix }}
+    {{ title }}
+    {{ title_suffix }}
 
-{{ title_prefix }}
-{{ title }}
-{{ title_suffix }}
+    {% if header %}
+        <header>
+            {{ header }}
+        </header>
+    {% endif %}
 
-{% if header %}
-    <header>
-    {{ header }}
-    </header>
-{% endif %}
+    {{ exposed }}
+    {{ attachment_before }}
 
-{{ exposed }}
-{{ attachment_before }}
+    {{ rows }}
+    {{ empty }}
+    {{ pager }}
 
-{{ rows }}
-{{ empty }}
-{{ pager }}
+    {{ attachment_after }}
+    {{ more }}
 
-{{ attachment_after }}
-{{ more }}
-
-{% if footer %}
-    <footer>
-    {{ footer }}
-    </footer>
-{% endif %}
+    {% if footer %}
+        <footer>
+            {{ footer }}
+        </footer>
+    {% endif %}
+</div>
