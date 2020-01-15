@@ -1,0 +1,11 @@
+.photoshelter-grid {
+    img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 460px) {
+    .photoshelter-img {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+}
