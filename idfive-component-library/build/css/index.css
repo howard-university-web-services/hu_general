@@ -3586,7 +3586,7 @@ label, .mobile-nav .silc-nav__link, .main-footer ul li, .main-nav .silc-nav__ite
 .webform-button--submit,
 .button .button--primary, .js-form-submit, .form-submit,
 .webform-button--reset, .js-webform-novalidate, .news-and-events__date, table.tablesaw-stack td .tablesaw-cell-label,
-table.tablesaw-stack th .tablesaw-cell-label, .alumni-profile h3 {
+table.tablesaw-stack th .tablesaw-cell-label, .alumni-profile h3, .resources-feed .views-field-title a {
   font-weight: 800;
   font-style: normal;
   font-family: "Open Sans", sans-serif; }
@@ -7009,6 +7009,14 @@ a.news-and-events__block {
     opacity: 0; }
 
 /* cell number */
+.photoshelter-grid img {
+  max-width: 100%; }
+
+@media (max-width: 460px) {
+  .photoshelter-img {
+    max-width: 100% !important;
+    max-height: 100% !important; } }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -8963,3 +8971,65 @@ a.tablesaw-btn {
       .section--program .silc-grid--faculty .faculty-profile h5,
       .section--program .silc-grid--faculty .faculty-profile .faculty-profile__link {
         text-align: left !important; } }
+
+.resources-feed .views-exposed-form {
+  margin-bottom: 2.5rem; }
+  @media (min-width: 800px) {
+    .resources-feed .views-exposed-form {
+      align-items: flex-end;
+      display: flex;
+      margin-left: -1.25rem; } }
+
+@media (min-width: 800px) {
+  .resources-feed .form-item,
+  .resources-feed .form-actions {
+    padding-left: 1.25rem; } }
+
+.resources-feed .form-item {
+  margin-bottom: 1.25rem; }
+  @media (min-width: 800px) {
+    .resources-feed .form-item {
+      flex: 1 1 0px;
+      margin-bottom: 0; } }
+
+@media (min-width: 800px) {
+  .resources-feed .form-actions {
+    flex: 0 1 auto; } }
+
+.resources-feed .form-submit {
+  margin: 0;
+  height: 3.25rem; }
+
+.resources-feed .views-field-title a {
+  color: #002A47;
+  display: inline-block;
+  font-size: 1.125rem;
+  letter-spacing: 0;
+  line-height: 1.33333;
+  margin-bottom: 0.875rem; }
+  @media (min-width: 800px) {
+    .resources-feed .views-field-title a {
+      font-size: 1.375rem; } }
+
+.resources-feed .views-field-field-hc-resource-category:before {
+  content: "Topic: ";
+  font-weight: 700; }
+
+.resources-feed tr,
+.resources-feed td.views-field {
+  background-color: #fff !important;
+  display: block;
+  width: 100%; }
+
+.resources-feed tr {
+  border-left: 0.3125rem solid #E51937;
+  margin-bottom: 2.5rem;
+  padding: 1.5625rem; }
+  @media (min-width: 800px) {
+    .resources-feed tr {
+      border-left: 0.625rem solid #E51937; } }
+
+.resources-feed td.views-field {
+  border: none;
+  padding: 0;
+  text-align: left; }

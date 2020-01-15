@@ -58,7 +58,7 @@
     "url": "https://github.com/nickrigby/silc"
   },
   "dependencies": {
-    "@frctl/fractal": "^1.2.0",
+    "@frctl/fractal": "^1.2.1",
     "flickity": "^2.2.1",
     "focus-within": "^2.0.0",
     "launchy-modal-window": "^0.9.2",
