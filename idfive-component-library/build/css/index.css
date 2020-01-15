@@ -7009,6 +7009,14 @@ a.news-and-events__block {
     opacity: 0; }
 
 /* cell number */
+.photoshelter-grid img {
+  max-width: 100%; }
+
+@media (max-width: 460px) {
+  .photoshelter-img {
+    max-width: 100% !important;
+    max-height: 100% !important; } }
+
 table {
   width: 100%;
   border-collapse: collapse;
