@@ -1,0 +1,71 @@
+.resources-feed {
+  .views-exposed-form {
+    margin-bottom: rem(40);
+    @include media("medium") {
+      align-items: flex-end;
+      display: flex;
+      margin-left: rem(-20);
+    }
+  }
+  .form-item,
+  .form-actions {
+    @include media("medium") {
+      padding-left: rem(20);
+    }
+  }
+  .form-item {
+    margin-bottom: rem(20);
+    @include media("medium") {
+      flex: 1 1 0px;
+      margin-bottom: 0;
+    }
+  }
+  .form-actions {
+    @include media("medium") {
+      flex: 0 1 auto;
+    }
+  }
+  .form-submit {
+    margin: 0;
+    height: rem(52);
+  }
+  .views-field-title {
+    a {
+      @extend %sans-extra-bold;
+      color: $mblue;
+      display: inline-block;
+      font-size: rem(18);
+      letter-spacing: 0;
+      line-height: (24 / 18);
+      margin-bottom: rem(14);
+      @include media("medium") {
+        font-size: rem(22);
+      }
+    }
+  }
+  .views-field-field-hc-resource-category {
+    &:before {
+      content: "Topic: ";
+      font-weight: 700;
+    }
+  }
+  tr,
+  td.views-field {
+    background-color: #fff !important;
+    display: block;
+    width: 100%;
+  }
+  tr {
+    border-left: rem(5) solid $red;
+    margin-bottom: rem(40);
+    padding: rem(25);
+    @include media("medium") {
+      border-left: rem(10) solid $red;
+    }
+  }
+  td.views-field {
+    border: none;
+    padding: 0;
+    text-align: left;
+  }
+}
