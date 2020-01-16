@@ -1,10 +1,6 @@
 @include media('table') {
     /**Stylesheet***/
         .hp_graph_bundle {
-            display: block;
-            width: 97%;
-            padding: 100px 0px;
-            margin: auto;
             .col {
                 display:block;
                 width: 100% !important;
@@ -27,7 +23,7 @@
                     color:$white;
                     z-index: 4;
                 }
-    
+
             }
             .hp_graph_skills {
                 text-align: right;
@@ -72,9 +68,9 @@
             .float_left {
                 float: left !important;
             }
-            .featurettes_image {
+            .graph {
                 display: block !important;
-                width: 100% !important;		
+                width: 100% !important;
                 .background-image {
                     width: 100%;
                     background-size: cover;
@@ -84,7 +80,7 @@
                     height: 100%;
                 }
             }
-            .featurettes_text {
+            .text {
                 width: 40%;
             }
             .icon {
@@ -95,30 +91,30 @@
             }
         }
     }
-    
-    
+
+
         .hp_graph_bundle {
             padding-bottom: 0;
-        
-            .featurette {
+
+            .text_wrapper {
                 width: 100%;
                 position: relative;
                 transform: none;
                 top: initial;
                 left: initial;
             }
-            .featurettes_image {
+            .graph {
                 width: 100%;
                 position: relative;
                 display: flex;
                 margin-bottom: 2em;
                 text-align: center;
             }
-            .featurettes_image *{
+            .graph *{
                 flex-grow:1;
                 box-sizing:border-box;
             }
-    
+
             .hp_graph_container {
                 background-color:#ccc;
                 position: relative;
@@ -154,8 +150,5 @@
                     color:$white;
                 }
             }
-    
+
         }
-    
-    
-        
