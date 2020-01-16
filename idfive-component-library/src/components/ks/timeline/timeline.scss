@@ -1,0 +1,68 @@
+.timeline {
+    background:$white;
+    padding: 100px 50px;
+    position: relative;
+    margin:auto;
+    box-shadow: 0.5rem 0.5rem 2rem 0 rgba($black, 0.2);
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left:calc(33% + 15px);
+      bottom: 0px;
+      width: 4px;
+      background:$gray2;
+    }
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  .entry {
+    clear: both;
+    text-align: left;
+    position: relative;
+    .title {
+      margin-bottom: .5em;
+      float: left;
+      width: 33%;
+      padding-right:30px;
+      text-align: right;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border: 4px solid $red;
+        background-color:$white;
+        border-radius:100%;
+        top: 15%;
+        right: -8px;
+        z-index: 99;
+      }
+      h3 {
+        margin: 0;
+        font-size: 120%;
+      }
+      p {
+        margin: 0;
+        font-size: 100%;
+      }
+    }
+    .body {
+      margin: 0 0 3em;
+      float: right;
+      width: 66%;
+      padding-left:30px;
+      p {
+        line-height: 1.4em;
+        &:first-child {
+          margin-top: 0;
+          font-weight: 400;
+        }
+      }
+    }
+  }
