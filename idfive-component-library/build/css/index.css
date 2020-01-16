@@ -6745,10 +6745,13 @@ a.fancy-link:hover {
     color: #2F2F2F; }
   .news-and-events__block {
     height: 100%;
-    display: flex;
+    display: block;
     background: #FFF;
     border-radius: 0.25rem;
     text-decoration: none; }
+    @media (min-width: 500px) {
+      .news-and-events__block {
+        display: flex; } }
     @media (min-width: 800px) {
       .news-and-events__block {
         display: block; } }

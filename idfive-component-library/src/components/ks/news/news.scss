@@ -92,11 +92,13 @@
 
   &__block {
     height: 100%;
-    display: flex;
+    display: block;
     background: $white;
     border-radius: rem(4);
     text-decoration: none;
-
+    @include media('small') {
+      display: flex;
+    }
     @include media('medium') {
       display: block;
     }
