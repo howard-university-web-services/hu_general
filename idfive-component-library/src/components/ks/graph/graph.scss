@@ -93,62 +93,59 @@
     }
 
 
-        .hp_graph_bundle {
-            padding-bottom: 0;
-
-            .text_wrapper {
-                width: 100%;
-                position: relative;
-                transform: none;
-                top: initial;
-                left: initial;
-            }
-            .graph {
-                width: 100%;
-                position: relative;
-                display: flex;
-                margin-bottom: 2em;
-                text-align: center;
-            }
-            .graph *{
-                flex-grow:1;
-                box-sizing:border-box;
-            }
-
-            .hp_graph_container {
-                background-color:#ccc;
-                position: relative;
-                margin-bottom: 10px;
-                height: 300px;
-                margin:0 auto;
-                max-width: 150px;
-                width:95%;
-                .label {
-                    position: absolute;
-                    width: 100%;
-                    left: 0;
-                    bottom: -25px;
-                }
-                .percent-label{
-                    display: none;
-                }
-            }
-            .hp_graph_percent {
-                z-index: 3;
-                background: $navy;
-                float: none;
-                position: absolute;
-                bottom: 0;
-                padding: 50%;
-                .percent{
-                    position: absolute;
-                    left: 50% !important;
-                    top: 50% !important;
-                    -webkit-transform: translate(-50%, -50%) !important;
-                    transform: translate(-50%, -50%) !important;
-                    margin: 0 !important;
-                    color:$white;
-                }
-            }
-
+    .hp_graph_bundle {
+        padding-bottom: 0;
+        .text_wrapper {
+            width: 100%;
+            position: relative;
+            transform: none;
+            top: initial;
+            left: initial;
         }
+        .graph {
+            width: 100%;
+            position: relative;
+            display: flex;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        .graph *{
+            flex-grow:1;
+            box-sizing:border-box;
+        }
+        .hp_graph_container {
+            background-color:#ccc;
+            position: relative;
+            margin-bottom: 10px;
+            height: 300px;
+            margin:0 auto;
+            max-width: 150px;
+            width:95%;
+            .label {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: -25px;
+            }
+            .percent-label{
+                display: none;
+            }
+        }
+        .hp_graph_percent {
+            z-index: 3;
+            background: $navy;
+            float: none;
+            position: absolute;
+            bottom: 0;
+            padding: 50%;
+            .percent{
+                position: absolute;
+                left: 50% !important;
+                top: 50% !important;
+                -webkit-transform: translate(-50%, -50%) !important;
+                transform: translate(-50%, -50%) !important;
+                margin: 0 !important;
+                color:$white;
+            }
+        }
+    }
