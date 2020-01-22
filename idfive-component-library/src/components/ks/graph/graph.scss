@@ -1,0 +1,151 @@
+@include media('table') {
+    /**Stylesheet***/
+        .hp_graph_bundle {
+            .col {
+                display:block;
+                width: 100% !important;
+            }
+            .hp_graph_container {
+                width: 100% !important;
+                display: inline-block;
+                height: 80px !important;
+                margin: initial !important;
+                max-width: 100% !important;
+                .label {
+                    display: none;
+                }
+                .percent-label{
+                    display: block !important;
+                    transform: translate(-50%,-50%);
+                        top: 50%;
+                    left: 10%;
+                    position: absolute;
+                    color:$white;
+                    z-index: 4;
+                }
+
+            }
+            .hp_graph_skills {
+                text-align: right;
+                padding: initial;
+                color: $black;
+                position: relative;
+            }
+            .hp_graph_percent {
+                height: 100% !important;
+                padding: 0 !important;
+                .percent {
+                    display: none !important;
+                }
+            }
+            h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.1;
+                position: relative;
+                &:before {
+                    content: '';
+                    width: 60%;
+                    height: 60px;
+                    border-bottom: 5px solid $red;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                }
+            }
+            .lead {
+                font-size: 1.25rem;
+                font-weight: 300;
+                br {
+                    display: none;
+                }
+            }
+            .h-100 {
+                height: 100vh;
+            }
+            .float_right {
+                float: right !important;
+            }
+            .float_left {
+                float: left !important;
+            }
+            .graph {
+                display: block !important;
+                width: 100% !important;
+                .background-image {
+                    width: 100%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-attachment: fixed;
+                    height: 100%;
+                }
+            }
+            .text {
+                width: 40%;
+            }
+            .icon {
+                .svg-inline--fa {
+                    width: 4em;
+                    height: 4em;
+                }
+            }
+        }
+    }
+
+
+    .hp_graph_bundle {
+        padding-bottom: 0;
+        .text_wrapper {
+            width: 100%;
+            position: relative;
+            transform: none;
+            top: initial;
+            left: initial;
+        }
+        .graph {
+            width: 100%;
+            position: relative;
+            display: flex;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        .graph *{
+            flex-grow:1;
+            box-sizing:border-box;
+        }
+        .hp_graph_container {
+            background-color:#ccc;
+            position: relative;
+            margin-bottom: 10px;
+            height: 300px;
+            margin:0 auto;
+            max-width: 150px;
+            width:95%;
+            .label {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: -25px;
+            }
+            .percent-label{
+                display: none;
+            }
+        }
+        .hp_graph_percent {
+            z-index: 3;
+            background: $navy;
+            float: none;
+            position: absolute;
+            bottom: 0;
+            padding: 50%;
+            .percent{
+                position: absolute;
+                left: 50% !important;
+                top: 50% !important;
+                -webkit-transform: translate(-50%, -50%) !important;
+                transform: translate(-50%, -50%) !important;
+                margin: 0 !important;
+                color:$white;
+            }
+        }
+    }
