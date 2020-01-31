@@ -7230,13 +7230,14 @@ image field when viewed on devices with a screen size of 767px and below
       display: none; }
     .hp_graph_bundle .hp_graph_container .percent-label {
       display: block !important;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
+      -webkit-transform: translate(0%, -50%);
+              transform: translate(0%, -50%);
       top: 50%;
-      left: 10%;
+      left: 0%;
       position: absolute;
       color: #FFF;
-      z-index: 4; }
+      z-index: 4;
+      padding-left: 1rem; }
   .hp_graph_bundle .hp_graph_skills {
     text-align: right;
     padding: initial;
@@ -7304,6 +7305,8 @@ image field when viewed on devices with a screen size of 767px and below
   .hp_graph_bundle .graph * {
     flex-grow: 1;
     box-sizing: border-box; }
+  .hp_graph_bundle .hyperlink .btn {
+    margin-top: 0; }
   .hp_graph_bundle .hp_graph_container {
     background-color: #ccc;
     position: relative;
@@ -7316,7 +7319,9 @@ image field when viewed on devices with a screen size of 767px and below
       position: absolute;
       width: 100%;
       left: 0;
-      bottom: -25px; }
+      color: #FFF;
+      word-break: break-all;
+      padding-top: 1rem; }
     .hp_graph_bundle .hp_graph_container .percent-label {
       display: none; }
   .hp_graph_bundle .hp_graph_percent {

@@ -16,12 +16,13 @@
                 }
                 .percent-label{
                     display: block !important;
-                    transform: translate(-50%,-50%);
-                        top: 50%;
-                    left: 10%;
+                    transform: translate(0%,-50%);
+                    top: 50%;
+                    left: 0%;
                     position: absolute;
                     color:$white;
                     z-index: 4;
+                    padding-left: 1rem;
                 }
 
             }
@@ -113,6 +114,11 @@
             flex-grow:1;
             box-sizing:border-box;
         }
+        .hyperlink{
+            .btn{
+                margin-top: 0;
+            }
+        }
         .hp_graph_container {
             background-color:#ccc;
             position: relative;
@@ -125,7 +131,9 @@
                 position: absolute;
                 width: 100%;
                 left: 0;
-                bottom: -25px;
+                color: $white;
+                word-break: break-all;
+                padding-top: 1rem;
             }
             .percent-label{
                 display: none;
