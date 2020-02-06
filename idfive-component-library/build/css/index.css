@@ -7351,6 +7351,64 @@ image field when viewed on devices with a screen size of 767px and below
       margin: 0 !important;
       color: #FFF; }
 
+.timeline {
+  background: #FFF;
+  padding: 100px 50px;
+  position: relative;
+  margin: auto;
+  box-shadow: 0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2); }
+  .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: calc(33% + 15px);
+    bottom: 0px;
+    width: 4px;
+    background: #CDCDCD; }
+  .timeline:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.entry {
+  clear: both;
+  text-align: left;
+  position: relative; }
+  .entry .title {
+    margin-bottom: .5em;
+    float: left;
+    width: 33%;
+    padding-right: 30px;
+    text-align: right;
+    position: relative; }
+    .entry .title:before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border: 4px solid #E51937;
+      background-color: #FFF;
+      border-radius: 100%;
+      top: 15%;
+      right: -8px;
+      z-index: 99; }
+    .entry .title h3 {
+      margin: 0;
+      font-size: 120%; }
+    .entry .title p {
+      margin: 0;
+      font-size: 100%; }
+  .entry .body {
+    margin: 0 0 3em;
+    float: right;
+    width: 66%;
+    padding-left: 30px; }
+    .entry .body p {
+      line-height: 1.4em; }
+      .entry .body p:first-child {
+        margin-top: 0;
+        font-weight: 400; }
+
 .faculty-profile {
   background: white;
   height: 100%;
