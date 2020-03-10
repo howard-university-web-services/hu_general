@@ -1,6 +1,7 @@
 @media print {
-    header, 
-    footer,
+
+    .main-header,
+    .main-footer,
     .messages,
     .hero-image,
     .sidebar-nav,
@@ -25,16 +26,25 @@
 
     .silc-grid {
         display: block;
+
         .silc-grid__col {
             display: block;
             width: 100% !important;
         }
     }
-    
 
-    h1, h2, h3, h4, h5,
-    .h1, .h2, .h3, .h4, .h5,
-    .block-header__icon, 
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .block-header__icon,
     .lead-in,
     .lead-in--small {
         color: #000 !important;
@@ -44,53 +54,141 @@
         background: #fff;
         padding-left: 0px !important;
         padding-right: 0px !important;
-        .h2, h2 {
-            padding-left: 0px !important;
-            padding-right: 0px !important;
+        min-height: auto !important;
+
+        .h2,
+        h2 {
+            padding: 0px !important;
         }
+
         .block-header__title {
             padding-left: 0px;
             padding-right: 0px;
             float: none;
         }
+
         .block-header__icon {
             display: none;
         }
 
+        .block-header__btn {
+            display: none;
+        }
     }
 
     .section--program {
         .silc-grid--faculty {
             padding-left: 10px;
+
             .silc-grid__col {
                 padding: 10px;
                 margin-bottom: 5px !important;
                 border: 1px solid #ccc;
                 height: auto !important;
             }
-    
-            .faculty-profile {
-                height: auto !important;
-                padding-bottom: 0px;
-                .faculty-profile__img,
-                .faculty-profile__btn,
-                .fancy-link,
-                .faculty-profile__divider,
-                .icon-envelope {
-                    display: none !important;
-                }
-                .faculty-profile__block {
-                    padding: 0px !important;
-                }
-                h3,
-                h4,
-                h5,
-                .faculty-profile__link {
-                    text-align: left !important;
-                }
-            }
         }
     }
-    
-    
+
+    .faculty-profile {
+        height: auto !important;
+        padding-bottom: 0px;
+
+        .faculty-profile__img,
+        .faculty-profile__btn,
+        .fancy-link,
+        .faculty-profile__divider,
+        .icon-envelope {
+            display: none !important;
+        }
+
+        .faculty-profile__block {
+            padding: 0px !important;
+        }
+
+        h3,
+        h4,
+        h5,
+        .faculty-profile__link {
+            text-align: left !important;
+        }
+    }
+
+    .news-and-events__date {
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+
+    .news-and-events__img {
+        display: none !important;
+    }
+
+    .news-and-events__title {
+        text-shadow: none !important;
+    }
+
+    .news-and-events__desc {
+        position: static !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        .btn {
+            display: none !important;
+        }
+    }
+
+    .news-and-events__btn {
+        display: none !important;
+    }
+
+    .silc-accordion__header,
+    .silc-accordion__content {
+        display: block !important;
+    }
+
+    .silc-accordion__label {
+        border: none !important;
+        margin-bottom: rem(8);
+        padding: 0 !important;
+
+        &:before {
+            display: none !important;
+        }
+    }
+
+    .silc-accordion__content {
+        padding: 0 !important;
+    }
+
+    .silc-accordion__section {
+        padding: 0 !important;
+    }
+
+    iframe[src*="soundcloud.com"] {
+        display: none !important;
+    }
+
+    .slideshow__img {
+        display: none !important;
+    }
+
+    .flickity-viewport {
+        height: auto !important;
+    }
+
+    .flickity-button {
+        display: none !important;
+    }
+
+    .slideshow__single {
+        position: static !important;
+        opacity: 1;
+    }
+
+    .video__wrap {
+        display: none !important;
+    }
+
+    .audio-file {
+        display: none !important;
+    }
 }
