@@ -45,8 +45,26 @@
               </div>
           </section>
         {% endif %}
+        {% if content.content.field_hc_resources_related|render %}
+	        <section class="section--padded-top section--padded-bottom" aria-label="Related Resources">
+		        <div class="documents">
+			        <div class="block-header">
+				        <div class="block-header__title">
+                  <span class="block-header__icon icon-info"></span>
+                    <h2>Related Resources</h2>
+				        </div>
+			        </div>
+              {% for key, item in content.field_hc_resources_related if key|first != '#' %}
+                <a href="{{ item['#url'] }}" class="fancy-link" target="_blank">
+                <span>{{ item['#title'] }}</span>
+                <span class="icon-arrow-right"></span></a>
+              {% endfor %}
+		        </div>
+	        </section>
+        {% endif %}
         <!-- Render without, so quickedit/etc works -->
-        {{ content|without('field_hc_resource_sidebar_title', 'field_hc_resource_contact_name', 'field_hc_resource_contact_email', 'field_hc_resource_contact_addres', 'body', 'field_hc_resource_category', 'field_hc_header_image', 'field_hc_resource_cta_link', 'field_hc_resource_documents', 'field_hc_lead_in') }}
+{{ content|without('field_hc_resources_related','field_hc_resource_sidebar_title', 'field_hc_resource_contact_name', 'field_hc_resource_contact_email', 'field_hc_resource_contact_addres', 'body', 'field_hc_resource_category', 'field_hc_header_image', 'field_hc_resource_cta_link', 'field_hc_resource_documents', 'field_hc_lead_in') }}
+
       </div>
       <!-- Sidebar -->
       <div class="silc-grid__col silc-grid__col--3-large">
