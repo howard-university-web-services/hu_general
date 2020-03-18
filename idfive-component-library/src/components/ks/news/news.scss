@@ -20,24 +20,16 @@
       
   }
   &__img_portrait {
-
-    @media screen and (max-width: 449px) {
+    @include media('small') {
       width: 90px;
       height: 120px;
       margin: 15px 0 15px 15px;
-    }
-
-    @media screen and (max-width: 499px) and (min-width: 450px) {
-      width: 28%;
-      padding-bottom: 36%;
-    }
-
-    @include media('small') {
       width: 140px;
       min-height: 13em;
     }
 
     @include media('medium') {
+      margin: 0;
       width: 100%;
       display: block;
       padding-bottom: 125%;
@@ -92,15 +84,19 @@
 
   &__block {
     height: 100%;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     background: $white;
     border-radius: rem(4);
     text-decoration: none;
-    @include media('small') {
-      display: flex;
-    }
     @include media('medium') {
       display: block;
+    }
+    &--portrait-img {
+      display: flex;
+      @include media('medium') {
+        display: block;
+      }
     }
   }
 
