@@ -1,18 +1,19 @@
 .hero-image {
-  height: rem(166);
+  @extend %image-bck;
   width: 100%;
   position: relative;
-  @extend %image-bck;
-
-  @include media ('medium') {
-    height: rem(336)
+  overflow: hidden;
+  max-height: rem(480); // Height at 1920px wide
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 25%;
   }
 
   &--large {
-    height: rem(272);
-
-    @include media ('medium') {
-      height: rem(442)
+    max-height: rem(576); // Height at 1920px
+    &:before {
+      padding-top: 30%;
     }
   }
 }
@@ -22,8 +23,12 @@
   .hero-image {
     height: auto;
     width: 100%; 
-    padding-top: 56.25%;
     max-height: calc(100vh - 115px);
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+    }
   }
   #hcsh-hero-video {
     max-height: calc(100vh - 115px);
