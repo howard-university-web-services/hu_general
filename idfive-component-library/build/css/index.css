@@ -6444,25 +6444,29 @@ a.fancy-link:hover {
         padding-top: 3.75rem; } }
 
 .hero-image {
-  height: 10.375rem;
   width: 100%;
-  position: relative; }
-  @media (min-width: 800px) {
-    .hero-image {
-      height: 21rem; } }
+  position: relative;
+  overflow: hidden;
+  max-height: 30rem; }
+  .hero-image:before {
+    content: "";
+    display: block;
+    padding-top: 25%; }
   .hero-image--large {
-    height: 17rem; }
-    @media (min-width: 800px) {
-      .hero-image--large {
-        height: 27.625rem; } }
+    max-height: 36rem; }
+    .hero-image--large:before {
+      padding-top: 30%; }
 
 .hero-image-home, .hero-video {
   position: relative; }
   .hero-image-home .hero-image, .hero-video .hero-image {
     height: auto;
     width: 100%;
-    padding-top: 56.25%;
     max-height: calc(100vh - 115px); }
+    .hero-image-home .hero-image:before, .hero-video .hero-image:before {
+      content: "";
+      display: block;
+      padding-top: 56.25%; }
   .hero-image-home #hcsh-hero-video, .hero-video #hcsh-hero-video {
     max-height: calc(100vh - 115px); }
     .hero-image-home #hcsh-hero-video > div, .hero-video #hcsh-hero-video > div {
@@ -6694,21 +6698,16 @@ a.fancy-link:hover {
       .news-and-events__img {
         width: 100%;
         display: block; } }
-  @media screen and (max-width: 449px) {
+  @media (min-width: 500px) {
     .news-and-events__img_portrait {
       width: 90px;
       height: 120px;
-      margin: 15px 0 15px 15px; } }
-  @media screen and (max-width: 499px) and (min-width: 450px) {
-    .news-and-events__img_portrait {
-      width: 28%;
-      padding-bottom: 36%; } }
-  @media (min-width: 500px) {
-    .news-and-events__img_portrait {
+      margin: 15px 0 15px 15px;
       width: 140px;
       min-height: 13em; } }
   @media (min-width: 800px) {
     .news-and-events__img_portrait {
+      margin: 0;
       width: 100%;
       display: block;
       padding-bottom: 125%; } }
@@ -6745,16 +6744,19 @@ a.fancy-link:hover {
     color: #2F2F2F; }
   .news-and-events__block {
     height: 100%;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     background: #FFF;
     border-radius: 0.25rem;
     text-decoration: none; }
-    @media (min-width: 500px) {
-      .news-and-events__block {
-        display: flex; } }
     @media (min-width: 800px) {
       .news-and-events__block {
         display: block; } }
+    .news-and-events__block--portrait-img {
+      display: flex; }
+      @media (min-width: 800px) {
+        .news-and-events__block--portrait-img {
+          display: block; } }
   .news-and-events__date {
     display: block;
     font-size: 0.75rem;
