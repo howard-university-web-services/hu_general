@@ -6,7 +6,12 @@
 #}
 
 <!-- Internal Page Hero -->
-{% include directory ~ '/templates/_includes/global/content_header.html.twig' %}
+{% if show_hero_image %}
+	{% include directory ~ '/templates/_includes/global/content_header.html.twig' %}
+{% else %}
+	{% include directory ~ '/templates/_includes/global/content_header_no_image.html.twig' %}
+{% endif %}
+
 
 <!-- Content -->
 <section class="section--padded-top">
@@ -45,7 +50,7 @@
               </div>
           </section>
         {% endif %}
-      {% if content.field_hc_resources_related|render %}
+        {% if content.field_hc_resources_related|render %}
 	        <section class="section--padded-top section--padded-bottom" aria-label="Related Resources">
 		        <div class="documents">
 			        <div class="block-header">
@@ -63,7 +68,8 @@
 	        </section>
         {% endif %}
         <!-- Render without, so quickedit/etc works -->
-{{ content|without('field_hc_resources_related','field_hc_resource_sidebar_title', 'field_hc_resource_contact_name', 'field_hc_resource_contact_email', 'field_hc_resource_contact_addres', 'body', 'field_hc_resource_category', 'field_hc_header_image', 'field_hc_resource_cta_link', 'field_hc_resource_documents', 'field_hc_lead_in') }}
+{{ content|without('field_hc_resources_related','field_hc_resource_sidebar_title', 'field_hc_resource_contact_name', 'field_hc_hide_header_image','field_hc_resource_contact_email', 'field_hc_resource_contact_addres', 'body', 'field_hc_resource_category', 'field_hc_header_image', 'field_hc_resource_cta_link', 'field_hc_resource_documents', 'field_hc_lead_in') }}
+
 
       </div>
       <!-- Sidebar -->
