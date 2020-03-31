@@ -1,0 +1,35 @@
+ul.js-pager__items {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    .pager__item {
+        display: inline-block;
+        font-weight: 700;
+    }
+
+    li[class="pager__item"] {
+        display: none;
+        @include media("medium") {
+            display: inline-block;
+        }
+    }
+}
+
+.pager__item--previous,
+.pager__item.is-active:last-child {
+    margin-right: auto;
+}
+
+.pager__item--next,
+.pager__item.is-active:first-child {
+    margin-left: auto;
+}
+
+.pager__item.is-active:last-child {
+    padding-right: rem(150); // Accomodate for shift when first and previous buttons aren't displayed
+}
+
+.pager__item.is-active:first-child {
+    padding-left: rem(120); // Accomodate for shift when last and next buttons aren't displayed
+}

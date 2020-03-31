@@ -9093,6 +9093,34 @@ a.tablesaw-btn {
     .modal-playlist__nav-button.next {
       right: 15%; } }
 
+ul.js-pager__items {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none; }
+  ul.js-pager__items .pager__item {
+    display: inline-block;
+    font-weight: 700; }
+  ul.js-pager__items li[class="pager__item"] {
+    display: none; }
+    @media (min-width: 800px) {
+      ul.js-pager__items li[class="pager__item"] {
+        display: inline-block; } }
+
+.pager__item--previous,
+.pager__item.is-active:last-child {
+  margin-right: auto; }
+
+.pager__item--next,
+.pager__item.is-active:first-child {
+  margin-left: auto; }
+
+.pager__item.is-active:last-child {
+  padding-right: 9.375rem; }
+
+.pager__item.is-active:first-child {
+  padding-left: 7.5rem; }
+
 @media print {
   .main-header,
   .main-footer,

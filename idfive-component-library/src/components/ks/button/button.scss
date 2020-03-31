@@ -79,10 +79,8 @@
 .button .button--primary, .js-form-submit, .form-submit,
 .webform-button--reset, .js-webform-novalidate {
   transition: background .3s ease-in-out;
-&:hover{
-  background: $lightblue;
-  color: $white;
-
-}
-
+  &:hover{
+    background: $lightblue;
+    color: $white;
+  }
 }
