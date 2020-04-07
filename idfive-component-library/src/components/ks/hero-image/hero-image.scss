@@ -20,6 +20,7 @@
 
 
 .hero-image-home, .hero-video {
+  position: relative;
   .hero-image {
     height: auto;
     width: 100%; 
@@ -45,7 +46,6 @@
       }
     }
   }
-  position: relative;
   .blue-overlay--video-image {
     z-index: 100;
     position: absolute;
@@ -56,6 +56,7 @@
     background-color: rgba(0, 58, 99, .35);
   }
   .compartment {
+    width: 100%;
     z-index: 101;
     @include media ('medium') {
       position: absolute;
