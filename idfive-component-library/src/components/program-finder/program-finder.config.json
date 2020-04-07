@@ -1,0 +1,99 @@
+{
+  "context": {
+    "title": "Programs",
+    "text": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam a architecto in, unde, ipsa voluptate commodi nostrum at asperiores ex culpa fugiat hic quasi, expedita ducimus quam quos aliquid accusamus?</p>",
+    "subtitle": "Undergraduate and Graduate Programs",
+    "programs": [
+      {
+        "name": "Chemical Engineering",
+        "url": "https://idfive.com",
+        "degrees": [
+          "M.S."
+        ]
+      },
+      {
+        "name": "Chemical Engineering",
+        "url": "https://idfive.com",
+        "degrees": [
+          "B.S."
+        ]
+      },
+      {
+        "name": "Civil Engineering",
+        "url": "https://idfive.com",
+        "degrees": [
+          "M.Eng.",
+          "Ph.D."
+        ]
+      },
+      {
+        "name": "Civil Engineering",
+        "url": "https://idfive.com",
+        "degrees": [
+          "B.S."
+        ]
+      },
+      {
+        "name": "Computer Engineering",
+        "url": "https://idfive.com",
+        "degrees": [
+          "B.S."
+        ]
+      },
+      {
+        "name": "Computer Science",
+        "url": "https://idfive.com",
+        "degrees": [
+          "M.S.",
+          "Ph.D."
+        ]
+      },
+      {
+        "name": "Cyber Security",
+        "url": "https://idfive.com",
+        "degrees": [
+          "Certificate"
+        ]
+      },
+      {
+        "name": "Electrical Engineering",
+        "url": "https://idfive.com",
+        "degrees": [
+          "M.Eng.",
+          "Ph.D."
+        ]
+      },
+      {
+        "name": "Electrical Engineering",
+        "url": "https://idfive.com",
+        "degrees": [
+          "B.S."
+        ]
+      },
+      {
+        "name": "Mechanical Engineering",
+        "url": "https://idfive.com",
+        "degrees": [
+          "M.Eng.",
+          "Ph.D."
+        ]
+      },
+      {
+        "name": "Mechanical Engineering",
+        "url": "https://idfive.com",
+        "degrees": [
+          "B.S."
+        ]
+      },
+      {
+        "name": "Systems and Computer Science",
+        "url": "https://idfive.com",
+        "degrees": [
+          "Certificate",
+          "M.S.",
+          "Ph.D."
+        ]
+      }
+    ]
+  }
+}

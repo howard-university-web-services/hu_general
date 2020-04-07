@@ -6,7 +6,7 @@
   cursor: pointer;
   width: auto!important;
   border-radius: rem(4);
-  margin: rem(20) rem(10) rem(15) 0;
+  margin: 0 rem(10) rem(15) 0;
   display: inline-flex;
   font-size: rem(13);
   line-height: rem(16);
@@ -69,6 +69,14 @@
       transition: background .3s ease-in-out, transform .2s ease-in-out, opacity .1s ease-in;
     }
   }
+}
+
+.webform-button--submit,
+.js-form-submit,
+.form-submit,
+.webform-button--reset,
+.js-webform-novalidate {
+  margin-top: rem(20);
 }
 
 .webform-button--reset, .js-webform-novalidate {

@@ -1,18 +1,10 @@
 .promotional-space {
+    @extend %callout;
     border-top: $red solid rem(5);
-    background: $white;
-    padding: rem(30);
-    @include media('medium'){
+    @include media('medium') {
         border-top: $red solid rem(10);
     }
-    h2{
-        font-size: rem(26);
-        line-height: 1.2;
-
-        @include media('medium'){
-            font-size: rem(36);
-            line-height: 1.36;
-        }
-
+    h2 {
+        @extend %callout-title;
     }
 }

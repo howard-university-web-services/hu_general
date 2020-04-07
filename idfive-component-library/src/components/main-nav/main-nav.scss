@@ -170,22 +170,6 @@
     align-items: center;
     height: 100% !important;
 
-    > ul {
-      > li {
-        &:hover,
-        &:focus,
-        &:focus-within {
-          > a,
-          > .nav__lists__container > a {
-            @include media("large") {
-              background: $yellow;
-              color:#1b1b1b;
-            }
-          }
-        }
-      }
-    }
-
     ul {
       list-style-type: none;
 
@@ -349,6 +333,21 @@
           ul {
             @include media("large") {
               display: none !important;
+            }
+          }
+        }
+      }
+    }
+    > ul {
+      > li {
+        &:hover,
+        &:focus,
+        &:focus-within {
+          > a,
+          > .nav__lists__container > a {
+            @include media("large") {
+              background: $yellow;
+              color: $darkgray;
             }
           }
         }

@@ -101,21 +101,26 @@ $body-padding-small:rem(20);
     @extend %sans-regular;
 }
 
-%body-text--list {
-    list-style-type: none;
-    li {
-        padding-left: rem(18);
-        position: relative;
-        @include media('medium') {
-            padding-left: rem(25)
-        }
-        &:before {
-            content: "•";
-            font-size: 1.4em;
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
+%callout {
+    background: $white;
+    padding: rem(30);
+}
+
+%callout-title {
+    font-size: rem(26);
+    line-height: 1.2;
+    @include media('medium') {
+        font-size: rem(36);
+        line-height: 1.36;
+    }
+}
+
+%divider {
+    border-top: rem(2) solid #d4d4d4;
+    height: 0;
+    width: 100%;
+    margin: rem(20) 0;
+    @include media('medium') {
+        margin: rem(32) 0;
     }
 }

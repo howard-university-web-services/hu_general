@@ -52,7 +52,14 @@
   }
 
   &__section {
-    margin: rem(20) 0
+    margin: rem(20) 0;
+    padding-bottom: 0 !important;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__content {
@@ -68,10 +75,6 @@
       font-size: rem(16);
       line-height: rem(23);
       padding: rem(30);
-    }
-
-    ul {
-      @extend %body-text--list;
     }
   }
 

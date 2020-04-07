@@ -25,6 +25,7 @@ import { JumpTo } from "../js/smooth-scroll";
 import focusWithin from 'focus-within';
 import MicroModal from 'micromodal';
 import Player from '@vimeo/player';
+import initProgramFinder from "../components/program-finder/program-finder";
 
 focusWithin(document);
 JumpTo();
@@ -38,6 +39,7 @@ silcNavInit();
 silcOffcanvasInit();
 insertHomepageHeroVimeoEmbed();
 Tablesaw.init();
+initProgramFinder();
 
 function insertHomepageHeroVimeoEmbed() {
   const hero_vid = document.querySelector(".hero-video");

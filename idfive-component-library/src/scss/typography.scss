@@ -49,9 +49,9 @@ h3, .h3, %h3 {
   @include media('medium') {
     font-size: rem(24);
   }
-  .text-content &,
-  .silc-accordion__content &,
-  .cke_editable_themed & {
+  .text-content &:not(.sidebar-title),
+  .silc-accordion__content &:not(.sidebar-title),
+  .cke_editable_themed &:not(.sidebar-title) {
     font-weight: 700;
   }
 }

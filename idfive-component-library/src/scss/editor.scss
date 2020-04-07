@@ -1,0 +1,12 @@
+@import "~silc-core/src/scss/index";
+@import "~silc-utilities/src/scss/index";
+@import "variables";
+@import "fonts";
+@import "base";
+@import "typography";
+
+body {
+    background-color: #fff;
+    margin: rem(16);
+    max-width: rem(990);
+}

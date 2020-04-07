@@ -6,7 +6,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const babelLoaderExcludeNodeModulesExcept = require('babel-loader-exclude-node-modules-except');
 
 const extractSass = new ExtractTextPlugin({
-    filename: "css/index.css"
+    filename: "css/[name].css"
 });
 
 const copyImages = new CopyWebpackPlugin([{
@@ -15,9 +15,12 @@ const copyImages = new CopyWebpackPlugin([{
 }]);
 
 const config = {
-    entry: "./src/js/index.ts",
+    entry: {
+        index: [ "./src/js/index.ts" ],
+        editor: [ "./src/js/editor.ts" ],
+    },
     output: {
-        filename: "js/index.js",
+        filename: "js/[name].js",
         path: path.resolve(__dirname, 'build')
     },
     resolve: {

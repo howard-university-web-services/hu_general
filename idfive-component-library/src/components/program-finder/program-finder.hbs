@@ -1,0 +1,31 @@
+<div class="program-finder">
+  <h2 class="program-finder__heading header--h2">{{title}}</h2>
+  {{#if text}}
+      {{{ text }}}
+  {{/if}}
+  {{#if subtitle}}
+      <h3 class="program-finder__nav-heading">Undergraduate and Graduate Programs</h3>
+  {{/if}}
+  <div class="program-finder-app">
+    <program-finder env="prod" degree="441" school="66" subject="" />
+  </div>
+  <noscript>
+    <div class="program-finder__nav">
+      <ul class="program-finder__nav-results">
+        {{#each programs}}
+          <li class="program-finder__nav-result">
+            <a href="{{url}}" class="program-finder__nav-course">
+              <span class="program-finder__nav-course-title">{{name}}</span>
+              <span class="program-finder__nav-course-degrees">
+                {{#each degrees}}
+                <span>{{this}}</span>
+                {{/each}}
+              </span>
+              <svg class="program-finder__nav-result-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.3 12.8"><path d="M.9 12.8c.1 0 .2 0 .3-.1s.2-.1.3-.2L7 7c.2-.2.3-.4.3-.6s-.1-.5-.3-.7L1.5.2C1.3 0 1.1-.1.9-.1S.4 0 .3.2C.1.4 0 .6 0 .9s.1.5.3.6l4.9 4.9-4.9 4.9c-.2.2-.3.4-.3.7s.1.5.3.6c.1.1.2.2.3.2h.3z" /></svg>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </noscript>
+</div>

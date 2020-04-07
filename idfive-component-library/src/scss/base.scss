@@ -384,8 +384,10 @@ strong {
   }
 
   .compartment {
+    flex: 1 1 0px;
     z-index: 2;
     position: relative;
+    width: 100%;
   }
 
   h2 {
