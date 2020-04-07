@@ -148,9 +148,10 @@ h5 {
   }
 }
 
-ul {
+ul, ol {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .skip-link {
@@ -355,10 +356,6 @@ strong {
     line-height: rem(16);
     margin-bottom: rem(15);
     color: $mediumgray;
-  }
-
-  &--list {
-    @extend %body-text--list;
   }
 }
 
@@ -626,8 +623,8 @@ strong {
   @extend %image-bck;
 }
 
-.fieldgroup {
-
+.fieldgroup,
+.js-webform-type-fieldset {
   position: relative;
   margin: rem(25) 0;
   padding: 0 0 rem(15) 0;
@@ -677,6 +674,15 @@ span.fieldset-legend {
     background: $reset;
     position: absolute;
     width: 100%;
+  }
+
+  .checkboxes--wrapper &,
+  .radios--wrapper & {
+    @extend %h3;
+    text-transform: none;
+    &:before {
+      display: none;
+    }
   }
 }
 
@@ -897,4 +903,3 @@ iframe {
     margin: 0 !important;
   }
 }
-
