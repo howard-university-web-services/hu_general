@@ -6936,6 +6936,7 @@ a.fancy-link:hover {
     right: 0;
     background-color: rgba(0, 58, 99, 0.35); }
   .hero-image-home .compartment, .hero-video .compartment {
+    width: 100%;
     z-index: 101; }
     @media (min-width: 800px) {
       .hero-image-home .compartment, .hero-video .compartment {
