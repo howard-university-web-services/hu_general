@@ -37,36 +37,7 @@
             </a>
           {% endfor %}
         {% endif %}
-        {% if content.field_hc_resource_documents|render %}
-          <section class="section--padded-top section--padded-bottom" aria-label="Resource Documents">
-              <div class="documents">
-                <div class="block-header">
-                  <div class="block-header__title">
-                    <span class=" block-header__icon icon-paper"></span>
-                    <h2>Documents &amp; Forms</h2>
-                  </div>
-                </div>
-                {{ content.field_hc_resource_documents }}
-              </div>
-          </section>
-        {% endif %}
-        {% if content.field_hc_resources_related|render %}
-	        <section class="section--padded-top section--padded-bottom" aria-label="Related Resources">
-		        <div class="documents">
-			        <div class="block-header">
-				        <div class="block-header__title">
-                  <span class="block-header__icon icon-info"></span>
-                    <h2>Related Resources</h2>
-				        </div>
-			        </div>
-              {% for key, item in content.field_hc_resources_related if key|first != '#' %}
-                <a href="{{ item['#url'] }}" class="fancy-link" target="_blank">
-                <span>{{ item['#title'] }}</span>
-                <span class="icon-arrow-right"></span></a>
-              {% endfor %}
-		        </div>
-	        </section>
-        {% endif %}
+
         <!-- Render without, so quickedit/etc works -->
 {{ content|without('field_hc_resources_related','field_hc_resource_sidebar_title', 'field_hc_resource_contact_name', 'field_hc_hide_header_image','field_hc_resource_contact_email', 'field_hc_resource_contact_addres', 'body', 'field_hc_resource_category', 'field_hc_header_image', 'field_hc_resource_cta_link', 'field_hc_resource_documents', 'field_hc_lead_in') }}
 
@@ -78,15 +49,18 @@
           {% if (content.field_hc_resource_contact_name|render) or (content.field_hc_resource_contact_email|render) or (content.field_hc_resource_contact_addres|render) %}
             <div class="contact-box">
               <h3 class="sidebar-title">{{ content.field_hc_resource_sidebar_title }}</h3>
-              <div>
-                {{ content.field_hc_resource_contact_name }}
-              </div>
-              <div>
-                {{ content.field_hc_resource_contact_email }}
-              </div>
-              <div>
+              <p>
+              {% if (content.field_hc_resource_contact_name|render) %}
+                <strong>{{ content.field_hc_resource_contact_name }}</strong>
+              {% endif %}
+              {% if (content.field_hc_resource_contact_name|render) and (content.field_hc_resource_contact_email|render) %}
+              <br>
+              {% endif %}
+              {% if (content.field_hc_resource_contact_email|render) %}
+                <strong>{{ content.field_hc_resource_contact_email }}</strong>
+              {% endif %}
+              </p>
                 {{ content.field_hc_resource_contact_addres }}
-              </div>
             </div>
           {% endif %}
         </aside>
@@ -95,3 +69,39 @@
     </div>
   </div>
 </section>
+
+{% if content.field_hc_resource_documents|render %}
+<div class="compartment">
+	<section class="section--padded-top section--padded-bottom" aria-label="Resource Documents">
+		<div class="documents">
+			<div class="block-header">
+				<div class="block-header__title">
+					<span class=" block-header__icon icon-paper"></span>
+					<h2>Documents &amp; Forms</h2>
+				</div>
+			</div>
+			{{ content.field_hc_resource_documents }}
+		</div>
+	</section>
+  </div>
+{% endif %}
+{% if content.field_hc_resources_related|render %}
+<div class="compartment">
+	<section class="section--padded-top section--padded-bottom" aria-label="Related Resources">
+		<div class="documents">
+			<div class="block-header">
+				<div class="block-header__title">
+					<span class="block-header__icon icon-info"></span>
+					<h2>Related Resources</h2>
+				</div>
+			</div>
+			{% for key, item in content.field_hc_resources_related if key|first != '#' %}
+				<a href="{{ item['#url'] }}" class="fancy-link" target="_blank">
+					<span>{{ item['#title'] }}</span>
+					<span class="icon-arrow-right"></span>
+				</a>
+			{% endfor %}
+		</div>
+	</section>
+  </div>
+{% endif %}
