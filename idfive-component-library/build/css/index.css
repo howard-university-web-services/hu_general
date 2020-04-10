@@ -6299,7 +6299,6 @@ a.fancy-link:hover {
   align-items: center;
   height: 100%;
   justify-content: center;
-  width: 15.3125rem;
   transition: width .2s ease-in-out;
   overflow: hidden; }
   @media (min-width: 800px) {
@@ -6409,6 +6408,8 @@ a.fancy-link:hover {
     .utility__search-trigger.search-open:before {
       content: "\E921";
       font-size: 1.25rem; }
+  .main-header__top .utility a {
+    white-space: nowrap; }
 
 .search-open.utility {
   width: 32.0625rem; }
