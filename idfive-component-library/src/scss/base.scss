@@ -851,47 +851,62 @@ iframe {
   color: white !important
 }
 
+.hp-html .align-left,
+.hp-html .align-right,
+.hp-html .align-center,
 .embedded-entity {
   margin: 0;
   margin-bottom: 20px;
-  &.align-left, &.align-right {
-    @include media('medium') {
-      max-width: 50%;
-    }
-  }
-  &.align-left {
-    @include media('medium') {
-      margin-right: 20px;
-    }
-  }
-  &.align-center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    figcaption {
-      text-align: left;
-      @include media('medium') {
-        text-align: center;
-      }
-    }
-  }
-  &.align-right {
-    @include media('medium') {
-      margin-left: 20px;
-    }
-  }
   img {
     max-width: 100%;
     height: auto;
   }
-  figcaption {
-    @extend #{'.body-text--light', '.body-text--small'};
-    display: block;
-    margin-top: 8px;
-    padding-bottom: 14px;
-    border-bottom: 2px solid #e0e0e0;
+}
+
+.hp-html .align-left,
+.hp-html .align-right,
+.embedded-entity.align-left,
+.embedded-entity.align-right {
+  @include media('medium') {
+    max-width: 50%;
   }
+}
+
+.hp-html .align-left,
+.embedded-entity.align-left {
+  @include media('medium') {
+    margin-right: 20px;
+  }
+}
+
+.hp-html .align-right,
+.embedded-entity.align-right {
+  @include media('medium') {
+    margin-left: 20px;
+  }
+}
+
+.html .align-center,
+.embedded-entity.align-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  figcaption {
+    text-align: left;
+    @include media('medium') {
+      text-align: center;
+    }
+  }
+}
+
+.hp-html figcaption,
+.embedded-entity figcaption {
+  @extend #{'.body-text--light', '.body-text--small'};
+  display: block;
+  margin-top: 8px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .media-caption {

@@ -1283,18 +1283,21 @@ h5 {
       font-size: 2.8125rem;
       line-height: 3.75rem; } }
 
-.body-text--small, .embedded-entity figcaption {
+.body-text--small, .hp-html figcaption,
+.embedded-entity figcaption {
   font-size: 0.75rem;
   line-height: 1.125rem; }
   @media (min-width: 800px) {
-    .body-text--small, .embedded-entity figcaption {
+    .body-text--small, .hp-html figcaption,
+    .embedded-entity figcaption {
       font-size: 0.875rem;
       line-height: 1.125rem; } }
 
 .body-text--dark {
   color: #1B1B1B; }
 
-.body-text--light, .embedded-entity figcaption {
+.body-text--light, .hp-html figcaption,
+.embedded-entity figcaption {
   color: #767676; }
 
 .body-text--date {
@@ -1842,36 +1845,56 @@ iframe {
 .juicer-feed .j-meta a {
   color: white !important; }
 
+.hp-html .align-left,
+.hp-html .align-right,
+.hp-html .align-center,
 .embedded-entity {
   margin: 0;
   margin-bottom: 20px; }
-  @media (min-width: 800px) {
-    .embedded-entity.align-left, .embedded-entity.align-right {
-      max-width: 50%; } }
-  @media (min-width: 800px) {
-    .embedded-entity.align-left {
-      margin-right: 20px; } }
-  .embedded-entity.align-center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px; }
-    .embedded-entity.align-center figcaption {
-      text-align: left; }
-      @media (min-width: 800px) {
-        .embedded-entity.align-center figcaption {
-          text-align: center; } }
-  @media (min-width: 800px) {
-    .embedded-entity.align-right {
-      margin-left: 20px; } }
+  .hp-html .align-left img,
+  .hp-html .align-right img,
+  .hp-html .align-center img,
   .embedded-entity img {
     max-width: 100%;
     height: auto; }
-  .embedded-entity figcaption {
-    display: block;
-    margin-top: 8px;
-    padding-bottom: 14px;
-    border-bottom: 2px solid #e0e0e0; }
+
+@media (min-width: 800px) {
+  .hp-html .align-left,
+  .hp-html .align-right,
+  .embedded-entity.align-left,
+  .embedded-entity.align-right {
+    max-width: 50%; } }
+
+@media (min-width: 800px) {
+  .hp-html .align-left,
+  .embedded-entity.align-left {
+    margin-right: 20px; } }
+
+@media (min-width: 800px) {
+  .hp-html .align-right,
+  .embedded-entity.align-right {
+    margin-left: 20px; } }
+
+.html .align-center,
+.embedded-entity.align-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px; }
+  .html .align-center figcaption,
+  .embedded-entity.align-center figcaption {
+    text-align: left; }
+    @media (min-width: 800px) {
+      .html .align-center figcaption,
+      .embedded-entity.align-center figcaption {
+        text-align: center; } }
+
+.hp-html figcaption,
+.embedded-entity figcaption {
+  display: block;
+  margin-top: 8px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e0e0e0; }
 
 .media-caption {
   margin-top: 8px;
@@ -1882,35 +1905,35 @@ iframe {
   .media-caption p {
     margin: 0 !important; }
 
-.text-content h1,
+.hp-html h1,
 .silc-accordion__content h1,
-.cke_editable_themed h1, .text-content
+.cke_editable_themed h1, .hp-html
 .h1,
 .silc-accordion__content
 .h1,
 .cke_editable_themed
-.h1, .text-content
+.h1, .hp-html
 h2,
 .silc-accordion__content
 h2,
 .cke_editable_themed
-h2, .text-content
+h2, .hp-html
 .h2,
 .silc-accordion__content
 .h2,
 .cke_editable_themed
-.h2, .text-content
+.h2, .hp-html
 h3,
 .silc-accordion__content
 h3,
 .cke_editable_themed
-h3, .text-content
+h3, .hp-html
 .h3,
 .silc-accordion__content
 .h3,
 .cke_editable_themed
-.h3, .text-content .checkboxes--wrapper span.fieldset-legend, .checkboxes--wrapper .text-content span.fieldset-legend,
-.text-content .radios--wrapper span.fieldset-legend, .radios--wrapper .text-content span.fieldset-legend,
+.h3, .hp-html .checkboxes--wrapper span.fieldset-legend, .checkboxes--wrapper .hp-html span.fieldset-legend,
+.hp-html .radios--wrapper span.fieldset-legend, .radios--wrapper .hp-html span.fieldset-legend,
 .silc-accordion__content .checkboxes--wrapper span.fieldset-legend,
 .checkboxes--wrapper .silc-accordion__content span.fieldset-legend,
 .silc-accordion__content .radios--wrapper span.fieldset-legend,
@@ -1918,67 +1941,67 @@ h3, .text-content
 .cke_editable_themed .checkboxes--wrapper span.fieldset-legend,
 .checkboxes--wrapper .cke_editable_themed span.fieldset-legend,
 .cke_editable_themed .radios--wrapper span.fieldset-legend,
-.radios--wrapper .cke_editable_themed span.fieldset-legend, .text-content
+.radios--wrapper .cke_editable_themed span.fieldset-legend, .hp-html
 h4,
 .silc-accordion__content
 h4,
 .cke_editable_themed
-h4, .text-content
+h4, .hp-html
 .h4,
 .silc-accordion__content
 .h4,
 .cke_editable_themed
-.h4, .text-content
+.h4, .hp-html
 h5,
 .silc-accordion__content
 h5,
 .cke_editable_themed
-h5, .text-content
+h5, .hp-html
 .h5,
 .silc-accordion__content
 .h5,
 .cke_editable_themed
-.h5, .text-content
+.h5, .hp-html
 h6,
 .silc-accordion__content
 h6,
 .cke_editable_themed
-h6, .text-content
+h6, .hp-html
 .h6,
 .silc-accordion__content
 .h6,
 .cke_editable_themed
 .h6 {
   margin: 2.25rem 0 0.9375rem; }
-  .text-content h1:first-child,
+  .hp-html h1:first-child,
   .silc-accordion__content h1:first-child,
-  .cke_editable_themed h1:first-child, .text-content
+  .cke_editable_themed h1:first-child, .hp-html
   .h1:first-child,
   .silc-accordion__content
   .h1:first-child,
   .cke_editable_themed
-  .h1:first-child, .text-content
+  .h1:first-child, .hp-html
   h2:first-child,
   .silc-accordion__content
   h2:first-child,
   .cke_editable_themed
-  h2:first-child, .text-content
+  h2:first-child, .hp-html
   .h2:first-child,
   .silc-accordion__content
   .h2:first-child,
   .cke_editable_themed
-  .h2:first-child, .text-content
+  .h2:first-child, .hp-html
   h3:first-child,
   .silc-accordion__content
   h3:first-child,
   .cke_editable_themed
-  h3:first-child, .text-content
+  h3:first-child, .hp-html
   .h3:first-child,
   .silc-accordion__content
   .h3:first-child,
   .cke_editable_themed
-  .h3:first-child, .text-content .checkboxes--wrapper span.fieldset-legend:first-child, .checkboxes--wrapper .text-content span.fieldset-legend:first-child,
-  .text-content .radios--wrapper span.fieldset-legend:first-child, .radios--wrapper .text-content span.fieldset-legend:first-child,
+  .h3:first-child, .hp-html .checkboxes--wrapper span.fieldset-legend:first-child, .checkboxes--wrapper .hp-html span.fieldset-legend:first-child,
+  .hp-html .radios--wrapper span.fieldset-legend:first-child, .radios--wrapper .hp-html span.fieldset-legend:first-child,
   .silc-accordion__content .checkboxes--wrapper span.fieldset-legend:first-child,
   .checkboxes--wrapper .silc-accordion__content span.fieldset-legend:first-child,
   .silc-accordion__content .radios--wrapper span.fieldset-legend:first-child,
@@ -1986,67 +2009,67 @@ h6, .text-content
   .cke_editable_themed .checkboxes--wrapper span.fieldset-legend:first-child,
   .checkboxes--wrapper .cke_editable_themed span.fieldset-legend:first-child,
   .cke_editable_themed .radios--wrapper span.fieldset-legend:first-child,
-  .radios--wrapper .cke_editable_themed span.fieldset-legend:first-child, .text-content
+  .radios--wrapper .cke_editable_themed span.fieldset-legend:first-child, .hp-html
   h4:first-child,
   .silc-accordion__content
   h4:first-child,
   .cke_editable_themed
-  h4:first-child, .text-content
+  h4:first-child, .hp-html
   .h4:first-child,
   .silc-accordion__content
   .h4:first-child,
   .cke_editable_themed
-  .h4:first-child, .text-content
+  .h4:first-child, .hp-html
   h5:first-child,
   .silc-accordion__content
   h5:first-child,
   .cke_editable_themed
-  h5:first-child, .text-content
+  h5:first-child, .hp-html
   .h5:first-child,
   .silc-accordion__content
   .h5:first-child,
   .cke_editable_themed
-  .h5:first-child, .text-content
+  .h5:first-child, .hp-html
   h6:first-child,
   .silc-accordion__content
   h6:first-child,
   .cke_editable_themed
-  h6:first-child, .text-content
+  h6:first-child, .hp-html
   .h6:first-child,
   .silc-accordion__content
   .h6:first-child,
   .cke_editable_themed
   .h6:first-child {
     margin-top: 0; }
-  .text-content h1:last-child,
+  .hp-html h1:last-child,
   .silc-accordion__content h1:last-child,
-  .cke_editable_themed h1:last-child, .text-content
+  .cke_editable_themed h1:last-child, .hp-html
   .h1:last-child,
   .silc-accordion__content
   .h1:last-child,
   .cke_editable_themed
-  .h1:last-child, .text-content
+  .h1:last-child, .hp-html
   h2:last-child,
   .silc-accordion__content
   h2:last-child,
   .cke_editable_themed
-  h2:last-child, .text-content
+  h2:last-child, .hp-html
   .h2:last-child,
   .silc-accordion__content
   .h2:last-child,
   .cke_editable_themed
-  .h2:last-child, .text-content
+  .h2:last-child, .hp-html
   h3:last-child,
   .silc-accordion__content
   h3:last-child,
   .cke_editable_themed
-  h3:last-child, .text-content
+  h3:last-child, .hp-html
   .h3:last-child,
   .silc-accordion__content
   .h3:last-child,
   .cke_editable_themed
-  .h3:last-child, .text-content .checkboxes--wrapper span.fieldset-legend:last-child, .checkboxes--wrapper .text-content span.fieldset-legend:last-child,
-  .text-content .radios--wrapper span.fieldset-legend:last-child, .radios--wrapper .text-content span.fieldset-legend:last-child,
+  .h3:last-child, .hp-html .checkboxes--wrapper span.fieldset-legend:last-child, .checkboxes--wrapper .hp-html span.fieldset-legend:last-child,
+  .hp-html .radios--wrapper span.fieldset-legend:last-child, .radios--wrapper .hp-html span.fieldset-legend:last-child,
   .silc-accordion__content .checkboxes--wrapper span.fieldset-legend:last-child,
   .checkboxes--wrapper .silc-accordion__content span.fieldset-legend:last-child,
   .silc-accordion__content .radios--wrapper span.fieldset-legend:last-child,
@@ -2054,32 +2077,32 @@ h6, .text-content
   .cke_editable_themed .checkboxes--wrapper span.fieldset-legend:last-child,
   .checkboxes--wrapper .cke_editable_themed span.fieldset-legend:last-child,
   .cke_editable_themed .radios--wrapper span.fieldset-legend:last-child,
-  .radios--wrapper .cke_editable_themed span.fieldset-legend:last-child, .text-content
+  .radios--wrapper .cke_editable_themed span.fieldset-legend:last-child, .hp-html
   h4:last-child,
   .silc-accordion__content
   h4:last-child,
   .cke_editable_themed
-  h4:last-child, .text-content
+  h4:last-child, .hp-html
   .h4:last-child,
   .silc-accordion__content
   .h4:last-child,
   .cke_editable_themed
-  .h4:last-child, .text-content
+  .h4:last-child, .hp-html
   h5:last-child,
   .silc-accordion__content
   h5:last-child,
   .cke_editable_themed
-  h5:last-child, .text-content
+  h5:last-child, .hp-html
   .h5:last-child,
   .silc-accordion__content
   .h5:last-child,
   .cke_editable_themed
-  .h5:last-child, .text-content
+  .h5:last-child, .hp-html
   h6:last-child,
   .silc-accordion__content
   h6:last-child,
   .cke_editable_themed
-  h6:last-child, .text-content
+  h6:last-child, .hp-html
   .h6:last-child,
   .silc-accordion__content
   .h6:last-child,
@@ -2106,12 +2129,12 @@ h3, .h3, .checkboxes--wrapper span.fieldset-legend,
     h3, .h3, .checkboxes--wrapper span.fieldset-legend,
     .radios--wrapper span.fieldset-legend {
       font-size: 1.5rem; } }
-  .text-content h3:not(.sidebar-title),
+  .hp-html h3:not(.sidebar-title),
   .silc-accordion__content h3:not(.sidebar-title),
-  .cke_editable_themed h3:not(.sidebar-title), .text-content .h3:not(.sidebar-title),
+  .cke_editable_themed h3:not(.sidebar-title), .hp-html .h3:not(.sidebar-title),
   .silc-accordion__content .h3:not(.sidebar-title),
-  .cke_editable_themed .h3:not(.sidebar-title), .text-content .checkboxes--wrapper span.fieldset-legend:not(.sidebar-title), .checkboxes--wrapper .text-content span.fieldset-legend:not(.sidebar-title),
-  .text-content .radios--wrapper span.fieldset-legend:not(.sidebar-title), .radios--wrapper .text-content span.fieldset-legend:not(.sidebar-title),
+  .cke_editable_themed .h3:not(.sidebar-title), .hp-html .checkboxes--wrapper span.fieldset-legend:not(.sidebar-title), .checkboxes--wrapper .hp-html span.fieldset-legend:not(.sidebar-title),
+  .hp-html .radios--wrapper span.fieldset-legend:not(.sidebar-title), .radios--wrapper .hp-html span.fieldset-legend:not(.sidebar-title),
   .silc-accordion__content .checkboxes--wrapper span.fieldset-legend:not(.sidebar-title),
   .checkboxes--wrapper .silc-accordion__content span.fieldset-legend:not(.sidebar-title),
   .silc-accordion__content .radios--wrapper span.fieldset-legend:not(.sidebar-title),
@@ -2211,43 +2234,43 @@ a {
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
-  .text-content a:not([class]),
+  .hp-html a:not([class]),
   .silc-accordion__content a:not([class]),
   .cke_editable_themed a:not([class]) {
     text-decoration: underline;
     transition: .15s color ease-in-out; }
-    .text-content a:not([class]):hover,
+    .hp-html a:not([class]):hover,
     .silc-accordion__content a:not([class]):hover,
     .cke_editable_themed a:not([class]):hover {
       color: #003A63; }
 
-.text-content ul li:not(:last-child),
+.hp-html ul li:not(:last-child),
 .silc-accordion__content ul li:not(:last-child),
-.cke_editable_themed ul li:not(:last-child), .text-content ol li:not(:last-child),
+.cke_editable_themed ul li:not(:last-child), .hp-html ol li:not(:last-child),
 .silc-accordion__content ol li:not(:last-child),
 .cke_editable_themed ol li:not(:last-child) {
   margin-bottom: 0.625rem; }
 
-.text-content ul,
+.hp-html ul,
 .silc-accordion__content ul,
 .cke_editable_themed ul {
   list-style-type: none;
   margin: 0 0 1rem; }
-  .text-content ul:last-child,
+  .hp-html ul:last-child,
   .silc-accordion__content ul:last-child,
   .cke_editable_themed ul:last-child {
     margin-bottom: 0; }
-  .text-content ul li,
+  .hp-html ul li,
   .silc-accordion__content ul li,
   .cke_editable_themed ul li {
     padding-left: 1.125rem;
     position: relative; }
     @media (min-width: 800px) {
-      .text-content ul li,
+      .hp-html ul li,
       .silc-accordion__content ul li,
       .cke_editable_themed ul li {
         padding-left: 1.75rem; } }
-    .text-content ul li:before,
+    .hp-html ul li:before,
     .silc-accordion__content ul li:before,
     .cke_editable_themed ul li:before {
       content: "\2022";
@@ -2257,23 +2280,23 @@ a {
       left: 0.375rem;
       top: 0; }
       @media (min-width: 800px) {
-        .text-content ul li:before,
+        .hp-html ul li:before,
         .silc-accordion__content ul li:before,
         .cke_editable_themed ul li:before {
           left: 0.75rem; } }
 
-.text-content ol,
+.hp-html ol,
 .silc-accordion__content ol,
 .cke_editable_themed ol {
   list-style: decimal;
   padding-left: 1.125rem;
   margin: 0 0 1rem; }
   @media (min-width: 800px) {
-    .text-content ol,
+    .hp-html ol,
     .silc-accordion__content ol,
     .cke_editable_themed ol {
       padding-left: 1.75rem; } }
-  .text-content ol:last-child,
+  .hp-html ol:last-child,
   .silc-accordion__content ol:last-child,
   .cke_editable_themed ol:last-child {
     margin-bottom: 0; }

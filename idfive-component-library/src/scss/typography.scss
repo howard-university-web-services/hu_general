@@ -16,7 +16,7 @@ h5,
 h6,
 .h6,
 %h6 {
-  .text-content &,
+  .hp-html &,
   .silc-accordion__content &,
   .cke_editable_themed & {
     margin: rem(36) 0 rem(15);
@@ -49,7 +49,7 @@ h3, .h3, %h3 {
   @include media('medium') {
     font-size: rem(24);
   }
-  .text-content &:not(.sidebar-title),
+  .hp-html &:not(.sidebar-title),
   .silc-accordion__content &:not(.sidebar-title),
   .cke_editable_themed &:not(.sidebar-title) {
     font-weight: 700;
@@ -148,7 +148,7 @@ a {
   &:hover {
     text-decoration: underline
   }
-  .text-content &:not([class]),
+  .hp-html &:not([class]),
   .silc-accordion__content &:not([class]),
   .cke_editable_themed &:not([class]) {
     text-decoration: underline;
@@ -160,7 +160,7 @@ a {
 }
 
 ul, ol {
-  .text-content &,
+  .hp-html &,
   .silc-accordion__content &,
   .cke_editable_themed & {
     li {
@@ -172,7 +172,7 @@ ul, ol {
 }
 
 ul {
-  .text-content &,
+  .hp-html &,
   .silc-accordion__content &,
   .cke_editable_themed & {
     list-style-type: none;
@@ -207,7 +207,7 @@ ul {
 }
 
 ol {
-  .text-content &,
+  .hp-html &,
   .silc-accordion__content &,
   .cke_editable_themed & {
     list-style: decimal;
