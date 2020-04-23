@@ -1,0 +1,13 @@
+.node--unpublished {
+  background-color: #fff4f4;
+}
+.entity-moderation-form__item {
+    flex:1;
+    .form-item {
+        input, textarea,select {
+            border:1px solid;
+        }
+
+    }
+}
+

@@ -9576,6 +9576,14 @@ a.tablesaw-btn {
     .modal-playlist__nav-button.next {
       right: 15%; } }
 
+.node--unpublished {
+  background-color: #fff4f4; }
+
+.entity-moderation-form__item {
+  flex: 1; }
+  .entity-moderation-form__item .form-item input, .entity-moderation-form__item .form-item textarea, .entity-moderation-form__item .form-item select {
+    border: 1px solid; }
+
 ul.js-pager__items {
   align-items: center;
   display: flex;

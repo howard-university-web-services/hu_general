@@ -9,8 +9,10 @@
 {% include directory ~ '/templates/_includes/global/content_header_no_image.html.twig' %}
 
 <!-- content -->
-<section class="section--padded-top">
+<section class="section--padded-top{{not node.isPublished() ? ' node--unpublished'}}">
+
   <div class="compartment">
+{{ content.content_moderation_control }}
       <div class="silc-grid silc-grid--collapse">
 
         <!-- Sidebar -->
@@ -27,7 +29,8 @@
               <p>{{ content.field_hc_summary }}</p>
 
               <!-- Render without, so quickedit/etc works -->
-              {{ content|without('field_hc_summary', 'field_hc_end_date', 'field_hc_featured', 'field_hc_links', 'field_hc_start_date') }}
+{{ content|without('content_moderation_control','field_hc_summary', 'field_hc_end_date', 'field_hc_featured', 'field_hc_links', 'field_hc_start_date') }}
+
 
           </div>
 

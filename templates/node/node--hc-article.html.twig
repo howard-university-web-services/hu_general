@@ -13,8 +13,10 @@
 {% endif %}
 
 <!-- Main content -->
-<section class="section--padded-top">
+<section class="section--padded-top{{not node.isPublished() ? ' node--unpublished'}}">
+
   <div class="compartment">
+    {{ content.content_moderation_control }}
       <div class="silc-grid silc-grid--collapse">
         <!-- Sidebar -->
           <div class="silc-grid__col silc-grid__col--2-large">
@@ -45,7 +47,8 @@
                 </div>
               {% endif %}
               <!-- Render without, so quickedit/etc works -->
-              {{ content|without('body', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
+{{ content|without('content_moderation_control','body', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
+
           </div>
       </div>
   </div>

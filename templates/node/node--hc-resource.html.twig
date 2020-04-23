@@ -16,7 +16,7 @@
 <!-- Content -->
 <section class="section--padded-top">
   <div class="compartment">
-
+    {{ content.content_moderation_control }}
     {% if content.field_hc_lead_in|render  %}
         <div class="silc-grid silc-grid--collapse">
           <div class="silc-grid__col silc-grid__col--12">
@@ -25,7 +25,8 @@
         </div>
     {% endif %}
 
-    <div class="silc-grid silc-grid--collapse">
+<div class="silc-grid silc-grid--collapse{{not node.isPublished() ? ' node--unpublished'}}">
+
       <!-- Main Body -->
       <div class="silc-grid__col silc-grid__col--9-large kitchen-sink--main-col">
         {{ content.body }}
@@ -39,7 +40,8 @@
         {% endif %}
 
         <!-- Render without, so quickedit/etc works -->
-{{ content|without('field_hc_resources_related','field_hc_resource_sidebar_title', 'field_hc_resource_contact_name', 'field_hc_hide_header_image','field_hc_resource_contact_email', 'field_hc_resource_contact_addres', 'body', 'field_hc_resource_category', 'field_hc_header_image', 'field_hc_resource_cta_link', 'field_hc_resource_documents', 'field_hc_lead_in') }}
+{{ content|without('content_moderation_control','field_hc_resources_related','field_hc_resource_sidebar_title', 'field_hc_resource_contact_name', 'field_hc_hide_header_image','field_hc_resource_contact_email', 'field_hc_resource_contact_addres', 'body', 'field_hc_resource_category', 'field_hc_header_image', 'field_hc_resource_cta_link', 'field_hc_resource_documents', 'field_hc_lead_in') }}
+
 
 
       </div>

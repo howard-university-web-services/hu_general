@@ -8,7 +8,9 @@
 <!-- content -->
 <section class="section--padded-top">
   <div class="compartment">
-      <div class="silc-grid silc-grid--collapse">
+{{ content.content_moderation_control }}
+<div class="silc-grid silc-grid--collapse{{not node.isPublished() ? ' node--unpublished'}}">
+
           <div class="silc-grid__col silc-grid__col--12-large kitchen-sink--main-col">
             <h3 class="news-and-events__title header--h3-small">{{ node.title.value }}</h3>
             <p class="body-text--small">{{ content.body }}</p>
@@ -22,7 +24,8 @@
               <span class="icon-arrow-right"></span>
             </a>
             <!-- Render without, so quickedit/etc works -->
-            {{ content|without('body', 'links', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
+{{ content|without('content_moderation_control','body', 'links', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
+
           </div>
       </div>
   </div>
