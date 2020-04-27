@@ -13,6 +13,9 @@ table {
         background: $navy;
         // font-family: $serif;
         padding: rem(24);
+        a {
+            color: $white;
+        }
     }
     .tablesaw thead th {
         text-align: center;

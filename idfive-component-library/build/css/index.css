@@ -7514,6 +7514,8 @@ table {
     text-align: center;
     background: #003A63;
     padding: 1.5rem; }
+    table th a {
+      color: #FFF; }
   table .tablesaw thead th {
     text-align: center; }
   table.tablesaw th,
@@ -7610,7 +7612,7 @@ table {
 /*Left aligns text fields used in Parallax Bundle***/
 /** Adjusts the width of the  Parallax Bundle's Image Field***/
 /** Creates Parallax effect for the Parallax Bundle's image field***/
-/** Removes Parallax effect for the Parallax Bundle's 
+/** Removes Parallax effect for the Parallax Bundle's
 image field when viewed on devices with a screen size of 767px and below
 ***/
 .hp_parallax_bundle {
