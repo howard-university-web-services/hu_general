@@ -4,15 +4,13 @@
 /*Left aligns text fields used in Parallax Bundle***/
 /** Adjusts the width of the  Parallax Bundle's Image Field***/
 /** Creates Parallax effect for the Parallax Bundle's image field***/
-/** Removes Parallax effect for the Parallax Bundle's 
+/** Removes Parallax effect for the Parallax Bundle's
 image field when viewed on devices with a screen size of 767px and below
 ***/
 .hp_parallax_bundle {
+	height: 100vh;
+	max-height: 600px;
 	position: relative;
-	h1 {
-		font-size: 2.5rem !important;
-		margin-bottom:25px;
-	}
 	.float_right {
 		float: none !important;
 	}
@@ -29,7 +27,9 @@ image field when viewed on devices with a screen size of 767px and below
 			background-repeat: no-repeat;
 			background-position: center;
 			background-attachment: initial;
-			height: 100vh;
+            height: 100vh;
+            max-height: 600px;
+            padding-bottom: 0 !important;
 		}
 	}
 	&:before {
@@ -37,41 +37,26 @@ image field when viewed on devices with a screen size of 767px and below
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background: $black;
+		background: $navy;
 		z-index: 3;
-		opacity: .65;
+		opacity: .5;
 	}
-
 	.featurettes_text {
 		width: 100%;
     	position: absolute;
     	color: $white;
     	text-align: center;
-    	z-index: 1001;
+    	z-index: 9;
     	top: 50%;
     	left: 50%;
-    	transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		.lead-in{
+			color:$white;
+		}
 	}
 }
 @include media('medium'){
 .hp_parallax_bundle {
-	h1 {
-		font-size: 3.5rem !important;
-		margin-bottom: 12px;
-		line-height: 1.1;
-	}
-	
-	.h-100 {
-		height:100vh;
-		padding: initial;
-	}
-	.lead {
-		font-size: 1.25rem;
-		font-weight: 300;
-		br {
-			display: none;
-		}
-	}
 	.float_right {
 		float: right !important;
 	}
@@ -79,7 +64,7 @@ image field when viewed on devices with a screen size of 767px and below
 		float: left !important;
 	}
 	.featurettes_image {
-		width: 50%;
+		width: 65%;
 		height: 100%;
 		position: relative;
 		z-index: 4;
@@ -103,10 +88,10 @@ image field when viewed on devices with a screen size of 767px and below
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
-		padding: 0px 15px;
+		padding: 0px 25px;
 	}
 	.featurettes_text {
-		width: 50%;
+		width: 35%;
 		height: 100%;
 		position: relative;
 		z-index: 4;
@@ -114,11 +99,8 @@ image field when viewed on devices with a screen size of 767px and below
 		transform: none;
 		left: 0;
 		top: 0;
-	}
-	.icon {
-		.svg-inline--fa {
-			width: 4em;
-			height: 4em;
+		.lead-in{
+			color:$navy !important;
 		}
 	}
 }

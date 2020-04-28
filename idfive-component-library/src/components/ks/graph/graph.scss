@@ -6,11 +6,13 @@
                 width: 100% !important;
             }
             .hp_graph_container {
-                width: 100% !important;
-                display: inline-block;
+                width: 90% !important;
+                background-color: $navy;
                 height: 80px !important;
                 margin: initial !important;
-                max-width: 100% !important;
+                max-width: 90% !important;
+                float: left !important;
+                margin-bottom: 10px !important;
                 .label {
                     display: none;
                 }
@@ -25,6 +27,24 @@
                     padding-left: 1rem;
                 }
 
+            }
+            .hp_graph_percent_container{
+                width: 10% !important;
+                height: 80px !important;
+                margin: initial !important;
+                max-width: 10% !important;
+                margin-bottom: 10px !important;
+                float: right !important;
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                .label{
+                    display: none;
+                }
+                .lead-in{
+                    display: block !important;
+                    padding-left: .75em !important;
+                }
             }
             .hp_graph_skills {
                 text-align: right;
@@ -107,7 +127,6 @@
             width: 100%;
             position: relative;
             display: flex;
-            margin-bottom: 2em;
             text-align: center;
         }
         .graph *{
@@ -127,15 +146,12 @@
             margin:0 auto;
             max-width: 150px;
             width:95%;
-            .label {
-                position: absolute;
-                width: 100%;
-                left: 0;
-                color: $white;
-                word-break: break-all;
-                padding-top: 1rem;
-            }
             .percent-label{
+                display: none;
+            }
+        }
+        .hp_graph_percent_container{
+            .lead-in{
                 display: none;
             }
         }
