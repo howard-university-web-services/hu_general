@@ -7617,15 +7617,14 @@ image field when viewed on devices with a screen size of 767px and below
   height: 100vh;
   max-height: 600px;
   position: relative; }
-  .hp_parallax_bundle .float_right {
-    float: none !important; }
   .hp_parallax_bundle .float_left {
-    float: none !important; }
-  .hp_parallax_bundle .featurettes_image {
+    left: 50% !important;
+    right: initial !important; }
+  .hp_parallax_bundle .parallax_image {
     width: 100%;
     height: 100%;
     position: relative; }
-    .hp_parallax_bundle .featurettes_image .background-image {
+    .hp_parallax_bundle .parallax_image .background-image {
       width: 100%;
       background-size: cover;
       background-repeat: no-repeat;
@@ -7642,7 +7641,7 @@ image field when viewed on devices with a screen size of 767px and below
     background: #003A63;
     z-index: 3;
     opacity: .5; }
-  .hp_parallax_bundle .featurettes_text {
+  .hp_parallax_bundle .parallax_text {
     width: 100%;
     position: absolute;
     color: #FFF;
@@ -7650,22 +7649,22 @@ image field when viewed on devices with a screen size of 767px and below
     z-index: 9;
     top: 50%;
     left: 50%;
+    padding: 0 15px;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-    .hp_parallax_bundle .featurettes_text .lead-in {
+    .hp_parallax_bundle .parallax_text .lead-in {
       color: #FFF; }
 
 @media (min-width: 800px) {
-  .hp_parallax_bundle .float_right {
-    float: right !important; }
   .hp_parallax_bundle .float_left {
-    float: left !important; }
-  .hp_parallax_bundle .featurettes_image {
-    width: 65%;
+    left: 0 !important;
+    right: initial !important; }
+  .hp_parallax_bundle .parallax_image {
+    width: 100%;
     height: 100%;
     position: relative;
     z-index: 4; }
-    .hp_parallax_bundle .featurettes_image .background-image {
+    .hp_parallax_bundle .parallax_image .background-image {
       width: 100%;
       background-size: cover;
       background-repeat: no-repeat;
@@ -7675,26 +7674,38 @@ image field when viewed on devices with a screen size of 767px and below
   .hp_parallax_bundle:before {
     content: inherit;
     background: transparent; }
-  .hp_parallax_bundle .featurette {
+  .hp_parallax_bundle .parallax_text_container {
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
+    text-align: center;
+    padding: 0px 25px;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 0px 25px; }
-  .hp_parallax_bundle .featurettes_text {
+    z-index: 3; }
+  .hp_parallax_bundle .parallax_text {
     width: 35%;
     height: 100%;
-    position: relative;
-    z-index: 4;
+    position: absolute;
+    z-index: 9;
     color: inherit;
     -webkit-transform: none;
-            transform: none;
-    left: 0;
+    transform: none;
+    right: 0 !important;
+    left: inherit;
     top: 0; }
-    .hp_parallax_bundle .featurettes_text .lead-in {
+    .hp_parallax_bundle .parallax_text:before {
+      content: '';
+      background: #FFF;
+      width: 100%;
+      height: 100%;
+      opacity: .85;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0; }
+    .hp_parallax_bundle .parallax_text .lead-in {
       color: #003A63 !important; } }
 
 @media (min-width: 639px) {
