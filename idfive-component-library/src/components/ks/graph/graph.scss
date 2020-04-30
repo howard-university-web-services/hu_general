@@ -34,7 +34,6 @@
                 margin: initial !important;
                 max-width: 10% !important;
                 margin-bottom: 10px !important;
-                float: right !important;
                 display: flex !important;
                 justify-content: center;
                 align-items: center;
@@ -115,7 +114,6 @@
 
 
     .hp_graph_bundle {
-        padding-bottom: 0;
         .text_wrapper {
             width: 100%;
             position: relative;
@@ -134,8 +132,10 @@
             box-sizing:border-box;
         }
         .hyperlink{
+            margin-top: 1rem;
             .btn{
                 margin-top: 0;
+                margin-bottom: 0;
             }
         }
         .hp_graph_container {

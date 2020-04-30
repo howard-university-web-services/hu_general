@@ -7739,7 +7739,6 @@ image field when viewed on devices with a screen size of 767px and below
     margin: initial !important;
     max-width: 10% !important;
     margin-bottom: 10px !important;
-    float: right !important;
     display: flex !important;
     justify-content: center;
     align-items: center; }
@@ -7797,52 +7796,59 @@ image field when viewed on devices with a screen size of 767px and below
     width: 4em;
     height: 4em; } }
 
-.hp_graph_bundle {
-  padding-bottom: 0; }
-  .hp_graph_bundle .text_wrapper {
-    width: 100%;
-    position: relative;
-    -webkit-transform: none;
-            transform: none;
-    top: initial;
-    left: initial; }
-  .hp_graph_bundle .graph {
-    width: 100%;
-    position: relative;
-    display: flex;
-    text-align: center; }
-  .hp_graph_bundle .graph * {
-    flex-grow: 1;
-    box-sizing: border-box; }
+.hp_graph_bundle .text_wrapper {
+  width: 100%;
+  position: relative;
+  -webkit-transform: none;
+          transform: none;
+  top: initial;
+  left: initial; }
+
+.hp_graph_bundle .graph {
+  width: 100%;
+  position: relative;
+  display: flex;
+  text-align: center; }
+
+.hp_graph_bundle .graph * {
+  flex-grow: 1;
+  box-sizing: border-box; }
+
+.hp_graph_bundle .hyperlink {
+  margin-top: 1rem; }
   .hp_graph_bundle .hyperlink .btn {
-    margin-top: 0; }
-  .hp_graph_bundle .hp_graph_container {
-    background-color: #ccc;
-    position: relative;
-    margin-bottom: 10px;
-    height: 300px;
-    margin: 0 auto;
-    max-width: 150px;
-    width: 95%; }
-    .hp_graph_bundle .hp_graph_container .percent-label {
-      display: none; }
-  .hp_graph_bundle .hp_graph_percent_container .lead-in {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+.hp_graph_bundle .hp_graph_container {
+  background-color: #ccc;
+  position: relative;
+  margin-bottom: 10px;
+  height: 300px;
+  margin: 0 auto;
+  max-width: 150px;
+  width: 95%; }
+  .hp_graph_bundle .hp_graph_container .percent-label {
     display: none; }
-  .hp_graph_bundle .hp_graph_percent {
-    z-index: 3;
-    background: #003A63;
-    float: none;
+
+.hp_graph_bundle .hp_graph_percent_container .lead-in {
+  display: none; }
+
+.hp_graph_bundle .hp_graph_percent {
+  z-index: 3;
+  background: #003A63;
+  float: none;
+  position: absolute;
+  bottom: 0;
+  padding: 50%; }
+  .hp_graph_bundle .hp_graph_percent .percent {
     position: absolute;
-    bottom: 0;
-    padding: 50%; }
-    .hp_graph_bundle .hp_graph_percent .percent {
-      position: absolute;
-      left: 50% !important;
-      top: 50% !important;
-      -webkit-transform: translate(-50%, -50%) !important;
-      transform: translate(-50%, -50%) !important;
-      margin: 0 !important;
-      color: #FFF; }
+    left: 50% !important;
+    top: 50% !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    color: #FFF; }
 
 @media (min-width: 800px) {
   .timeline {
