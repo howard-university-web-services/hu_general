@@ -7514,6 +7514,8 @@ table {
     text-align: center;
     background: #003A63;
     padding: 1.5rem; }
+    table th a {
+      color: #FFF; }
   table .tablesaw thead th {
     text-align: center; }
   table.tablesaw th,
