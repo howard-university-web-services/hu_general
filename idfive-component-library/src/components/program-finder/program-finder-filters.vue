@@ -1,20 +1,20 @@
 <template>
     <div class="program-finder__filters">
-        <div class="program-finder__filter">
+        <div class="program-finder__filter" v-if="hasDegreeFilter">
             <label for="program-finder-degree">Degree</label>
             <select id="program-finder-degree" aria-label="Degree" @change="handleDegreeChange($event.target.value)">
                 <option value="" :selected="!!selectedDegree">Select a degree</option>
                 <option v-for="degree in degrees" :key="degree.id" :selected="selectedDegree == degree.id" :value="degree.id">{{ degree.label }}</option>
             </select>
         </div>
-        <div class="program-finder__filter">
+        <div class="program-finder__filter" v-if="hasSchoolFilter">
             <label for="program-finder-school">School</label>
             <select id="program-finder-school" aria-label="School" @change="handleSchoolChange($event.target.value)">
                 <option value="" :selected="!!selectedSchool">Select a school</option>
                 <option v-for="school in schools" :key="school.id" :selected="selectedSchool == school.id" :value="school.id">{{ school.label }}</option>
             </select>
         </div>
-        <div class="program-finder__filter">
+        <div class="program-finder__filter" v-if="hasSubjectFilter">
             <label for="program-finder-subject">Subject</label>
             <select id="program-finder-subject" aria-label="Subject" @change="handleSubjectChange($event.target.value)">
                 <option value="" :selected="!!selectedSubject">Select a subject</option>
@@ -49,6 +49,15 @@ export default {
         },
         selectedSubject() {
             return state.selectedSubject;
+        },
+        hasDegreeFilter() {
+            return state.hasDegreeFilter;
+        },
+        hasSchoolFilter() {
+            return state.hasSchoolFilter;
+        },
+        hasSubjectFilter() {
+            return state.hasSubjectFilter;
         }
     },
     methods: {
