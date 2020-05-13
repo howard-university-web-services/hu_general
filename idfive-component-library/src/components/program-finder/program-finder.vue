@@ -1,6 +1,6 @@
 <template>
     <div class="program-finder__nav">
-        <program-finder-filters v-if="successfullyFetchedFilters" />
+        <program-finder-filters v-if="!noFilters && successfullyFetchedFilters" />
         <program-finder-results v-if="!noResultsFound" />
         <div v-else class="program-finder__nav-no-results">No programs found, please try another search using different criteria.</div>
     </div>
@@ -18,6 +18,9 @@ export default {
         if (!!this.degree) state.selectedDegree = this.degree;
         if (!!this.school) state.selectedSchool = this.school;
         if (!!this.subject) state.selectedSubject = this.subject;
+        state.hasDegreeFilter = this.degreeFilter;
+        state.hasSchoolFilter = this.schoolFilter;
+        state.hasSubjectFilter = this.subjectFilter;
     },
     beforeMount() {
         // Initially fetch programs and filter data from API
@@ -37,6 +40,18 @@ export default {
         },
         subject: {
             type: String
+        },
+        degreeFilter: {
+            type: Boolean,
+            default: true
+        },
+        schoolFilter: {
+            type: Boolean,
+            default: true
+        },
+        subjectFilter: {
+            type: Boolean,
+            default: true
         }
     },
     components: {
@@ -58,6 +73,9 @@ export default {
         },
         successfullyFetchedFilters() {
             return !state.fetchingFilters && !state.errorFetchingFilters;
+        },
+        noFilters() {
+            return getters.noFilters();
         }
     },
     watch: {

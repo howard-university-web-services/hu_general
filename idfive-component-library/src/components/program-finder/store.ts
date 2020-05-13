@@ -13,15 +13,21 @@ export const state = Vue.observable({
     fetchingPrograms: true,
     errorFetchingPrograms: false,
     fetchingFilters: true,
-    errorFetchingFilters: false
+    errorFetchingFilters: false,
+    hasDegreeFilter: false,
+    hasSchoolFilter: false,
+    hasSubjectFilter: false
 });
 
 export const getters = {
     apiBase() {
-        const protocol = `http${ state.env === "prod" ? "s" : "" }:`;
-        const hostname = `${ state.env !== "prod" ? `${ state.env }.` : "" }programs.howard.edu`;
-        
+        const protocol = `http${state.env === "prod" ? "s" : ""}:`;
+        const hostname = `${state.env !== "prod" ? `${state.env}.` : ""}programs.howard.edu`;
+
         return `${protocol}//${hostname}/api`;
+    },
+    noFilters() {
+        return !state.hasDegreeFilter && !state.hasSchoolFilter && !state.hasSubjectFilter;
     }
 };
 
@@ -60,22 +66,45 @@ export const actions = {
             });
     },
     fetchFilterData() {
-        this.fetchingFilters = true;
-        return axios.all([
-            axios.get(`${getters.apiBase()}/degree_classification`),
-            axios.get(`${getters.apiBase()}/schools`),
-            axios.get(`${getters.apiBase()}/subjects`)
-        ])
-            .then(axios.spread((degrees, schools, subjects) => {
-                state.degrees = degrees.data.data;
-                state.schools = schools.data.data;
-                state.subjects = subjects.data.data;
-                state.fetchingFilters = false;
-            }))
-            .catch(error => {
-                state.fetchingFilters = false;
-                state.errorFetchingFilters = true;
-            });
+        if (!getters.noFilters()) {
+            const filtersToFetch = [];
+
+            if (state.hasDegreeFilter) {
+                filtersToFetch.push({
+                    name: "degrees",
+                    endpoint: `${getters.apiBase()}/degree_classification`
+                });
+            }
+
+            if (state.hasSchoolFilter) {
+                filtersToFetch.push({
+                    name: "schools",
+                    endpoint: `${getters.apiBase()}/schools`
+                });
+            }
+
+            if (state.hasSubjectFilter) {
+                filtersToFetch.push({
+                    name: "subjects",
+                    endpoint: `${getters.apiBase()}/subjects`
+                });
+            }
+
+            this.fetchingFilters = true;
+
+            return axios.all(filtersToFetch.map((filter) => axios.get(filter.endpoint)))
+                .then(axios.spread((...responses) => {
+                    responses.forEach((response, i) => {
+                        state[filtersToFetch[i].name] = response.data.data;
+                    });
+                    state.fetchingFilters = false;
+                }))
+                .catch(error => {
+                    console.error(error);
+                    state.fetchingFilters = false;
+                    state.errorFetchingFilters = true;
+                });
+        }
     },
     resetFilters() {
         state.selectedDegree = null;
