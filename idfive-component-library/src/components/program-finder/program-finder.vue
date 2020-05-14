@@ -1,7 +1,7 @@
 <template>
     <div class="program-finder__nav">
-        <program-finder-filters v-if="!noFilters && successfullyFetchedFilters" />
-        <program-finder-results v-if="!noResultsFound" />
+        <program-finder-filters :store="store" v-if="!noFilters && successfullyFetchedFilters" />
+        <program-finder-results :store="store" v-if="!noResultsFound" />
         <div v-else class="program-finder__nav-no-results">No programs found, please try another search using different criteria.</div>
     </div>
 </template>
@@ -9,23 +9,28 @@
 <script lang="ts">
 import ProgramFinderFilters from "./program-finder-filters.vue";
 import ProgramFinderResults from "./program-finder-results.vue";
-import { state, actions, getters } from "./store";
+import ProgramFinderStore from "./store";
 
 export default {
+    data() {
+        return {
+            store: ProgramFinderStore(),
+        }
+    },
     created() {
         // Hydrate store state with data passed through props
-        state.env = this.env;
-        if (!!this.degree) state.selectedDegree = this.degree;
-        if (!!this.school) state.selectedSchool = this.school;
-        if (!!this.subject) state.selectedSubject = this.subject;
-        state.hasDegreeFilter = this.degreeFilter;
-        state.hasSchoolFilter = this.schoolFilter;
-        state.hasSubjectFilter = this.subjectFilter;
+        this.store.state.env = this.env;
+        if (!!this.degree) this.store.state.selectedDegree = this.degree;
+        if (!!this.school) this.store.state.selectedSchool = this.school;
+        if (!!this.subject) this.store.state.selectedSubject = this.subject;
+        this.store.state.hasDegreeFilter = this.degreeFilter;
+        this.store.state.hasSchoolFilter = this.schoolFilter;
+        this.store.state.hasSubjectFilter = this.subjectFilter;
     },
     beforeMount() {
         // Initially fetch programs and filter data from API
-        actions.fetchProgramData();
-        actions.fetchFilterData();
+        this.store.actions.fetchProgramData();
+        this.store.actions.fetchFilterData();
     },
     props: {
         env: {
@@ -60,33 +65,33 @@ export default {
     },
     computed: {
         selectedDegree() {
-            return state.selectedDegree;
+            return this.store.state.selectedDegree;
         },
         selectedSchool() {
-            return state.selectedSchool;
+            return this.store.state.selectedSchool;
         },
         selectedSubject() {
-            return state.selectedSubject;
+            return this.store.state.selectedSubject;
         },
         noResultsFound() {
-            return !state.fetchingPrograms && state.programs.length === 0;
+            return !this.store.state.fetchingPrograms && this.store.state.programs.length === 0;
         },
         successfullyFetchedFilters() {
-            return !state.fetchingFilters && !state.errorFetchingFilters;
+            return !this.store.state.fetchingFilters && !this.store.state.errorFetchingFilters;
         },
         noFilters() {
-            return getters.noFilters();
+            return this.store.getters.noFilters();
         }
     },
     watch: {
         selectedDegree() {
-            actions.fetchProgramData();
+            this.store.actions.fetchProgramData();
         },
         selectedSchool() {
-            actions.fetchProgramData();
+            this.store.actions.fetchProgramData();
         },
         selectedSubject() {
-            actions.fetchProgramData();
+            this.store.actions.fetchProgramData();
         }
     }
 }
