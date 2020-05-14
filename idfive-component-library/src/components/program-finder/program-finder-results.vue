@@ -26,15 +26,19 @@
 </template>
 
 <script lang="ts">
-import { state } from "./store";
 
 export default {
+    props: {
+        store: {
+            required: true,
+        }
+    },
     computed: {
         programs() {
-            return state.programs;
+            return this.store.state.programs;
         },
         successfullyFetchedResults() {
-            return !state.fetchingPrograms && !state.errorFetchingPrograms;
+            return !this.store.state.fetchingPrograms && !this.store.state.errorFetchingPrograms;
         }
     }
 }

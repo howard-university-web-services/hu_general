@@ -9601,10 +9601,16 @@ a.tablesaw-btn {
 .node--unpublished {
   background-color: #fff4f4; }
 
+.entity-moderation-form {
+  border: 1px solid;
+  background-color: #f5f5f2; }
+
 .entity-moderation-form__item {
   flex: 1; }
   .entity-moderation-form__item .form-item input, .entity-moderation-form__item .form-item textarea, .entity-moderation-form__item .form-item select {
     border: 1px solid; }
+  .entity-moderation-form__item:last-of-type {
+    text-align: right; }
 
 ul.js-pager__items {
   align-items: center;

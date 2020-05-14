@@ -28,50 +28,53 @@
 </template>
 
 <script lang="ts">
-import { state, actions } from "./store";
-
 export default {
+    props: {
+        store: {
+            required: true,
+        },
+    },
     computed: {
         degrees() {
-            return state.degrees;
+            return this.store.state.degrees;
         },
         schools() {
-            return state.schools;
+            return this.store.state.schools;
         },
         subjects() {
-            return state.subjects;
+            return this.store.state.subjects;
         },
         selectedDegree() {
-            return state.selectedDegree;
+            return this.store.state.selectedDegree;
         },
         selectedSchool() {
-            return state.selectedSchool;
+            return this.store.state.selectedSchool;
         },
         selectedSubject() {
-            return state.selectedSubject;
+            return this.store.state.selectedSubject;
         },
         hasDegreeFilter() {
-            return state.hasDegreeFilter;
+            return this.store.state.hasDegreeFilter;
         },
         hasSchoolFilter() {
-            return state.hasSchoolFilter;
+            return this.store.state.hasSchoolFilter;
         },
         hasSubjectFilter() {
-            return state.hasSubjectFilter;
+            return this.store.state.hasSubjectFilter;
         }
     },
     methods: {
         handleDegreeChange(degree) {
-            state.selectedDegree = degree;
+            this.store.state.selectedDegree = degree;
         },
         handleSchoolChange(school) {
-            state.selectedSchool = school;
+            this.store.state.selectedSchool = school;
         },
         handleSubjectChange(subject) {
-            state.selectedSubject = subject;
+            this.store.state.selectedSubject = subject;
         },
         resetFilters() {
-            actions.resetFilters();
+            this.store.actions.resetFilters();
         }
     }
 }
