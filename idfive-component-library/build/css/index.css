@@ -3572,7 +3572,7 @@ html {
 /*Secondary Colors */
 /* Fonts */
 body, .body-text--time, select, input,
-textarea, .main-footer address, .silc-accordion__content, .nav-toggled .main-header__nav ul li a, .breadcrumb__items, .program-finder p, .program-finder .program-finder__filter select, .program-finder .program-finder__filters-reset, .news-and-events__time, table tr:nth-child(odd) td {
+textarea, .main-footer address, .silc-accordion__content, .nav-toggled .main-header__nav ul li a, .breadcrumb__items, .program-finder p, .program-finder__filter select, .program-finder__filters-reset, .news-and-events__time, table tr:nth-child(odd) td {
   font-weight: 400;
   font-style: normal;
   font-family: "Open Sans", sans-serif; }
@@ -3582,7 +3582,7 @@ label, .mobile-nav .silc-nav__link, .main-footer ul li, .main-nav .silc-nav__ite
   font-style: normal;
   font-family: "Open Sans", sans-serif; }
 
-.header--h1, .header--h2, .header--page-intro, .body-text--date, .full-width-image-banner h2, .silc-accordion__label, .js .silc-accordion--become-tabs.silc-accordion .silc-accordion__nav-link, .sidebar-title, .fancy-link, .block-header h2, .block-header .h2, .announcements__block--featured .announcements__title, .post-header__title, .program-finder .program-finder__nav-heading, .program-finder .program-finder__nav-course-title, .utility__search-submit, .utility__search-mobile .utility__search-form-mobile .utility__search__mobile-submit, .sidebar-nav h3 a, .btn,
+.header--h1, .header--h2, .header--page-intro, .body-text--date, .full-width-image-banner h2, .silc-accordion__label, .js .silc-accordion--become-tabs.silc-accordion .silc-accordion__nav-link, .sidebar-title, .fancy-link, .block-header h2, .block-header .h2, .announcements__block--featured .announcements__title, .post-header__title, .program-finder__nav-heading, .program-finder__nav-course-title, .utility__search-submit, .utility__search-mobile .utility__search-form-mobile .utility__search__mobile-submit, .sidebar-nav h3 a, .btn,
 .webform-button--submit,
 .button .button--primary, .js-form-submit, .form-submit,
 .webform-button--reset, .js-webform-novalidate, .news-and-events__date, table.tablesaw-stack td .tablesaw-cell-label,
@@ -3615,11 +3615,11 @@ table.tablesaw-stack th .tablesaw-cell-label, .alumni-profile h3 {
   background: #FFF;
   padding: 1.875rem; }
 
-.program-finder .program-finder__heading, .promotional-space h2, .callout .callout__title {
+.program-finder__heading, .promotional-space h2, .callout .callout__title {
   font-size: 1.625rem;
   line-height: 1.2; }
   @media (min-width: 800px) {
-    .program-finder .program-finder__heading, .promotional-space h2, .callout .callout__title {
+    .program-finder__heading, .promotional-space h2, .callout .callout__title {
       font-size: 2.25rem;
       line-height: 1.36; } }
 
@@ -6137,29 +6137,27 @@ a.fancy-link:hover {
   background-color: #FFF;
   padding: 2.5rem 1.875rem 0; }
   .program-finder p {
-    margin: 0.9375rem 0; }
-  .program-finder .program-finder__heading {
+    margin: 0.9375rem 0;
+    line-height: 1.4375rem; }
+  .program-finder__heading {
     color: #003A63; }
-  .program-finder .program-finder__nav-heading {
+  .program-finder__nav {
+    margin-top: 1.25rem; }
+  .program-finder__nav-heading {
     color: #003A63;
     font-size: 0.875rem;
     letter-spacing: 0.1125rem;
     line-height: 1.75;
-    margin: 0;
+    margin: 0 0 1.375rem;
     text-transform: uppercase; }
     @media (min-width: 800px) {
-      .program-finder .program-finder__nav-heading {
+      .program-finder__nav-heading {
         font-size: 1.125rem; } }
-    .program-finder .program-finder__nav-heading:after {
-      content: "";
-      border-top: 0.0625rem solid #D8D8D8;
-      display: block;
-      margin-top: 1.25rem; }
-  .program-finder .program-finder__nav-results {
+  .program-finder__nav-results {
     margin: 0 -2rem; }
-  .program-finder .program-finder__nav-result {
+  .program-finder__nav-result {
     border-top: 1px solid #CDCDCD; }
-  .program-finder .program-finder__nav-course {
+  .program-finder__nav-course {
     align-items: center;
     background-color: #FFF;
     display: block;
@@ -6167,18 +6165,18 @@ a.fancy-link:hover {
     position: relative;
     transition: .3s background-color ease-in-out; }
     @media (min-width: 639px) {
-      .program-finder .program-finder__nav-course {
+      .program-finder__nav-course {
         display: flex; } }
-    .program-finder .program-finder__nav-course[href]:hover, .program-finder .program-finder__nav-course[href]:focus {
+    .program-finder__nav-course[href]:hover, .program-finder__nav-course[href]:focus {
       background-color: #EDC054;
       text-decoration: none; }
-      .program-finder .program-finder__nav-course[href]:hover .program-finder__nav-course-title, .program-finder .program-finder__nav-course[href]:focus .program-finder__nav-course-title {
+      .program-finder__nav-course[href]:hover .program-finder__nav-course-title, .program-finder__nav-course[href]:focus .program-finder__nav-course-title {
         color: #1B1B1B; }
-      .program-finder .program-finder__nav-course[href]:hover .program-finder__nav-course-degrees, .program-finder .program-finder__nav-course[href]:focus .program-finder__nav-course-degrees {
+      .program-finder__nav-course[href]:hover .program-finder__nav-course-degrees, .program-finder__nav-course[href]:focus .program-finder__nav-course-degrees {
         color: #1B1B1B; }
-      .program-finder .program-finder__nav-course[href]:hover .program-finder__nav-result-chevron, .program-finder .program-finder__nav-course[href]:focus .program-finder__nav-result-chevron {
+      .program-finder__nav-course[href]:hover .program-finder__nav-result-chevron, .program-finder__nav-course[href]:focus .program-finder__nav-result-chevron {
         fill: #1B1B1B; }
-  .program-finder .program-finder__nav-result-chevron {
+  .program-finder__nav-result-chevron {
     fill: #003A63;
     height: 0.875rem;
     width: 0.5rem;
@@ -6188,7 +6186,7 @@ a.fancy-link:hover {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     transition: .3s fill ease-in-out; }
-  .program-finder .program-finder__nav-course-title {
+  .program-finder__nav-course-title {
     color: #003A63;
     display: block;
     font-size: 1.0625rem;
@@ -6196,44 +6194,44 @@ a.fancy-link:hover {
     margin: 0 0 0.25rem;
     transition: .3s color ease-in-out; }
     @media (min-width: 639px) {
-      .program-finder .program-finder__nav-course-title {
+      .program-finder__nav-course-title {
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: auto;
         margin: 0 0.875rem 0 0;
         width: 60%; } }
-  .program-finder .program-finder__nav-course-degrees {
+  .program-finder__nav-course-degrees {
     color: #757575;
     display: block;
     font-size: 1rem;
     transition: .3s color ease-in-out; }
     @media (min-width: 639px) {
-      .program-finder .program-finder__nav-course-degrees {
+      .program-finder__nav-course-degrees {
         flex: 1; } }
-    .program-finder .program-finder__nav-course-degrees span:not(:last-child) {
+    .program-finder__nav-course-degrees span:not(:last-child) {
       margin-right: 0.625rem; }
-  .program-finder .program-finder__nav-no-results {
+  .program-finder__nav-no-results {
     padding: 1.25rem 0; }
-  .program-finder .program-finder__filters {
+  .program-finder__filters {
     margin-bottom: 1.875rem;
     margin-left: -1.25rem; }
     @media (min-width: 800px) {
-      .program-finder .program-finder__filters {
+      .program-finder__filters {
         align-items: flex-end;
         display: flex;
         flex-wrap: wrap; } }
-  .program-finder .program-finder__filter {
+  .program-finder__filter {
     padding-left: 1.25rem; }
     @media (min-width: 800px) {
-      .program-finder .program-finder__filter {
+      .program-finder__filter {
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: auto;
         width: 50%; } }
     @media (min-width: 1250px) {
-      .program-finder .program-finder__filter {
+      .program-finder__filter {
         width: 25%; } }
-    .program-finder .program-finder__filter select {
+    .program-finder__filter select {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
@@ -6252,10 +6250,10 @@ a.fancy-link:hover {
       line-height: 1.4375;
       padding: 0.8125rem 2.625rem 0.75rem 0.875rem;
       cursor: pointer; }
-    .program-finder .program-finder__filter--reset {
+    .program-finder__filter--reset {
       flex: 0;
       margin-top: 1.25rem; }
-  .program-finder .program-finder__filters-reset {
+  .program-finder__filters-reset {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -6268,12 +6266,12 @@ a.fancy-link:hover {
     text-decoration: underline;
     white-space: nowrap;
     width: 5.625rem; }
-  .program-finder .program-finder__loader {
+  .program-finder__loader {
     background-color: #FFF;
     display: flex;
     justify-content: center;
     padding: 1.25rem 1.25rem 2.5rem; }
-    .program-finder .program-finder__loader > div {
+    .program-finder__loader > div {
       -webkit-animation: loaderDot 1.4s infinite ease-in-out both;
               animation: loaderDot 1.4s infinite ease-in-out both;
       background-color: #003A63;
@@ -6283,12 +6281,12 @@ a.fancy-link:hover {
       flex-basis: auto;
       height: 1.125rem;
       width: 1.125rem; }
-      .program-finder .program-finder__loader > div:not(:last-child) {
+      .program-finder__loader > div:not(:last-child) {
         margin-right: 0.5rem; }
-      .program-finder .program-finder__loader > div:nth-child(1) {
+      .program-finder__loader > div:nth-child(1) {
         -webkit-animation-delay: -0.32s;
                 animation-delay: -0.32s; }
-      .program-finder .program-finder__loader > div:nth-child(2) {
+      .program-finder__loader > div:nth-child(2) {
         -webkit-animation-delay: -0.16s;
                 animation-delay: -0.16s; }
 
@@ -7516,8 +7514,6 @@ table {
     text-align: center;
     background: #003A63;
     padding: 1.5rem; }
-    table th a {
-      color: #FFF; }
   table .tablesaw thead th {
     text-align: center; }
   table.tablesaw th,
@@ -7672,7 +7668,7 @@ image field when viewed on devices with a screen size of 767px and below
       width: 100%;
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center 0;
       background-attachment: fixed;
       height: 100%; }
   .hp_parallax_bundle:before {
