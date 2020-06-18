@@ -9,16 +9,10 @@ table {
         @extend %sans-bold;
         font-size: rem(16);
         color: $white;
-        text-align: center;
+        text-align: left;
         background: $navy;
         // font-family: $serif;
-        padding: rem(24);
-        a {
-            color: $white;
-        }
-    }
-    .tablesaw thead th {
-        text-align: center;
+        padding: rem(15);
     }
     &.tablesaw th,
     &.tablesaw td,
@@ -27,7 +21,6 @@ table {
         @include media('table') {
             padding: rem(15);
             // border-bottom: 1px solid $gray4;
-            text-align: center;
         }
     }
     tr {
@@ -41,7 +34,6 @@ table {
                 background: $white;
                 @include media('table') {
                     font-size: rem(16);
-                    text-align: center;
                     border-left: solid rem(1) $gray4;
                 }
                 &:first-child {
@@ -65,7 +57,6 @@ table {
                 background: $gray5;
                 @include media('table') {
                     font-size: rem(16);
-                    text-align: center;
                     border-left: solid rem(1) $gray4;
                 }
                 &:first-child {
@@ -84,9 +75,6 @@ table {
     &.tablesaw-stack td,
     &.tablesaw-stack th {
         text-align: left!important;
-        @include media('table') {
-            text-align: center!important;
-        }
     }
     &.tablesaw-stack td .tablesaw-cell-label,
     &.tablesaw-stack th .tablesaw-cell-label {

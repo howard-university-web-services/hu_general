@@ -10,10 +10,12 @@
     width: 100%;
 
     @include media('small') {
+      margin-right: rem(15);
       width: 40%
     }
        
     @include media('medium') {
+      margin-right: 0;
       width: 100%;
       display: block;
     }
@@ -21,10 +23,9 @@
   }
   &__img_portrait {
     @include media('small') {
-      width: 90px;
-      height: 120px;
-      margin: 15px 0 15px 15px;
-      width: 140px;
+      width: rem(90);
+      height: rem(120);
+      width: rem(140);
       min-height: 13em;
     }
 
@@ -37,20 +38,21 @@
   }
 
   &__desc {
-    padding: rem(15) rem(15) rem(5) rem(15);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
     flex: 1;
-
+    padding: rem(15) rem(20);
+    @include media('small') {
+      padding: 0;
+    }
+    @include media('medium') {
+      padding: rem(15) rem(20);
+    }
     &--featured {
       background: $white;
       height: 100%;
-    }
-
-    @include media('medium') {
-      padding: rem(15) rem(20) rem(14) rem(20);
     }
 
     p {
@@ -89,8 +91,12 @@
     background: $white;
     border-radius: rem(4);
     text-decoration: none;
+    @include media('small') {
+      padding: rem(15);
+    }
     @include media('medium') {
       display: block;
+      padding: 0;
     }
     &--portrait-img {
       display: flex;
@@ -144,14 +150,17 @@
 
   // Buttons
   .btn {
-    margin-top: 0px;
+    margin-top: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__btn {
     @include media('medium') {
       background: $yellow;
       display: block;
       .btn {
-        margin: 0px 0px 0px 0px;
+        margin: 0;
       }
     }
   }
@@ -160,12 +169,35 @@
   &__block.news-and-events__block_feat_3up {
     border-radius: rem(4);
     overflow: hidden;
+    @include media('medium') {
+      padding: rem(15);
+    }
     .news-and-events__img {
+      @include media('small') {
+        align-self: flex-start;
+        min-height: auto;
+      }
       @include media('medium') {
-        width: 265px;
+        height: rem(320);
+        width: rem(265);
         display: block;
         float: left;
-        padding-bottom: 20rem;
+        margin: 0 rem(15) 0 0;
+      }
+      &:before {
+        @include media('small') {
+          content: '';
+          display: block;
+          padding-top: 66.667%;
+        }
+        @include media('medium') {
+          display: none;
+        }
+      }
+    }
+    .news-and-events__desc {
+      @include media('medium') {
+        padding: 0;
       }
     }
   }
@@ -177,6 +209,7 @@
         @include media('medium') {
           color: white;
           border-radius: rem(4);
+          padding: 0;
           position: relative;
         }
 
@@ -222,10 +255,10 @@
 
         .news-and-events__img {
           @include media('medium') {
-            min-height: rem(340);
             position: relative;
             overflow: hidden;
-            min-height: rem(540)
+            min-height: rem(540);
+            height: 100%;
           }
 
           &:after {

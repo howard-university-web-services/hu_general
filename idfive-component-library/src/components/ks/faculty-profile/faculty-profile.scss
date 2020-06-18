@@ -92,6 +92,9 @@
         font-size: rem(22);
       }
     }
+    &-envelope {
+      transform: translateY(#{rem(2)});
+    }
   }
   &__btn {
     background: $yellow;

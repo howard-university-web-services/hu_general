@@ -3,8 +3,6 @@ export default class  sidebarNav{
   protected child: HTMLElement;
   protected trigger:HTMLElement
   
-
-
   /**----------------------------------------------------------
    * Constructor
    ----------------------------------------------------------*/
@@ -14,20 +12,15 @@ export default class  sidebarNav{
     this.child = this.element.querySelector('.silc-nav__items');
     this.trigger = this.element.querySelector('.silc-nav__link');
 
-this.displayChild();
-
-
-
+    this.displayChild();
   }
 
   protected displayChild() {
     if (this.element) {
       this.trigger.addEventListener("click", event => {
- event.preventDefault();
-      this.child.classList.toggle('sidebar-nav__display-child');
+        event.preventDefault();
+        this.child.classList.toggle('sidebar-nav__display-child');
       });
-
-
     }
   }
 

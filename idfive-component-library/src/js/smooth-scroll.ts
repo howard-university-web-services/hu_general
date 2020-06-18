@@ -3,11 +3,6 @@
 import * as SmoothScroll from 'smooth-scroll';
 export function JumpTo(){
 
-var offset = function(){if (window.innerWidth < 700) {
-	return 0;
-}
-return -90;}
-
 // document.querySelector('.nav-brace').addEventListener('click', function() {
 //     SmoothScroll(0, 400);
 // });
@@ -18,10 +13,11 @@ return -90;}
 		header: '[data-scroll-header]',
 
 		// Speed & Easing
-		speed: 800, // Integer. How fast to complete the scroll in milliseconds
-		offset: offset, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
-		easing: 'easeOut', // Easing pattern to use
-		customEasing: function (time) {}, // Function. Custom easing pattern
+		speed: 600, // Integer. How fast to complete the scroll in milliseconds
+		offset: 0, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+		customEasing: function (time) {
+			return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+		}, // Function. Custom easing pattern
 
 		// Callback API
 		before: function () {}, // Callback to run before scroll

@@ -10,7 +10,8 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_system_theme_settings_alter().
  */
-function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface $form_state)
+{
 
   // Remove some stock idfive stuff we aren't using.
   unset($form['page_elements']);
@@ -18,6 +19,34 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
   unset($form['theme_ui']);
   unset($form['search']);
   unset($form['other']);
+
+  // Theme variant
+  $form['theme_variant_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Theme Variant Settings'),
+  ];
+  $form['theme_variant_options'] = array(
+    '#type' => 'value',
+    '#value' => array(
+      '' => t('Default'),
+      'clean_light' => t('Clean & Light'),
+      'classic_editorial' => t('Classic Editorial')
+    )
+  );
+  $form['theme_variant_settings']['theme_variant'] = array(
+    '#title' => t('Theme Variant'),
+    '#type' => 'select',
+    '#description' => "Select theme variant.",
+    '#default_value' => theme_get_setting('theme_variant'),
+    '#options' => $form['theme_variant_options']['#value'],
+  );
+  // Show theme switcher.
+  $form['theme_variant_settings']['show_switcher'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show theme variant switcher for authenticated users'),
+    '#default_value' => theme_get_setting('show_switcher'),
+  ];
+
 
   // School/Department/Organization.
   $form['hu_school_settings'] = [
@@ -125,5 +154,4 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#default_value' => theme_get_setting('phone'),
     '#description' => t('Add a phone number.'),
   ];
-
 }

@@ -34,7 +34,6 @@ export default class SlideDistance {
       let descHeight = this.desc.clientHeight;
       let viewportHeight = dotsDistance + descHeight;
 
-      let dotsDistanceMobile = this.image.clientWidth;
       let buttonDistance = dotsDistance - this.buttonHeightDiv;
       let buttonDistanceMobile = dotsDistance - this.buttonHeightDivMobile;
       this.dots.style.top = dotsDistance - 42 + "px";
@@ -45,11 +44,11 @@ export default class SlideDistance {
 
       }
       for (let i = 0; i < this.buttons.length; i++) {
-        if (dotsDistanceMobile <= 673) {
+        if (window.matchMedia("(min-width: 800px)").matches) {
+          this.buttons[i].style.top = buttonDistance + "px";
+        } else {
           this.buttons[i].style.top = buttonDistanceMobile + "px";
         }
-        else { this.buttons[i].style.top = buttonDistance + "px"; }
-
       }
     }
   }

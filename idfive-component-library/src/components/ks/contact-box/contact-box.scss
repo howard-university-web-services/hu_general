@@ -1,3 +1,4 @@
+
 .contact-box {
     background: $white;
     padding: rem(30);
@@ -6,8 +7,10 @@
     box-shadow:  rem(1) rem(1) rem(9) 0 rgba(0, 0, 0, 0.2);
     font-size: 1rem;
     line-height: 1.3rem;
-    @include media('medium') {
+    margin-top: rem(24);
+    @include media('large') {
         border-top: rem(10) solid $red;
+        margin-top: 0;
     }
     span {
         display: block;

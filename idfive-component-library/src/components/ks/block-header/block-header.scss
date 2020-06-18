@@ -3,6 +3,7 @@
   position: relative;
   color: $white;
   height: auto;
+  overflow: hidden;
   margin-bottom: rem(20);
   display: block;
   @include media('medium') {

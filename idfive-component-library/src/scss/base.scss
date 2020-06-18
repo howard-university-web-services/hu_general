@@ -473,17 +473,22 @@ strong {
     @include media('medium') {
       padding: 0 rem(30) rem(30) rem(30);
     }
+    h3 {
+      margin-bottom: rem(10);
+    }
   }
 
   &__img {
     @extend %image-bck;
     height: rem(224);
     width: 100%;
-    margin-bottom: rem(10);
-
+    margin-bottom: rem(15);
     @include media('medium') {
-      height: 100%;
       min-height: rem(224);
+    }
+    @include media('large') {
+      height: 100%;
+      margin-bottom: 0;
     }
   }
 

@@ -97,6 +97,7 @@ h5, .h5, %h5 {
     text-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.30);
     color: $white;
     line-height: 1.25;
+    max-width: rem(690);
     @extend %serif-regular;
     @include media('medium') {
       font-size: rem(38);
@@ -150,7 +151,8 @@ a {
   }
   .hp-html &:not([class]),
   .silc-accordion__content &:not([class]),
-  .cke_editable_themed &:not([class]) {
+  .cke_editable_themed &:not([class]),
+  .table & {
     text-decoration: underline;
     transition: .15s color ease-in-out;
     &:hover {

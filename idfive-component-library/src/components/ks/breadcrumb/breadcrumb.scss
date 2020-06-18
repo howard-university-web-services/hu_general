@@ -1,3 +1,4 @@
+
 .breadcrumb {
     padding: 0 0 rem(7);
     &__items {
@@ -21,15 +22,38 @@
         a {
             color: $gray3;
             transition: color ease .3s;
-            font-size: rem(11);
-            line-height: rem(22);
+        }
+        &:nth-last-child(2) {
+            .breadcrumb__back-to-parent {
+                @include media('medium') {
+                    display: none;
+                }
+            }
+            &::before {
+                content: "\e901";
+                @include icon();
+                color: $lightblue;
+                margin: 0 rem(5) 0 0;
+                transform: scale(-1);
+                @include media('medium') {
+                    display: none;
+                }
+            }
+            &::after {
+                display: none;
+                @include media('medium') {
+                    display: inline;
+                }
+            }
+        }
+        &:not(:nth-last-child(2)) {
+            display: none;
             @include media('medium') {
-                font-size: rem(13);
-                line-height: rem(18);
+                display: flex;
             }
         }
         &:last-of-type {
-            &:after {
+            &::after {
                 content: "";
             }
         }

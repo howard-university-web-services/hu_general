@@ -26,6 +26,7 @@ import focusWithin from 'focus-within';
 import MicroModal from 'micromodal';
 import Player from '@vimeo/player';
 import initProgramFinder from "../components/program-finder/program-finder";
+import ThemeOptionSelect from "./theme-option-select";
 
 focusWithin(document);
 JumpTo();
@@ -112,6 +113,11 @@ function featuredImageInit() {
     new featuredImage(el);
   });
 }
+function themeOptionSelectInit() {
+  [].forEach.call(document.querySelectorAll(".theme-option-select"), (el: HTMLSelectElement) => {
+    new ThemeOptionSelect(el);
+  });
+}
 
 window.addEventListener("load", function () {
   let navToggle = document.querySelector(".main-header__trigger-menu");
@@ -184,6 +190,7 @@ window.addEventListener("load", function () {
   featuredImageInit();
   SliderDistanceInit();
   ourPeopleInit();
+  themeOptionSelectInit();
 });
 
 window.addEventListener("DOMContentLoaded", () => {

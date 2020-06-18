@@ -12,16 +12,21 @@
   <nav aria-label="breadcrumb" class="breadcrumb">
     <ol class="breadcrumb__items">
       {% for item in breadcrumb %}
-      {% if loop.last %}
+        {% if loop.last %}
           <li class="breadcrumb__item breadcrumb__item--active">
-      {% else %}
+        {% else %}
           <li class="breadcrumb__item">
-      {% endif %}
-          {% if item.url %}
-            <a href="{{ item.url }}">{{ item.text }}</a>
-          {% else %}
-            {{ item.text }}
-          {% endif %}
+        {% endif %}
+        {% if item.url %}
+          <a href="{{ item.url }}">
+            {% if loop.index == (loop.length - 1) %}
+              <span class="breadcrumb__back-to-parent">Back to </span>
+            {% endif %}
+            <span class="breadcrumb__item-text">{{ item.text }}</span>
+          </a>
+        {% else %}
+          {{ item.text }}
+        {% endif %}
         </li>
       {% endfor %}
     </ol>

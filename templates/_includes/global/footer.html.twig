@@ -1,87 +1,101 @@
 <footer class="main-footer" aria-label="Footer">
-  <div class="main-footer__top">
-    <div class="main-footer__contact">
-        <address class="site__address">
-            {% if address_line_one %}
-                <strong class="main-footer__title">{{ address_line_one }}</strong><br>
-            {% endif %}
-            {% if address_line_two %}
-                <span>{{ address_line_two }}</span><br>
-            {% endif %}
-            {% if address_line_three %}
-                <span>{{ address_line_three }}</span><br>
-            {% endif %}
-            {% if phone %}
-                <span>Phone: {{ phone }}</span>
-            {% endif %}
-        </address>
-    </div>
-    <div class="main-footer__nav">
+	<div class="main-footer__top">
+		<div class="main-footer__contact">
+			<address class="site__address">
+				{% if address_line_one %}
+					<strong class="main-footer__title">{{ address_line_one }}</strong><br>
+				{% endif %}
+				{% if address_line_two %}
+					<span>{{ address_line_two }}</span><br>
+				{% endif %}
+				{% if address_line_three %}
+					<span>{{ address_line_three }}</span><br>
+				{% endif %}
+				{% if phone %}
+					<span>Phone:
+						{{ phone }}</span>
+				{% endif %}
+			</address>
+		</div>
+		<div class="main-footer__nav">
 
-        <div class="main-footer__social">
-            <ul class="social-links">
-                {% if facebook_link %}
-                    <li>
-                        <a class="social-links__item" href="{{ facebook_link }}" target="_blank">
-                            <i class="icon-facebook"><span class="visible-for-screen-readers">Facebook</span></i>
-                        </a>
-                    </li>
-                {% endif %}
-                {% if twitter_link %}
-                    <li>
-                        <a class="social-links__item" href="{{ twitter_link }}" target="_blank">
-                            <i class="icon-twitter"><span class="visible-for-screen-readers">Twitter</span></i>
-                        </a>
-                    </li>
-                {% endif %}
-                {% if instagram_link %}
-                    <li>
-                        <a class="social-links__item" href="{{ instagram_link }}" target="_blank">
-                            <i class="icon-instagram"><span class="visible-for-screen-readers">Instagram</span></i>
-                        </a>
-                    </li>
-                {% endif %}
-                {% if youtube_link %}
-                    <li>
-                        <a class="social-links__item" href="{{ youtube_link }}" target="_blank">
-                            <i class="icon-youtube"><span class="visible-for-screen-readers">Youtube</span></i>
-                        </a>
-                    </li>
-                {% endif %}
-            </ul>
-        </div>
+			<div class="main-footer__social">
+				<ul class="social-links">
+					{% if facebook_link %}
+						<li>
+							<a class="social-links__item" href="{{ facebook_link }}" target="_blank">
+								<i class="icon-facebook">
+									<span class="visible-for-screen-readers">Facebook</span>
+								</i>
+							</a>
+						</li>
+					{% endif %}
+					{% if twitter_link %}
+						<li>
+							<a class="social-links__item" href="{{ twitter_link }}" target="_blank">
+								<i class="icon-twitter">
+									<span class="visible-for-screen-readers">Twitter</span>
+								</i>
+							</a>
+						</li>
+					{% endif %}
+					{% if instagram_link %}
+						<li>
+							<a class="social-links__item" href="{{ instagram_link }}" target="_blank">
+								<i class="icon-instagram">
+									<span class="visible-for-screen-readers">Instagram</span>
+								</i>
+							</a>
+						</li>
+					{% endif %}
+					{% if youtube_link %}
+						<li>
+							<a class="social-links__item" href="{{ youtube_link }}" target="_blank">
+								<i class="icon-youtube">
+									<span class="visible-for-screen-readers">Youtube</span>
+								</i>
+							</a>
+						</li>
+					{% endif %}
+				</ul>
+			</div>
 
-      <div class="main-footer__menu">
-        <nav class="main-footer__main-nav">
-          {{ page.footer_primary_menu }}
-        </nav>
-      </div>
+			<div class="main-footer__menu">
+				<nav class="main-footer__main-nav">
+					{{ page.footer_primary_menu }}
+				</nav>
+			</div>
 
-    </div>
-  </div>
-  <div class=" main-footer__bottom">
+		</div>
+	</div>
+	<div class=" main-footer__bottom">
 
-    <div class="silc-grid silc-grid--align-center-medium">
+		<div class="silc-grid silc-grid--align-center-medium">
 
-        <div class="silc-grid__col silc-grid__col--1-medium">
-            <a href="http://howard.edu" class="main-footer__bottom-logo">
-                <img src="{{ base_path ~ directory }}/idfive-component-library/build/img/howard_clocktower_logo_white_footer.svg" alt="Howard Logo COAS">
-            </a>
-        </div>
+			<div class="silc-grid__col silc-grid__col--1-medium">
+				<a href="http://howard.edu" class="main-footer__bottom-logo">
+					<img src="{{ base_path ~ directory }}/idfive-component-library/build/img/howard_clocktower_logo_white_footer.svg" alt="Howard Logo COAS">
+				</a>
+			</div>
 
-        <div class="silc-grid__col silc-grid__col--5-medium">
-            <div class="main-footer__copyright">
-                <span>&copy; {{ "now"|date("Y") }} Howard University. All Rights Reserved.</span>
-            </div>
-        </div>
+			<div class="silc-grid__col silc-grid__col--5-medium">
+				<div class="main-footer__copyright">
+					<span>&copy;
+						{{ "now"|date("Y") }}
+						Howard University. All Rights Reserved.</span>
+				</div>
+			</div>
 
-        <div class="silc-grid__col silc-grid__col--6-medium">
-            <div class="main-footer__bottom-nav">
-                {{ page.footer_menu }}
-            </div>
-        </div>
+			<div class="silc-grid__col silc-grid__col--6-medium">
+				<div class="main-footer__bottom-nav">
+					{{ page.footer_menu }}
+				</div>
+			</div>
 
-    </div>
+		</div>
 
-  </div>
+	</div>
+	{% if logged_in and show_switcher %}
+		<select class="theme-option-select"></select>
+	{% endif %}
 </footer>
