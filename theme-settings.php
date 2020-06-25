@@ -10,8 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_system_theme_settings_alter().
  */
-function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface $form_state)
-{
+function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
 
   // Remove some stock idfive stuff we aren't using.
   unset($form['page_elements']);
@@ -20,33 +19,31 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
   unset($form['search']);
   unset($form['other']);
 
-  // Theme variant
+  // Theme variant.
   $form['theme_variant_settings'] = [
     '#type' => 'details',
     '#title' => t('Theme Variant Settings'),
   ];
-  $form['theme_variant_options'] = array(
+  $form['theme_variant_options'] = [
     '#type' => 'value',
-    '#value' => array(
+    '#value' => [
       '' => t('Default'),
       'clean_light' => t('Clean & Light'),
-      'classic_editorial' => t('Classic Editorial')
-    )
-  );
-  $form['theme_variant_settings']['theme_variant'] = array(
+      'classic_editorial' => t('Classic Editorial'),
+    ],
+  ];
+  $form['theme_variant_settings']['theme_variant'] = [
     '#title' => t('Theme Variant'),
     '#type' => 'select',
     '#description' => "Select theme variant.",
     '#default_value' => theme_get_setting('theme_variant'),
     '#options' => $form['theme_variant_options']['#value'],
-  );
-  // Show theme switcher.
+  ];
   $form['theme_variant_settings']['show_switcher'] = [
     '#type' => 'checkbox',
     '#title' => t('Show theme variant switcher for authenticated users'),
     '#default_value' => theme_get_setting('show_switcher'),
   ];
-
 
   // School/Department/Organization.
   $form['hu_school_settings'] = [
@@ -83,6 +80,29 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#title' => t('Show light header menu'),
     '#description' => t('Uses the light menu color scheme for the header menu.'),
     '#default_value' => theme_get_setting('light_header'),
+  ];
+  // Featured Header Link.
+  $form['hu_header_settings']['featured_link'] = [
+    '#type' => 'details',
+    '#title' => t('Featured Header Link'),
+  ];
+  $form['hu_header_settings']['featured_link']['featured_header_link_show'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show Featured Header Link'),
+    '#description' => t('Choose whether to show the featured link in the header.'),
+    '#default_value' => theme_get_setting('featured_header_link_show'),
+  ];
+  $form['hu_header_settings']['featured_link']['featured_header_link_title'] = [
+    '#type' => 'textfield',
+    '#title' => t('Featured Header Link Title'),
+    '#default_value' => theme_get_setting('featured_header_link_title'),
+    '#description' => t('Add a link Title for the featured link.'),
+  ];
+  $form['hu_header_settings']['featured_link']['featured_header_link_url'] = [
+    '#type' => 'url',
+    '#title' => t('Featured Header Link URL'),
+    '#description' => t('Add a link URL for the featured link.'),
+    '#default_value' => theme_get_setting('featured_header_link_url'),
   ];
 
   // Footer.

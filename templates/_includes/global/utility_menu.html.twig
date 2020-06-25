@@ -1,13 +1,18 @@
 <div class="utility">
-  <div class="utility__menu">
-    {{ menu }}
-  </div>
-  <div class="utility__search">
-    <form action="/search/node" class="utility__search-form main-search" id="{{ fid }}" method="get">
-      <label for="{{ sid }}" class="visible-for-screen-readers">Search this Site</label>
-      <input type="text" class="utility__search-input" name="keys" id="{{ sid }}" placeholder="Search...">
-      <button type="submit" class="utility__search-submit">go</button>
-    </form>
-    <button aria-hidden="true" class="utility__search-trigger"><span class="visually-hidden">Trigger Search</span></button>
-  </div>
+	<div class="utility__menu">
+		{{ menu }}
+	</div>
+	{% if featured_header_link_show %}
+		<a href="{{ featured_header_link_url }}">{{ featured_header_link_title }}</a>
+	{% endif %}
+	<div class="utility__search">
+		<form action="/search/node" class="utility__search-form main-search" id="{{ fid }}" method="get">
+			<label for="{{ sid }}" class="visible-for-screen-readers">Search this Site</label>
+			<input type="text" class="utility__search-input" name="keys" id="{{ sid }}" placeholder="Search...">
+			<button type="submit" class="utility__search-submit">go</button>
+		</form>
+		<button aria-hidden="true" class="utility__search-trigger">
+			<span class="visually-hidden">Trigger Search</span>
+		</button>
+	</div>
 </div>
