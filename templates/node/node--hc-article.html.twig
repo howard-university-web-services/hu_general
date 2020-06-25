@@ -26,6 +26,11 @@
           </div>
           <!-- Main column -->
           <div class="silc-grid__col silc-grid__col--10-large kitchen-sink--main-col">
+              {% if content.field_hc_article_date %}
+                <div class="hc-article--date">
+                  {{ content.field_hc_article_date }}
+                </div>
+              {% endif %}
               {% if content.field_hc_featured_image %}
                 <div class="hc-article--featured-image">
                   {{ content.field_hc_featured_image }}
@@ -47,7 +52,7 @@
                 </div>
               {% endif %}
               <!-- Render without, so quickedit/etc works -->
-{{ content|without('content_moderation_control','body', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
+{{ content|without('content_moderation_control','body', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image', 'field_hc_article_date') }}
 
           </div>
       </div>
