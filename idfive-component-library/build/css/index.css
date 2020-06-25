@@ -8418,6 +8418,9 @@ image field when viewed on devices with a screen size of 767px and below
 .hc-article--categories {
   padding-bottom: 20px; }
 
+.hc-article--date {
+  padding-bottom: 20px; }
+
 .pnf--primary > nav > ul {
   -webkit-column-count: 3;
   -moz-column-count: 3;
