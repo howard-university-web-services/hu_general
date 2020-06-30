@@ -3,6 +3,9 @@
   <div class="utility__menu">
     {{ menu }}
   </div>
+  {% if featured_header_link_show %}
+    <a href="{{ featured_header_link_url }}">{{ featured_header_link_title }}</a>
+  {% endif %}
 </div>
 
 <div class="utility__search-mobile">
