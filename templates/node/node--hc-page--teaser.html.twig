@@ -7,7 +7,6 @@
 
 <!-- content -->
 <section class="section--padded-top{{not node.isPublished() ? ' node--unpublished'}}">
-
   <div class="compartment">
     {{ content.content_moderation_control }}
       <div class="silc-grid silc-grid--collapse">
@@ -24,8 +23,7 @@
               <span class="icon-arrow-right"></span>
             </a>
             <!-- Render without, so quickedit/etc works -->
-{{ content|without('content_moderation_control','field_hc_header_image', 'links', 'field_hc_hide_header_image', 'field_hc_ks_widgets', 'field_hc_ks_widgets_full') }}
-
+            {{ content|without('content_moderation_control','field_hc_header_image', 'links', 'field_hc_hide_header_image', 'field_hc_ks_widgets', 'field_hc_ks_widgets_full') }}
           </div>
       </div>
   </div>

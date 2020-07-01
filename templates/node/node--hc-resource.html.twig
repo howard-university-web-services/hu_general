@@ -27,7 +27,9 @@
 
       <!-- Main Body -->
       <div class="silc-grid__col silc-grid__col--9-large kitchen-sink--main-col">
-        {{ content.body }}
+        <div class="hp-html">
+          {{ content.body }}
+        </div>
         {% if content.field_hc_resource_cta_link|render %}
           {% for key, item in content.field_hc_resource_cta_link if key|first != '#' %}
             <a href="{{ item['#url'] }}" class="btn" {% if item['#options'].attributes.target %} target="{{ item['#options'].attributes.target }}" {% endif %}>
