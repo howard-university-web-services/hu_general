@@ -3607,7 +3607,7 @@ body.classic_editorial select {
   font-style: normal;
   font-family: "Serif12Beta", serif; }
 
-.header--h3-small, .header--h3-large, h2, .h2, h4, .h4, body.classic_editorial .silc-accordion__label, h5, .h5, .main-header__logo-link .main-header__title, .main-header__dept, .main-footer__logo-link .footer__title, .slideshow__desc h2, .news-and-events--department .news-and-events__block_feat_4up h3, .faculty-profile h3, body.classic_editorial .fancy-link, body.classic_editorial .btn,
+.header--h3-small, .header--h3-large, h2, .h2, h4, .h4, body.classic_editorial .silc-accordion__label, h5, .h5, h6, .h6, .main-header__logo-link .main-header__title, .main-header__dept, .main-footer__logo-link .footer__title, .slideshow__desc h2, .news-and-events--department .news-and-events__block_feat_4up h3, .faculty-profile h3, body.classic_editorial .fancy-link, body.classic_editorial .btn,
 body.classic_editorial .webform-button--submit,
 body.classic_editorial .button .button--primary,
 body.classic_editorial .js-form-submit,
@@ -4864,6 +4864,17 @@ h5, .h5 {
     h5, .h5 {
       font-size: 1rem;
       line-height: 1.25; } }
+
+h6, .h6 {
+  color: #002A47;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-size: 0.75rem;
+  line-height: 1.33333; }
+  @media (min-width: 800px) {
+    h6, .h6 {
+      font-size: 0.875rem;
+      line-height: 1.28571; } }
 
 .lead-in {
   font-size: 1.5rem;

@@ -81,6 +81,20 @@ h5, .h5, %h5 {
   }
 }
 
+h6, .h6,
+%h6 {
+  @extend %serif-bold;
+  color: $mblue;
+  text-transform: uppercase;
+  letter-spacing: rem(0.8);
+  font-size: rem(12);
+  line-height: (16 / 12);
+  @include media('medium') {
+    font-size: rem(14);
+    line-height: (18 / 14);
+  }
+}
+
 .lead-in {
   @extend %serif-regular;
   font-size: rem(24);
