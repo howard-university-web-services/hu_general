@@ -6434,6 +6434,9 @@ a.fancy-link:hover {
   @media (min-width: 800px) {
     .promotional-space {
       border-top: #E51937 solid 0.625rem; } }
+  .promotional-space .body-text--list {
+    padding: 0 0 0 40px !important;
+    list-style: initial !important; }
 
 .utility {
   display: none;

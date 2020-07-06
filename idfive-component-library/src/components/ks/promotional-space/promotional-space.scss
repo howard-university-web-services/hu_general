@@ -7,4 +7,8 @@
     h2 {
         @extend %callout-title;
     }
+    .body-text--list{
+        padding: 0 0 0 40px !important;
+        list-style: initial !important;
+    }
 }
