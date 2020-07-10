@@ -1,6 +1,7 @@
 
 body.clean_light {
     background-color: $white;
+    line-height: (26 / 16);
 
     /* Typography */
 
@@ -67,6 +68,13 @@ body.clean_light {
     .lead-in-large {
         font-size: rem(18);
         line-height: 1.75;
+    }
+    .body-text--small {
+        font-size: rem(13);
+        @include media('medium') {
+            font-size: rem(15);
+            line-height: (23 / 15);
+        }
     }
 
     /* Buttons */
@@ -340,6 +348,35 @@ body.clean_light {
         border-radius: rem(4);
         overflow: hidden;
     }
+
+    a.news-and-events__block {
+        transition: background .3s ease-in-out,
+        border-color .3s ease-in-out,
+        box-shadow .3s ease-in-out;
+        &:hover,
+        &:focus {
+            background-color: $lightblue;
+            border: rem(1) solid #adadad;
+            box-shadow: rem(1) rem(7) rem(29) rgba($mblue, .5);
+            span,
+            p,
+            .news-and-events__title {
+                color: $white;
+            }
+            .news-and-events__img {
+                opacity: .85;
+            }
+        }
+        span,
+        p,
+        .news-and-events__title {
+            transition: .3s color ease-in-out;
+        }
+        .news-and-events__img {
+            transition: .3s opacity ease-in-out;
+        }
+    }
+
     .news-and-events--department {
         .news-and-events__block {
             &:not(.news-and-events__block_feat_4up) {
@@ -366,22 +403,12 @@ body.clean_light {
     }
     .news-and-events__title {
         color: $navy;
+        font-size: rem(20);
+        line-height: (24 / 20);
+        margin-top: rem(8);
     }
-    a.news-and-events__block {
-        &:hover,
-        &:focus {
-            background-color: $lightblue;
-            span,
-            p,
-            .news-and-events__title {
-                color: $white;
-            }
-        }
-        span,
-        p,
-        .news-and-events__title {
-            transition: .3s color ease-in-out;
-        }
+    .news-and-events__img {
+        transition: .3s opacity ease-in-out;
     }
     .news-and-events__date {
         @extend %sans-regular;

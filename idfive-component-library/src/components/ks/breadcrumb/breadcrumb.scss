@@ -32,8 +32,10 @@
             &::before {
                 content: "\e901";
                 @include icon();
+                display: inline-block;
                 color: $lightblue;
-                margin: 0 rem(5) 0 0;
+                font-size: rem(12);
+                margin: 0 rem(5) 0 rem(-3);
                 transform: scale(-1);
                 @include media('medium') {
                     display: none;

@@ -55,13 +55,14 @@
     width: rem(252);
     background: $white;
     border-radius: rem(6);
-    position: relative;
+    position: absolute;
+    right: 100%;
     padding: rem(10) rem(15);
     transform: scaleX(0);
-    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
     transform-origin: 100% 50%;
     opacity: 0;
-    display: none;
+    visibility: hidden;
     margin-left: rem(15);
   }
 
@@ -98,11 +99,7 @@
   }
 
   &__search {
-    display: flex;
-    //   // Removes Utility Search  display: flex;
-    flex-direction: row;
-    transition: width 2s ease-in-out;
-    align-items: center;
+    position: relative;
   }
 
   &__search-trigger {
@@ -144,18 +141,12 @@
 }
 
 .search-open {
-  &.utility {
-    width: rem(513);
-  }
-
   &.utility__search-form {
-    display: block;
-
+    visibility: visible;
     &.effects {
       transform: scaleX(1);
       opacity: 1;
       transition: transform .2s ease-in-out, opacity .3s ease-in-out;
-      ;
     }
   }
 }

@@ -4,6 +4,7 @@ body.classic_editorial {
     color: #111;
     @include media("medium") {
         font-size: rem(17);
+        line-height: (27 / 17);
     }
     &.alerts-active {
         .main-content {
@@ -100,6 +101,13 @@ body.classic_editorial {
                 color: $lightblue;
                 transition: .2s color ease-in-out;
             }
+        }
+    }
+    .body-text--small {
+        font-size: rem(13);
+        @include media('medium') {
+            font-size: rem(15);
+            line-height: (22 / 15);
         }
     }
 
@@ -482,6 +490,8 @@ body.classic_editorial {
         border-radius: rem(4);
         border: rem(2) solid #E9E9E9;
         padding: rem(20) rem(20) rem(30);
+    }
+    a.news-and-events__block {
         transition: .3s border ease-in-out,
         .3s color ease-in-out,
         .3s background-color ease-in-out,
@@ -491,11 +501,16 @@ body.classic_editorial {
             background-color: $gray5;
             border: rem(2) solid $lightblue;
             box-shadow: rem(1) rem(13) rem(17) rem(-8) rgba($black, 0.2);
-            .news-and-events__date,
-            .news-and-events__title,
-            .news-and-events__time {
+            span,
+            p,
+            .news-and-events__title {
                 color: $lightblue;
             }
+        }
+        span,
+        p,
+        .news-and-events__title {
+            transition: .3s color ease-in-out;
         }
     }
     .news-and-events__block_feat_4up {
@@ -509,6 +524,11 @@ body.classic_editorial {
     }
     .news-and-events__desc {
         padding: 0;
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
     .news-and-events__date,
     .news-and-events__time {
@@ -517,6 +537,7 @@ body.classic_editorial {
     .news-and-events__title {
         @extend %h3;
         color: $navy;
+        font-size: rem(21);
     }
     .news-and-events__btn {
         .btn {

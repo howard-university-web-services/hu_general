@@ -4,22 +4,30 @@
   @include media('medium') {
     max-width: 100%;
   }
+  .ks-cards & {
+    .news-and-events__img {
+      &:before {
+        padding-top: 75%;
+      }
+    }
+  }
   &__img {
     @extend %image-bck;
-    min-height: rem(176);
-    width: 100%;
-
+    margin-right: rem(15);
+    width: 25%;
     @include media('small') {
-      margin-right: rem(15);
-      width: 40%
+      width: 40%;
     }
-       
     @include media('medium') {
       margin-right: 0;
       width: 100%;
       display: block;
     }
-      
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 125%;
+    }
   }
   &__img_portrait {
     @include media('small') {
@@ -42,11 +50,7 @@
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
-    flex: 1;
-    padding: rem(15) rem(20);
-    @include media('small') {
-      padding: 0;
-    }
+    flex: 1 1 0px;
     @include media('medium') {
       padding: rem(15) rem(20);
     }
@@ -86,14 +90,13 @@
 
   &__block {
     height: 100%;
+    align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
     background: $white;
     border-radius: rem(4);
     text-decoration: none;
-    @include media('small') {
-      padding: rem(15);
-    }
+    padding: rem(15);
     @include media('medium') {
       display: block;
       padding: 0;
@@ -173,26 +176,12 @@
       padding: rem(15);
     }
     .news-and-events__img {
-      @include media('small') {
-        align-self: flex-start;
-        min-height: auto;
-      }
       @include media('medium') {
         height: rem(320);
         width: rem(265);
         display: block;
         float: left;
         margin: 0 rem(15) 0 0;
-      }
-      &:before {
-        @include media('small') {
-          content: '';
-          display: block;
-          padding-top: 66.667%;
-        }
-        @include media('medium') {
-          display: none;
-        }
       }
     }
     .news-and-events__desc {
