@@ -10071,6 +10071,12 @@ body.clean_light {
   @media (min-width: 1250px) {
     body.clean_light .main-header__nav nav ul li li a {
       font-weight: 400; } }
+  body.clean_light .utility__search-input {
+    box-shadow: none; }
+    body.clean_light .utility__search-input:focus {
+      box-shadow: none;
+      border: none;
+      padding-left: 0; }
   body.clean_light .main-footer address {
     font-size: 0.9375rem;
     line-height: 1.6; }
@@ -10621,6 +10627,10 @@ body.classic_editorial {
     body.classic_editorial .main-header__nav nav > ul > li:hover > .nav__lists__container > a {
       background-color: #003A63;
       color: #FFF; } }
+  body.classic_editorial .utility__search-input {
+    border: none; }
+    body.classic_editorial .utility__search-input:focus {
+      border: none; }
   body.classic_editorial .main-footer a {
     color: #003A63; }
   body.classic_editorial .main-footer__top {

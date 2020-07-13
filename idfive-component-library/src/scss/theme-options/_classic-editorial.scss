@@ -230,6 +230,13 @@ body.classic_editorial {
         }
     }
 
+        .utility__search-input {
+            border: none;
+            &:focus {
+                border: none;
+            }
+        }
+
     /* Footer */
     .main-footer {
         ul {

@@ -168,6 +168,15 @@ body.clean_light {
         }
     }
 
+    .utility__search-input {
+        box-shadow: none;
+        &:focus {
+            box-shadow: none;
+            border: none;
+            padding-left: 0;
+        }
+    }
+
     /* Footer */
 
     .main-footer {
