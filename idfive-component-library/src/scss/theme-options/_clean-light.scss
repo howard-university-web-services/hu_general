@@ -561,6 +561,18 @@ body.clean_light {
         }
     }
 
+    /* Full-width Callout */
+    .full-width-cta {
+        h2 {
+            font-size: rem(40);
+            line-height: rem(50);
+            @include media('medium') {
+              font-size: rem(80);
+              line-height: rem(109);
+            }
+        }
+    }
+
     /* Facebook/Twitter Feed */
     .facebook-twitter-feed {
         background-color: $skyblue;
