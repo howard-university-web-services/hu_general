@@ -1,17 +1,16 @@
-
 <div class="utility">
-  <div class="utility__menu">
-    {{ menu }}
-  </div>
-  {% if featured_header_link_show %}
-    <a href="{{ featured_header_link_url }}">{{ featured_header_link_title }}</a>
-  {% endif %}
+	<div class="utility__menu">
+		{% if featured_header_link_show %}
+			<a class="utility__featured-link" href="{{ featured_header_link_url }}">{{ featured_header_link_title }}</a>
+		{% endif %}
+		{{ menu }}
+	</div>
 </div>
 
 <div class="utility__search-mobile">
-  <form action="/search/node" class="utility__search-form-mobile" id="{{ fid }}" method="get">
-    <label for="{{ fid }}-{{ sid }}" class="visible-for-screen-readers">Search this Site</label>
-    <input type="text" class="utility__search__mobile-input" name="keys" id="{{ fid }}-{{ sid }}" placeholder="Search...">
-    <button type="submit" class="utility__search__mobile-submit">go</button>
-  </form>
+	<form action="/search/node" class="utility__search-form-mobile" id="{{ fid }}" method="get">
+		<label for="{{ fid }}-{{ sid }}" class="visible-for-screen-readers">Search this Site</label>
+		<input type="text" class="utility__search__mobile-input" name="keys" id="{{ fid }}-{{ sid }}" placeholder="Search...">
+		<button type="submit" class="utility__search__mobile-submit">go</button>
+	</form>
 </div>

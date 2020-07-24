@@ -14,6 +14,7 @@
   &__menu {
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     h2 {
       display: none;
@@ -48,6 +49,23 @@
       @extend %sans-bold;
       letter-spacing: 0;
       text-transform: uppercase;
+
+      &.utility__featured-link {
+        background-color: $yellow;
+        border-radius: rem(6);
+        color: $black;
+        display: inline-block;
+        margin: 0 0 0 rem(8);
+        padding: rem(6) rem(10) rem(5);
+        transition: .3s background ease-in-out, .3s color ease-in-out;
+
+        &:hover,
+        &:focus {
+          background-color: $lightblue;
+          color: $white;
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -73,11 +91,12 @@
     color: $gray3;
     font-size: rem(14);
 
-    &:active,&:focus{
+    &:active,
+    &:focus {
       box-shadow: none;
-    outline: none;
-    border-left:0;
-    padding-left: 0;
+      outline: none;
+      border-left: 0;
+      padding-left: 0;
     }
   }
 
@@ -133,6 +152,7 @@
       }
     }
   }
+
   .main-header__top & {
     a {
       white-space: nowrap;
@@ -143,6 +163,7 @@
 .search-open {
   &.utility__search-form {
     visibility: visible;
+
     &.effects {
       transform: scaleX(1);
       opacity: 1;
@@ -172,6 +193,7 @@
   }
 
   .utility__menu {
+    display: block;
     width: 100%;
     padding: rem(15) rem(30);
 
@@ -184,6 +206,12 @@
       @include media('medium') {
         line-height: rem(54);
         font-size: rem(20);
+      }
+
+      &.utility__featured-link {
+        line-height: normal;
+        margin: rem(10) 0 rem(12);
+        padding: rem(10) rem(15);
       }
     }
   }
@@ -228,11 +256,12 @@
 .utility__search-mobile {
   width: 100%;
   padding: 0 rem(30) rem(30) rem(30);
+
   .utility__search-form-mobile {
     position: relative;
     width: 100%;
     background: transparent;
-  
+
     .utility__search__mobile {
       &-input {
         border-top-left-radius: rem(6);
@@ -240,6 +269,7 @@
         border-top-right-radius: rem(6);
         border-bottom-right-radius: rem(6);
       }
+
       &-submit {
         position: absolute;
         right: 0;
