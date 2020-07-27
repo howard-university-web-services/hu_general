@@ -1,47 +1,79 @@
 .news-and-events {
   max-width: 700px;
   margin: 0 auto;
+
   @include media('medium') {
     max-width: 100%;
   }
-  .ks-cards & {
-    .news-and-events__img {
-      &:before {
-        padding-top: 56.25%;
+
+  &__block {
+    align-items: flex-start;
+    background: $white;
+    border-radius: rem(4);
+    display: flex;
+    height: 100%;
+    padding: rem(15);
+    text-decoration: none;
+
+    @include media('medium') {
+      display: block;
+      padding: 0;
+    }
+
+    .ks-cards & {
+      display: block;
+      padding: 0;
+
+      @include media('small') {
+        display: flex;
+        padding: rem(15);
+      }
+
+      @include media('medium') {
+        display: block;
+        padding: 0;
       }
     }
   }
+
   &__img {
     @extend %image-bck;
     margin-right: rem(15);
     width: 25%;
+
     @include media('small') {
-      width: 40%;
+      width: rem(140);
     }
+
     @include media('medium') {
       margin-right: 0;
       width: 100%;
-      display: block;
     }
+
     &:before {
       content: "";
       display: block;
       padding-top: 125%;
     }
-  }
-  &__img_portrait {
-    @include media('small') {
-      width: rem(90);
-      height: rem(120);
-      width: rem(140);
-      min-height: 13em;
-    }
 
-    @include media('medium') {
-      margin: 0;
+    .ks-cards & {
+      margin-right: 0;
+      max-height: rem(176);
       width: 100%;
-      display: block;
-      padding-bottom: 125%;
+
+      @include media('small') {
+        margin-right: rem(15);
+        width: rem(192);
+      }
+
+      @include media('medium') {
+        margin-right: 0;
+        width: 100%;
+      }
+
+      &:before {
+        padding-top: 56.25%;
+      }
     }
   }
 
@@ -51,9 +83,12 @@
     align-items: center;
     align-content: center;
     flex: 1 1 0px;
+    padding: 0;
+
     @include media('medium') {
-      padding: rem(15) rem(20);
+      padding: rem(15);
     }
+
     &--featured {
       background: $white;
       height: 100%;
@@ -62,11 +97,23 @@
     p {
       color: $charcoal
     }
+
+    .ks-cards & {
+      padding: rem(15);
+
+      @include media('small') {
+        padding: 0;
+      }
+
+      @include media('medium') {
+        padding: rem(15);
+      }
+    }
   }
 
   &__main {
     background: $white;
-    
+
     @include media('medium') {
       background: transparent;
       height: calc(100% - 57px);
@@ -86,27 +133,6 @@
 
   p {
     color: $charcoal
-  }
-
-  &__block {
-    height: 100%;
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: wrap;
-    background: $white;
-    border-radius: rem(4);
-    text-decoration: none;
-    padding: rem(15);
-    @include media('medium') {
-      display: block;
-      padding: 0;
-    }
-    &--portrait-img {
-      display: flex;
-      @include media('medium') {
-        display: block;
-      }
-    }
   }
 
   &__date {
@@ -154,14 +180,17 @@
   // Buttons
   .btn {
     margin-top: 0;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
   &__btn {
     @include media('medium') {
       background: $yellow;
       display: block;
+
       .btn {
         margin: 0;
       }
@@ -172,10 +201,14 @@
   &__block.news-and-events__block_feat_3up {
     border-radius: rem(4);
     overflow: hidden;
+
     @include media('medium') {
       padding: rem(15);
     }
+
     .news-and-events__img {
+      width: 40%;
+
       @include media('medium') {
         height: rem(320);
         width: rem(265);
@@ -184,6 +217,7 @@
         margin: 0 rem(15) 0 0;
       }
     }
+
     .news-and-events__desc {
       @include media('medium') {
         padding: 0;
