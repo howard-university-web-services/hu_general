@@ -6461,8 +6461,7 @@ a.fancy-link:hover {
   align-items: center;
   height: 100%;
   justify-content: center;
-  transition: width .2s ease-in-out;
-  overflow: hidden; }
+  transition: width .2s ease-in-out; }
   @media (min-width: 800px) {
     .utility {
       display: flex; } }
