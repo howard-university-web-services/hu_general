@@ -26,11 +26,9 @@
           </div>
           <!-- Main column -->
           <div class="silc-grid__col silc-grid__col--10-large kitchen-sink--main-col">
-              {% if content.field_hc_article_date %}
                 <div class="hc-article--date">
-                  {{ content.field_hc_article_date }}
+                  {{ publish_date }}
                 </div>
-              {% endif %}
               {% if content.field_hc_featured_image %}
                 <div class="hc-article--featured-image">
                   {{ content.field_hc_featured_image }}
