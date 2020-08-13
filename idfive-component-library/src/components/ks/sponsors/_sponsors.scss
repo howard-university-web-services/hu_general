@@ -1,0 +1,44 @@
+.sponsors__card {
+    background-color: $white;
+    border: rem(4) solid $white;
+    display: block;
+    height: 100%;
+    padding: rem(16);
+    transition: .3s border-color ease-in-out,
+    .3s box-shadow ease-in-out;
+    &:hover,
+    &:focus {
+        box-shadow: 0 5px 15px 0 rgba($black, 0.19);
+        border-color: $yellow;
+        text-decoration: none;
+    }
+}
+
+.sponsors__card-image {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.sponsors__card-title {
+    color: $navy;
+    font-size: rem(14);
+    margin: rem(14) 0 0;
+    text-align: center;
+    .sponsors--logos & {
+        @extend %visible-for-screen-readers;
+    }
+}

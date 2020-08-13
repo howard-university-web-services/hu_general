@@ -1,0 +1,66 @@
+{
+    "context": {
+        "items": [
+            {
+                "name": "KPMG",
+                "img": "/img/Sponsors_Logo_1.png",
+                "url": "https://idfive.com"
+            },
+            {
+                "name": "PVH",
+                "img": "/img/Sponsors_Logo_2.png",
+                "url": "https://idfive.com"
+            },
+            {
+                "name": "JP Morgan Chase & Co.",
+                "img": "/img/Sponsors_Logo_3.png",
+                "url": "https://idfive.com"
+            },
+            {
+                "name": "Lilly",
+                "img": "/img/Sponsors_Logo_4.png",
+                "url": "https://idfive.com"
+            },
+            {
+                "name": "Capital One",
+                "img": "/img/Sponsors_Logo_5.png",
+                "url": "https://idfive.com"
+            }
+        ]
+    },
+    "variants": [
+        {
+            "name": "people",
+            "context": {
+                "modifier": "people",
+                "items": [
+                    {
+                        "name": "Frank Brown, Jr., MD",
+                        "img": "/img/Sponsors_Person_1.jpg",
+                        "url": "https://idfive.com"
+                    },
+                    {
+                        "name": "Gaynelle S. Henderson, Ph.D",
+                        "img": "/img/Sponsors_Person_2.jpg",
+                        "url": "https://idfive.com"
+                    },
+                    {
+                        "name": "Candice Jacko",
+                        "img": "/img/Sponsors_Person_3.jpg",
+                        "url": "https://idfive.com"
+                    },
+                    {
+                        "name": "Janet Welch Bennett, MD",
+                        "img": "/img/Sponsors_Person_4.jpg",
+                        "url": "https://idfive.com"
+                    },
+                    {
+                        "name": "Deborah Carpenter Brittain",
+                        "img": "/img/Sponsors_Person_5.jpg",
+                        "url": "https://idfive.com"
+                    }
+                ]
+            }
+        }
+    ]
+}

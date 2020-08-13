@@ -1,0 +1,15 @@
+<div class="sponsors sponsors--people">
+    {{>@block-header--no-btn blockTitle="Our Alumni" titleIcon="our-people"}}
+    <div class="silc-grid">
+        {{#each items}}
+            <div class="silc-grid__col silc-grid__col--6 silc-grid__col--4-small silc-grid__col--3-medium-l">
+                <a href="{{ url }}" class="sponsors__card">
+                    <div class="sponsors__card-image">
+                        <img src="{{path img }}" alt="{{ name }}">
+                    </div>
+                    <div class="sponsors__card-title">{{ name }}</div>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+</div>
