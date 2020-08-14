@@ -8481,9 +8481,20 @@ image field when viewed on devices with a screen size of 767px and below
 
 .sponsors__card-title {
   color: #003A63;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-weight: 900;
   margin: 0.875rem 0 0;
   text-align: center; }
+
+.sponsors__card-text {
+  color: #003A63;
+  font-size: 0.875rem;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: 0.75rem; }
+  .sponsors__card-text p:last-child {
+    margin-bottom: 0px; }
 
 .hc-article--featured-image {
   max-width: 100%;

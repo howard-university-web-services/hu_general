@@ -5,7 +5,8 @@
     height: 100%;
     padding: rem(16);
     transition: .3s border-color ease-in-out,
-    .3s box-shadow ease-in-out;
+        .3s box-shadow ease-in-out;
+
     &:hover,
     &:focus {
         box-shadow: 0 5px 15px 0 rgba($black, 0.19);
@@ -16,11 +17,13 @@
 
 .sponsors__card-image {
     position: relative;
+
     &:before {
         content: "";
         display: block;
         padding-top: 100%;
     }
+
     img {
         display: block;
         height: 100%;
@@ -35,10 +38,25 @@
 
 .sponsors__card-title {
     color: $navy;
-    font-size: rem(14);
+    font-size: rem(15);
+    line-height: 1.4;
+    font-weight: 900;
     margin: rem(14) 0 0;
     text-align: center;
+
     .sponsors--logos & {
         @extend %visible-for-screen-readers;
+    }
+}
+
+.sponsors__card-text {
+    color: $navy;
+    font-size: rem(14);
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 0.75rem;
+
+    p:last-child {
+        margin-bottom: 0px;
     }
 }
