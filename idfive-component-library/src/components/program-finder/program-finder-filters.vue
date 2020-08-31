@@ -21,6 +21,13 @@
                 <option v-for="subject in subjects" :key="subject.id" :selected="selectedSubject == subject.id" :value="subject.id">{{ subject.label }}</option>
             </select>
         </div>
+        <div class="program-finder__filter" v-if="hasProfessionFilter">
+            <label for="program-finder-subject">Profession</label>
+            <select id="program-finder-profession" aria-label="Profession" @change="handleProfessionChange($event.target.value)">
+                <option value="" :selected="!!selectedProfession">Select a profession</option>
+                <option v-for="profession in professions" :key="profession.id" :selected="selectedProfession == profession.id" :value="profession.id">{{ profession.label }}</option>
+            </select>
+        </div>
         <div class="program-finder__filter program-finder__filter--reset">
             <button class="program-finder__filters-reset" @click="resetFilters" type="button">Reset Filters</button>
         </div>
@@ -44,6 +51,9 @@ export default {
         subjects() {
             return this.store.state.subjects;
         },
+        professions() {
+            return this.store.state.professions;
+        },
         selectedDegree() {
             return this.store.state.selectedDegree;
         },
@@ -53,6 +63,9 @@ export default {
         selectedSubject() {
             return this.store.state.selectedSubject;
         },
+        selectedProfession() {
+            return this.store.state.selectedProfession;
+        },
         hasDegreeFilter() {
             return this.store.state.hasDegreeFilter;
         },
@@ -61,6 +74,9 @@ export default {
         },
         hasSubjectFilter() {
             return this.store.state.hasSubjectFilter;
+        },
+        hasProfessionFilter() {
+            return this.store.state.hasProfessionFilter;
         }
     },
     methods: {
@@ -72,6 +88,9 @@ export default {
         },
         handleSubjectChange(subject) {
             this.store.state.selectedSubject = subject;
+        },
+        handleProfessionChange(subject) {
+            this.store.state.selectedProfession = subject;
         },
         resetFilters() {
             this.store.actions.resetFilters();

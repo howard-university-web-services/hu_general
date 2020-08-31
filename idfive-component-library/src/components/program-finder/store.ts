@@ -7,9 +7,11 @@ export default function ProgramFinderStore() {
         degrees: [],
         schools: [],
         subjects: [],
+        professions: [],
         selectedDegree: null,
         selectedSchool: null,
         selectedSubject: null,
+        selectedProfession: null,
         env: null,
         fetchingPrograms: true,
         errorFetchingPrograms: false,
@@ -17,7 +19,8 @@ export default function ProgramFinderStore() {
         errorFetchingFilters: false,
         hasDegreeFilter: false,
         hasSchoolFilter: false,
-        hasSubjectFilter: false
+        hasSubjectFilter: false,
+        hasProfessionFilter: false
     });
 
     const getters = {
@@ -28,7 +31,7 @@ export default function ProgramFinderStore() {
             return `${protocol}//${hostname}/api`;
         },
         noFilters() {
-            return !state.hasDegreeFilter && !state.hasSchoolFilter && !state.hasSubjectFilter;
+            return !state.hasDegreeFilter && !state.hasSchoolFilter && !state.hasSubjectFilter && !state.hasProfessionFilter;
         }
     };
 
@@ -46,6 +49,10 @@ export default function ProgramFinderStore() {
 
             if (!!state.selectedSubject) {
                 params["filter[program_subject][value][]"] = state.selectedSubject;
+            }
+
+            if (!!state.selectedProfession) {
+                params["filter[related_professions][value][]"] = state.selectedProfession;
             }
 
             state.fetchingPrograms = true;
@@ -91,6 +98,13 @@ export default function ProgramFinderStore() {
                     });
                 }
 
+                if (state.hasProfessionFilter) {
+                    filtersToFetch.push({
+                        name: "professions",
+                        endpoint: `${getters.apiBase()}/related_professions`
+                    });
+                }
+
                 state.fetchingFilters = true;
 
                 return axios.all(filtersToFetch.map((filter) => axios.get(filter.endpoint)))
@@ -111,6 +125,7 @@ export default function ProgramFinderStore() {
             state.selectedDegree = null;
             state.selectedSchool = null;
             state.selectedSubject = null;
+            state.selectedProfession = null;
         }
     };
 

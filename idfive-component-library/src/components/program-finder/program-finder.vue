@@ -23,9 +23,11 @@ export default {
         if (!!this.degree) this.store.state.selectedDegree = this.degree;
         if (!!this.school) this.store.state.selectedSchool = this.school;
         if (!!this.subject) this.store.state.selectedSubject = this.subject;
+        if (!!this.profession) this.store.state.selectedProfession = this.profession;
         this.store.state.hasDegreeFilter = this.degreeFilter;
         this.store.state.hasSchoolFilter = this.schoolFilter;
         this.store.state.hasSubjectFilter = this.subjectFilter;
+        this.store.state.hasProfessionFilter = this.professionFilter;
     },
     beforeMount() {
         // Initially fetch programs and filter data from API
@@ -46,6 +48,9 @@ export default {
         subject: {
             type: String
         },
+        profession: {
+            type: String
+        },
         degreeFilter: {
             type: Boolean,
             default: true
@@ -55,6 +60,10 @@ export default {
             default: true
         },
         subjectFilter: {
+            type: Boolean,
+            default: true
+        },
+        professionFilter: {
             type: Boolean,
             default: true
         }
@@ -72,6 +81,9 @@ export default {
         },
         selectedSubject() {
             return this.store.state.selectedSubject;
+        },
+        selectedProfession() {
+            return this.store.state.selectedProfession;
         },
         noResultsFound() {
             return !this.store.state.fetchingPrograms && this.store.state.programs.length === 0;
@@ -91,6 +103,9 @@ export default {
             this.store.actions.fetchProgramData();
         },
         selectedSubject() {
+            this.store.actions.fetchProgramData();
+        },
+        selectedProfession() {
             this.store.actions.fetchProgramData();
         }
     }
