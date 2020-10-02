@@ -1,7 +1,9 @@
 <!-- Homepage Hero (image)-->
 <section class="hero-image-home section--blue-blend">
     <div class="hero-image hero-image--large" style="background-image:url('{{hero_image}}')"></div>
-    <div class="blue-overlay--video-image"></div>
+    {% if not hide_overlay %}
+        <div class="blue-overlay--video-image"></div>
+    {% endif %}
     {% if content.field_hc_intro_image_text %}
         <div class="compartment">
             <div class="silc-grid silc-grid--collapse">
