@@ -6,6 +6,7 @@
  $silc-grid--gutter:24px;
  $silc-core--breakpoints: (
    ("small", "(min-width: 500px)"),
+   ("medium-s", "(min-width: 600px)"),
    ("table", "(min-width: 639px)"),
    ("medium", "(min-width: 800px)"),
    ("medium-l", "(min-width: 1000px)"),
@@ -16,7 +17,7 @@
    ("1300", "(min-width: 1300px)")
  ) !default;
  $silc-nav--options--expands: 1250px !default;
- 
+
  $silc-utilities--margin: (
    ('0', '0'),
    ('auto', 'auto'),
@@ -26,4 +27,3 @@
    ('4', '1rem'),
    ('5', '1.25rem')
  );
-  

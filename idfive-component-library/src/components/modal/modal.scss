@@ -1,7 +1,7 @@
 /**************************\
   Basic Modal Styles for micromodal library
 \**************************/
-  
+
 .modal__overlay {
   position: fixed;
   top: 0;
@@ -29,14 +29,21 @@
 }
 
 .modal__content .faculty-profile__img {
-  float: left;
-  margin-right: 1.25rem;
+  @include media('medium-s') {
+    float: left;
+    margin-right: 1.25rem;
+  }
 }
 
 .modal__header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin-top: 15px;
+  @include media('medium') {
+    margin-top:0px;
+    justify-content: space-between;
+  }
 }
 
 .modal__title {
@@ -46,9 +53,7 @@
   font-size: 1.5rem;
   line-height: 1.25;
   box-sizing: border-box;
-  @include media('medium') {
-    font-size: 1.75rem;
-  }
+  font-size: 1.75rem;
 }
 
 .modal__close {
