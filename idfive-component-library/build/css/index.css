@@ -7830,6 +7830,8 @@ image field when viewed on devices with a screen size of 767px and below
             transform: translate(-50%, -50%); }
     .hp_parallax_bundle .parallax_text .lead-in {
       color: #FFF; }
+    .hp_parallax_bundle .parallax_text * {
+      color: #FFF !important; }
 
 @media (min-width: 800px) {
   .hp_parallax_bundle .float_left {
@@ -7882,7 +7884,9 @@ image field when viewed on devices with a screen size of 767px and below
       top: 0;
       left: 0; }
     .hp_parallax_bundle .parallax_text .lead-in {
-      color: #003A63 !important; } }
+      color: #003A63 !important; }
+    .hp_parallax_bundle .parallax_text * {
+      color: initial !important; } }
 
 @media (min-width: 639px) {
   /**Stylesheet***/
