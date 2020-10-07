@@ -52,67 +52,73 @@ image field when viewed on devices with a screen size of 767px and below
 		.lead-in{
 			color:$white;
 		}
+		*{
+			color: $white !important;
+		}
 	}
 }
 @include media('medium'){
-.hp_parallax_bundle {
-	.float_left {
-		left: 0 !important;
-		right: initial !important;
-	}
-	.parallax_image {
-		width: 100%;
-		height: 100%;
-		position: relative;
-		z-index: 4;
-		.background-image {
-			width: 100%;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center 0;
-			background-attachment: fixed;
-			height: 100%;
+	.hp_parallax_bundle {
+		.float_left {
+			left: 0 !important;
+			right: initial !important;
 		}
-	}
-	&:before {
-		content: inherit;
-		background: transparent;
-	}
-	.parallax_text_container {
-		width: 100%;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		text-align: center;
-		padding: 0px 25px;
-		transform: translate(-50%,-50%);
-		z-index: 3;
-	}
-	.parallax_text {
-		width: 35%;
-    	height: 100%;
-    	position: absolute;
-    	z-index: 9;
-    	color: inherit;
-    	-webkit-transform: none;
-    	transform: none;
-		right: 0 !important;
-		left: inherit;
-		top: 0;
+		.parallax_image {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			z-index: 4;
+			.background-image {
+				width: 100%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center 0;
+				background-attachment: fixed;
+				height: 100%;
+			}
+		}
 		&:before {
-			content: '';
-			background: $white;
-			width: 100%;
-			height: 100%;
-			opacity: .85;
-			position: absolute;
-			z-index: 3;
-			top:0;
-			left: 0;
+			content: inherit;
+			background: transparent;
 		}
-		.lead-in{
-			color:$navy !important;
+		.parallax_text_container {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			text-align: center;
+			padding: 0px 25px;
+			transform: translate(-50%,-50%);
+			z-index: 3;
+		}
+		.parallax_text {
+			width: 35%;
+			height: 100%;
+			position: absolute;
+			z-index: 9;
+			color: inherit;
+			-webkit-transform: none;
+			transform: none;
+			right: 0 !important;
+			left: inherit;
+			top: 0;
+			&:before {
+				content: '';
+				background: $white;
+				width: 100%;
+				height: 100%;
+				opacity: .85;
+				position: absolute;
+				z-index: 3;
+				top:0;
+				left: 0;
+			}
+			.lead-in{
+				color:$navy !important;
+			}
+			*{
+				color:initial !important;
+			}
 		}
 	}
-}
 }
