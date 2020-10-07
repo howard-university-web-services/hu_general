@@ -8492,7 +8492,8 @@ image field when viewed on devices with a screen size of 767px and below
   font-size: 0.875rem;
   text-align: center;
   line-height: 1.4;
-  margin-top: 0.75rem; }
+  margin-top: 0.75rem;
+  overflow-wrap: break-word; }
   .sponsors__card-text p:last-child {
     margin-bottom: 0px; }
 
