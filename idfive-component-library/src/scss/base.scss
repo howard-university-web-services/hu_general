@@ -932,3 +932,22 @@ iframe {
   padding-top: rem(30);
   padding-bottom: rem(30);
 }
+
+.image-wrap {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
