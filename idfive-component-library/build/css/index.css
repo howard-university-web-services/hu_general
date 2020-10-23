@@ -3931,7 +3931,7 @@ body.clean_light .lead-in-large, body.clean_light .main-header__dept a, body.cle
   font-family: "Open Sans", sans-serif; }
 
 .body-text--social-media, .full-width-cta h2, h3, .h3, .checkboxes--wrapper span.fieldset-legend,
-.radios--wrapper span.fieldset-legend, body.classic_editorial .news-and-events__title, body.classic_editorial .announcements__block--featured .announcements__title, .lead-in, .lead-in-large, blockquote, .nav-toggled .main-header__nav ul li li a, .contact-box span, .contact-box p, .department-title__desc, .announcements__title, .news-and-events__title, .faculty-profile h5, .faculty-profile__link, body.classic_editorial, body.classic_editorial h2,
+.radios--wrapper span.fieldset-legend, body.classic_editorial .news-and-events__title, body.classic_editorial .announcements__block--featured .announcements__title, .lead-in, .lead-in-large, blockquote, .nav-toggled .main-header__nav ul li li a, .contact-box span, .contact-box p, .department-title__desc, .announcements__title, .news-and-events__title, .faculty-profile h5, .faculty-profile h6, .faculty-profile__link, body.classic_editorial, body.classic_editorial h2,
 body.classic_editorial .h2, body.classic_editorial h3,
 body.classic_editorial .h3, body.classic_editorial h4,
 body.classic_editorial .h4, body.classic_editorial .silc-accordion__label, body.classic_editorial h5,
@@ -8457,7 +8457,7 @@ image field when viewed on devices with a screen size of 767px and below
   .faculty-profile h5 {
     font-size: 0.875rem;
     line-height: 1rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.25rem;
     color: #002A47;
     text-align: center;
     text-transform: none;
@@ -8466,6 +8466,18 @@ image field when viewed on devices with a screen size of 767px and below
       .faculty-profile h5 {
         font-size: 1rem;
         line-height: 1.25rem; } }
+  .faculty-profile h6 {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: #002A47;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0; }
+    @media (min-width: 800px) {
+      .faculty-profile h6 {
+        font-size: 1.125rem;
+        line-height: 1.375rem; } }
   .faculty-profile__link {
     display: block;
     margin: 0 auto;

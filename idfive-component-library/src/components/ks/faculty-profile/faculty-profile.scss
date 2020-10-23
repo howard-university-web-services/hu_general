@@ -48,7 +48,7 @@
   h5 {
     font-size: rem(14);
     line-height: rem(16);
-    margin-bottom: rem(10);
+    margin-bottom: rem(4);
     @extend %serif-regular;
     color: $mblue;
     text-align: center;
@@ -57,6 +57,20 @@
     @include media('medium') {
       font-size: rem(16);
       line-height: rem(20);
+    }
+  }
+  h6 {
+    font-size: rem(16);
+    line-height: rem(18);
+    margin-bottom: rem(4);
+    @extend %serif-regular;
+    color: $mblue;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0;
+    @include media('medium') {
+      font-size: rem(18);
+      line-height: rem(22);
     }
   }
   &__link {
