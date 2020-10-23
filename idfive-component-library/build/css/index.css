@@ -4905,6 +4905,24 @@ iframe {
   padding-top: 1.875rem;
   padding-bottom: 1.875rem; }
 
+.image-wrap {
+  position: relative; }
+  .image-wrap:before {
+    content: "";
+    display: block;
+    padding-top: 100%; }
+  .image-wrap img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
 .hp-html h1,
 .silc-accordion__content h1,
 .cke_editable_themed h1, .hp-html
