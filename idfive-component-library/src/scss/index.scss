@@ -52,15 +52,19 @@
 @import "../components/modal/modal";
 @import "../components/pages/pages";
 @import "../components/pagination/pagination";
-@import "print";
+@import "../components/resources-feed/resources-feed";
+@import "../components/ks/campus-communications/campus-communications";
+
 // @import "../components/offcanvas/offcanvas";
 // @import "../components/hero/hero";
 // @import "../components/accordion/accordion";
 // @import "../components/explorer/explorer";
 // @import "../components/floating-callout/floating-callout";
 // @import "../components/social/social";|svg
-@import "../components/resources-feed/resources-feed";
 
 // Theme Options
 @import "theme-options/clean-light";
 @import "theme-options/classic-editorial";
+
+// Print
+@import "print";

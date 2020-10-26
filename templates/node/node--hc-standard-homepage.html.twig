@@ -1,8 +1,8 @@
 {#
 /**
- * @file
- * Theme override to display an HC Standard Homepage node.
- */
+* @file
+* Theme override to display an HC Standard Homepage node.
+*/
 #}
 
 <h1 class="visually-hidden">{{ node.title.value }}</h1>
@@ -44,8 +44,47 @@
     </div>
 {% endif %}
 
+<!-- Campus Announcements -->
+{% if announcements %}
+    <section class="section--padded-bottom" aria-label="Campus-Wide Announcements">
+        <div class="compartment">
+            <div class="campus-communications">
+                <div class="campus-communications__header block-header">
+                    <div class="campus-communications__header-icon">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewbox="0 0 512 512"><path fill="#FFFFFF" d="M501.62 92.11L267.24 2.04a31.958 31.958 0 00-22.47 0L10.38 92.11A16.001 16.001 0 000 107.09V144c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-36.91c0-6.67-4.14-12.64-10.38-14.98zM64 192v160H48c-8.84 0-16 7.16-16 16v48h448v-48c0-8.84-7.16-16-16-16h-16V192h-64v160h-96V192h-64v160h-96V192H64zm432 256H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"/></svg>
+                    </div>
+                    <h2 class="campus-communications__header-title">Campus-Wide Announcements</h2>
+                </div>
+                <div class="campus-communications__body">
+                    {% for announcement in announcements %}
+                        <div class="campus-communications__announcement">
+                            <h3 class="campus-communications__announcement-title">{{ announcement.label }}</h3>
+                            <div class="campus-communications__announcement-content">
+                                {{ announcement.body|raw }}
+                            </div>
+                            {% if announcement.external_link[0] %}
+                                <ul class="campus-communications__announcement-links">
+                                    {% for link in announcement.external_link %}
+                                        <li>
+                                            <a href="{{ link.url }}" class="btn">
+                                                <span class="btn__text">{{ link.title }}</span>
+                                                <span class="icon-arrow-right"></span>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}
+
 <!-- KS Widgets -->
 {{ content.field_hc_ks_widgets }}
 
 <!-- Render without, so quickedit/etc works -->
 {{ content|without('field_hc_hero_display_options', 'field_hc_media_display_options', 'field_hc_header_image', 'field_hc_hide_intro_sidebar', 'field_hc_header_video', 'field_hc_ks_widgets', 'field_hc_intro_background_image', 'field_hc_intro_sidebar_text', 'field_hc_intro_sidebar_title', 'field_hc_intro_text', 'field_hc_intro_title', 'field_hc_intro_image_text', 'field_hc_hide_overlay') }}
+

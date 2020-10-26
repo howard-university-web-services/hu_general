@@ -1,0 +1,92 @@
+.campus-communications {
+  position: relative;
+  margin-top: rem(-24);
+  z-index: 100;
+}
+
+.campus-communications__header {
+  align-items: center;
+  background-color: $mblue;
+  box-shadow: 0 -10px 12px 0 rgba($black, 0.3);
+  display: flex;
+}
+
+.campus-communications__header-icon {
+  align-items: center;
+  align-self: stretch;
+  background-color: $red;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  height: rem(60);
+  width: rem(60);
+
+  @include media("medium") {
+    width: rem(80);
+    height: rem(80);
+  }
+
+  svg {
+    height: rem(20);
+    width: rem(20);
+
+    @include media("medium") {
+      height: rem(25);
+      width: rem(25);
+    }
+  }
+}
+
+.campus-communications .block-header {
+  margin-bottom: 0px !important;
+}
+
+.campus-communications__header-title {
+  padding: 0 rem(20) !important;
+}
+
+.campus-communications__body {
+  background-color: $white;
+  padding: rem(28);
+}
+
+.campus-communications__announcement {
+  &:not(:last-child) {
+    border-bottom: rem(1) solid $gray4;
+    margin-bottom: rem(28);
+    padding-bottom: rem(28);
+  }
+}
+
+.campus-communications__announcement-title {
+  @extend %sans-extra-bold;
+  color: $mblue;
+  font-size: rem(20);
+  line-height: (28 / 22);
+
+  @include media("medium") {
+    font-size: rem(22);
+    line-height: (28 / 22);
+  }
+
+  margin: 0 0 rem(12);
+}
+
+.campus-communications__announcement-content {
+  margin-bottom: rem(24);
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.campus-communications__announcement-links {
+  margin-bottom: rem(-15);
+
+  li {
+    display: inline-block;
+    margin-right: rem(-4);
+  }
+}

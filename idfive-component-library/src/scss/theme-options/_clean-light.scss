@@ -688,9 +688,10 @@ body.clean_light {
         h2 {
             font-size: rem(40);
             line-height: rem(50);
+
             @include media('medium') {
-              font-size: rem(80);
-              line-height: rem(109);
+                font-size: rem(80);
+                line-height: rem(109);
             }
         }
     }
@@ -968,5 +969,20 @@ body.clean_light {
             margin: 0;
             padding: 0;
         }
+    }
+
+    /* Campus Communications Widget */
+
+    .campus-communications__header.block-header {
+        background-color: $lightblue;
+        border-top: none;
+        color: $white;
+    }
+
+    .campus-communications__body {
+        border-right: rem(2) solid #e9e9e9;
+        border-bottom: rem(2) solid #e9e9e9;
+        border-left: rem(2) solid #e9e9e9;
+        box-shadow: rem(1) rem(7) rem(23) rgba(0, 42, 71, 0.2);
     }
 }

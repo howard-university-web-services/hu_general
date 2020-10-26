@@ -519,9 +519,14 @@ body.classic_editorial {
 
         h2 {
             @extend %serif-italic;
-            font-size: rem(26);
+            font-size: rem(20);
+            letter-spacing: normal;
             padding: 0 !important;
             text-transform: none;
+
+            @include media("large") {
+                font-size: rem(26);
+            }
         }
     }
 
@@ -991,17 +996,21 @@ body.classic_editorial {
 
     .full-width-cta {
         background-image: linear-gradient(180deg, #1F5C87 0%, $mblue 100%);
+
         .background {
             opacity: .2;
         }
+
         h2 {
             font-size: rem(45);
             line-height: rem(50);
             text-shadow: none;
+
             @include media('medium') {
-              font-size: rem(90);
-              line-height: rem(109);
+                font-size: rem(90);
+                line-height: rem(109);
             }
+
             &:before,
             &:after {
                 background: $white;
@@ -1021,41 +1030,50 @@ body.classic_editorial {
         background-color: $lightblue;
         margin: 0 auto rem(64);
         max-width: rem(1208);
+
         .fancy-link {
+
             span,
             .icon-arrow-right::before {
                 color: $white;
             }
         }
-        > .compartment {
+
+        >.compartment {
             @include media("medium") {
                 position: relative;
             }
-            > .silc-grid .silc-grid__col--11-medium {
+
+            >.silc-grid .silc-grid__col--11-medium {
                 @include media("medium") {
                     padding-left: rem(140);
                     width: 100%;
                 }
             }
         }
+
         .social-links__item {
             @include media("medium") {
                 position: absolute;
                 top: 0;
             }
+
             &:hover {
                 i {
                     background-color: $mustard;
+
                     &::before {
                         color: $mblue;
                     }
                 }
             }
+
             i {
                 background-color: $mblue;
                 height: rem(86);
                 width: rem(86);
                 position: relative;
+
                 &::before {
                     color: $white;
                     font-size: rem(32);
@@ -1170,5 +1188,27 @@ body.classic_editorial {
 
     .program-finder__nav-heading {
         border-bottom-color: #E9E9E9;
+    }
+
+    /* Campus Communications Widget */
+
+    .campus-communications__header.block-header {
+        background-color: $lightblue;
+        box-shadow: none;
+        border: none;
+        color: $white;
+
+        .campus-communications__header-title {
+            color: inherit;
+            padding: 0 rem(20) !important;
+            margin-top: 3px;
+        }
+    }
+
+    .campus-communications__body {
+        background-color: $gray5;
+        border-right: rem(2) solid #e9e9e9;
+        border-bottom: rem(2) solid #e9e9e9;
+        border-left: rem(2) solid #e9e9e9;
     }
 }
