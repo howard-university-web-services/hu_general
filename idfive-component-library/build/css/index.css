@@ -8021,6 +8021,11 @@ a.news-and-events__block {
   .js .carousel__cell.is-selected:after {
     opacity: 0; }
 
+@media (max-width: 460px) {
+  .lum-lightbox-inner img {
+    max-width: 100% !important;
+    max-height: 100% !important; } }
+
 /* cell number */
 .photoshelter-grid img {
   max-width: 100%; }

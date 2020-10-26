@@ -104,9 +104,9 @@
       padding-bottom: 28.5%;
     }
 
-    
 
-    
+
+
 
     &:hover {
       &:after {
@@ -156,7 +156,14 @@
       opacity: 0;
     }
   }
-  
+
+}
+
+@media (max-width: 460px) {
+  .lum-lightbox-inner img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
 }
 
 /* cell number */
