@@ -116,7 +116,7 @@
     }
 
     @include media('medium') {
-      font-size: rem(24);
+      font-size: rem(21);
       padding: rem(20) rem(25) rem(20) 0;
     }
 
@@ -309,7 +309,7 @@ body.nav-toggled {
 }
 
 // Alternate light header menu
-.main-header--light { 
+.main-header--light {
   .main-header {
     &__bottom {
       background: $white;

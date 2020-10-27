@@ -237,7 +237,8 @@ body.classic_editorial {
         a {
             @extend %serif-regular;
             color: $mblue;
-            font-size: rem(24);
+            font-weight: 700;
+            font-size: rem(21);
         }
     }
 
