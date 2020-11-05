@@ -7,19 +7,19 @@
 
 <h1 class="visually-hidden">{{ node.title.value }}</h1>
 
-<!-- Full width image or video -->
+{# Full width image or video #}
 {% if hero_display_type == 'media' %}
-    <!-- Homepage Hero Video -->
+    {# Homepage Hero Video #}
     {% if hero_media_display_type == 'video' %}
         {% include directory ~ '/templates/_includes/global/content_header_home_video.html.twig' %}
     {% endif %}
-    <!-- Homepage Hero Image -->
+    {# Homepage Hero Image #}
     {% if hero_media_display_type == 'image' %}
         {% include directory ~ '/templates/_includes/global/content_header_home.html.twig' %}
     {% endif %}
 {% endif %}
 
-<!-- Standard Intro -->
+{# Standard Intro #}
 {% if hero_display_type == 'standard_intro' %}
     <div class="department-title section--blue-blend section--padded-large">
         <div class="background" style="background-image:url('{{ home_intro_image }}')"></div>
@@ -44,8 +44,8 @@
     </div>
 {% endif %}
 
-<!-- Campus Announcements -->
-{% if announcements %}
+{# Campus Announcements #}
+{% if show_announcements and announcements %}
     <section class="section--padded-bottom" aria-label="Campus-Wide Announcements">
         <div class="compartment">
             <div class="campus-communications">
@@ -82,9 +82,8 @@
     </section>
 {% endif %}
 
-<!-- KS Widgets -->
+{# KS Widgets #}
 {{ content.field_hc_ks_widgets }}
 
-<!-- Render without, so quickedit/etc works -->
-{{ content|without('field_hc_hero_display_options', 'field_hc_media_display_options', 'field_hc_header_image', 'field_hc_hide_intro_sidebar', 'field_hc_header_video', 'field_hc_ks_widgets', 'field_hc_intro_background_image', 'field_hc_intro_sidebar_text', 'field_hc_intro_sidebar_title', 'field_hc_intro_text', 'field_hc_intro_title', 'field_hc_intro_image_text', 'field_hc_hide_overlay') }}
-
+{# Render without, so quickedit/etc works #}
+{{ content|without('field_hc_hide_announcements', 'field_hc_hero_display_options', 'field_hc_media_display_options', 'field_hc_header_image', 'field_hc_hide_intro_sidebar', 'field_hc_header_video', 'field_hc_ks_widgets', 'field_hc_intro_background_image', 'field_hc_intro_sidebar_text', 'field_hc_intro_sidebar_title', 'field_hc_intro_text', 'field_hc_intro_title', 'field_hc_intro_image_text', 'field_hc_hide_overlay') }}
