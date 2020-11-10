@@ -1,4 +1,4 @@
-{% include directory ~ '/templates/_includes/global/header.html.twig' %}
+{% include parent_include_directory ~ '/templates/_includes/global/header.html.twig' %}
 
 <main class="main-content">
 
@@ -14,11 +14,11 @@
 			<section class="section--padded-top section--padded-bottom news-and-events news-and-events--department">
 
 				{{ page.content }}
-				
+
 			</section>
 
 		</div>
 
 	</main>
 
-{% include directory ~ '/templates/_includes/global/footer.html.twig' %}
+{% include parent_include_directory ~ '/templates/_includes/global/footer.html.twig' %}

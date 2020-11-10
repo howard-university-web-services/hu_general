@@ -7,9 +7,9 @@
 
 <!-- Internal Page Hero -->
 {% if show_hero_image %}
-  {% include directory ~ '/templates/_includes/global/content_header.html.twig' %}
+  {% include parent_include_directory ~ '/templates/_includes/global/content_header.html.twig' %}
 {% else %}
-  {% include directory ~ '/templates/_includes/global/content_header_no_image.html.twig' %}
+  {% include parent_include_directory ~ '/templates/_includes/global/content_header_no_image.html.twig' %}
 {% endif %}
 
 <!-- KS Widgets -->

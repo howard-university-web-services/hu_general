@@ -11,11 +11,11 @@
 {% if hero_display_type == 'media' %}
     {# Homepage Hero Video #}
     {% if hero_media_display_type == 'video' %}
-        {% include directory ~ '/templates/_includes/global/content_header_home_video.html.twig' %}
+        {% include parent_include_directory ~ '/templates/_includes/global/content_header_home_video.html.twig' %}
     {% endif %}
     {# Homepage Hero Image #}
     {% if hero_media_display_type == 'image' %}
-        {% include directory ~ '/templates/_includes/global/content_header_home.html.twig' %}
+        {% include parent_include_directory ~ '/templates/_includes/global/content_header_home.html.twig' %}
     {% endif %}
 {% endif %}
 
