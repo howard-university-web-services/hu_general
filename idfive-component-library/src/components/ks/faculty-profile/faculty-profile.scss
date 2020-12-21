@@ -5,33 +5,65 @@
   border-radius: rem(4);
   padding-bottom: rem(48);
   overflow: hidden;
+
   @include media('medium') {
     padding-bottom: rem(60);
   }
+
   &__block {
     padding: rem(24) rem(15) rem(20) rem(15);
+
     @include media('medium') {
       padding: rem(30) rem(30) rem(20) rem(30);
     }
   }
+
   &__img {
     width: rem(160);
     height: rem(160);
     @extend %image-bck;
     margin: 0 auto rem(18) auto;
   }
-  h3 {
-    margin-bottom: rem(8);
+
+  &__quote {
     @extend %serif-bold;
+    font-style: italic;
+    color: $navy;
+    font-size: rem(20);
+    color: $skyblue;
+    line-height: rem(35);
+    padding-bottom: 10px;
+
+    hr {
+      height: 2px;
+      background-color: $yellow;
+      width: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: $navy;
+  }
+
+  h3 {
+    margin-bottom: rem(6);
+    @extend %sans-bold;
     color: $navy;
     font-size: rem(16);
-      line-height: rem(21);
+    line-height: rem(21);
     text-align: center;
+
     @include media('medium') {
       font-size: rem(20);
       line-height: rem(24)
     }
   }
+
   h4 {
     @extend %sans-bold;
     font-size: rem(12);
@@ -40,11 +72,13 @@
     text-transform: uppercase;
     text-align: center;
     color: $mblue;
+
     @include media('medium') {
       font-size: rem(14);
       line-height: rem(18);
     }
   }
+
   h5 {
     font-size: rem(14);
     line-height: rem(16);
@@ -54,11 +88,13 @@
     text-align: center;
     text-transform: none;
     letter-spacing: 0;
+
     @include media('medium') {
       font-size: rem(16);
       line-height: rem(20);
     }
   }
+
   h6 {
     font-size: rem(16);
     line-height: rem(18);
@@ -68,11 +104,13 @@
     text-align: center;
     text-transform: none;
     letter-spacing: 0;
+
     @include media('medium') {
       font-size: rem(18);
       line-height: rem(22);
     }
   }
+
   &__link {
     display: block;
     margin: 0 auto;
@@ -85,31 +123,38 @@
     margin-bottom: .175rem;
     text-decoration: none;
   }
+
   &__divider {
     height: rem(1);
     background: $yellow;
     width: rem(85);
     margin: rem(10) auto;
+
     @include media('medium') {
       margin: rem(15) auto;
     }
   }
+
   .icon {
     margin-right: rem(10);
     display: inline-block;
+
     &:before {
       font-size: rem(19);
       color: $red;
     }
+
     &-map-marker {
       &::before {
         font-size: rem(22);
       }
     }
+
     &-envelope {
       transform: translateY(#{rem(2)});
     }
   }
+
   &__btn {
     background: $yellow;
     display: block;
@@ -118,14 +163,17 @@
     position: absolute;
     width: 100%;
     bottom: 0;
+
     .fancy-link {
       margin: 0;
       padding: rem(15) 0;
     }
+
     a {
       text-align: center;
       justify-content: center;
     }
+
     @include media('medium') {
       padding: rem(3);
     }

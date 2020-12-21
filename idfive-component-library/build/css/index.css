@@ -3905,7 +3905,7 @@ body.clean_light .contact-box span, body.clean_light .news-and-events__date, bod
   font-style: normal;
   font-family: "Open Sans", sans-serif; }
 
-label, .mobile-nav .silc-nav__link, .main-footer ul li, .main-nav .silc-nav__item--home, .main-nav .silc-nav__link, .main-nav .silc-nav__items .silc-nav__items .silc-nav__link, .main-header__nav nav ul li--home, .main-header__nav nav ul li a, .breadcrumb__item--active, .utility__menu a, .sidebar-nav a, .sidebar-nav .silc-nav .silc-nav__items .silc-nav__items .silc-nav__link, table th, .faculty-profile h4, .our-people h4, .alumni-profile h4, body.clean_light h5,
+label, .mobile-nav .silc-nav__link, .main-footer ul li, .main-nav .silc-nav__item--home, .main-nav .silc-nav__link, .main-nav .silc-nav__items .silc-nav__items .silc-nav__link, .main-header__nav nav ul li--home, .main-header__nav nav ul li a, .breadcrumb__item--active, .utility__menu a, .sidebar-nav a, .sidebar-nav .silc-nav .silc-nav__items .silc-nav__items .silc-nav__link, table th, .faculty-profile h3, .faculty-profile h4, .our-people h4, .alumni-profile h4, body.clean_light h5,
 body.clean_light .h5, body.clean_light .contact-box a, body.clean_light .alumni-profile__caption h4, body.clean_light blockquote, body.clean_light span.fieldset-legend {
   font-weight: 700;
   font-style: normal;
@@ -3945,7 +3945,7 @@ body.classic_editorial select {
   font-style: normal;
   font-family: "Serif12Beta", serif; }
 
-.header--h3-small, .header--h3-large, h2, .h2, h4, .h4, body.classic_editorial .silc-accordion__label, h5, .h5, h6, .h6, .main-header__logo-link .main-header__title, .main-header__dept, .main-footer__logo-link .footer__title, .slideshow__desc h2, .news-and-events--department .news-and-events__block_feat_4up h3, .faculty-profile h3, body.classic_editorial .fancy-link, body.classic_editorial .btn,
+.header--h3-small, .header--h3-large, h2, .h2, h4, .h4, body.classic_editorial .silc-accordion__label, h5, .h5, h6, .h6, .main-header__logo-link .main-header__title, .main-header__dept, .main-footer__logo-link .footer__title, .slideshow__desc h2, .news-and-events--department .news-and-events__block_feat_4up h3, .faculty-profile__quote, body.classic_editorial .fancy-link, body.classic_editorial .btn,
 body.classic_editorial .webform-button--submit,
 body.classic_editorial .button .button--primary,
 body.classic_editorial .js-form-submit,
@@ -8456,8 +8456,26 @@ image field when viewed on devices with a screen size of 767px and below
     width: 10rem;
     height: 10rem;
     margin: 0 auto 1.125rem auto; }
+  .faculty-profile__quote {
+    font-style: italic;
+    color: #003A63;
+    font-size: 1.25rem;
+    color: #4C7290;
+    line-height: 2.1875rem;
+    padding-bottom: 10px; }
+    .faculty-profile__quote hr {
+      height: 2px;
+      background-color: #EDC054;
+      width: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+  .faculty-profile p {
+    text-align: center;
+    color: #003A63; }
   .faculty-profile h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.375rem;
     color: #003A63;
     font-size: 1rem;
     line-height: 1.3125rem;
