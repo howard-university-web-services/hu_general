@@ -8,7 +8,6 @@ body.clean_light {
     .h2,
     %h2 {
         @extend %sans-extra-bold;
-
         &:not(.main-header__dept) {
             font-size: rem(34);
             letter-spacing: em(-.3, 34);
@@ -178,7 +177,6 @@ body.clean_light {
             @extend %sans-extra-bold;
             color: $mblue;
             font-weight: 700;
-            font-size: rem(21);
         }
     }
 

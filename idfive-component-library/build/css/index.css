@@ -10511,8 +10511,7 @@ body.clean_light {
     background-color: #EDC054; }
   body.clean_light .main-header__dept a {
     color: #002A47;
-    font-weight: 700;
-    font-size: 1.3125rem; }
+    font-weight: 700; }
   @media (min-width: 1250px) {
     body.clean_light .main-header__nav nav ul li a {
       color: #002A47;
@@ -11111,8 +11110,7 @@ body.classic_editorial {
     background-color: #002A47; }
   body.classic_editorial .main-header__dept a {
     color: #002A47;
-    font-weight: 700;
-    font-size: 1.3125rem; }
+    font-weight: 700; }
   @media (min-width: 1250px) {
     body.classic_editorial .main-header__nav nav ul li a {
       color: #002A47;
