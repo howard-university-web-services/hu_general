@@ -8,9 +8,12 @@ body.clean_light {
     .h2,
     %h2 {
         @extend %sans-extra-bold;
-        font-size: rem(34);
-        letter-spacing: em(-.3, 34);
-        line-height: (44 / 34);
+
+        &:not(.main-header__dept) {
+            font-size: rem(34);
+            letter-spacing: em(-.3, 34);
+            line-height: (44 / 34);
+        }
     }
 
     h3,

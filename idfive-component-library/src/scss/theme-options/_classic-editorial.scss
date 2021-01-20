@@ -21,8 +21,11 @@ body.classic_editorial {
     %h2 {
         @extend %serif-regular;
         color: $mblue;
-        font-size: rem(36);
-        line-height: (46 / 36);
+
+        &:not(.main-header__dept) {
+            font-size: rem(36);
+            line-height: (46 / 36);
+        }
     }
 
     .hp-html,

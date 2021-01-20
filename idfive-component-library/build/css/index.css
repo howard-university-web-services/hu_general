@@ -5462,12 +5462,12 @@ a {
     .main-header__logo-link:hover {
       text-decoration: none; }
   .main-header__dept {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #FFF;
     letter-spacing: 0;
     position: relative;
     padding: 0 0 0 1.25rem;
-    margin-right: 0.3125rem;
+    margin-right: 56px;
     margin-bottom: 0; }
     .main-header__dept a {
       color: #FFF;
@@ -5477,15 +5477,17 @@ a {
         font-size: 1.3125rem;
         padding: 1.25rem 1.5625rem 1.25rem 0; } }
     @media (min-width: 1250px) {
-      .main-header__dept::after {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 1.875rem;
-        background: #FFF;
-        width: 0.0625rem;
-        top: calc(50% - 15px);
-        right: 0; } }
+      .main-header__dept {
+        margin-right: 0.3125rem; }
+        .main-header__dept::after {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 1.875rem;
+          background: #FFF;
+          width: 0.0625rem;
+          top: calc(50% - 15px);
+          right: 0; } }
   .main-header__drawer {
     height: 100%;
     display: none;
@@ -5637,7 +5639,9 @@ body.nav-toggled {
 
 .main-header--light .main-header__trigger-menu {
   background: #003A63; }
-  .main-header--light .main-header__trigger-menu .bar1, .main-header--light .main-header__trigger-menu .bar2, .main-header--light .main-header__trigger-menu .bar3 {
+  .main-header--light .main-header__trigger-menu .bar1,
+  .main-header--light .main-header__trigger-menu .bar2,
+  .main-header--light .main-header__trigger-menu .bar3 {
     background-color: #FFF; }
 
 .search_results--section {
@@ -10383,8 +10387,8 @@ body.clean_light {
   /* External Feeds */
   /* Forms */
   /* Campus Communications Widget */ }
-  body.clean_light h2,
-  body.clean_light .h2 {
+  body.clean_light h2:not(.main-header__dept),
+  body.clean_light .h2:not(.main-header__dept) {
     font-size: 2.125rem;
     letter-spacing: -0.00882em;
     line-height: 1.29412; }
@@ -10942,9 +10946,11 @@ body.classic_editorial {
     padding-top: 0; }
   body.classic_editorial h2,
   body.classic_editorial .h2 {
-    color: #002A47;
-    font-size: 2.25rem;
-    line-height: 1.27778; }
+    color: #002A47; }
+    body.classic_editorial h2:not(.main-header__dept),
+    body.classic_editorial .h2:not(.main-header__dept) {
+      font-size: 2.25rem;
+      line-height: 1.27778; }
   body.classic_editorial .hp-html h3:not(.sidebar-title),
   body.classic_editorial .hp-html .h3:not(.sidebar-title),
   body.classic_editorial .hp-html .checkboxes--wrapper span.fieldset-legend:not(.sidebar-title),
