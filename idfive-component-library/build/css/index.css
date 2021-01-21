@@ -10435,8 +10435,12 @@ body.clean_light {
         color: #2A6EBB;
         transition: .3s color ease-in-out; }
   body.clean_light .lead-in {
-    font-size: 1.5rem;
+    font-size: 1.1875rem;
+    line-height: 1.4;
     letter-spacing: -0.00833em; }
+    @media (min-width: 800px) {
+      body.clean_light .lead-in {
+        font-size: 1.5rem; } }
   body.clean_light .lead-in-large {
     font-size: 1.125rem;
     line-height: 1.75; }
@@ -11000,9 +11004,12 @@ body.classic_editorial {
     line-height: 1.25; }
   body.classic_editorial .lead-in {
     color: #376180;
-    font-size: 1.6875rem;
-    line-height: 1.2963;
-    margin-bottom: 1rem; }
+    font-size: 1.3125rem;
+    margin-bottom: 1rem;
+    line-height: 1.33; }
+    @media (min-width: 800px) {
+      body.classic_editorial .lead-in {
+        font-size: 1.6875rem; } }
   body.classic_editorial .lead-in-large {
     font-size: 1.5rem;
     line-height: 1.58333; }

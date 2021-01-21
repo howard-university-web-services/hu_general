@@ -8,6 +8,7 @@ body.clean_light {
     .h2,
     %h2 {
         @extend %sans-extra-bold;
+
         &:not(.main-header__dept) {
             font-size: rem(34);
             letter-spacing: em(-.3, 34);
@@ -85,8 +86,13 @@ body.clean_light {
     }
 
     .lead-in {
-        font-size: rem(24);
+        font-size: rem(19);
+        line-height: 1.4;
         letter-spacing: em(-.2, 24);
+
+        @include media('medium') {
+            font-size: rem(24);
+        }
     }
 
     .lead-in-large {

@@ -81,9 +81,13 @@ body.classic_editorial {
     .lead-in {
         @extend %serif-italic;
         color: #376180;
-        font-size: rem(27);
-        line-height: (35 / 27);
+        font-size: rem(21);
         margin-bottom: rem(16);
+        line-height: 1.33;
+
+        @include media('medium') {
+            font-size: rem(27);
+        }
     }
 
     .lead-in-large {
