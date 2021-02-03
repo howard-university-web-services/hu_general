@@ -8462,7 +8462,7 @@ image field when viewed on devices with a screen size of 767px and below
     margin: 0 auto 1.125rem auto; }
   .faculty-profile__quote {
     font-style: italic;
-    color: #003A63;
+    text-align: center;
     font-size: 1.25rem;
     color: #4C7290;
     line-height: 2.1875rem;

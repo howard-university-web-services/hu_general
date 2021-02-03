@@ -28,7 +28,7 @@
   &__quote {
     @extend %serif-bold;
     font-style: italic;
-    color: $navy;
+    text-align: center;
     font-size: rem(20);
     color: $skyblue;
     line-height: rem(35);
