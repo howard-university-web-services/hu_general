@@ -24,10 +24,12 @@ export default {
         if (!!this.school) this.store.state.selectedSchool = this.school;
         if (!!this.subject) this.store.state.selectedSubject = this.subject;
         if (!!this.profession) this.store.state.selectedProfession = this.profession;
+        if (!!this.type) this.store.state.selectedType = this.type;
         this.store.state.hasDegreeFilter = this.degreeFilter;
         this.store.state.hasSchoolFilter = this.schoolFilter;
         this.store.state.hasSubjectFilter = this.subjectFilter;
         this.store.state.hasProfessionFilter = this.professionFilter;
+        this.store.state.hasTypeFilter = this.typeFilter;
     },
     beforeMount() {
         // Initially fetch programs and filter data from API
@@ -51,6 +53,9 @@ export default {
         profession: {
             type: String
         },
+        type: {
+            type: String
+        },
         degreeFilter: {
             type: Boolean,
             default: true
@@ -64,6 +69,10 @@ export default {
             default: true
         },
         professionFilter: {
+            type: Boolean,
+            default: true
+        },
+        typeFilter: {
             type: Boolean,
             default: true
         }
@@ -85,8 +94,11 @@ export default {
         selectedProfession() {
             return this.store.state.selectedProfession;
         },
+        selectedType() {
+            return this.store.state.selectedType;
+        },
         noResultsFound() {
-            return !this.store.state.fetchingPrograms && this.store.state.programs.length === 0;
+            return !this.store.state.fetchingPrograms && (this.store.state.programs === null || this.store.state.programs.length === 0);
         },
         successfullyFetchedFilters() {
             return !this.store.state.fetchingFilters && !this.store.state.errorFetchingFilters;
@@ -106,6 +118,9 @@ export default {
             this.store.actions.fetchProgramData();
         },
         selectedProfession() {
+            this.store.actions.fetchProgramData();
+        },
+        selectedType() {
             this.store.actions.fetchProgramData();
         }
     }

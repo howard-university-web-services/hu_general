@@ -22,10 +22,17 @@
             </select>
         </div>
         <div class="program-finder__filter" v-if="hasProfessionFilter">
-            <label for="program-finder-subject">Profession</label>
+            <label for="program-finder-profession">Profession</label>
             <select id="program-finder-profession" aria-label="Profession" @change="handleProfessionChange($event.target.value)">
                 <option value="" :selected="!!selectedProfession">Select a profession</option>
                 <option v-for="profession in professions" :key="profession.id" :selected="selectedProfession == profession.id" :value="profession.id">{{ profession.label }}</option>
+            </select>
+        </div>
+        <div class="program-finder__filter" v-if="hasTypeFilter">
+            <label for="program-finder-type">Type</label>
+            <select id="program-finder-type" aria-label="Type" @change="handleTypeChange($event.target.value)">
+                <option value="" :selected="!!selectedType">Select a type</option>
+                <option v-for="type in types" :key="type.id" :selected="selectedType == type.id" :value="type.id">{{ type.label }}</option>
             </select>
         </div>
         <div class="program-finder__filter program-finder__filter--reset">
@@ -54,6 +61,9 @@ export default {
         professions() {
             return this.store.state.professions;
         },
+        types() {
+            return this.store.state.types;
+        },
         selectedDegree() {
             return this.store.state.selectedDegree;
         },
@@ -66,6 +76,9 @@ export default {
         selectedProfession() {
             return this.store.state.selectedProfession;
         },
+        selectedType() {
+            return this.store.state.selectedType;
+        },
         hasDegreeFilter() {
             return this.store.state.hasDegreeFilter;
         },
@@ -77,6 +90,9 @@ export default {
         },
         hasProfessionFilter() {
             return this.store.state.hasProfessionFilter;
+        },
+        hasTypeFilter() {
+            return this.store.state.hasTypeFilter;
         }
     },
     methods: {
@@ -89,8 +105,11 @@ export default {
         handleSubjectChange(subject) {
             this.store.state.selectedSubject = subject;
         },
-        handleProfessionChange(subject) {
-            this.store.state.selectedProfession = subject;
+        handleProfessionChange(prof) {
+            this.store.state.selectedProfession = prof;
+        },
+        handleTypeChange(type) {
+            this.store.state.selectedType = type;
         },
         resetFilters() {
             this.store.actions.resetFilters();

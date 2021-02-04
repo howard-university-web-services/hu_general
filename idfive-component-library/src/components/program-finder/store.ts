@@ -8,10 +8,12 @@ export default function ProgramFinderStore() {
         schools: [],
         subjects: [],
         professions: [],
+        types: [],
         selectedDegree: null,
         selectedSchool: null,
         selectedSubject: null,
         selectedProfession: null,
+        selectedType: null,
         env: null,
         fetchingPrograms: true,
         errorFetchingPrograms: false,
@@ -20,7 +22,8 @@ export default function ProgramFinderStore() {
         hasDegreeFilter: false,
         hasSchoolFilter: false,
         hasSubjectFilter: false,
-        hasProfessionFilter: false
+        hasProfessionFilter: false,
+        hasTypeFilter: false
     });
 
     const getters = {
@@ -37,22 +40,26 @@ export default function ProgramFinderStore() {
 
     const actions = {
         fetchProgramData() {
-            const params = { "sort": "label" };
+            const params = {};
 
             if (!!state.selectedDegree) {
-                params["filter[degree_classification][value][]"] = state.selectedDegree;
+                params["degree_classification"] = state.selectedDegree;
             }
 
             if (!!state.selectedSchool) {
-                params["filter[related_school][value][]"] = state.selectedSchool;
+                params["related_schools"] = state.selectedSchool;
             }
 
             if (!!state.selectedSubject) {
-                params["filter[program_subject][value][]"] = state.selectedSubject;
+                params["program_subject"] = state.selectedSubject;
             }
 
             if (!!state.selectedProfession) {
-                params["filter[related_professions][value][]"] = state.selectedProfession;
+                params["related_professions"] = state.selectedProfession;
+            }
+
+            if (!!state.selectedType) {
+                params["program_type"] = state.selectedType;
             }
 
             state.fetchingPrograms = true;
@@ -105,6 +112,13 @@ export default function ProgramFinderStore() {
                     });
                 }
 
+                if (state.hasTypeFilter) {
+                    filtersToFetch.push({
+                        name: "types",
+                        endpoint: `${getters.apiBase()}/program_type`
+                    });
+                }
+
                 state.fetchingFilters = true;
 
                 return axios.all(filtersToFetch.map((filter) => axios.get(filter.endpoint)))
@@ -126,6 +140,7 @@ export default function ProgramFinderStore() {
             state.selectedSchool = null;
             state.selectedSubject = null;
             state.selectedProfession = null;
+            state.selectedType = null;
         }
     };
 
