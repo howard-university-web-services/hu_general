@@ -46,7 +46,17 @@
 
 {# Campus Announcements #}
 {% if show_announcements and announcements %}
-    <section class="section--padded-bottom" aria-label="Campus-Wide Announcements">
+    {% set announcement_classes = [
+        "section--padded-bottom",
+    ] %}
+
+    {% if hero_display_type == "none" %}
+        {% set announcement_classes = announcement_classes|merge([
+            "section--padded-top"
+        ]) %}
+    {% endif %}
+
+    <section {{ attributes.addClass(announcement_classes) }} aria-label="Campus-Wide Announcements">
         <div class="compartment">
             <div class="campus-communications">
                 <div class="campus-communications__header block-header">

@@ -10295,8 +10295,9 @@ ul.js-pager__items {
 
 .campus-communications {
   position: relative;
-  margin-top: -1.5rem;
   z-index: 100; }
+  section:not(.section--padded-top) .campus-communications {
+    margin-top: -4.125rem; }
 
 .campus-communications__header {
   align-items: center;
