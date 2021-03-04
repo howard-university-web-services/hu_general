@@ -1,7 +1,9 @@
 .campus-communications {
   position: relative;
-  margin-top: rem(-24);
   z-index: 100;
+  section:not(.section--padded-top) & {
+    margin-top: rem(-(42 + 24));
+  }
 }
 
 .campus-communications__header {
