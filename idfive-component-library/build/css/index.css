@@ -7552,7 +7552,8 @@ a.fancy-link:hover {
   .webform-button--submit--light,
   .button .button--primary--light, .js-form-submit--light, .form-submit--light,
   .webform-button--reset--light, .js-webform-novalidate--light {
-    background: #4C7290; }
+    background: #4C7290;
+    color: #FFF; }
   .btn__text,
   .webform-button--submit__text,
   .button .button--primary__text, .js-form-submit__text, .form-submit__text,
