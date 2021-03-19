@@ -7548,6 +7548,11 @@ a.fancy-link:hover {
   padding: 0 1.125rem;
   align-items: center;
   text-decoration: none; }
+  .btn--light,
+  .webform-button--submit--light,
+  .button .button--primary--light, .js-form-submit--light, .form-submit--light,
+  .webform-button--reset--light, .js-webform-novalidate--light {
+    background: #4C7290; }
   .btn__text,
   .webform-button--submit__text,
   .button .button--primary__text, .js-form-submit__text, .form-submit__text,
@@ -10228,6 +10233,22 @@ a.tablesaw-btn {
     border: 1px solid; }
   .entity-moderation-form__item:last-of-type {
     text-align: right; }
+
+.hu_login {
+  padding: 40px; }
+  .hu_login--saml {
+    background-color: #031F33; }
+    .hu_login--saml h2,
+    .hu_login--saml p {
+      color: #fff; }
+  .hu_login--local {
+    border: 1px solid #CDCDCD; }
+    .hu_login--local .btn {
+      margin-bottom: 0px; }
+    .hu_login--local h3 {
+      margin-bottom: 10px; }
+    .hu_login--local p {
+      margin-bottom: 0px; }
 
 ul.js-pager__items {
   align-items: center;

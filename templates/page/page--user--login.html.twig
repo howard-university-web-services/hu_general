@@ -1,0 +1,69 @@
+{% include parent_include_directory ~ '/templates/_includes/global/header.html.twig' %}
+
+<main class="main-content" id="main-content">
+
+	{{ messages }}
+	{{ page.help }}
+
+	{# Internal page Hero #}
+	<div class="hero-image" style="background-image:url('{{ hero_image }}')"></div>
+	<header class="post-header">
+		<div
+			class="compartment">
+			{# Manually fake the breadcrumbs #}
+			<nav aria-label="breadcrumb" class="breadcrumb">
+				<ol class="breadcrumb__items">
+					<li class="breadcrumb__item">
+						<a href="/">
+							<span class="breadcrumb__back-to-parent">Back to
+							</span>
+							<span class="breadcrumb__item-text">Home</span>
+						</a>
+					</li>
+					<li class="breadcrumb__item breadcrumb__item--active">
+						Login
+					</li>
+				</ol>
+			</nav>
+			<h1 class="post-header__title">Login</h1>
+		</div>
+	</header>
+	<section class="section--padded-top section--padded-bottom">
+		<div class="compartment">
+			<div
+				class="silc-grid silc-grid--collapse">
+				{# Howard login #}
+				<div class="silc-grid__col silc-grid__col--6-large">
+					<div class="hu_login hu_login--saml">
+						<h2>Howard University Login</h1>
+						<p>Howard University staff and faculty accounts can access site via Office 365 Portal.</p>
+						<a class="btn btn js-form-submit form-submit" href="/saml_login">Go to Office 365 portal</a>
+					</div>
+				</div>
+				{# Drupal login #}
+				<div class="silc-grid__col silc-grid__col--6-large">
+					<div class="hu_login hu_login--local">
+						<h3>Admin Login</h3>
+						<p>Access for Howard external vendors with provisioned site accounts. This in not common.</p>
+						<form class="user-login-form" data-drupal-selector="user-login-form" action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8">
+							<div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name">
+								<label for="edit-name" class="js-form-required form-required">Username</label>
+								<input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" data-drupal-selector="edit-name" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" required="required" aria-required="true"/>
+							</div>
+							<div class="js-form-item form-item js-form-type-password form-item-pass js-form-item-pass">
+								<label for="edit-pass" class="js-form-required form-required">Password</label>
+								<input data-drupal-selector="edit-pass" type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" required="required" aria-required="true"/>
+							</div>
+							<input data-drupal-selector="edit-user-login-form" type="hidden" name="form_id" value="user_login_form">
+							<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+								<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log in as Affiliate" class="btn btn--light js-form-submit form-submit"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+{% include parent_include_directory ~ '/templates/_includes/global/footer.html.twig' %}

@@ -16,6 +16,9 @@
   padding: 0 rem(18);
   align-items: center;
   text-decoration: none;
+  &--light {
+    background: $skyblue;
+  }
   &__text {
     transform: translateX(15px);
     transition: transform .3s ease-in-out;

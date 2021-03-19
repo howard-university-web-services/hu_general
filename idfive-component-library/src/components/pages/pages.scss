@@ -18,3 +18,31 @@
     }
 }
 
+.hu_login {
+    padding: 40px;
+
+    &--saml {
+        background-color: $darkblue;
+
+        h2,
+        p {
+            color: #fff;
+        }
+    }
+
+    &--local {
+        border: 1px solid $gray2;
+
+        .btn {
+            margin-bottom: 0px;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 0px;
+        }
+    }
+}
