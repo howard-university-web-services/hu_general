@@ -35,16 +35,15 @@
 				{# Howard login #}
 				<div class="silc-grid__col silc-grid__col--6-large">
 					<div class="hu_login hu_login--saml">
-						<h2>Howard University Login</h1>
-						<p>Howard University staff and faculty accounts can access site via Office 365 Portal.</p>
-						<a class="btn btn js-form-submit form-submit" href="/saml_login">Go to Office 365 portal</a>
+						<h2>Site Builder Login</h1>
+						<p>Howard University Site Builders can access this site via the Office 365 Portal.</p>
+						<a class="btn btn js-form-submit form-submit" href="/saml_login">Go to Office 365 Portal</a>
 					</div>
 				</div>
 				{# Drupal login #}
 				<div class="silc-grid__col silc-grid__col--6-large">
 					<div class="hu_login hu_login--local">
-						<h3>Admin Login</h3>
-						<p>Access for Howard external vendors with provisioned site accounts. This is not common.</p>
+						<h3>Administrator Login</h3>
 						<form class="user-login-form" data-drupal-selector="user-login-form" action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8">
 							<div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name">
 								<label for="edit-name" class="js-form-required form-required">Username</label>
@@ -56,7 +55,7 @@
 							</div>
 							<input data-drupal-selector="edit-user-login-form" type="hidden" name="form_id" value="user_login_form">
 							<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
-								<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log in as Affiliate" class="btn btn--light js-form-submit form-submit"/>
+								<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log In as Administrator" class="btn btn--light js-form-submit form-submit"/>
 							</div>
 						</form>
 					</div>
