@@ -95,7 +95,8 @@
     }
 
     p {
-      color: $charcoal
+      color: $charcoal;
+      width: 100%;
     }
 
     .ks-cards & {
@@ -227,7 +228,7 @@
 
   // 4 with one featured overrides
   &--department {
-    
+
       .news-and-events__block_feat_4up {
         @include media('medium') {
           color: white;
@@ -324,7 +325,7 @@
         height: auto;
         min-height: rem(121);
         border-bottom-right-radius: 0;
-        
+
         &:hover {
           background: #EDC054;
           border-bottom-left-radius: rem(4);
@@ -332,7 +333,7 @@
         }
       }
     }
-  
+
 }
 
 /* Styles for .news-and-events__block when element is an anchor instead of a div */

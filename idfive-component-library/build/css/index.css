@@ -7738,7 +7738,8 @@ a.fancy-link:hover {
       background: #FFF;
       height: 100%; }
     .news-and-events__desc p {
-      color: #2F2F2F; }
+      color: #2F2F2F;
+      width: 100%; }
     .ks-cards .news-and-events__desc {
       padding: 0.9375rem; }
       @media (min-width: 500px) {
