@@ -5,26 +5,49 @@
  */
 #}
 
-<!-- content -->
 <section class="section--padded-top">
-  <div class="compartment">
-      {{ content.content_moderation_control }}
-      <div class="silc-grid silc-grid--collapse{{not node.isPublished() ? ' node--unpublished'}}">
-          <div class="silc-grid__col silc-grid__col--12-large kitchen-sink--main-col">
-            <h3 class="news-and-events__title header--h3-small">{{ node.title.value }}</h3>
-            <p class="body-text--small">{{ content.body }}</p>
-            <a href="{{ url }}" class="fancy-link">
-              <span>Read More
-                <span class="visually-hidden">
-                  about
-                  {{ node.title.value }}
-                </span>
-              </span>
-              <span class="icon-arrow-right"></span>
-            </a>
-            <!-- Render without, so quickedit/etc works -->
-            {{ content|without('content_moderation_control','body', 'links', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
-          </div>
-      </div>
-  </div>
+	<div class="compartment">
+		{{ content.content_moderation_control }}
+		<div class="silc-grid silc-grid--collapse{{not node.isPublished() ? ' node--unpublished'}}">
+			<div class="silc-grid__col silc-grid__col--12-large kitchen-sink--main-col">
+				<h3 class="news-and-events__title header--h3-small">{{ node.title.value }}</h3>
+				{% if article_type == 'internal' %}
+					{# Internal Article #}
+					<p class="body-text--small">{{ content.body }}</p>
+					<a href="{{ url }}" class="fancy-link">
+						<span>Read More
+							<span class="visually-hidden">
+								about
+								{{ node.title.value }}
+							</span>
+						</span>
+						<span class="icon-arrow-right"></span>
+					</a>
+				{% else %}
+					{# External Article #}
+					{% if content.field_hc_article_dateline %}
+						<div class="hc-article--date">
+							{{ content.field_hc_article_dateline }}
+						</div>
+					{% endif %}
+					{% if content.field_hc_article_source %}
+						<div class="hc-article--date">
+							{{ content.field_hc_article_source }}
+						</div>
+					{% endif %}
+					<a href="{{ content.field_hc_article_link }}" class="fancy-link" target="_blank">
+						<span>Read More
+							<span class="visually-hidden">
+								about
+								{{ node.title.value }}
+							</span>
+						</span>
+						<span class="icon-arrow-right"></span>
+					</a>
+				{% endif %}
+				{# Render without, so quickedit/etc works #}
+				{{ content|without('field_hc_article_source', 'field_hc_article_link', 'field_hc_article_type', 'field_hc_article_dateline', 'content_moderation_control','body', 'links', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
+			</div>
+		</div>
+	</div>
 </section>

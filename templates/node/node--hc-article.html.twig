@@ -5,27 +5,29 @@
  */
 #}
 
-<!-- Internal Page Hero -->
+{# Internal Page Hero #}
 {% if show_hero_image %}
   {% include parent_include_directory ~ '/templates/_includes/global/content_header.html.twig' %}
 {% else %}
   {% include parent_include_directory ~ '/templates/_includes/global/content_header_no_image.html.twig' %}
 {% endif %}
 
-<!-- Main content -->
+{# Main content #}
 <section class="section--padded-top{{not node.isPublished() ? ' node--unpublished'}}">
 
   <div class="compartment">
     {{ content.content_moderation_control }}
       <div class="silc-grid silc-grid--collapse">
-        <!-- Sidebar -->
+          {# Sidebar #}
           <div class="silc-grid__col silc-grid__col--2-large">
             <aside class="sidebar">
               {{ page_sidebar }}
             </aside>
           </div>
-          <!-- Main column -->
+          {# Main column #}
           <div class="silc-grid__col silc-grid__col--10-large kitchen-sink--main-col">
+            {% if article_type == 'internal' %}
+              {# Internal Article #}
               {% if publish_date %}
                 <div class="hc-article--date">
                   {{ publish_date }}
@@ -51,9 +53,22 @@
                   {%- endfor -%}
                 </div>
               {% endif %}
-              <!-- Render without, so quickedit/etc works -->
-{{ content|without('content_moderation_control','body', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image', 'field_hc_article_date') }}
-
+            {% else %}
+              {# External Article #}
+              {% if content.field_hc_article_dateline %}
+                <div class="hc-article--date">
+                  {{ content.field_hc_article_dateline }}
+                </div>
+              {% endif %}
+              {% if content.field_hc_article_source %}
+                <div class="hc-article--date">
+                  {{ content.field_hc_article_source }}
+                </div>
+              {% endif %}
+              <a class="btn" href="{{ content.field_hc_article_link }}" target="_blank">View Full Article</a>
+            {% endif %}
+            {# Render without, so quickedit/etc works #}
+            {{ content|without('field_hc_article_source', 'field_hc_article_link', 'field_hc_article_type', 'field_hc_article_dateline', 'content_moderation_control','body', 'links', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
           </div>
       </div>
   </div>
