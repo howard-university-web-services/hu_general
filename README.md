@@ -53,18 +53,23 @@ These links will show as icons in the footer throughout the site.
 
 These fields set the footer address throughout the site.
 
+### Admin settings
+
+- Site-wide Scripts or Embeds. Allows admins to add JS snippets/etc, when needed.
+
 ### Development
+
 This theme is built on the [idfive component library (ICL)](https://bitbucket.org/idfivellc/idfive-component-library/src/master/).
 CSS/JS in folder idfive-component-library
 From idfive-component-library run the following:
- - Run `nvm use 10`
- - Run npm install
- - Run npm run fractal to preview CSS?JS changes
- - Run npm run build:production for production builds.
+
+- Run `nvm use 10`
+- Run `npm install`
+- Run `npm run fractal` to preview CSS?JS changes
+- Run `npm run build:production` for production builds.
 
 ## Resources
 
 - [idfive Component Library D8 Theme](https://bitbucket.org/idfivellc/idfive-component-library-d8-theme)
 - [Silc Framework](https://silc.io/)
 - [idfive Component Library Source Files](https://bitbucket.org/idfivellc/idfive-component-library/src/master/)
-

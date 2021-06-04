@@ -13,6 +13,7 @@ use Drupal\file\Entity\File;
  */
 function hu_general_preprocess_html(&$variables) {
   $variables['theme_variant'] = theme_get_setting('theme_variant');
+  $variables['admin_scripts'] = theme_get_setting('admin_scripts');
 }
 
 /**

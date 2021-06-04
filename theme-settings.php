@@ -174,4 +174,17 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#default_value' => theme_get_setting('phone'),
     '#description' => t('Add a phone number.'),
   ];
+
+  // Admin only settings.
+  $form['hu_admin_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Admin Settings'),
+  ];
+  $form['hu_admin_settings']['admin_scripts'] = [
+    '#type' => 'textarea',
+    '#title' => t('Site-wide Scripts or Embeds'),
+    '#default_value' => theme_get_setting('admin_scripts'),
+    '#description'  => '<strong>ADMIN ONLY.</strong> With great power comes great responsibility. This fields allows the addition of extra scripts/tracking codes/etc, on to the HTML template of the theme. This means it will be on all pages of the site.',
+    '#required' => FALSE,
+  ];
 }
