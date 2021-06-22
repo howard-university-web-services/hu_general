@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override to display an HC Person node Teaser.
+ */
+#}
+
+<section class="section--padded-top{{not node.isPublished() ? ' node--unpublished'}}">
+	<div class="compartment">
+		{{ content.content_moderation_control }}
+		<div class="silc-grid silc-grid--collapse">
+			<div class="silc-grid__col silc-grid__col--12-large kitchen-sink--main-col">
+				<h3 class="news-and-events__title header--h3-small">{{node.title.value}}</h3>
+				<div class="body-text--small">{{ content.body }}</div>
+				<a href="{{ url }}" class="fancy-link">
+					<span>Read More
+						<span class="visually-hidden">
+							about
+							{{ node.title.value }}
+						</span>
+					</span>
+					<span class="icon-arrow-right"></span>
+				</a>
+				{# Render without, so quickedit/etc works #}
+				{{ content|without('content_moderation_control','body', 'field_hc_person_image', 'field_hc_person_category', 'field_hc_last_name', 'field_hc_person_title', 'field_hc_person_link', 'field_hc_person_organization') }}
+			</div>
+		</div>
+	</div>
+</section>

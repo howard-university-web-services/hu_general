@@ -1,0 +1,16 @@
+.hc_person {
+  &--details {
+    &__image {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &__meta {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}

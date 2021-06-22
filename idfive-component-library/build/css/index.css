@@ -10385,6 +10385,15 @@ ul.js-pager__items {
     display: inline-block;
     margin-right: -0.25rem; }
 
+.hc_person--details__image img {
+  max-width: 100%;
+  height: auto; }
+
+.hc_person--details__meta {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px; }
+
 body.clean_light {
   background-color: #FFF;
   line-height: 1.625;
