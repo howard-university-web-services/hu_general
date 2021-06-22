@@ -10281,11 +10281,13 @@ ul.js-pager__items {
   padding-left: 7.5rem; }
 
 #views-exposed-form-hc-resources-feed-block-1.views-exposed-form,
-#views-exposed-form-hc-resources-index-block-1.views-exposed-form {
+#views-exposed-form-hc-resources-index-block-1.views-exposed-form,
+#views-exposed-form-hc-person-feed-main-feed.views-exposed-form {
   margin-bottom: 2.5rem; }
   @media (min-width: 800px) {
     #views-exposed-form-hc-resources-feed-block-1.views-exposed-form,
-    #views-exposed-form-hc-resources-index-block-1.views-exposed-form {
+    #views-exposed-form-hc-resources-index-block-1.views-exposed-form,
+    #views-exposed-form-hc-person-feed-main-feed.views-exposed-form {
       align-items: flex-end;
       display: flex;
       margin-left: -1.25rem; } }
@@ -10294,25 +10296,31 @@ ul.js-pager__items {
   #views-exposed-form-hc-resources-feed-block-1 .form-item,
   #views-exposed-form-hc-resources-feed-block-1 .form-actions,
   #views-exposed-form-hc-resources-index-block-1 .form-item,
-  #views-exposed-form-hc-resources-index-block-1 .form-actions {
+  #views-exposed-form-hc-resources-index-block-1 .form-actions,
+  #views-exposed-form-hc-person-feed-main-feed .form-item,
+  #views-exposed-form-hc-person-feed-main-feed .form-actions {
     padding-left: 1.25rem; } }
 
 #views-exposed-form-hc-resources-feed-block-1 .form-item,
-#views-exposed-form-hc-resources-index-block-1 .form-item {
+#views-exposed-form-hc-resources-index-block-1 .form-item,
+#views-exposed-form-hc-person-feed-main-feed .form-item {
   margin-bottom: 1.25rem; }
   @media (min-width: 800px) {
     #views-exposed-form-hc-resources-feed-block-1 .form-item,
-    #views-exposed-form-hc-resources-index-block-1 .form-item {
+    #views-exposed-form-hc-resources-index-block-1 .form-item,
+    #views-exposed-form-hc-person-feed-main-feed .form-item {
       flex: 1 1 0px;
       margin-bottom: 0; } }
 
 @media (min-width: 800px) {
   #views-exposed-form-hc-resources-feed-block-1 .form-actions,
-  #views-exposed-form-hc-resources-index-block-1 .form-actions {
+  #views-exposed-form-hc-resources-index-block-1 .form-actions,
+  #views-exposed-form-hc-person-feed-main-feed .form-actions {
     flex: 0 1 auto; } }
 
 #views-exposed-form-hc-resources-feed-block-1 .form-submit,
-#views-exposed-form-hc-resources-index-block-1 .form-submit {
+#views-exposed-form-hc-resources-index-block-1 .form-submit,
+#views-exposed-form-hc-person-feed-main-feed .form-submit {
   margin: 0;
   height: 3.25rem; }
 
