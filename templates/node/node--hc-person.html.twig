@@ -28,17 +28,17 @@
             </div>
             <div class="silc-grid__col silc-grid__col--9-large">
               {% if content.field_hc_person_title|render %}
-                <span class="hc_person--details__meta"><strong>Title</span>: {{ content.field_hc_person_title }}</span>
+                <span class="hc_person--details__meta"><strong>Title</strong>: {{ content.field_hc_person_title }}</span>
               {% endif %}
               {% if content.field_hc_person_organization|render %}
-                <span class="hc_person--details__meta"><strong>Organization</span>: {{ content.field_hc_person_organization }}</span>
+                <span class="hc_person--details__meta"><strong>Organization</strong>: {{ content.field_hc_person_organization }}</span>
               {% endif %}
               {% if content.field_hc_person_link|render %}
                 <span class="hc_person--details__meta">{{ content.field_hc_person_link }}</span>
               {% endif %}
               {% if content.field_hc_person_category|render %}
                 <span class="hc_person--details__meta">
-                  <strong>Categories</span>:
+                  <strong>Categories</strong>:
                   {%- for item in content.field_hc_person_category['#items'] -%}
                     {%- if loop.first -%}
                       {{- item.entity.name.value -}}
