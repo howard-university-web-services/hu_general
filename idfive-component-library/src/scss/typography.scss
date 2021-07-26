@@ -190,7 +190,8 @@ ul, ol {
 ul {
   .hp-html &,
   .silc-accordion__content &,
-  .cke_editable_themed & {
+  .cke_editable_themed &,
+  .page-node-type-hc-article .kitchen-sink--main-col & {
     list-style-type: none;
     margin: 0 0 rem(16);
 

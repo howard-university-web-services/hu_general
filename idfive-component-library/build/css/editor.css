@@ -2295,26 +2295,31 @@ a {
 
 .hp-html ul,
 .silc-accordion__content ul,
-.cke_editable_themed ul {
+.cke_editable_themed ul,
+.page-node-type-hc-article .kitchen-sink--main-col ul {
   list-style-type: none;
   margin: 0 0 1rem; }
   .hp-html ul:last-child,
   .silc-accordion__content ul:last-child,
-  .cke_editable_themed ul:last-child {
+  .cke_editable_themed ul:last-child,
+  .page-node-type-hc-article .kitchen-sink--main-col ul:last-child {
     margin-bottom: 0; }
   .hp-html ul li,
   .silc-accordion__content ul li,
-  .cke_editable_themed ul li {
+  .cke_editable_themed ul li,
+  .page-node-type-hc-article .kitchen-sink--main-col ul li {
     padding-left: 1.125rem;
     position: relative; }
     @media (min-width: 800px) {
       .hp-html ul li,
       .silc-accordion__content ul li,
-      .cke_editable_themed ul li {
+      .cke_editable_themed ul li,
+      .page-node-type-hc-article .kitchen-sink--main-col ul li {
         padding-left: 1.75rem; } }
     .hp-html ul li:before,
     .silc-accordion__content ul li:before,
-    .cke_editable_themed ul li:before {
+    .cke_editable_themed ul li:before,
+    .page-node-type-hc-article .kitchen-sink--main-col ul li:before {
       content: "\2022";
       font-size: 1.4em;
       display: inline-block;
@@ -2324,7 +2329,8 @@ a {
       @media (min-width: 800px) {
         .hp-html ul li:before,
         .silc-accordion__content ul li:before,
-        .cke_editable_themed ul li:before {
+        .cke_editable_themed ul li:before,
+        .page-node-type-hc-article .kitchen-sink--main-col ul li:before {
           left: 0.75rem; } }
 
 .hp-html ol,
