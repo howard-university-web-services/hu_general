@@ -1,16 +1,136 @@
 .hc_person {
-  &--details {
+  &-details {
+    background: #FFFFFF;
+    border-bottom: 5px solid $yellow;
+    border-radius: rem(4);
+    box-shadow: 1px 7px 23px 0 rgba($mblue, 0.2);
+    margin: 0 0 rem(20);
+    padding: rem(30);
+
+    @include media("medium") {
+      align-items: flex-start;
+      display: flex;
+      margin-bottom: rem(30);
+      padding: rem(55);
+    }
+
+    &__image-meta {
+      @include media("medium") {
+        flex: 0 1 auto;
+        width: 35%;
+      }
+    }
+
     &__image {
+      margin: 0 auto;
+      max-width: rem(300);
+      position: relative;
+
+      @include media("medium") {
+        max-width: none;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+
       img {
-        max-width: 100%;
+        display: block;
+        width: 100%;
         height: auto;
+
+        @supports (object-fit:cover) {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
       }
     }
 
     &__meta {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
+      text-align: center;
+      margin: rem(16) 0 0;
+
+      @include media("medium") {
+        margin-top: rem(24);
+        text-align: left;
+      }
+    }
+
+    &__content {
+      color: $mblue;
+      margin: rem(20) 0 0;
+
+      @include media("medium") {
+        flex: 1 1 0px;
+        margin: 0 0 0 rem(35);
+      }
+
+      @include media("large") {
+        margin-left: rem(50);
+      }
+    }
+
+    &__content-top {
+      border-bottom: 2px solid $gray;
+      margin-bottom: rem(30);
+      padding-bottom: rem(30);
+    }
+
+    &__name {
+      margin-bottom: rem(18);
+    }
+
+    &__title {
+      font-size: rem(24);
+      font-weight: 700;
+      letter-spacing: em(-0.2, 24);
+      line-height: (30 / 24);
+      margin: 0;
+    }
+
+    &__organization {
+      font-size: rem(18);
+      font-weight: 600;
+      letter-spacing: em(0.05, 18);
+      line-height: (30 / 18);
+      margin: 0;
+    }
+
+    &__website {
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    &__content-subsection-title {
+      color: $mblue !important;
+    }
+
+    &__categories {
+      font-weight: 600;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      li {
+        flex: 0 0 auto;
+        line-height: 1;
+
+        &:not(:last-child) {
+          border-right: 2px solid $lightblue;
+          margin-right: rem(8);
+          padding-right: rem(8);
+        }
+      }
     }
   }
 }

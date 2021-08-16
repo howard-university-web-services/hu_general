@@ -18,45 +18,56 @@
           </aside>
         </div>
         <div class="silc-grid__col silc-grid__col--10-large kitchen-sink--main-col">
-
           {# Main content #}
-          <div class="silc-grid silc-grid--collapse hc_person--details">
-            <div class="silc-grid__col silc-grid__col--3-large">
-              <div class="hc_person--details__image">
+          <div class="hc_person-details">
+            <div class="hc_person-details__image-meta">
+              <div class="hc_person-details__image">
                 {{ content.field_hc_person_image }}
               </div>
+              <div class="hc_person-details__meta">
+                {% if content.field_hc_person_link|render %}
+                  <div class="hc_person-details__website">
+                    {{ content.field_hc_person_link }}
+                  </div>
+                {% endif %}
+              </div>
             </div>
-            <div class="silc-grid__col silc-grid__col--9-large">
-              {% if content.field_hc_person_title|render %}
-                <span class="hc_person--details__meta"><strong>Title</strong>: {{ content.field_hc_person_title }}</span>
-              {% endif %}
-              {% if content.field_hc_person_organization|render %}
-                <span class="hc_person--details__meta"><strong>Organization</strong>: {{ content.field_hc_person_organization }}</span>
-              {% endif %}
-              {% if content.field_hc_person_link|render %}
-                <span class="hc_person--details__meta">{{ content.field_hc_person_link }}</span>
-              {% endif %}
-              {% if content.field_hc_person_category|render %}
-                <span class="hc_person--details__meta">
-                  <strong>Categories</strong>:&nbsp;
-                  {%- for item in content.field_hc_person_category['#items'] -%}
-                    {%- if loop.first -%}
-                      {{- item.entity.name.value -}}
-                    {%- elseif loop.last -%}
-                      {{- ' and ' ~ item.entity.name.value -}}
-                    {%- else -%}
-                      {{- ', ' ~ item.entity.name.value -}}
-                    {%- endif -%}
-                  {%- endfor -%}
-                </span>
-              {% endif %}
+            <div class="hc_person-details__content">
+              <div class="hc_person-details__content-top">
+                <h2 class="hc_person-details__name">{{ node.getTitle() }}</h2>
+                {% if content.field_hc_person_title|render %}
+                  <p class="hc_person-details__title">{{ content.field_hc_person_title }}</p>
+                {% endif %}
+                {% if content.field_hc_person_organization|render %}
+                  <p class="hc_person-details__organization">{{ content.field_hc_person_organization }}</p>
+                {% endif %}
+              </div>
+              <div class="hc_person-details__content-bottom">
+                <div class="silc-grid">
+                  {% if content.field_hc_person_category|render %}
+                    <div class="silc-grid__col silc-grid__col--medium-s-6 hc_person-details__content-subsection">
+                      <h3 class="h4 hc_person-details__content-subsection-title">Categories</h3>
+                      <div class="hc_person-details__categories">
+                        <ul>
+                          {% for item in content.field_hc_person_category['#items'] %}
+                            <li>{{ item.entity.name.value }}</li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
             </div>
           </div>
-          {{ content.body }}
+          <div class="section--padded-top section--padded-bottom">
+            <h2>Biography</h2>
+            {{ content.body }}
+          </div>
         </div>
       </div>
   </div>
 </section>
 
 {# Render without, so quickedit/etc works #}
-{{ content|without('content_moderation_control','body', 'links', 'field_hc_person_image', 'field_hc_person_category', 'field_hc_last_name', 'field_hc_person_title', 'field_hc_person_link', 'field_hc_person_organization') }}
+{{ content|without('content_moderation_control','body', 'field_hc_person_image', 'field_hc_person_category', 'field_hc_last_name', 'field_hc_person_title', 'field_hc_person_link', 'field_hc_person_organization') }}
