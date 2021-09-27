@@ -37,7 +37,7 @@
           {% endfor %}
         {% endif %}
         {# Render without, so quickedit/etc works #}
-        {{ content|without('content_moderation_control','field_hc_resources_related','field_hc_resource_sidebar_title', 'field_hc_resource_contact_name', 'field_hc_hide_header_image','field_hc_resource_contact_email', 'field_hc_resource_contact_addres', 'body', 'field_hc_resource_category', 'field_hc_header_image', 'field_hc_resource_cta_link', 'field_hc_resource_documents', 'field_hc_lead_in') }}
+        {{ content|without('field_hc_site_access', 'content_moderation_control','field_hc_resources_related','field_hc_resource_sidebar_title', 'field_hc_resource_contact_name', 'field_hc_hide_header_image','field_hc_resource_contact_email', 'field_hc_resource_contact_addres', 'body', 'field_hc_resource_category', 'field_hc_header_image', 'field_hc_resource_cta_link', 'field_hc_resource_documents', 'field_hc_lead_in') }}
       </div>
 
       {# Sidebar #}

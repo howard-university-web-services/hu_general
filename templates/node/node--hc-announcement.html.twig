@@ -21,7 +21,7 @@
       <div class="silc-grid__col silc-grid__col--10-large kitchen-sink--main-col">
         <p>{{ content.field_hc_summary }}</p>
         {# Render without, so quickedit/etc works #}
-        {{ content|without('content_moderation_control','field_hc_summary', 'field_hc_end_date', 'field_hc_featured', 'field_hc_links', 'field_hc_start_date') }}
+        {{ content|without('field_hc_site_access', 'content_moderation_control','field_hc_summary', 'field_hc_end_date', 'field_hc_featured', 'field_hc_links', 'field_hc_start_date') }}
       </div>
 
     </div>

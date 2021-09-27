@@ -68,7 +68,7 @@
               <a class="btn" href="{{ content.field_hc_article_link }}" target="_blank">View Full Article</a>
             {% endif %}
             {# Render without, so quickedit/etc works #}
-            {{ content|without('field_hc_article_source', 'field_hc_article_link', 'field_hc_article_type', 'field_hc_article_dateline', 'content_moderation_control','body', 'links', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
+            {{ content|without('field_hc_site_access', 'field_hc_article_source', 'field_hc_article_link', 'field_hc_article_type', 'field_hc_article_dateline', 'content_moderation_control','body', 'links', 'field_hc_featured_image', 'field_hc_article_category', 'field_hc_header_image', 'field_hc_hide_header_image') }}
           </div>
       </div>
   </div>
