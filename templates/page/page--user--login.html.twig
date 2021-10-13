@@ -43,6 +43,7 @@
 				{# Drupal login #}
 				<div class="silc-grid__col silc-grid__col--6-large">
 					<div class="hu_login hu_login--local">
+						{{ page.content.hu_general_messages }}
 						<h3>Administrator Login</h3>
 						<p>Only for Office of University Communications site administrators.</p>
 						<form class="user-login-form" data-drupal-selector="user-login-form" action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8">
@@ -59,6 +60,9 @@
 								<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Log In as Administrator" class="btn btn--light js-form-submit form-submit"/>
 							</div>
 						</form>
+						<p>
+							<a href="/user/password">Reset Password</a>
+						</p>
 					</div>
 				</div>
 			</div>
