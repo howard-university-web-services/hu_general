@@ -22,7 +22,7 @@ body.classic_editorial {
         @extend %serif-regular;
         color: $mblue;
 
-        &:not(.main-header__dept) {
+        &:not(.main-header__dept):not(.silc-accordion__label) {
             font-size: rem(36);
             line-height: (46 / 36);
         }
@@ -820,10 +820,15 @@ body.classic_editorial {
                 inset 0 rem(-2) 0 0 #E9E9E9;
             padding-top: rem(40);
             margin-top: 0;
+            border-left: none;
 
             &::before {
                 display: none;
             }
+        }
+
+        .silc-accordion__label {
+            border-left: none;
         }
     }
 
@@ -837,6 +842,7 @@ body.classic_editorial {
             inset 0 rem(-2) 0 0 #E9E9E9;
         font-weight: 400;
         transition: .3s background-color ease-in-out;
+        
 
         &:hover {
             background-color: #E8EBED;
@@ -868,6 +874,7 @@ body.classic_editorial {
             inset 0 rem(2) 0 0 $mblue,
             inset rem(-2) 0 0 0 $mblue,
             inset 0 rem(-2) 0 0 $mblue;
+        border-left: none;
 
         &::after {
             display: none;

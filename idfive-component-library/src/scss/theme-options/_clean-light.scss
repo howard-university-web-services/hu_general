@@ -9,7 +9,7 @@ body.clean_light {
     %h2 {
         @extend %sans-extra-bold;
 
-        &:not(.main-header__dept) {
+        &:not(.main-header__dept):not(.silc-accordion__label) {
             font-size: rem(34);
             letter-spacing: em(-.3, 34);
             line-height: (44 / 34);
@@ -565,6 +565,10 @@ body.clean_light {
                 display: none;
             }
         }
+        
+        .silc-accordion__label {
+            border-left: none;
+        }
     }
 
     .silc-accordion__section {
@@ -577,6 +581,7 @@ body.clean_light {
                 inset 0 rem(1) 0 0 $gray4,
                 inset rem(-1) 0 0 0 $gray4,
                 inset 0 rem(-1) 0 0 $gray4;
+            border-left: none;
         }
 
         .silc-accordion__label--active {
@@ -584,6 +589,7 @@ body.clean_light {
                 inset 0 rem(3) 0 0 $navy,
                 inset rem(-3) 0 0 0 $navy,
                 inset 0 rem(-3) 0 0 $navy;
+            border-left: none;
         }
 
         &:hover {
@@ -594,6 +600,7 @@ body.clean_light {
                     inset 0 rem(3) 0 0 $mustard,
                     inset rem(-3) 0 0 0 $mustard,
                     inset 0 rem(-3) 0 0 $mustard;
+                border-left: none;
             }
         }
 

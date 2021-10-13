@@ -168,7 +168,7 @@
       &__label {
         border-left: transparent solid rem(3);
         border-top: 0;
-        padding: rem(15);
+        padding: rem(20) rem(20) rem(20) rem(50);
         transition: border .1s ease-in-out;
 
         &--active {
@@ -177,11 +177,14 @@
         }
 
         &::before {
-          display: none
+          @include media('medium') {
+            display: none;
+          }
         }
 
         @include media('medium') {
           border-left: 0;
+          padding: rem(15);
         }
       }
 
