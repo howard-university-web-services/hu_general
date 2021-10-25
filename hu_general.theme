@@ -7,6 +7,7 @@
 
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\file\Entity\File;
+use Drupal\block\Entity\Block;
 
 /**
  * Implements hook_preprocess_html().
@@ -23,6 +24,11 @@ function hu_general_preprocess_page(&$variables) {
   _hu_general_extend_theme_variables($variables);
   $variables['hero_image'] = '/themes/contrib/hu_general/idfive-component-library/build/img/graduates_talking.jpg';
   $variables['parent_include_directory'] = \Drupal::service('theme_handler')->getTheme('hu_general')->getPath();
+  // Make Oauth login block available.
+  $login_block = Block::load('openidconnectlogin');
+  $variables['login_block'] = \Drupal::entityTypeManager()
+  ->getViewBuilder('block')
+  ->view($login_block);
 }
 
 /**
