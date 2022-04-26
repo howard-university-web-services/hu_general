@@ -104,6 +104,17 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#description' => t('Add a link URL for the featured link.'),
     '#default_value' => theme_get_setting('featured_header_link_url'),
   ];
+  // Search Options
+  $form['hu_header_settings']['search_options'] = [
+    '#type' => 'details',
+    '#title' => t('Search Options'),
+  ];
+  $form['hu_header_settings']['search_options']['featured_header_hide_search'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Hide Search'),
+    '#description' => t('Choose whether to hide the search functionality in the header.'),
+    '#default_value' => theme_get_setting('hide_search'),
+  ];
 
   // Footer.
   $form['hu_footer_settings'] = [

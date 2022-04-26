@@ -5,14 +5,16 @@
 			<a class="utility__featured-link" href="{{ featured_header_link_url }}">{{ featured_header_link_title }}</a>
 		{% endif %}
 	</div>
-	<div class="utility__search">
-		<form action="/search/node" class="utility__search-form main-search" id="{{ fid }}" method="get">
-			<label for="{{ sid }}" class="visible-for-screen-readers">Search this Site</label>
-			<input type="text" class="utility__search-input" name="keys" id="{{ sid }}" placeholder="Search...">
-			<button type="submit" class="utility__search-submit">go</button>
-		</form>
-		<button aria-hidden="true" class="utility__search-trigger">
-			<span class="visually-hidden">Trigger Search</span>
-		</button>
-	</div>
+	{% if not featured_header_hide_search %}
+		<div class="utility__search">
+			<form action="/search/node" class="utility__search-form main-search" id="{{ fid }}" method="get">
+				<label for="{{ sid }}" class="visible-for-screen-readers">Search this Site</label>
+				<input type="text" class="utility__search-input" name="keys" id="{{ sid }}" placeholder="Search...">
+				<button type="submit" class="utility__search-submit">go</button>
+			</form>
+			<button aria-hidden="true" class="utility__search-trigger">
+				<span class="visually-hidden">Trigger Search</span>
+			</button>
+		</div>
+	{% endif %}
 </div>

@@ -39,6 +39,8 @@ Additional options available on the /appearance/settings/hu_general page:
 ### Howard Header Settings
 
 - Show light header menu: Uses the light menu color scheme for the header menu throughout the site.
+- Featured Header Link: Show a featured link in the header, and set text and URL.
+- Hie Search: Hides the search function on desktop and mobile, if you wish to not have search functionality on the site.
 
 ### Howard footer Settings, Social Links
 
