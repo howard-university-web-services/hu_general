@@ -17,13 +17,18 @@ table {
     &.tablesaw th,
     &.tablesaw td,
     td {
-        padding: rem(15);
+        padding: rem(8) rem(15) rem(8) rem(15);
         @include media('table') {
             padding: rem(15);
             // border-bottom: 1px solid $gray4;
         }
     }
     tr {
+        border-top: 3px solid $mblue;
+        @include media('table') {
+            border-top: none;
+        }
+
         &:nth-child(odd) {
             td {
                 @extend %sans-regular;
@@ -41,9 +46,8 @@ table {
                     border-left: none;
                 }
                 &:last-of-type {
-                    border-bottom: rem(1) solid $gray4;
-                    @include media('table') {
-                        border-bottom: 0;
+                    @include media('table-max') {
+                        border-bottom: 0 !important;
                     }
                 }
             }
@@ -64,9 +68,8 @@ table {
                     border-left: 0;
                 }
                 &:last-of-type {
-                    border-bottom: rem(1) solid $gray4;
-                    @include media('table') {
-                        border-bottom: 0;
+                    @include media('table-max') {
+                        border-bottom: 0 !important;
                     }
                 }
             }
@@ -81,5 +84,6 @@ table {
         @extend %sans-extra-bold;
         font-size: rem(14);
         color: $mblue;
+        width: 100%;
     }
 }

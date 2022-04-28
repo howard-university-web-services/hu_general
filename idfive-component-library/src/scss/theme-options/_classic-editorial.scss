@@ -960,6 +960,9 @@ body.classic_editorial {
     /* Table */
     table {
         @extend %serif-regular;
+        @include media('table-max') {
+            border-bottom: rem(2) solid #E9E9E9 !important;
+        }
 
         thead,
         tbody {

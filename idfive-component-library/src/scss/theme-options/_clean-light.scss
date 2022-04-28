@@ -688,7 +688,7 @@ body.clean_light {
         }
 
         td {
-            border-bottom: rem(2) solid #E9E9E9 !important;
+            border-bottom: rem(2) solid #E9E9E9;
 
             &:not(:first-child) {
                 @include media ('table') {
