@@ -13,7 +13,7 @@ body {
   color: $charcoal;
   @extend %sans-regular;
 
-  @include media('medium') {
+  @include media("medium") {
     font-size: rem(16);
     line-height: rem(23);
   }
@@ -30,7 +30,7 @@ hr {
   border: 0;
   margin: rem(25) 0;
 
-  @include media('medium') {
+  @include media("medium") {
     margin: rem(40) 0;
   }
 }
@@ -57,7 +57,7 @@ h5 {
   }
 
   &--white {
-    color: $white
+    color: $white;
   }
 
   &--h2 {
@@ -75,7 +75,7 @@ h5 {
     margin-bottom: rem(10);
     color: $navy;
 
-    @include media('medium') {
+    @include media("medium") {
       font-size: rem(20);
       line-height: rem(24);
     }
@@ -88,7 +88,7 @@ h5 {
     margin-bottom: rem(12);
     color: $navy;
 
-    @include media('medium') {
+    @include media("medium") {
       font-size: rem(26);
       line-height: rem(30);
     }
@@ -100,7 +100,7 @@ h5 {
     line-height: rem(45);
     margin-bottom: rem(20);
 
-    @include media('medium') {
+    @include media("medium") {
       letter-spacing: rem(0.9);
       font-size: rem(45);
       line-height: rem(60);
@@ -113,18 +113,18 @@ h5 {
     font-size: rem(12);
     line-height: rem(18);
 
-    @include media('medium') {
+    @include media("medium") {
       font-size: rem(14);
       line-height: rem(18);
     }
   }
 
   &--dark {
-    color: $darkgray
+    color: $darkgray;
   }
 
   &--light {
-    color: $mediumgray
+    color: $mediumgray;
   }
 
   &--date {
@@ -148,7 +148,8 @@ h5 {
   }
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -177,10 +178,12 @@ ul, ol {
 }
 
 // Make sure last section always has extra bottom padding
-main>section:not(.section--padded-bottom) section:last-child:not(.section--padded-bottom) {
+main
+  > section:not(.section--padded-bottom)
+  section:last-child:not(.section--padded-bottom) {
   padding-bottom: rem(20);
 
-  @include media('medium') {
+  @include media("medium") {
     padding-bottom: rem(32);
   }
 }
@@ -192,45 +195,45 @@ main>section:not(.section--padded-bottom) section:last-child:not(.section--padde
   }
 
   &--padded-top {
-    padding-top: rem(20);
+    margin-top: rem(32);
 
-    @include media('medium') {
-      padding-top: rem(32);
+    @include media("medium") {
+      margin-top: rem(42);
     }
   }
 
   &--padded {
-    padding-top: rem(80);
-    padding-bottom: rem(80)
+    margin-top: rem(80);
+    margin-bottom: rem(80);
   }
 
   &--padded-large {
-    padding-top: rem(80);
-    padding-bottom: rem(80);
+    margin-top: rem(80);
+    margin-bottom: rem(80);
 
-    @include media('medium') {
-      padding-top: rem(100);
-      padding-bottom: rem(100);
+    @include media("medium") {
+      margin-top: rem(100);
+      margin-bottom: rem(100);
     }
   }
 
   &--padded-bottom {
-    padding-bottom: rem(20);
+    margin-bottom: rem(32);
 
-    @include media('medium') {
-      padding-bottom: rem(32);
+    @include media("medium") {
+      margin-bottom: rem(42);
     }
   }
 
   &--padded-bottom-small {
-    padding-bottom: rem(25);
+    margin-bottom: rem(25);
   }
 
   &--padded-bottom-mdm {
-    padding-bottom: rem(20);
+    margin-bottom: rem(32);
 
-    @include media('medium') {
-      padding-bottom: rem(50);
+    @include media("medium") {
+      margin-bottom: rem(64);
     }
   }
 }
@@ -240,12 +243,12 @@ main>section:not(.section--padded-bottom) section:last-child:not(.section--padde
   margin: 0 auto;
   padding: 0 $body-padding-small;
 
-  @include media('medium') {
-    padding: 0 $body-padding-medium
+  @include media("medium") {
+    padding: 0 $body-padding-medium;
   }
 
-  @include media('medium-l') {
-    padding: 0 $body-padding-large
+  @include media("medium-l") {
+    padding: 0 $body-padding-large;
   }
 }
 
@@ -272,16 +275,16 @@ strong {
   &__image {
     max-width: 100%;
     margin-bottom: 30px;
-    @include media('medium') {
+    @include media("medium") {
       float: left;
       max-width: 30%;
       margin-right: 30px;
       margin-bottom: 0px;
     }
     img {
-      max-width:400px;
-      @include media('medium') {
-        max-width:100%;
+      max-width: 400px;
+      @include media("medium") {
+        max-width: 100%;
       }
     }
   }
@@ -290,7 +293,7 @@ strong {
     text-decoration: none;
   }
 
-  @include media('medium') {
+  @include media("medium") {
     padding: rem(80) 0;
     text-align: left;
   }
@@ -300,17 +303,13 @@ strong {
     text-decoration: none;
 
     i {
-      margin: 0 auto
+      margin: 0 auto;
     }
   }
 
   .fancy-link {
     justify-content: center;
     font-style: normal;
-
-    @include media('medium') {
-      justify-content: flex-start;
-    }
   }
 
   .social-links__item i {
@@ -318,17 +317,17 @@ strong {
     width: rem(48);
 
     &::before {
-      font-size: rem(20)
+      font-size: rem(20);
     }
   }
 
   a {
     color: white;
-    font-style: italic; text-decoration: none;
+    font-style: italic;
+    text-decoration: none;
 
     &:hover,
     &:focus {
-
       text-decoration: underline;
     }
   }
@@ -346,7 +345,7 @@ strong {
     margin-bottom: rem(20);
     @extend %serif-regular;
 
-    @include media('medium') {
+    @include media("medium") {
       font-size: rem(32);
       line-height: rem(42);
     }
@@ -368,12 +367,12 @@ strong {
   align-items: center;
   @extend %image-bck;
 
-  @include media('medium') {
+  @include media("medium") {
     padding: rem(138) 0;
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     height: 100%;
     top: 0;
@@ -381,7 +380,7 @@ strong {
     width: 100%;
     background: $mblue;
     opacity: 0.7;
-    z-index: 0
+    z-index: 0;
   }
 
   .compartment {
@@ -397,7 +396,7 @@ strong {
     font-size: rem(24);
     line-height: rem(32);
 
-    @include media('medium') {
+    @include media("medium") {
       font-size: rem(32);
       line-height: rem(42);
       margin-bottom: rem(45);
@@ -408,7 +407,7 @@ strong {
     margin-top: rem(15);
     margin-bottom: 0;
 
-    @include media('small') {
+    @include media("small") {
       margin-top: 0;
       margin-bottom: 0;
     }
@@ -421,8 +420,8 @@ strong {
   padding: rem(15);
   border-radius: rem(4);
 
-  @include media('medium') {
-    padding: rem(30)
+  @include media("medium") {
+    padding: rem(30);
   }
 
   audio {
@@ -440,7 +439,7 @@ strong {
   display: block;
   height: auto;
 
-  @include media('medium') {
+  @include media("medium") {
     width: rem(489);
     height: rem(326);
   }
@@ -452,7 +451,7 @@ strong {
     width: 100%;
     height: rem(223);
 
-    @include media('medium') {
+    @include media("medium") {
       width: rem(489);
       height: rem(326);
     }
@@ -460,7 +459,7 @@ strong {
 }
 
 .kitchen-sink--main-col section:first-child {
-  padding-top: 0px;
+  margin-top: 0px;
 }
 
 .section-content {
@@ -471,7 +470,7 @@ strong {
   &__block {
     padding: 0 rem(20) rem(20) rem(20);
 
-    @include media('medium') {
+    @include media("medium") {
       padding: 0 rem(30) rem(30) rem(30);
     }
     h3 {
@@ -484,10 +483,10 @@ strong {
     height: rem(224);
     width: 100%;
     margin-bottom: rem(15);
-    @include media('medium') {
+    @include media("medium") {
       min-height: rem(224);
     }
-    @include media('large') {
+    @include media("large") {
       height: 100%;
       margin-bottom: 0;
     }
@@ -497,7 +496,7 @@ strong {
     width: 100%;
     float: left;
 
-    @include media('medium') {
+    @include media("medium") {
       width: 50%;
       margin-right: rem(24);
     }
@@ -510,19 +509,24 @@ strong {
   overflow: hidden;
 
   .background {
-    opacity: .2;
+    opacity: 0.35;
     z-index: 1;
-    mix-blend-mode: luminosity; //IE 9 and down
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; // IE 10 and 11
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)"; // IE 10 and 11
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       opacity: 0.2;
     }
   }
 
-  >* {
+  > * {
     position: relative;
     z-index: 3;
+  }
+}
+
+section[aria-label="Callout"]:last-child {
+  @include media("medium") {
+    margin-bottom: rem(-50);
   }
 }
 
@@ -536,7 +540,7 @@ strong {
   position: relative;
 
   .background {
-    opacity: .5;
+    opacity: 0.5;
     z-index: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; // IE 10 and 11
 
@@ -545,16 +549,22 @@ strong {
     }
   }
 
-  >* {
+  > * {
     position: relative;
     z-index: 3;
   }
 
   .compartment {
     text-align: center;
+    padding-top: rem(32);
+    padding-bottom: rem(32);
+
+    h2 {
+      margin-bottom: rem(30);
+    }
 
     .btn {
-      @include media('small') {
+      @include media("small") {
         margin-right: rem(24);
       }
     }
@@ -564,26 +574,26 @@ strong {
     }
   }
 
-  @include media('medium') {
-    min-height: rem(640)
+  @include media("medium") {
+    min-height: rem(640);
   }
 
   h2 {
     @extend %serif-regular;
     color: $white;
     font-size: rem(45);
-    line-height: rem(50);
+    line-height: (50 / 45);
     position: relative;
     text-align: center;
     text-shadow: 0 0 rem(30) rgba(0, 0, 0, 0.67);
 
-    @include media('medium') {
+    @include media("medium") {
       font-size: rem(90);
-      line-height: rem(109);
+      line-height: (109 / 90);
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       height: rem(3);
       width: 100%;
@@ -592,17 +602,17 @@ strong {
       top: 50%;
       z-index: 1;
 
-      @include media('medium') {
+      @include media("medium") {
         left: calc(-100% - 10px);
       }
 
-      @include media('medium') {
+      @include media("medium") {
         left: calc(-100% - 20px);
       }
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: rem(3);
       width: 100%;
@@ -611,11 +621,11 @@ strong {
       top: 50%;
       z-index: 1;
 
-      @include media('medium') {
+      @include media("medium") {
         right: calc(-100% - 10px);
       }
 
-      @include media('medium') {
+      @include media("medium") {
         right: calc(-100% - 20px);
       }
     }
@@ -639,7 +649,6 @@ strong {
   border: 0;
 
   &:last-of-type {
-
     &::after {
       display: none;
     }
@@ -656,7 +665,6 @@ strong {
   //   width: 100%;
 
   // }
-
 }
 
 legend {
@@ -664,19 +672,18 @@ legend {
 }
 
 span.fieldset-legend {
-  text-transform: uppercase;
-  letter-spacing: .1125rem;
-  font-weight: 800;
+  letter-spacing: 0.1125rem;
   width: 100%;
   position: relative;
   color: $mblue;
-  padding-bottom: rem(10);
   display: block;
   padding-top: rem(25);
+  font-weight: 700 !important;
+  text-transform: uppercase;
 
   &:before {
     display: block;
-    content: '';
+    content: "";
     height: rem(3);
     top: 0;
     background: $reset;
@@ -759,6 +766,13 @@ label {
   margin-bottom: rem(5);
   display: inline-block;
   margin-top: rem(20);
+  &.option {
+    font-weight: normal !important;
+  }
+}
+
+.form-item .description {
+  font-size: rem(16);
 }
 
 .js-form-type-select {
@@ -770,7 +784,7 @@ select::-ms-expand {
 }
 
 .js-form-type-select:after {
-  content: "\E903";
+  content: "\e91d";
   @include icon();
   right: rem(11);
   font-size: rem(22);
@@ -791,19 +805,14 @@ select::-ms-expand {
 }
 
 .j-stacker-wrapper {
-
   .j-stacker {
     padding-left: rem(-20);
 
     .j-stack.galcolumn {
-
       padding-left: rem(20) !important;
       padding-bottom: rem(20);
-
     }
-
   }
-
 }
 
 .juicer-feed.image-grid .j-text,
@@ -814,7 +823,7 @@ select::-ms-expand {
 
 .juicer-feed.colors .j-meta a.j-social.j-instagram,
 .juicer-feed.colored-icons .j-meta a.j-social.j-instagram {
-  color: white !important
+  color: white !important;
 }
 
 .juicer-feed.image-grid .j-text .j-message a,
@@ -838,7 +847,7 @@ select::-ms-expand {
 .juicer-feed.slider li.feed-item.j-twitter.j-video .j-text,
 .juicer-feed.hip li.feed-item.j-twitter.image-post .j-text,
 .juicer-feed.hip li.feed-item.j-twitter.j-video .j-text {
-  background: rgba(0, 42, 71, 0.7)
+  background: rgba(0, 42, 71, 0.7);
 }
 
 iframe {
@@ -854,7 +863,7 @@ iframe {
 }
 
 .juicer-feed .j-meta a {
-  color: white !important
+  color: white !important;
 }
 
 .hp-html .align-left,
@@ -873,21 +882,21 @@ iframe {
 .hp-html .align-right,
 .embedded-entity.align-left,
 .embedded-entity.align-right {
-  @include media('medium') {
+  @include media("medium") {
     max-width: 50%;
   }
 }
 
 .hp-html .align-left,
 .embedded-entity.align-left {
-  @include media('medium') {
+  @include media("medium") {
     margin-right: 20px;
   }
 }
 
 .hp-html .align-right,
 .embedded-entity.align-right {
-  @include media('medium') {
+  @include media("medium") {
     margin-left: 20px;
   }
 }
@@ -900,7 +909,7 @@ iframe {
   margin-top: 20px;
   figcaption {
     text-align: left;
-    @include media('medium') {
+    @include media("medium") {
       text-align: center;
     }
   }
@@ -908,7 +917,7 @@ iframe {
 
 .hp-html figcaption,
 .embedded-entity figcaption {
-  @extend #{'.body-text--light', '.body-text--small'};
+  @extend #{".body-text--light", ".body-text--small"};
   display: block;
   margin-top: 8px;
   padding-bottom: 14px;
@@ -950,4 +959,8 @@ iframe {
     top: 0;
     left: 0;
   }
+}
+
+.hp_button_link {
+  margin-bottom: rem(-15);
 }

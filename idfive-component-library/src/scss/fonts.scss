@@ -30,14 +30,6 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?iunndt');
-  src: url('../fonts/icomoon.eot?iunndt#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?iunndt') format('truetype'), url('../fonts/icomoon.woff?iunndt') format('woff'), url('../fonts/icomoon.svg?iunndt#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 // @font-face {
 //     font-family: 'serif12';
 //     src: url('../fonts/serif12beta-regular.eot');
@@ -45,20 +37,6 @@
 //     font-weight: 400;
 //     font-style: normal
 // }
-[class^="icon-"],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 @mixin icon() {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -74,194 +52,207 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-Home:before {
-  content: "\e923";
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?homudp');
+  src:  url('../fonts/icomoon.eot?homudp#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?homudp') format('truetype'),
+    url('../fonts/icomoon.woff?homudp') format('woff'),
+    url('../fonts/icomoon.svg?homudp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-.icon-chevron-right:before {
-  content: "\e901";
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-chevron-left:before {
-  content: "\e902";
-}
-
-.icon-chevron-down:before {
-  content: "\e903";
-}
-
-.icon-chevron-up:before {
-  content: "\e904";
-}
-
-.icon-home:before {
-  content: "\e905";
-}
-
-.icon-minus:before {
-  content: "\e906";
-}
-
-.icon-plus1:before {
-  content: "\e907";
-}
-
-.icon-menu:before {
-  content: "\e908";
-}
-
-.icon-arrow-right1:before {
-  content: "\e909";
-}
-
-.icon-play:before {
+.icon-our-people-line:before {
   content: "\e90a";
 }
-
-.icon-play-button:before {
-  content: "\e90b";
+.icon-announcement-line:before {
+  content: "\e909";
 }
-
-.icon-envelope:before {
-  content: "\e90c";
+.icon-calendar-line:before {
+  content: "\e900";
 }
-
-.icon-quotes:before {
-  content: "\e90d";
+.icon-phone-line:before {
+  content: "\e901";
 }
-
-.icon-plus:before {
-  content: "\e90e";
+.icon-paper-line:before {
+  content: "\e902";
 }
-
-.icon-minus1:before {
-  content: "\e90f";
+.icon-picture-line:before {
+  content: "\e903";
 }
-
-.icon-calendar:before {
-  content: "\e910";
+.icon-info-line:before {
+  content: "\e904";
 }
-
-.icon-news:before {
-  content: "\e911";
+.icon-envelope-line:before {
+  content: "\e905";
 }
-
-.icon-our-people:before {
-  content: "\e912";
+.icon-location-line:before {
+  content: "\e906";
 }
-
-.icon-hearth:before {
-  content: "\e913";
+.icon-heart-line:before {
+  content: "\e907";
 }
-
-.icon-arrow-left:before {
-  content: "\e914";
+.icon-news-line:before {
+  content: "\e908";
 }
-
-.icon-arrow-right:before {
-  content: "\e915";
-}
-
-.icon-info:before {
-  content: "\e916";
-}
-
-.icon-arrow-down:before {
-  content: "\e917";
-}
-
-.icon-arrow-up:before {
-  content: "\e918";
-}
-
-.icon-paper:before {
-  content: "\e919";
-}
-
-.icon-picture:before {
+.icon-location:before {
   content: "\e91a";
 }
-
-.icon-announcement:before {
+.icon-chevron-right:before {
   content: "\e91b";
 }
-
-.icon-map-marker:before {
+.icon-chevron-left:before {
   content: "\e91c";
 }
-
-.icon-arrow_upward:before {
+.icon-chevron-down:before {
   content: "\e91d";
 }
-
-.icon-arrow_forward:before {
+.icon-chevron-up:before {
   content: "\e91e";
 }
-
-.icon-arrow_downward:before {
+.icon-home:before {
   content: "\e91f";
 }
-
-.icon-arrow_back:before {
+.icon-minus:before {
   content: "\e920";
 }
-
-.icon-x:before {
+.icon-plus1:before {
   content: "\e921";
 }
-
-.icon-x1:before {
+.icon-menu:before {
   content: "\e922";
 }
-
+.icon-arrow-right1:before {
+  content: "\e923";
+}
+.icon-play:before {
+  content: "\e924";
+}
+.icon-play-button:before {
+  content: "\e925";
+}
+.icon-envelope:before {
+  content: "\e926";
+}
+.icon-quotes:before {
+  content: "\e927";
+}
+.icon-plus:before {
+  content: "\e928";
+}
+.icon-minus1:before {
+  content: "\e929";
+}
+.icon-calendar:before {
+  content: "\e92a";
+}
+.icon-news:before {
+  content: "\e92b";
+}
+.icon-our-people:before {
+  content: "\e92c";
+}
+.icon-hearth:before {
+  content: "\e92d";
+}
+.icon-arrow-left:before {
+  content: "\e92e";
+}
+.icon-arrow-right:before {
+  content: "\e92f";
+}
+.icon-info:before {
+  content: "\e930";
+}
+.icon-arrow-down:before {
+  content: "\e931";
+}
+.icon-arrow-up:before {
+  content: "\e932";
+}
+.icon-paper:before {
+  content: "\e933";
+}
+.icon-picture:before {
+  content: "\e934";
+}
+.icon-announcement:before {
+  content: "\e935";
+}
+.icon-map-marker:before {
+  content: "\e936";
+}
+.icon-arrow_upward:before {
+  content: "\e937";
+}
+.icon-arrow_forward:before {
+  content: "\e938";
+}
+.icon-arrow_downward:before {
+  content: "\e939";
+}
+.icon-arrow_back:before {
+  content: "\e93a";
+}
+.icon-x:before {
+  content: "\e93b";
+}
+.icon-x1:before {
+  content: "\e93c";
+}
+.icon-Home:before {
+  content: "\e93d";
+}
 .icon-phone:before {
   content: "\e942";
 }
-
 .icon-envelop:before {
   content: "\e945";
 }
-
 .icon-search:before {
   content: "\e986";
 }
-
 .icon-play3:before {
   content: "\ea1c";
 }
-
 .icon-facebook:before {
   content: "\ea90";
 }
-
 .icon-instagram:before {
   content: "\ea92";
 }
-
 .icon-twitter:before {
   content: "\ea96";
 }
-
 .icon-rss:before {
   content: "\ea9b";
 }
-
 .icon-youtube:before {
   content: "\ea9d";
 }
-
 .icon-vimeo:before {
   content: "\eaa0";
 }
-
 .icon-flickr:before {
   content: "\eaa3";
 }
-
 .icon-linkedin2:before {
   content: "\eaca";
-}
-
-.icon-location:before {
-  content: "\e900";
 }

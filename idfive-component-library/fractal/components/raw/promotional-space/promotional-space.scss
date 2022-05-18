@@ -1,0 +1,10 @@
+.promotional-space {
+    @extend %callout;
+    border-top: $red solid rem(5);
+    @include media('medium') {
+        border-top: $red solid rem(10);
+    }
+    h2 {
+        @extend %callout-title;
+    }
+}

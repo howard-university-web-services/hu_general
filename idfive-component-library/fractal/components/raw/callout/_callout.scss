@@ -1,0 +1,9 @@
+.callout {
+	@extend %callout;
+	@include media('medium') {
+		padding: rem(60);
+	}
+	.callout__title {
+		@extend %callout-title;
+	}
+}

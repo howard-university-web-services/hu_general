@@ -1,0 +1,19 @@
+.department-title {
+  width: 100%;
+  padding: rem(24) 0 rem(32) 0;
+  &__desc {
+    @extend %serif-regular;
+    font-size: rem(38);
+    color: $white;
+    line-height: rem(48);
+    text-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.30);
+  }
+
+  @include media('medium'){
+    padding: rem(100) 0;
+  }
+  .contact-box
+  {
+    display: block!important;
+  }
+}

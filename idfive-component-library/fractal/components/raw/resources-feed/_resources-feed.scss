@@ -1,0 +1,34 @@
+#views-exposed-form-hc-resources-feed-block-1,
+#views-exposed-form-hc-resources-index-block-1,
+#views-exposed-form-hc-person-feed-main-feed {
+  &.views-exposed-form {
+    margin-bottom: rem(40);
+    @include media("medium") {
+      align-items: flex-end;
+      display: flex;
+      margin-left: rem(-20);
+    }
+  }
+  .form-item,
+  .form-actions {
+    @include media("medium") {
+      padding-left: rem(20);
+    }
+  }
+  .form-item {
+    margin-bottom: rem(20);
+    @include media("medium") {
+      flex: 1 1 0px;
+      margin-bottom: 0;
+    }
+  }
+  .form-actions {
+    @include media("medium") {
+      flex: 0 1 auto;
+    }
+  }
+  .form-submit {
+    margin: 0;
+    height: rem(52);
+  }
+}

@@ -3,28 +3,29 @@
  *
  */
 
- $silc-grid--gutter:24px;
- $silc-core--breakpoints: (
-   ("small", "(min-width: 500px)"),
-   ("medium-s", "(min-width: 600px)"),
-   ("table", "(min-width: 639px)"),
-   ("table-max", "(max-width: 639px)"),
-   ("medium", "(min-width: 800px)"),
-   ("medium-l", "(min-width: 1000px)"),
-   ("large-s", "(min-width: 1099px)"),
-   ("large", "(min-width: 1250px)"),
-   ("big", "(min-width: 1600px)"),
-   ("1220", "(min-width: 1220px)"),
-   ("1300", "(min-width: 1300px)")
- ) !default;
- $silc-nav--options--expands: 1250px !default;
+$silc-grid--gutter: 24px;
+$silc-core--breakpoints: (
+  ("small", "(min-width: 500px)"),
+  ("medium-s", "(min-width: 600px)"),
+  ("table", "(min-width: 639px)"),
+  ("medium", "(min-width: 800px)"),
+  ("medium-l", "(min-width: 1000px)"),
+  ("large-s", "(min-width: 1099px)"),
+  ("large", "(min-width: 1250px)"),
+  ("big", "(min-width: 1600px)"),
+  ("1220", "(min-width: 1220px)"),
+  ("1250", "(min-width: 1250px)"),
+  ("1300", "(min-width: 1300px)"),
+  ("1440", "(min-width: 1440px)")
+) !default;
+$silc-nav--options--expands: 1250px !default;
 
- $silc-utilities--margin: (
-   ('0', '0'),
-   ('auto', 'auto'),
-   ('1', '.25rem'),
-   ('2', '.5rem'),
-   ('3', '.75rem'),
-   ('4', '1rem'),
-   ('5', '1.25rem')
- );
+$silc-utilities--margin: (
+  ("0", "0"),
+  ("auto", "auto"),
+  ("1", ".25rem"),
+  ("2", ".5rem"),
+  ("3", ".75rem"),
+  ("4", "1rem"),
+  ("5", "1.25rem")
+);

@@ -1,3 +1,5 @@
+import { convertToLineIcons, convertToDefaultIcons } from "./theme-icons";
+
 interface ThemeOption {
     name: string,
     classname: string
@@ -42,6 +44,13 @@ export default class ThemeOptionSelect {
             try {
                 localStorage.setItem("theme-option-debug", target.value);
                 this.toggleBodyClass();
+
+                // Update icons for Classic and Editorial variant
+                if (target.value === "classic_editorial") {
+                    convertToLineIcons();
+                } else {
+                    convertToDefaultIcons();
+                }
             } catch(ex) {
                 console.error(ex);
             }

@@ -1,0 +1,23 @@
+.post-header {
+  background: $white;
+  display: inline-block;
+  width: 100%;
+  padding: rem(18) 0;
+
+  &--shadow {
+    box-shadow: 0 rem(-8) rem(12) 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &__title {
+    @extend %sans-extra-bold;
+    color: $mblue;
+    margin: 0 auto;
+    font-size: rem(18);
+    line-height: rem(24);
+
+    @include media('medium') {
+      font-size: rem(33);
+      line-height: rem(45);
+    }
+  }
+}

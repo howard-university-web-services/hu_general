@@ -1,0 +1,46 @@
+
+.announcements {
+    &__title {
+        @extend %serif-regular;
+        font-size: rem(24);
+        color: $mblue;
+        letter-spacing: 0;
+        margin-bottom: rem(10);
+    }
+    p {
+        @extend %serif-bold;
+        font-size: rem(16);
+        color: $charcoal;
+        letter-spacing: 0;
+        line-height: rem(23);
+        margin: rem(10) 0;
+    }
+    &__block {
+        &--featured {
+            margin-bottom: rem(25);
+            border-left: rem(10) solid $navy;
+            background: $white;
+            padding: rem(25);
+            .announcements__title {
+                @extend %sans-extra-bold;
+                font-size: rem(22);
+                letter-spacing: 0;
+                line-height: rem(29);
+            }
+            p {
+                font-family: "Open Sans", sans-serif;
+                font-size: rem(16);
+                letter-spacing: 0;
+                line-height: rem(23);
+            }
+        }
+    }
+    &__date {
+        @extend %sans-extra-bold;
+        font-size: rem(14);
+        color: $mblue;
+        letter-spacing: rem(1.79);
+        line-height: rem(17);
+        margin: rem(10) 0;
+    }
+}

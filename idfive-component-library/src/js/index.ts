@@ -11,6 +11,7 @@ import { silcAccordionInit } from "silc-accordion";
 import { silcNavInit } from "silc-nav";
 import { silcOffcanvasInit } from "silc-offcanvas";
 import { searchToggle } from "../components/utility-menu/utility-menu";
+import { convertToLineIcons } from "./theme-icons";
 
 import MainNav from "../components/main-nav/main-nav";
 import ModalPlaylist from "../components/modal/modal";
@@ -182,6 +183,7 @@ window.addEventListener("load", function () {
   if (heroImage && postHeader) {
     postHeader.classList.add("post-header--shadow");
   }
+
   carouselInit();
   photoshelterGridInit();
   modalPlaylistInit();
@@ -191,6 +193,10 @@ window.addEventListener("load", function () {
   SliderDistanceInit();
   ourPeopleInit();
   themeOptionSelectInit();
+
+  if (body.classList.contains("classic_editorial")) {
+    convertToLineIcons();
+  }
 });
 
 window.addEventListener("DOMContentLoaded", () => {
