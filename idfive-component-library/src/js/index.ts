@@ -175,6 +175,8 @@ window.addEventListener("load", function () {
   }
   if (sidebarClose) {
     for (let i = 0; i < sidebarClose.length; i++) {
+      const sidebarCloseLink = sidebarClose[i] as HTMLAnchorElement;
+      sidebarCloseLink.href = "";
       sidebarClose[i].addEventListener("click", function (event) {
         sidebarClose[i].classList.toggle("sidebar-open");
       });

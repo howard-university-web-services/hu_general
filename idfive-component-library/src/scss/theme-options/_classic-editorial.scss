@@ -679,22 +679,33 @@ body.classic_editorial {
   }
 
   .block-header__title {
-    float: left;
     margin: rem(4) rem(24) 0 0;
     padding: 0 0 0 rem(30);
     position: relative;
 
     @include media("medium") {
       padding-left: rem(48);
+      float: left;
+    }
+    h2,
+    .h2 {
+      font-size: rem(26) !important;
+      letter-spacing: 0;
+      padding-left: rem(8) !important;
+      @include media("medium") {
+        padding-left: 0 !important;
+      }
     }
   }
 
   .block-header__icon {
     color: $red;
-    top: 0;
+    top: rem(3);
     left: 0;
+    font-size: rem(24);
     @include media("medium") {
       font-size: rem(33);
+      top: 0;
     }
   }
 
@@ -713,6 +724,11 @@ body.classic_editorial {
       font-size: rem(16);
       padding: 0 0 rem(13) 0;
       position: relative;
+      margin-top: rem(16);
+      @include media("medium") {
+        padding: 0;
+        margin-top: 0;
+      }
 
       &:before {
         @include media("medium") {
@@ -1344,6 +1360,13 @@ body.classic_editorial {
     }
   }
 
+  section[aria-label="Callout"]:last-child {
+    margin-bottom: rem(-64);
+    @include media("large") {
+      margin-bottom: rem(-14);
+    }
+  }
+
   .full-width-cta,
   .full-width-image-banner {
     margin: 0 auto rem(64);
@@ -1403,6 +1426,11 @@ body.classic_editorial {
   }
 
   /* Facebook/Twitter Feed */
+  section[aria-label="Twitter feed"]:last-child {
+    @include media("large") {
+      margin-bottom: 0;
+    }
+  }
 
   .hp_callout--standard + .hp_facebook_feed,
   .hp_callout--standard + .hp_twitter_feed {
