@@ -7896,6 +7896,9 @@ a.fancy-link:hover {
       .slideshow .fancy-header {
         padding-top: 3.75rem; } }
 
+.header--page-links {
+  padding-top: 5px; }
+
 .hero-image {
   width: 100%;
   position: relative;
@@ -7961,6 +7964,13 @@ a.fancy-link:hover {
         .hero-image-home .compartment h2.header--white.header--page-intro, .hero-video .compartment h2.header--white.header--page-intro {
           font-size: 3.5rem;
           line-height: 4.75rem; } }
+    .hero-image-home .compartment .header--page-links, .hero-video .compartment .header--page-links {
+      padding-left: 22px;
+      padding-top: 10px; }
+      @media (min-width: 800px) {
+        .hero-image-home .compartment .header--page-links, .hero-video .compartment .header--page-links {
+          padding-left: 42px;
+          padding-top: 20px; } }
   .hero-image-home .hcsc_hero_video_controls, .hero-video .hcsc_hero_video_controls {
     z-index: 101;
     position: absolute;
