@@ -1,10 +1,8 @@
-{# Homepage Hero (video) #}
-<section class="hero-video section--blue-blend" aria-label="Howard University">
+{# Homepage Hero (image) #}
+<section class="hero-image-home section--blue-blend">
+    <div class="hero-image hero-image--large" style="background-image:url('{{home_hero_image}}')"></div>
     {% if not hide_overlay %}
         <div class="blue-overlay--video-image"></div>
-    {% endif %}
-    {% if hero_media_video %}
-        <div data-vimeo-id="{{ hero_media_video }}" data-vimeo-defer id="hcsh-hero-video"></div>
     {% endif %}
     {% if content.field_hc_intro_image_text %}
         <div class="compartment">
@@ -25,16 +23,4 @@
             </div>
         </div>
     {% endif %}
-    <div class="hcsc_hero_video_controls">
-        <div class="hcsc_hero_video_control hcsc_hero_video_pause_control">
-            <div class="hcsc_hero_video_pause">
-                <span class="visible-for-screen-readers">Pause</span>
-            </div>
-        </div>
-        <div class="hcsc_hero_video_control hcsc_hero_video_play_control visually-hidden">
-            <div class="hcsc_hero_video_play">
-                <span class="visible-for-screen-readers">Play</span>
-            </div>
-        </div>
-    </div>
 </section>

@@ -1,4 +1,8 @@
 
+.header--page-links {
+  padding-top: 5px;
+}
+
 .hero-image {
   @extend %image-bck;
   width: 100%;
@@ -74,6 +78,14 @@
       @media (min-width: 2100px) {
         font-size: 3.5rem;
         line-height: 4.75rem;
+      }
+    }
+    .header--page-links {
+      padding-left: 22px;
+      padding-top: 10px;
+      @include media ('medium') {
+        padding-left: 42px;
+        padding-top: 20px;
       }
     }
   }

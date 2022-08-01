@@ -1,16 +1,32 @@
-<!-- Homepage Hero (image)-->
-<section class="hero-image-home section--blue-blend">
-    <div class="hero-image hero-image--large" style="background-image:url('{{home_hero_image}}')"></div>
-    {% if not hide_overlay %}
-        <div class="blue-overlay--video-image"></div>
-    {% endif %}
-    {% if content.field_hc_intro_image_text %}
-        <div class="compartment">
-            <div class="silc-grid silc-grid--collapse">
-                <div class="silc-grid__col silc-grid__col--8-medium">
-                    <h2 class=" header--white header--page-intro">{{ content.field_hc_intro_image_text }}</h2>
-                </div>
+{# Homepage Hero (standard) #}
+<div class="department-title section--blue-blend section--padded-large">
+    <div class="background" style="background-image:url('{{ home_intro_image }}')"></div>
+    <div class="compartment">
+        <div class="silc-grid silc-grid--collapse">
+            <div class="silc-grid__col silc-grid__col--8-medium">
+                <h2 class=" header--white header--page-intro">{{ content.field_hc_intro_title }}</h2>
+                <p class="lead-in-large">{{ content.field_hc_intro_text }}</p>
+                {% if content.field_hc_intro_links %}
+                    <div class="header--page-links">
+                        {% for key, item in content.field_hc_intro_links if key|first != '#' %}
+                            <a href="{{ content.field_hc_intro_links[key]['#url'] }}" class="btn"{% if content.field_hc_intro_links[key]['#options'].attributes.target %} target="{{ content.field_hc_intro_links[key]['#options'].attributes.target }}"{% endif %}>
+                                <span class="btn__text">{{ content.field_hc_intro_links[key]['#title'] }}</span>
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
+            {% if show_intro_sidebar %}
+                <div class="silc-grid__col silc-grid__col--4-medium">
+                    <div class="contact-box">
+                        {% if content.field_hc_intro_sidebar_title[0] %}
+                            <h3 class="sidebar-title">{{ content.field_hc_intro_sidebar_title }}</h3>
+                        {% endif %}
+                        {{ content.field_hc_intro_sidebar_text }}
+                    </div>
+                </div>
+            {% endif %}
         </div>
-    {% endif %}
-</section>
+    </div>
+</div>
