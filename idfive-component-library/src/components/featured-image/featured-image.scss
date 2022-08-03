@@ -1,21 +1,12 @@
 .slideshow {
-  // background: $light-blue;
   width: 100%;
   min-height: rem(405);
   position: relative;
+  overflow: hidden;
 
   &__single {
-    // min-height: 405px;
     width: 100%;
     left: 0 !important;
-    opacity: 0;
-    z-index: 0;
-    transition: 1s ease all;
-
-    &.is-selected {
-      opacity: 1;
-      z-index: 1;
-    }
   }
 
   &__desc {
@@ -52,15 +43,15 @@
   }
 
   .flickity-slider {
-    transform: none !important;
+    // transform: none !important;
   }
 
-  .flickity-button {
-    transform: translateY(1px);
-    @include media('large') {
-      transform: translateY(8px);
-    }
-  }
+  // .flickity-button {
+  //   transform: translateY(0);
+  //   @include media('medium') {
+  //     transform: translateY(1px);
+  //   }
+  // }
 
   .flickity-prev-next-button {
     color: $white;

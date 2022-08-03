@@ -20,7 +20,7 @@ export default class SlideDistance {
     this.dots = this.element.querySelector(".flickity-page-dots");
     this.viewport = this.element.querySelector(".flickity-viewport");
 
-    this.buttonHeightDiv = 66;
+    this.buttonHeightDiv = 65;
     this.buttonHeightDivMobile = 48;
 
     if (document.readyState === "complete") {

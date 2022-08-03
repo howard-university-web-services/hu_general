@@ -1642,11 +1642,6 @@ body.classic_editorial {
     }
   }
 
-  .slideshow .flickity-button {
-    @include media('large') {
-      transform: translateY(4px);
-    }
-  }
 
   /* Program Finder */
 

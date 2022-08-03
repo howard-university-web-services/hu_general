@@ -1185,11 +1185,6 @@ body.clean_light {
     }
   }
   
-  .slideshow .flickity-button {
-    @include media('large') {
-      transform: translateY(1px);
-    }
-  }
 
   /* Video Embed */
 
