@@ -7732,16 +7732,11 @@ a.fancy-link:hover {
 .slideshow {
   width: 100%;
   min-height: 25.3125rem;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .slideshow__single {
     width: 100%;
-    left: 0 !important;
-    opacity: 0;
-    z-index: 0;
-    transition: 1s ease all; }
-    .slideshow__single.is-selected {
-      opacity: 1;
-      z-index: 1; }
+    left: 0 !important; }
   .slideshow__desc {
     background: #FFF;
     padding: 1.25rem 1.25rem;
@@ -7761,16 +7756,6 @@ a.fancy-link:hover {
     background-size: cover;
     padding-bottom: 44.2%;
     background-position: center; }
-  .slideshow .flickity-slider {
-    -webkit-transform: none !important;
-            transform: none !important; }
-  .slideshow .flickity-button {
-    -webkit-transform: translateY(1px);
-            transform: translateY(1px); }
-    @media (min-width: 1250px) {
-      .slideshow .flickity-button {
-        -webkit-transform: translateY(8px);
-                transform: translateY(8px); } }
   .slideshow .flickity-prev-next-button {
     color: #FFF;
     cursor: pointer;
@@ -12046,10 +12031,6 @@ body.clean_light {
     body.clean_light .carousel .flickity-prev-next-button::after,
     body.clean_light .slideshow .flickity-prev-next-button::after {
       color: #FFF; }
-  @media (min-width: 1250px) {
-    body.clean_light .slideshow .flickity-button {
-      -webkit-transform: translateY(1px);
-              transform: translateY(1px); } }
   body.clean_light .video__wrap {
     border-left: 0.0625rem solid #D8D8D8;
     border-right: 0.0625rem solid #D8D8D8;
@@ -13364,10 +13345,6 @@ body.classic_editorial {
     body.classic_editorial .carousel .flickity-prev-next-button::after,
     body.classic_editorial .slideshow .flickity-prev-next-button::after {
       color: #FFF; }
-  @media (min-width: 1250px) {
-    body.classic_editorial .slideshow .flickity-button {
-      -webkit-transform: translateY(4px);
-              transform: translateY(4px); } }
   body.classic_editorial .program-finder__nav-heading {
     border-bottom-color: #e9e9e9; }
   body.classic_editorial .campus-communications__header.block-header {

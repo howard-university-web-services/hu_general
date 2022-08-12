@@ -60,7 +60,8 @@
   },
   "dependencies": {
     "@frctl/fractal": "^1.2.1",
-    "flickity": "^2.2.1",
+    "flickity": "^2.3.0",
+    "flickity-fade": "^1.0.0",
     "focus-within": "^2.0.0",
     "launchy-modal-window": "^0.9.2",
     "lightbox2": "^2.11.1",
