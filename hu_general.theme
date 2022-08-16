@@ -70,8 +70,10 @@ function hu_general_preprocess_file_link(&$variables) {
   $file_entity = $file instanceof File ? $file : File::load($file->fid);
   $url = file_create_url($file_entity->getFileUri());
   $variables['#cache']['contexts'][] = 'url.site';
-  $fieldParent = $file_entity->_referringItem->getEntity();
-  $fieldParentType = $fieldParent->getEntityTypeId();
+  if($file_entity->_referringItem !== NULL) {
+    $fieldParent = $file_entity->_referringItem->getEntity();
+    $fieldParentType = $fieldParent->getEntityTypeId();
+  }
   // Use the media name as the link text if available. Ignore if parent is a node, ie a regular file field.
   if (isset($fieldParent) && $fieldParentType !== 'node') {
     $link_text = $fieldParent->getName();
