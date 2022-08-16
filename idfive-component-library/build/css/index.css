@@ -7881,6 +7881,11 @@ a.fancy-link:hover {
       .slideshow .fancy-header {
         padding-top: 3.75rem; } }
 
+.slideshow__single {
+  pointer-events: none; }
+  .slideshow__single.is-selected {
+    pointer-events: initial; }
+
 .header--page-links {
   padding-top: 5px; }
 

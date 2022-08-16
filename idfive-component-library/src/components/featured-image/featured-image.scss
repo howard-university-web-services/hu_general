@@ -198,3 +198,10 @@
     }
   }
 }
+
+.slideshow__single {
+  pointer-events: none;
+  &.is-selected {
+    pointer-events: initial;
+  }
+}

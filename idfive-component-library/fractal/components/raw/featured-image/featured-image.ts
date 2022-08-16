@@ -23,6 +23,7 @@ export default class featuredImage {
         autoPlay: 6000,
         fade: true,
         draggable: false, 
+        adaptiveHeight: true,
         contain: true,
         prevNextButtons: true,
 
