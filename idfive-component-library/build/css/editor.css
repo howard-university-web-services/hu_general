@@ -1610,7 +1610,8 @@ strong {
 .section--blue-blend {
   position: relative;
   background: #002A47;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 0; }
   .section--blue-blend .background {
     opacity: 0.35;
     z-index: 1;

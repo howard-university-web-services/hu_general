@@ -4968,7 +4968,8 @@ strong {
 .section--blue-blend {
   position: relative;
   background: #002A47;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 0; }
   .section--blue-blend .background {
     opacity: 0.35;
     z-index: 1;
@@ -7880,6 +7881,11 @@ a.fancy-link:hover {
     @media (min-width: 800px) {
       .slideshow .fancy-header {
         padding-top: 3.75rem; } }
+
+.slideshow__single {
+  pointer-events: none; }
+  .slideshow__single.is-selected {
+    pointer-events: initial; }
 
 .header--page-links {
   padding-top: 5px; }
