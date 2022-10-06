@@ -18,6 +18,7 @@ const config = {
     entry: {
         index: [ "./src/js/index.ts" ],
         editor: [ "./src/js/editor.ts" ],
+        print:["./src/scss/print.scss"]
     },
     output: {
         filename: "js/[name].js",
