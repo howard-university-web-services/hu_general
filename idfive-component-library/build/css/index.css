@@ -6112,6 +6112,8 @@ body.nav-toggled {
   @media (min-width: 800px) {
     .main-footer {
       margin-top: 3.125rem; } }
+  .main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4, .main-footer h5 {
+    color: #FFF; }
   .main-footer a {
     color: #FFF;
     text-decoration: none; }
@@ -11931,6 +11933,8 @@ body.clean_light {
         color: #FFF;
         font-size: 2rem;
         transition: 0.2s color ease-in-out; }
+      body.clean_light .facebook-twitter-feed .social-links__item i span.visible-for-screen-readers {
+        color: #FFF; }
   body.clean_light .announcements .body-text--date {
     font-size: 0.875rem;
     font-weight: 600;
@@ -13267,6 +13271,8 @@ body.classic_editorial {
         color: #FFF;
         font-size: 2rem;
         transition: 0.2s color ease-in-out; }
+      body.classic_editorial .facebook-twitter-feed .social-links__item i span.visible-for-screen-readers {
+        color: #FFF; }
   body.classic_editorial .body-text--social-media {
     font-weight: 400; }
   body.classic_editorial .faculty-profile__btn {

@@ -1012,6 +1012,10 @@ body.clean_light {
           font-size: rem(32);
           transition: 0.2s color ease-in-out;
         }
+
+        span.visible-for-screen-readers {
+          color: $white;
+        }
       }
     }
   }
