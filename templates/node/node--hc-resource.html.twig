@@ -45,7 +45,7 @@
         <aside class="sidebar">
           {% if (content.field_hc_resource_contact_name|render) or (content.field_hc_resource_contact_email|render) or (content.field_hc_resource_contact_addres|render) %}
             <div class="contact-box">
-              <h3 class="sidebar-title">{{ content.field_hc_resource_sidebar_title }}</h3>
+              <h2 class="sidebar-title">{{ content.field_hc_resource_sidebar_title }}</h2>
               <p>
               {% if (content.field_hc_resource_contact_name|render) %}
                 <strong>{{ content.field_hc_resource_contact_name }}</strong>
