@@ -1504,7 +1504,8 @@ strong {
   padding: 3.125rem 0.625rem;
   min-height: 26.5625rem;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  background-color: #003A63; }
   @media (min-width: 800px) {
     .full-width-image-banner {
       padding: 8.625rem 0; } }
