@@ -1940,6 +1940,7 @@ iframe {
 
 .hp-html figcaption,
 .embedded-entity figcaption {
+  color: #4f4f4f;
   display: block;
   margin-top: 8px;
   padding-bottom: 14px;
