@@ -8433,7 +8433,8 @@ a.news-and-events__block {
   background: #EEE;
   position: relative;
   overflow: hidden; }
-  .carousel .visible-for-screen-readers {
+  .carousel .visible-for-screen-readers,
+  .carousel a .visible-for-screen-readers {
     color: #000; }
   .carousel .flickity-prev-next-button {
     color: #FFF;

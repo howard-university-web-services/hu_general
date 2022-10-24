@@ -4,7 +4,8 @@
   overflow: hidden;
 
   // wcag screenreader only wave
-  .visible-for-screen-readers {
+  .visible-for-screen-readers,
+  a  .visible-for-screen-readers {
     color: $black;
   }
 
