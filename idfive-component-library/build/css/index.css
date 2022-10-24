@@ -9323,7 +9323,8 @@ image field when viewed on devices with a screen size of 767px and below
   .alumni-profile__img {
     height: 100%;
     min-height: 20.9375rem;
-    position: relative; }
+    position: relative;
+    background-color: #003A63; }
     @media (min-width: 800px) {
       .alumni-profile__img {
         min-height: 18.25rem; } }
