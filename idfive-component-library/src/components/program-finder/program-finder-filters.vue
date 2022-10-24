@@ -2,35 +2,35 @@
     <div class="program-finder__filters">
         <div class="program-finder__filter" v-if="hasDegreeFilter">
             <label for="program-finder-degree">Degree</label>
-            <select id="program-finder-degree" aria-label="Degree" @change="handleDegreeChange($event.target.value)">
+            <select id="program-finder-degree" @change="handleDegreeChange($event.target.value)">
                 <option value="" :selected="!!selectedDegree">Select a degree</option>
                 <option v-for="degree in degrees" :key="degree.id" :selected="selectedDegree == degree.id" :value="degree.id">{{ degree.label }}</option>
             </select>
         </div>
         <div class="program-finder__filter" v-if="hasSchoolFilter">
             <label for="program-finder-school">School</label>
-            <select id="program-finder-school" aria-label="School" @change="handleSchoolChange($event.target.value)">
+            <select id="program-finder-school" @change="handleSchoolChange($event.target.value)">
                 <option value="" :selected="!!selectedSchool">Select a school</option>
                 <option v-for="school in schools" :key="school.id" :selected="selectedSchool == school.id" :value="school.id">{{ school.label }}</option>
             </select>
         </div>
         <div class="program-finder__filter" v-if="hasSubjectFilter">
             <label for="program-finder-subject">Subject</label>
-            <select id="program-finder-subject" aria-label="Subject" @change="handleSubjectChange($event.target.value)">
+            <select id="program-finder-subject" @change="handleSubjectChange($event.target.value)">
                 <option value="" :selected="!!selectedSubject">Select a subject</option>
                 <option v-for="subject in subjects" :key="subject.id" :selected="selectedSubject == subject.id" :value="subject.id">{{ subject.label }}</option>
             </select>
         </div>
         <div class="program-finder__filter" v-if="hasProfessionFilter">
             <label for="program-finder-profession">Profession</label>
-            <select id="program-finder-profession" aria-label="Profession" @change="handleProfessionChange($event.target.value)">
+            <select id="program-finder-profession" @change="handleProfessionChange($event.target.value)">
                 <option value="" :selected="!!selectedProfession">Select a profession</option>
                 <option v-for="profession in professions" :key="profession.id" :selected="selectedProfession == profession.id" :value="profession.id">{{ profession.label }}</option>
             </select>
         </div>
         <div class="program-finder__filter" v-if="hasTypeFilter">
             <label for="program-finder-type">Type</label>
-            <select id="program-finder-type" aria-label="Type" @change="handleTypeChange($event.target.value)">
+            <select id="program-finder-type" @change="handleTypeChange($event.target.value)">
                 <option value="" :selected="!!selectedType">Select a type</option>
                 <option v-for="type in types" :key="type.id" :selected="selectedType == type.id" :value="type.id">{{ type.label }}</option>
             </select>
