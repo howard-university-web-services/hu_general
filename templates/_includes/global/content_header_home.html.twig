@@ -4,18 +4,22 @@
     <div class="compartment">
         <div class="silc-grid silc-grid--collapse">
             <div class="silc-grid__col silc-grid__col--8-medium">
-                <h2 class=" header--white header--page-intro">{{ content.field_hc_intro_title }}</h2>
+               {% if content.field_hc_intro_image_text|render %}
+                    <h2 class="header--white header--page-intro">{{ content.field_hc_intro_image_text }}</h2>
+                {% endif %}
+                {% if content.field_hc_intro_text|render %}
                 <p class="lead-in-large">{{ content.field_hc_intro_text }}</p>
-                {% if content.field_hc_intro_links %}
+                {% endif %}
+                {% if content.field_hc_intro_image_links|render %}
                     <div class="header--page-links">
-                        {% for key, item in content.field_hc_intro_links if key|first != '#' %}
-                            <a href="{{ content.field_hc_intro_links[key]['#url'] }}" class="btn"{% if content.field_hc_intro_links[key]['#options'].attributes.target %} target="{{ content.field_hc_intro_links[key]['#options'].attributes.target }}"{% endif %}>
-                                <span class="btn__text">{{ content.field_hc_intro_links[key]['#title'] }}</span>
+                        {% for key, item in content.field_hc_intro_image_links if key|first != '#' %}
+                            <a href="{{ content.field_hc_intro_image_links[key]['#url'] }}" class="btn"{% if content.field_hc_intro_image_links[key]['#options'].attributes.target %} target="{{ content.field_hc_intro_image_links[key]['#options'].attributes.target }}"{% endif %}>
+                                <span class="btn__text">{{ content.field_hc_intro_image_links[key]['#title'] }}</span>
                                 <span class="icon-arrow-right"></span>
                             </a>
                         {% endfor %}
                     </div>
-                {% endif %}
+				{% endif %}
             </div>
             {% if show_intro_sidebar %}
                 <div class="silc-grid__col silc-grid__col--4-medium">

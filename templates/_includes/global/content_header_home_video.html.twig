@@ -6,12 +6,13 @@
     {% if hero_media_video %}
         <div data-vimeo-id="{{ hero_media_video }}" data-vimeo-defer id="hcsh-hero-video"></div>
     {% endif %}
-    {% if content.field_hc_intro_image_text %}
         <div class="compartment">
             <div class="silc-grid silc-grid--collapse">
                 <div class="silc-grid__col silc-grid__col--8-medium">
-                    <h2 class="header--white header--page-intro">{{ content.field_hc_intro_image_text }}</h2>
-                    {% if content.field_hc_intro_image_links %}
+                    {% if content.field_hc_intro_image_text|render %}
+                        <h2 class="header--white header--page-intro">{{ content.field_hc_intro_image_text }}</h2>
+                    {% endif %}
+                    {% if content.field_hc_intro_image_links|render %}
                         <div class="header--page-links">
                             {% for key, item in content.field_hc_intro_image_links if key|first != '#' %}
                                 <a href="{{ content.field_hc_intro_image_links[key]['#url'] }}" class="btn"{% if content.field_hc_intro_image_links[key]['#options'].attributes.target %} target="{{ content.field_hc_intro_image_links[key]['#options'].attributes.target }}"{% endif %}>
@@ -24,7 +25,6 @@
                 </div>
             </div>
         </div>
-    {% endif %}
     <div class="hcsc_hero_video_controls">
         <div class="hcsc_hero_video_control hcsc_hero_video_pause_control">
             <div class="hcsc_hero_video_pause">

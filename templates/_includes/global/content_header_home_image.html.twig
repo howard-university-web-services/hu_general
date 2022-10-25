@@ -4,12 +4,13 @@
     {% if not hide_overlay %}
         <div class="blue-overlay--video-image"></div>
     {% endif %}
-    {% if content.field_hc_intro_image_text %}
         <div class="compartment">
             <div class="silc-grid silc-grid--collapse">
                 <div class="silc-grid__col silc-grid__col--8-medium">
-                    <h2 class="header--white header--page-intro">{{ content.field_hc_intro_image_text }}</h2>
-                    {% if content.field_hc_intro_image_links %}
+                    {% if content.field_hc_intro_image_text|render %}
+                        <h2 class="header--white header--page-intro">{{ content.field_hc_intro_image_text }}</h2>
+                    {% endif %}
+                    {% if content.field_hc_intro_image_links|render %}
                         <div class="header--page-links">
                             {% for key, item in content.field_hc_intro_image_links if key|first != '#' %}
                                 <a href="{{ content.field_hc_intro_image_links[key]['#url'] }}" class="btn"{% if content.field_hc_intro_image_links[key]['#options'].attributes.target %} target="{{ content.field_hc_intro_image_links[key]['#options'].attributes.target }}"{% endif %}>
@@ -22,5 +23,4 @@
                 </div>
             </div>
         </div>
-    {% endif %}
 </section>
