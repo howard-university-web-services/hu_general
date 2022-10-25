@@ -3,6 +3,12 @@
   position: relative;
   overflow: hidden;
 
+  // wcag screenreader only wave
+  .visible-for-screen-readers,
+  a  .visible-for-screen-readers {
+    color: $black;
+  }
+
   .flickity-prev-next-button {
     color: $white;
     transform: translateY(-50%);

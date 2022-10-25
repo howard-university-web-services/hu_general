@@ -5,6 +5,11 @@
     height: rem(115);
   }
 
+  // Minor adjustment for wave scanning
+  h2.visually-hidden {
+    color: $white;
+  }
+
   &__top {
     background: $mblue;
     height: rem(48);

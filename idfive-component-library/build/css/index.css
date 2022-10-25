@@ -7910,21 +7910,27 @@ a.fancy-link:hover {
     .hero-image--large:before {
       padding-top: 30%; }
 
-.hero-image-home, .hero-video {
+.hero-image-home,
+.hero-video {
   position: relative; }
-  .hero-image-home .hero-image, .hero-video .hero-image {
+  .hero-image-home .hero-image,
+  .hero-video .hero-image {
     height: auto;
     width: 100%;
     max-height: calc(100vh - 115px); }
-    .hero-image-home .hero-image:before, .hero-video .hero-image:before {
+    .hero-image-home .hero-image:before,
+    .hero-video .hero-image:before {
       content: "";
       display: block;
       padding-top: 56.25%; }
-  .hero-image-home #hcsh-hero-video, .hero-video #hcsh-hero-video {
+  .hero-image-home #hcsh-hero-video,
+  .hero-video #hcsh-hero-video {
     max-height: calc(100vh - 115px); }
-    .hero-image-home #hcsh-hero-video > div, .hero-video #hcsh-hero-video > div {
+    .hero-image-home #hcsh-hero-video > div,
+    .hero-video #hcsh-hero-video > div {
       max-height: 100%; }
-      .hero-image-home #hcsh-hero-video > div iframe, .hero-video #hcsh-hero-video > div iframe {
+      .hero-image-home #hcsh-hero-video > div iframe,
+      .hero-video #hcsh-hero-video > div iframe {
         left: 50% !important;
         top: 50% !important;
         -webkit-transform: translate(-50%, -50%) !important;
@@ -7933,7 +7939,8 @@ a.fancy-link:hover {
         width: auto !important;
         min-width: 100% !important;
         min-height: 100% !important; }
-  .hero-image-home .blue-overlay--video-image, .hero-video .blue-overlay--video-image {
+  .hero-image-home .blue-overlay--video-image,
+  .hero-video .blue-overlay--video-image {
     z-index: 100;
     position: absolute;
     top: 0;
@@ -7941,34 +7948,42 @@ a.fancy-link:hover {
     bottom: 0;
     right: 0;
     background-color: rgba(0, 58, 99, 0.35); }
-  .hero-image-home .compartment, .hero-video .compartment {
+  .hero-image-home .compartment,
+  .hero-video .compartment {
     width: 100%;
     z-index: 101; }
     @media (min-width: 800px) {
-      .hero-image-home .compartment, .hero-video .compartment {
+      .hero-image-home .compartment,
+      .hero-video .compartment {
         position: absolute;
         top: 50%;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%); } }
-    .hero-image-home .compartment h2.header--white.header--page-intro, .hero-video .compartment h2.header--white.header--page-intro {
+    .hero-image-home .compartment h2.header--white.header--page-intro,
+    .hero-video .compartment h2.header--white.header--page-intro {
       padding: 20px; }
       @media (min-width: 800px) {
-        .hero-image-home .compartment h2.header--white.header--page-intro, .hero-video .compartment h2.header--white.header--page-intro {
+        .hero-image-home .compartment h2.header--white.header--page-intro,
+        .hero-video .compartment h2.header--white.header--page-intro {
           border-left: 2px solid #EDC054;
           padding: 0px 0px 0px 40px;
           text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.65); } }
       @media (min-width: 2100px) {
-        .hero-image-home .compartment h2.header--white.header--page-intro, .hero-video .compartment h2.header--white.header--page-intro {
+        .hero-image-home .compartment h2.header--white.header--page-intro,
+        .hero-video .compartment h2.header--white.header--page-intro {
           font-size: 3.5rem;
           line-height: 4.75rem; } }
-    .hero-image-home .compartment .header--page-links, .hero-video .compartment .header--page-links {
+    .hero-image-home .compartment .header--page-links,
+    .hero-video .compartment .header--page-links {
       padding-left: 22px;
       padding-top: 10px; }
       @media (min-width: 800px) {
-        .hero-image-home .compartment .header--page-links, .hero-video .compartment .header--page-links {
+        .hero-image-home .compartment .header--page-links,
+        .hero-video .compartment .header--page-links {
           padding-left: 42px;
           padding-top: 20px; } }
-  .hero-image-home .hcsc_hero_video_controls, .hero-video .hcsc_hero_video_controls {
+  .hero-image-home .hcsc_hero_video_controls,
+  .hero-video .hcsc_hero_video_controls {
     z-index: 101;
     position: absolute;
     top: 56.25vw;
@@ -7977,23 +7992,34 @@ a.fancy-link:hover {
     right: 0;
     color: #fff;
     padding: 20px; }
-    .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control, .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control {
+    @media (min-width: 800px) {
+      .hero-image-home .hcsc_hero_video_controls,
+      .hero-video .hcsc_hero_video_controls {
+        top: initial;
+        -webkit-transform: none;
+                transform: none;
+        bottom: 0; } }
+    .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control,
+    .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control {
       border: 2px solid #fff;
       border-radius: 50%;
       padding: 14px;
       text-align: center;
       width: 50px;
       height: 50px;
-      transition: background-color .3s ease-in-out; }
+      transition: background-color 0.3s ease-in-out; }
       @media (min-width: 800px) {
-        .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control, .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control {
+        .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control,
+        .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control {
           padding: 20px;
           width: 70px;
           height: 70px; } }
-      .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control:hover, .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control:hover {
+      .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control:hover,
+      .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control:hover {
         background-color: rgba(0, 58, 99, 0.5);
         cursor: pointer; }
-      .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_pause, .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_pause {
+      .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_pause,
+      .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_pause {
         width: 8px;
         height: 20px;
         margin-left: auto;
@@ -8003,10 +8029,12 @@ a.fancy-link:hover {
         border-color: #fff;
         border-style: double; }
         @media (min-width: 800px) {
-          .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_pause, .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_pause {
+          .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_pause,
+          .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_pause {
             height: 28px;
             border-width: 0px 0px 0px 24px; } }
-      .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_play, .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_play {
+      .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_play,
+      .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_play {
         box-sizing: border-box;
         width: 8px;
         height: 10px;
@@ -8015,7 +8043,8 @@ a.fancy-link:hover {
         margin-left: 2px;
         border-color: transparent transparent transparent #fff; }
         @media (min-width: 800px) {
-          .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_play, .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_play {
+          .hero-image-home .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_play,
+          .hero-video .hcsc_hero_video_controls .hcsc_hero_video_control .hcsc_hero_video_play {
             border-width: 15px 0px 15px 28px;
             margin-left: 3px; } }
 

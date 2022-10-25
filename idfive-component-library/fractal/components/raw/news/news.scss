@@ -304,6 +304,7 @@
       }
 
       .news-and-events__img {
+        background-color: $navy;
         @include media("medium") {
           position: relative;
           overflow: hidden;

@@ -1,4 +1,3 @@
-
 .header--page-links {
   padding-top: 5px;
 }
@@ -23,12 +22,12 @@
   }
 }
 
-
-.hero-image-home, .hero-video {
+.hero-image-home,
+.hero-video {
   position: relative;
   .hero-image {
     height: auto;
-    width: 100%; 
+    width: 100%;
     max-height: calc(100vh - 115px);
     &:before {
       content: "";
@@ -41,12 +40,12 @@
     > div {
       max-height: 100%;
       iframe {
-        left: 50% !important; 
-        top: 50% !important; 
+        left: 50% !important;
+        top: 50% !important;
         transform: translate(-50%, -50%) !important;
-        height: auto !important; 
-        width: auto !important; 
-        min-width: 100% !important; 
+        height: auto !important;
+        width: auto !important;
+        min-width: 100% !important;
         min-height: 100% !important;
       }
     }
@@ -58,22 +57,22 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 58, 99, .35);
+    background-color: rgba(0, 58, 99, 0.35);
   }
   .compartment {
     width: 100%;
     z-index: 101;
-    @include media ('medium') {
+    @include media("medium") {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
     }
     h2.header--white.header--page-intro {
       padding: 20px;
-      @include media ('medium') {
+      @include media("medium") {
         border-left: 2px solid $yellow;
         padding: 0px 0px 0px 40px;
-        text-shadow: 0px 0px 10px rgba(0,0,0,0.65);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.65);
       }
       @media (min-width: 2100px) {
         font-size: 3.5rem;
@@ -83,7 +82,7 @@
     .header--page-links {
       padding-left: 22px;
       padding-top: 10px;
-      @include media ('medium') {
+      @include media("medium") {
         padding-left: 42px;
         padding-top: 20px;
       }
@@ -97,6 +96,11 @@
     right: 0;
     color: #fff;
     padding: 20px;
+    @include media("medium") {
+      top: initial;
+      transform: none;
+      bottom: 0;
+    }
     .hcsc_hero_video_control {
       border: 2px solid #fff;
       border-radius: 50%;
@@ -104,14 +108,14 @@
       text-align: center;
       width: 50px;
       height: 50px;
-      transition: background-color .3s ease-in-out;
-      @include media ('medium') {
+      transition: background-color 0.3s ease-in-out;
+      @include media("medium") {
         padding: 20px;
         width: 70px;
         height: 70px;
       }
       &:hover {
-        background-color: rgba(0, 58, 99, .5);
+        background-color: rgba(0, 58, 99, 0.5);
         cursor: pointer;
       }
       .hcsc_hero_video_pause {
@@ -123,7 +127,7 @@
         border-width: 0px 0px 0px 18px;
         border-color: #fff;
         border-style: double;
-        @include media ('medium') {
+        @include media("medium") {
           height: 28px;
           border-width: 0px 0px 0px 24px;
         }
@@ -136,13 +140,11 @@
         border-width: 10px 0px 10px 20px;
         margin-left: 2px;
         border-color: transparent transparent transparent #fff;
-        @include media ('medium') {
+        @include media("medium") {
           border-width: 15px 0px 15px 28px;
           margin-left: 3px;
         }
       }
     }
-    
   }
-
 }

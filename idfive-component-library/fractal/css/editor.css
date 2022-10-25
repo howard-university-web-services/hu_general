@@ -1504,7 +1504,8 @@ strong {
   padding: 3.125rem 0.625rem;
   min-height: 26.5625rem;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  background-color: #003A63; }
   @media (min-width: 800px) {
     .full-width-image-banner {
       padding: 8.625rem 0; } }
@@ -1939,6 +1940,7 @@ iframe {
 
 .hp-html figcaption,
 .embedded-entity figcaption {
+  color: #4f4f4f;
   display: block;
   margin-top: 8px;
   padding-bottom: 14px;
