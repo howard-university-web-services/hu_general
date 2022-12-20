@@ -6124,7 +6124,7 @@ body.nav-toggled {
   .main-footer__top {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
     padding: 2.5rem 1.25rem; }
     @media (min-width: 800px) {
@@ -6232,6 +6232,16 @@ body.nav-toggled {
     .main-footer__logo-link img {
       margin-right: 0.625rem;
       height: 100%; }
+
+.main-footer__main-nav.access {
+  margin-top: 0; }
+
+.main-footer a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.0625rem; }
 
 .silc-accordion .section-content__img {
   max-height: 14.25rem; }
