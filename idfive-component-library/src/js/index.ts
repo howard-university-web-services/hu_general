@@ -28,6 +28,7 @@ import MicroModal from 'micromodal';
 import Player from '@vimeo/player';
 import initProgramFinder from "../components/program-finder/program-finder";
 import ThemeOptionSelect from "./theme-option-select";
+import youtubePlaylist from "../components/ks/video/video";
 
 focusWithin(document);
 JumpTo();
@@ -91,6 +92,11 @@ function carouselInit() {
 function photoshelterGridInit() {
   [].forEach.call(document.querySelectorAll(".photoshelter-grid"), el => {
     new photoshelterGrid(el);
+  });
+}
+function youtubePlaylistInit() {
+  [].forEach.call(document.querySelectorAll(".hp-yp-pip"), el => {
+    new youtubePlaylist(el);
   });
 }
 
@@ -195,6 +201,7 @@ window.addEventListener("load", function () {
   SliderDistanceInit();
   ourPeopleInit();
   themeOptionSelectInit();
+  youtubePlaylistInit();
 
   if (body.classList.contains("classic_editorial")) {
     convertToLineIcons();

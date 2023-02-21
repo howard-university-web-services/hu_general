@@ -8711,6 +8711,42 @@ table {
   width: 100%;
   height: auto; }
 
+.hp-youtube-playlist h3 {
+  margin-bottom: 10px; }
+
+.hp-youtube-playlist p.video-meta {
+  font-style: italic;
+  color: #767676; }
+
+.hp-youtube-playlist iframe {
+  border-bottom: 10px solid #EDC054; }
+
+.hp-youtube-playlist .video-link img {
+  max-width: 100%;
+  height: auto; }
+
+.hp-youtube-playlist .video-link h4 {
+  margin-bottom: 0px;
+  font-size: 1em; }
+
+.hp-youtube-playlist .video-link--pip a.active-video,
+.hp-youtube-playlist .video-link--pip a :hover {
+  cursor: none; }
+  .hp-youtube-playlist .video-link--pip a.active-video img,
+  .hp-youtube-playlist .video-link--pip a :hover img {
+    border-bottom: 10px solid #EDC054; }
+
+.hp-youtube-playlist .video-link--pip a :hover {
+  cursor: pointer; }
+
+@media (min-width: 800px) {
+  .hp-youtube-playlist .see-all-link a {
+    margin-top: 75px; } }
+
+@media (min-width: 1250px) {
+  .hp-youtube-playlist .see-all-link a {
+    margin-top: 45px; } }
+
 /**Stylesheet***/
 /*Right aligns text fields used in Parallax Bundle***/
 /*Left aligns text fields used in Parallax Bundle***/
