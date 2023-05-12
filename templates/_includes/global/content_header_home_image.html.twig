@@ -12,11 +12,13 @@
                     {% endif %}
                     {% if content.field_hc_intro_image_links|render %}
                         <div class="header--page-links">
-                            {% for key, item in content.field_hc_intro_image_links if key|first != '#' %}
-                                <a href="{{ content.field_hc_intro_image_links[key]['#url'] }}" class="btn"{% if content.field_hc_intro_image_links[key]['#options'].attributes.target %} target="{{ content.field_hc_intro_image_links[key]['#options'].attributes.target }}"{% endif %}>
-                                    <span class="btn__text">{{ content.field_hc_intro_image_links[key]['#title'] }}</span>
-                                    <span class="icon-arrow-right"></span>
-                                </a>
+                            {% for key, item in content.field_hc_intro_image_links %}
+                                {% if key|first != '#' %}
+                                    <a href="{{ content.field_hc_intro_image_links[key]['#url'] }}" class="btn"{% if content.field_hc_intro_image_links[key]['#options'].attributes.target %} target="{{ content.field_hc_intro_image_links[key]['#options'].attributes.target }}"{% endif %}>
+                                        <span class="btn__text">{{ content.field_hc_intro_image_links[key]['#title'] }}</span>
+                                        <span class="icon-arrow-right"></span>
+                                    </a>
+                                {% endif %}
                             {% endfor %}
                         </div>
 					 {% endif %}
