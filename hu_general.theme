@@ -29,7 +29,7 @@ function hu_general_preprocess_page(&$variables) {
     $config = [];
     $plugin_block = $block_manager->createInstance('openid_connect_login', $config);
     $render = $plugin_block->build();
-    $variables['login_block'] = render($render);
+    $variables['login_block'] = \Drupal::service('renderer')->render($render);
   }
 }
 
