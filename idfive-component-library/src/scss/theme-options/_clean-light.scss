@@ -299,9 +299,7 @@ body.clean_light {
           a {
             @extend %sans-extra-bold;
 
-            @media (min-width: $silc-nav--options--expands) {
-              color: $mblue;
-            }
+
           }
 
           li {
@@ -389,7 +387,7 @@ body.clean_light {
   .sidebar-nav {
     margin: rem(-8) 0 rem(32);
     box-shadow: rem(1) rem(7) rem(23) rgba($mblue, 0.2);
-    
+
     border: rem(1) solid $gray4;
     border-radius: rem(4);
 
@@ -492,7 +490,7 @@ body.clean_light {
     }
 
     .block-header__title {
-      
+
       margin: rem(13) rem(24) 0 0;
       padding-left: rem(30);
       position: relative;
@@ -1188,7 +1186,7 @@ body.clean_light {
       color: $white;
     }
   }
-  
+
 
   /* Video Embed */
 

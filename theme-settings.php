@@ -81,6 +81,13 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#description' => t('Uses the light menu color scheme for the header menu.'),
     '#default_value' => theme_get_setting('light_header'),
   ];
+    // Show hamburger menu.
+  $form['hu_header_settings']['hamburguer_desktop'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Show hamburger in Desktop?'),
+    '#description' => t('Used for display hamburger menu in Desktop Site.'),
+    '#default_value' => theme_get_setting('hamburguer_desktop'),
+  ];
   // Featured Header Link.
   $form['hu_header_settings']['featured_link'] = [
     '#type' => 'details',

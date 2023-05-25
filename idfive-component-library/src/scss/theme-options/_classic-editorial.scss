@@ -391,7 +391,6 @@ body.classic_editorial {
           a {
             @extend %serif-regular;
             @media (min-width: $silc-nav--options--expands) {
-              color: $mblue;
               font-size: rem(16);
             }
           }

@@ -1,4 +1,11 @@
-<header class="main-header {% if light_header %}main-header--light{% endif %}" aria-label="main-header">
+ {% if h_menu == 1 %}
+    {% set h_menu = 'show-menu-mobile' %}
+    {% set c_menu = 'display-menu-mobile' %}
+{% else %}
+    {% set h_menu = 'no-display-menu-mobile' %}
+    {% set c_menu = 'hidden-menu-mobile' %}
+{% endif %}
+<header class="main-header {% if light_header %}main-header--light{% endif %} {{ c_menu }}" aria-label="main-header">
     <div class="main-header__top">
         <div class="main-header__logo">
             <div class="main-header__logo-link">
@@ -14,11 +21,12 @@
             {% include parent_include_directory ~ '/templates/_includes/global/utility_menu.html.twig' with {'fid': 'mainSearch', 'sid': 'keyword', 'menu': page.secondary_menu} %}
         </div>
     </div>
+
     <div class="main-header__bottom">
         <h2 class="main-header__dept"><a href="{{front_page}}">{{ department }}</a></h2>
         <div class="main-header__nav-wrap">
             <div class="main-header__drawer">
-                <div class="main-header__nav">
+                <div class="main-header__nav {{ h_menu }}">
                     {{ page.primary_menu }}
                 </div>
                 <div class="main-header__utility main-header__utility--mobile">
@@ -26,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-header__trigger-menu">
+        <div class="main-header__trigger-menu {{ h_menu }}">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
