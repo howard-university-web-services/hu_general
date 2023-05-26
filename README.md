@@ -41,6 +41,7 @@ Additional options available on the /appearance/settings/hu_general page:
 - Show light header menu: Uses the light menu color scheme for the header menu throughout the site.
 - Featured Header Link: Show a featured link in the header, and set text and URL.
 - Hie Search: Hides the search function on desktop and mobile, if you wish to not have search functionality on the site.
+- Hamburger menu in desktop: If checked, the menu for the site will be hambrger (mobile view full time).
 
 ### Howard footer Settings, Social Links
 
@@ -48,7 +49,7 @@ These links will show as icons in the footer throughout the site.
 
 - Twitter Link
 - Facebook Link
-- Youtube Link
+- Youtube Links
 - Instagram Link
 
 ### Howard footer Settings, Address
