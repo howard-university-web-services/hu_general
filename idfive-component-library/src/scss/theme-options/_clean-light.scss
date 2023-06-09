@@ -291,14 +291,17 @@ body.clean_light {
       font-weight: 700;
     }
   }
-
-  .main-header__nav {
+  .show-menu-mobile.main-header__nav nav ul li a {
+    color: white;
+  }
+  .main-header__nav,
+  .no-display-menu-mobile.main-header__nav {
     nav {
       ul {
         li {
           a {
             @extend %sans-extra-bold;
-
+            color: $mblue;
 
           }
 

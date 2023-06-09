@@ -633,7 +633,8 @@
 }
 .display-menu-mobile{
   .main-header__nav,
-  .main-header__utility{
+  .main-header__utility,
+  .main-header__dept::after{
     display: none;
   }
 

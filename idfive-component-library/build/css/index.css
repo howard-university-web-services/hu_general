@@ -4285,7 +4285,8 @@ body.clean_light .h2, body.clean_light h3,
 body.clean_light .h3, body.clean_light .checkboxes--wrapper span.fieldset-legend, .checkboxes--wrapper body.clean_light span.fieldset-legend,
 body.clean_light .radios--wrapper span.fieldset-legend, .radios--wrapper body.clean_light span.fieldset-legend, body.clean_light table caption, table body.clean_light caption, body.clean_light body.classic_editorial .news-and-events__title, body.classic_editorial body.clean_light .news-and-events__title, body.clean_light body.classic_editorial .announcements__block--featured .announcements__title, body.classic_editorial .announcements__block--featured body.clean_light .announcements__title, body.clean_light h4,
 body.clean_light .h4, body.clean_light body.classic_editorial .silc-accordion__label, body.classic_editorial body.clean_light .silc-accordion__label, body.clean_light .lead-in,
-body.clean_light .lead-in-large, body.clean_light .main-header__dept a, body.clean_light .main-header__nav nav ul li a, body.clean_light .sidebar-nav .silc-nav__link.is-active, body.clean_light .news-and-events__block_feat_4up .news-and-events__title {
+body.clean_light .lead-in-large, body.clean_light .main-header__dept a, body.clean_light .main-header__nav nav ul li a,
+body.clean_light .no-display-menu-mobile.main-header__nav nav ul li a, body.clean_light .sidebar-nav .silc-nav__link.is-active, body.clean_light .news-and-events__block_feat_4up .news-and-events__title {
   font-weight: 800;
   font-style: normal;
   font-family: "Open Sans", sans-serif; }
@@ -4302,7 +4303,9 @@ body.classic_editorial .h3, body.classic_editorial table caption, table body.cla
 body.classic_editorial .h4, body.classic_editorial .silc-accordion__label, body.classic_editorial h5,
 body.classic_editorial .h5, body.classic_editorial h6,
 body.classic_editorial .h6, body.classic_editorial .lead-in-large, body.classic_editorial .post-header__title, body.classic_editorial .main-header__dept a, body.classic_editorial .main-header__nav nav ul li > .nav__lists__container > a,
-body.classic_editorial .main-header__nav nav ul li a, body.classic_editorial .utility__menu a, body.classic_editorial .main-footer ul li, body.classic_editorial .site__address, body.classic_editorial .breadcrumb__item, body.classic_editorial .sidebar-nav .silc-nav__items .silc-nav__items .silc-nav__link, body.classic_editorial .sidebar-nav .silc-nav__link, body.classic_editorial .contact-box p,
+body.classic_editorial .main-header__nav nav ul li a,
+body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li a, body.classic_editorial .utility__menu a, body.classic_editorial .main-footer ul li, body.classic_editorial .site__address, body.classic_editorial .breadcrumb__item, body.classic_editorial .sidebar-nav .silc-nav__items .silc-nav__items .silc-nav__link, body.classic_editorial .sidebar-nav .silc-nav__link, body.classic_editorial .contact-box p,
 body.classic_editorial .contact-box span, body.classic_editorial .news-and-events__date,
 body.classic_editorial .news-and-events__time, body.classic_editorial.js .silc-accordion--become-tabs.silc-accordion .silc-accordion__nav-link, body.classic_editorial table, body.classic_editorial .alumni-profile__caption h4, body.classic_editorial input,
 body.classic_editorial textarea,
@@ -6832,7 +6835,8 @@ body.nav-toggled {
         padding: 1.25rem 1.25rem 1rem 2.0625rem; }
 
 .display-menu-mobile .main-header__nav,
-.display-menu-mobile .main-header__utility {
+.display-menu-mobile .main-header__utility,
+.display-menu-mobile .main-header__dept::after {
   display: none; }
 
 .display-menu-mobile .main-header__trigger-menu,
@@ -11709,8 +11713,14 @@ body.clean_light {
   body.clean_light .main-header__dept a {
     color: #002A47;
     font-weight: 700; }
+  body.clean_light .show-menu-mobile.main-header__nav nav ul li a {
+    color: white; }
+  body.clean_light .main-header__nav nav ul li a,
+  body.clean_light .no-display-menu-mobile.main-header__nav nav ul li a {
+    color: #002A47; }
   @media (min-width: 1250px) {
-    body.clean_light .main-header__nav nav ul li li a {
+    body.clean_light .main-header__nav nav ul li li a,
+    body.clean_light .no-display-menu-mobile.main-header__nav nav ul li li a {
       font-weight: 400; } }
   body.clean_light .utility__menu a {
     font-weight: 600;
@@ -12797,13 +12807,27 @@ body.classic_editorial {
   body.classic_editorial .main-header__dept a {
     color: #002A47;
     font-weight: 700; }
-  @media (min-width: 1250px) {
-    body.classic_editorial .main-header__nav nav ul li > .nav__lists__container > a,
-    body.classic_editorial .main-header__nav nav ul li a {
-      font-size: 1rem; } }
+  body.classic_editorial .show-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+  body.classic_editorial .show-menu-mobile.main-header__nav nav ul li a,
+  body.classic_editorial .show-menu-mobile.no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+  body.classic_editorial .show-menu-mobile.no-display-menu-mobile.main-header__nav nav ul li a {
+    color: white; }
+  body.classic_editorial .main-header__nav nav ul li > .nav__lists__container > a,
+  body.classic_editorial .main-header__nav nav ul li a,
+  body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+  body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li a {
+    color: #002A47; }
+    @media (min-width: 1250px) {
+      body.classic_editorial .main-header__nav nav ul li > .nav__lists__container > a,
+      body.classic_editorial .main-header__nav nav ul li a,
+      body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+      body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li a {
+        font-size: 1rem; } }
   @media (min-width: 1250px) {
     body.classic_editorial .main-header__nav nav > ul > li:hover > a,
-    body.classic_editorial .main-header__nav nav > ul > li:hover > .nav__lists__container > a {
+    body.classic_editorial .main-header__nav nav > ul > li:hover > .nav__lists__container > a,
+    body.classic_editorial .no-display-menu-mobile.main-header__nav nav > ul > li:hover > a,
+    body.classic_editorial .no-display-menu-mobile.main-header__nav nav > ul > li:hover > .nav__lists__container > a {
       background-color: #003A63;
       color: #FFF; } }
   body.classic_editorial .utility__menu a {

@@ -382,8 +382,14 @@ body.classic_editorial {
       font-weight: 700;
     }
   }
-
-  .main-header__nav {
+  .show-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+  .show-menu-mobile.main-header__nav nav ul li a,
+  .show-menu-mobile.no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+  .show-menu-mobile.no-display-menu-mobile.main-header__nav nav ul li a {
+    color: white;
+  }
+  .main-header__nav,
+  .no-display-menu-mobile.main-header__nav {
     nav {
       ul {
         li {
@@ -393,6 +399,7 @@ body.classic_editorial {
             @media (min-width: $silc-nav--options--expands) {
               font-size: rem(16);
             }
+            color: $mblue;
           }
         }
       }
