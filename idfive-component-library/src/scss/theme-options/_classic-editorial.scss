@@ -399,11 +399,12 @@ body.classic_editorial {
             @media (min-width: $silc-nav--options--expands) {
               font-size: rem(16);
             }
-            color: $mblue;
+            @media (min-width: 1250px) {
+              color: $mblue;
+            }
           }
         }
       }
-
       > ul {
         > li {
           &:hover {

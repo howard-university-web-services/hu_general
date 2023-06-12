@@ -11715,9 +11715,10 @@ body.clean_light {
     font-weight: 700; }
   body.clean_light .show-menu-mobile.main-header__nav nav ul li a {
     color: white; }
-  body.clean_light .main-header__nav nav ul li a,
-  body.clean_light .no-display-menu-mobile.main-header__nav nav ul li a {
-    color: #002A47; }
+  @media (min-width: 1250px) {
+    body.clean_light .main-header__nav nav ul li a,
+    body.clean_light .no-display-menu-mobile.main-header__nav nav ul li a {
+      color: #002A47; } }
   @media (min-width: 1250px) {
     body.clean_light .main-header__nav nav ul li li a,
     body.clean_light .no-display-menu-mobile.main-header__nav nav ul li li a {
@@ -12812,17 +12813,18 @@ body.classic_editorial {
   body.classic_editorial .show-menu-mobile.no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
   body.classic_editorial .show-menu-mobile.no-display-menu-mobile.main-header__nav nav ul li a {
     color: white; }
-  body.classic_editorial .main-header__nav nav ul li > .nav__lists__container > a,
-  body.classic_editorial .main-header__nav nav ul li a,
-  body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
-  body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li a {
-    color: #002A47; }
-    @media (min-width: 1250px) {
-      body.classic_editorial .main-header__nav nav ul li > .nav__lists__container > a,
-      body.classic_editorial .main-header__nav nav ul li a,
-      body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
-      body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li a {
-        font-size: 1rem; } }
+  @media (min-width: 1250px) {
+    body.classic_editorial .main-header__nav nav ul li > .nav__lists__container > a,
+    body.classic_editorial .main-header__nav nav ul li a,
+    body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+    body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li a {
+      font-size: 1rem; } }
+  @media (min-width: 1250px) {
+    body.classic_editorial .main-header__nav nav ul li > .nav__lists__container > a,
+    body.classic_editorial .main-header__nav nav ul li a,
+    body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+    body.classic_editorial .no-display-menu-mobile.main-header__nav nav ul li a {
+      color: #002A47; } }
   @media (min-width: 1250px) {
     body.classic_editorial .main-header__nav nav > ul > li:hover > a,
     body.classic_editorial .main-header__nav nav > ul > li:hover > .nav__lists__container > a,

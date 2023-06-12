@@ -301,8 +301,9 @@ body.clean_light {
         li {
           a {
             @extend %sans-extra-bold;
-            color: $mblue;
-
+            @media (min-width: 1250px) {
+              color: $mblue;
+            }
           }
 
           li {
