@@ -163,6 +163,12 @@
   }
 }
 
+.no-display-menu-mobile.main-header__nav nav ul li .nav__lists__container > a{
+  @media (max-width: 1250px) {
+  color: white;
+  }
+}
+
 .no-display-menu-mobile.main-header__nav {
   nav {
     display: flex;
@@ -376,6 +382,21 @@
     }
   }
 }
+
+
+.main-header--light.display-menu-mobile .main-header__nav nav > ul > li > .nav__lists__container > a {
+  @media screen and (min-width: 1250px) {
+    color:$white;
+  }
+}
+
+.main-header--light .main-header__nav nav > ul > li > a,
+.main-header--light .main-header__nav nav > ul > li > .nav__lists__container > a {
+  @media screen and (min-width: 1250px) {
+    color:$navy;
+  }
+}
+
 .main-header__nav {
   nav {
     display: flex;
@@ -631,6 +652,9 @@
     }
   }
 }
+
+// Hamburger menu enable on Desktop
+
 .display-menu-mobile{
   .main-header__nav,
   .main-header__utility,

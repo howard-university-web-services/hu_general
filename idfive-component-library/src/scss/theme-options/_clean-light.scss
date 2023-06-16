@@ -275,11 +275,9 @@ body.clean_light {
   }
 
   /* Header */
-
   .main-header__bottom {
     background-color: $white;
   }
-
   .main-header__dept {
     &::after {
       background-color: $yellow;
@@ -291,9 +289,18 @@ body.clean_light {
       font-weight: 700;
     }
   }
+  .main-header__dept a,
+  .main-header__nav nav ul li a,
+  .no-display-menu-mobile.main-header__nav nav ul li a {
+    color: white;
+  }
+  .main-header__dept a {
+    color: $mblue;
+  }
   .show-menu-mobile.main-header__nav nav ul li a {
     color: white;
   }
+
   .main-header__nav,
   .no-display-menu-mobile.main-header__nav {
     nav {
@@ -305,7 +312,6 @@ body.clean_light {
               color: $mblue;
             }
           }
-
           li {
             a {
               @media (min-width: $silc-nav--options--expands) {

@@ -388,6 +388,18 @@ body.classic_editorial {
   .show-menu-mobile.no-display-menu-mobile.main-header__nav nav ul li a {
     color: white;
   }
+  .main-header__nav nav ul li > .nav__lists__container > a,
+  .main-header__nav nav ul li a,
+  .no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+  .no-display-menu-mobile.main-header__nav nav ul li a{
+    color: white;
+  }
+  .display-menu-mobile.nav-toggled .main-header__nav > ul > li:hover > .nav__lists__container a {
+    @media screen and (min-width: 1250px) {
+      background-color: $red !important;
+    }
+  }
+
   .main-header__nav,
   .no-display-menu-mobile.main-header__nav {
     nav {
@@ -399,12 +411,14 @@ body.classic_editorial {
             @media (min-width: $silc-nav--options--expands) {
               font-size: rem(16);
             }
+
             @media (min-width: 1250px) {
               color: $mblue;
             }
           }
         }
       }
+
       > ul {
         > li {
           &:hover {
@@ -420,7 +434,12 @@ body.classic_editorial {
       }
     }
   }
-
+  .display-menu-mobile .main-header__nav nav > ul > li:hover > .nav__lists__container > a{
+    @media (min-width: $silc-nav--options--expands) {
+      background-color: $red;
+      color: $white;
+    }
+  }
   .utility__menu {
     a {
       @extend %serif-regular;
