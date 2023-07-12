@@ -29,11 +29,13 @@
           {{ content.body }}
         </div>
         {% if content.field_hc_resource_cta_link|render %}
-          {% for key, item in content.field_hc_resource_cta_link if key|first != '#' %}
+          {% for key, item in content.field_hc_resource_cta_link %}
+          {% if key|first != '#' %}
             <a href="{{ item['#url'] }}" class="btn" {% if item['#options'].attributes.target %} target="{{ item['#options'].attributes.target }}" {% endif %}>
               <span class="btn__text">{{ item['#title'] }}</span>
               <span class="icon-arrow-right"></span>
             </a>
+          {% endif %}
           {% endfor %}
         {% endif %}
         {# Render without, so quickedit/etc works #}
@@ -95,11 +97,13 @@
             <h2>Related Resources</h2>
           </div>
         </div>
-        {% for key, item in content.field_hc_resources_related if key|first != '#' %}
+        {% for key, item in content.field_hc_resources_related %}
+        {% if key|first != '#' %}
           <a href="{{ item['#url'] }}" class="fancy-link">
             <span>{{ item['#title'] }}</span>
             <span class="icon-arrow-right"></span>
           </a>
+        {% endif %}
         {% endfor %}
       </div>
     </section>
