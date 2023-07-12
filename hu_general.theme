@@ -74,7 +74,7 @@ function hu_general_preprocess_file_link(&$variables) {
   $file = $variables['file'];
   $options = [];
   $file_entity = $file instanceof File ? $file : File::load($file->fid);
-  $url = file_create_url($file_entity->getFileUri());
+  $url = \Drupal::service('file_url_generator')->generateAbsoluteString($file_entity->getFileUri());
   $variables['#cache']['contexts'][] = 'url.site';
   if($file_entity->_referringItem !== NULL) {
     $fieldParent = $file_entity->_referringItem->getEntity();
