@@ -292,15 +292,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-02655b74e2ebb3f9aed5aebbdd0904dd">main-nav.scss</option>
+                <option value="file-7d7d71cf937f8367f88d60debd963417">main-nav.scss</option>
                 
-                <option value="file-de54ede866692b595cdbd95d54350cab">main-nav.ts</option>
+                <option value="file-39257a8b30613b6e4468ba711e54edcc">main-nav.ts</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-02655b74e2ebb3f9aed5aebbdd0904dd" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-7d7d71cf937f8367f88d60debd963417" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -473,7 +473,13 @@
   }
 }
 
-<span class="hljs-selector-class">.main-header__nav</span> {
+<span class="hljs-selector-class">.no-display-menu-mobile</span><span class="hljs-selector-class">.main-header__nav</span> <span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-class">.nav__lists__container</span> &gt; <span class="hljs-selector-tag">a</span>{
+  <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">1250px</span>) {
+  <span class="hljs-attribute">color</span>: white;
+  }
+}
+
+<span class="hljs-selector-class">.no-display-menu-mobile</span><span class="hljs-selector-class">.main-header__nav</span> {
   <span class="hljs-selector-tag">nav</span> {
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">align-items</span>: center;
@@ -687,6 +693,153 @@
   }
 }
 
+
+<span class="hljs-selector-class">.main-header--light</span><span class="hljs-selector-class">.display-menu-mobile</span> <span class="hljs-selector-class">.main-header__nav</span> <span class="hljs-selector-tag">nav</span> &gt; <span class="hljs-selector-tag">ul</span> &gt; <span class="hljs-selector-tag">li</span> &gt; <span class="hljs-selector-class">.nav__lists__container</span> &gt; <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">1250px</span>) {
+    <span class="hljs-attribute">color</span>:<span class="hljs-variable">$white</span>;
+  }
+}
+
+<span class="hljs-selector-class">.main-header--light</span> <span class="hljs-selector-class">.main-header__nav</span> <span class="hljs-selector-tag">nav</span> &gt; <span class="hljs-selector-tag">ul</span> &gt; <span class="hljs-selector-tag">li</span> &gt; <span class="hljs-selector-tag">a</span>,
+<span class="hljs-selector-class">.main-header--light</span> <span class="hljs-selector-class">.main-header__nav</span> <span class="hljs-selector-tag">nav</span> &gt; <span class="hljs-selector-tag">ul</span> &gt; <span class="hljs-selector-tag">li</span> &gt; <span class="hljs-selector-class">.nav__lists__container</span> &gt; <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">1250px</span>) {
+    <span class="hljs-attribute">color</span>:<span class="hljs-variable">$navy</span>;
+  }
+}
+
+<span class="hljs-selector-class">.main-header__nav</span> {
+  <span class="hljs-selector-tag">nav</span> {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">align-items</span>: center;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span> <span class="hljs-meta">!important</span>;
+    <span class="hljs-selector-tag">ul</span> {
+      <span class="hljs-attribute">list-style-type</span>: none;
+
+      <span class="hljs-selector-tag">li</span> {
+        <span class="hljs-attribute">position</span>: relative;
+
+
+        &amp;<span class="hljs-selector-class">.active</span> {
+          <span class="hljs-selector-tag">a</span> {
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$lightblue</span>;
+            &amp;<span class="hljs-selector-pseudo">:hover</span> {
+              <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$red</span>;
+            }
+          }
+        }
+
+        &amp;<span class="hljs-selector-pseudo">:hover</span>,
+        &amp;<span class="hljs-selector-pseudo">:focus</span>,
+        &amp;<span class="hljs-selector-pseudo">:focus</span>-within {
+          <span class="hljs-attribute">cursor</span>: pointer;
+
+          <span class="hljs-selector-tag">a</span> {
+            <span class="hljs-attribute">text-decoration</span>: none;
+          }
+
+          <span class="hljs-selector-tag">ul</span> {
+
+            <span class="hljs-selector-tag">li</span> {
+              <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+
+              &amp;<span class="hljs-selector-pseudo">:hover</span>,
+              &amp;<span class="hljs-selector-pseudo">:focus</span>,
+              &amp;<span class="hljs-selector-pseudo">:focus</span>-within {
+                <span class="hljs-attribute">cursor</span>: pointer;
+                <span class="hljs-attribute">background</span>: transparent;
+
+                <span class="hljs-selector-tag">a</span> {
+                  <span class="hljs-attribute">text-decoration</span>: none;
+                }
+              }
+            }
+          }
+        }
+
+        <span class="hljs-selector-tag">ul</span> {
+          <span class="hljs-selector-tag">li</span> {
+            &amp;<span class="hljs-selector-pseudo">:hover</span> {
+              <span class="hljs-selector-tag">a</span> {
+                <span class="hljs-attribute">color</span>: <span class="hljs-variable">$lightblue</span>;
+              }
+            }
+
+            <span class="hljs-selector-tag">a</span> {
+              <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">20</span>);
+            }
+          }
+        }
+
+        &amp;--home {
+          <span class="hljs-keyword">@extend</span> %sans-bold;
+
+          <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">22</span>) <span class="hljs-meta">!important</span>;
+          <span class="hljs-attribute">text-transform</span>: uppercase;
+          <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">padding-left</span>: rem(<span class="hljs-number">73</span>) <span class="hljs-meta">!important</span>;
+          <span class="hljs-attribute">position</span>: relative;
+
+          &amp;<span class="hljs-selector-pseudo">::before</span> {
+            <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;\e93d&quot;</span>;
+            <span class="hljs-attribute">color</span>: <span class="hljs-variable">$white</span>;
+            <span class="hljs-attribute">position</span>: absolute;
+
+            <span class="hljs-keyword">@include</span> icon();
+
+            <span class="hljs-attribute">left</span>: rem(<span class="hljs-number">30</span>);
+            <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">24</span>);
+            <span class="hljs-attribute">top</span>: <span class="hljs-number">1.15rem</span>;
+
+
+          }
+
+        }
+
+        <span class="hljs-selector-class">.nav__lists__container</span> {
+          &gt; <span class="hljs-selector-tag">a</span> {
+            <span class="hljs-attribute">padding-right</span>: rem(<span class="hljs-number">105</span>);
+          }
+        }
+
+        <span class="hljs-selector-tag">a</span> {
+          <span class="hljs-keyword">@extend</span> %sans-bold;
+          <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">20</span>) rem(<span class="hljs-number">30</span>);
+          <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">14</span>);
+          <span class="hljs-attribute">color</span>: <span class="hljs-variable">$white</span>;
+          <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">display</span>: block;
+          <span class="hljs-attribute">position</span>: relative;
+          <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.15s</span> ease-in-out, background <span class="hljs-number">0.15s</span> ease-in-out;
+        }
+
+        <span class="hljs-selector-tag">ul</span> {
+          <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
+          <span class="hljs-attribute">list-style</span>: none;
+          <span class="hljs-attribute">overflow</span>: hidden;
+          <span class="hljs-selector-class">.js</span> &amp; {
+            <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">transition</span>: <span class="hljs-number">0.3s</span> height ease-in-out;
+
+          }
+
+        }
+      }
+    }
+    &gt; <span class="hljs-selector-tag">ul</span> {
+
+      &gt; <span class="hljs-selector-tag">li</span> {
+
+
+        &gt; <span class="hljs-selector-class">.nav__lists__container</span> {
+          <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+        }
+
+      }
+    }
+  }
+}
 <span class="hljs-selector-class">.nav__lists__container</span> {
   <span class="hljs-attribute">position</span>: relative;
 }
@@ -704,11 +857,6 @@
   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1000</span>;
   <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.3s</span>;
-
-  <span class="hljs-keyword">@include</span> media(<span class="hljs-string">&quot;large&quot;</span>) {
-    <span class="hljs-attribute">display</span>: none;
-  }
-
   &amp;<span class="hljs-selector-pseudo">:hover</span> {
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$yellow</span>;
     &amp;:after {
@@ -738,6 +886,13 @@
     <span class="hljs-attribute">border-right</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#fff</span>;
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.3s</span>, top <span class="hljs-number">0.3s</span>, border-color <span class="hljs-number">0.3s</span>;
+  }
+}
+<span class="hljs-keyword">@include</span> media(<span class="hljs-string">&quot;large&quot;</span>) {
+  <span class="hljs-selector-class">.no-display-menu-mobile</span>{
+    <span class="hljs-selector-class">.nav__lists__trigger</span>{
+      <span class="hljs-attribute">display</span>: none;
+    }
   }
 }
 
@@ -807,7 +962,21 @@
     }
   }
 }
-</pre>
+
+<span class="hljs-comment">// Hamburger menu enable on Desktop</span>
+
+<span class="hljs-selector-class">.display-menu-mobile</span>{
+  <span class="hljs-selector-class">.main-header__nav</span>,
+  <span class="hljs-selector-class">.main-header__utility</span>,
+  <span class="hljs-selector-class">.main-header__dept</span><span class="hljs-selector-pseudo">::after</span>{
+    <span class="hljs-attribute">display</span>: none;
+  }
+
+  <span class="hljs-selector-class">.main-header__trigger-menu</span>,
+  &amp;<span class="hljs-selector-class">.nav-toggled</span> <span class="hljs-selector-class">.main-header__nav</span>{
+    <span class="hljs-attribute">display</span>: block;
+  }
+}</pre>
                             </code>
                             
                         </div>
@@ -823,12 +992,12 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">9.9 KB</span>
+                    <span class="Meta-value">13.1 KB</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-de54ede866692b595cdbd95d54350cab" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-39257a8b30613b6e4468ba711e54edcc" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -2008,6 +2177,40 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a
                 class="Tree-entityLink"
+                href="./data-point.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="data-point"
+                data-handle="data-point"
+            >
+                <span>Data Point</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
                 href="./department-title.html"
                 data-role="tree-link"
                 
@@ -2447,6 +2650,94 @@
 
             </a>
         </li>
+        
+    
+        
+        
+            
+            
+            <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-giving-feed">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-giving-feed-items">
+                    Giving Feed
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-giving-feed-items">
+                
+                
+                
+                
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./giving-feed--default.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="giving-feed--default"
+                data-handle="giving-feed--default"
+            >
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./giving-feed--featured.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="giving-feed--featured"
+                data-handle="giving-feed--featured"
+            >
+                <span>Featured</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+                </ul>
+            </li>
+            
         
     
         
@@ -3942,8 +4233,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2022-12-20T17:41:56.293Z">
-                                12/20/2022
+                            <time datetime="2023-10-20T17:45:27.442Z">
+                                10/20/2023
                             </time>
                         
                     </dd>

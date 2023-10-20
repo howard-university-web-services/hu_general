@@ -4411,6 +4411,9 @@ body.classic_editorial .sidebar-title {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-giving-stories:before {
+  content: "\E90B"; }
+
 .icon-our-people-line:before {
   content: "\E90A"; }
 

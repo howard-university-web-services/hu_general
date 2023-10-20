@@ -1,0 +1,121 @@
+.giving-feed {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media("medium") {
+    max-width: 100%;
+  }
+}
+
+.giving-feed__block {
+    align-items: flex-start;
+    background: $white;
+    border-radius: rem(4);
+    display: flex;
+    height: 100%;
+    padding: rem(15);
+    text-decoration: none;
+
+    @include media("medium") {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  .giving-feed__img {
+    @extend %image-bck;
+    margin-right: rem(15);
+    width: 25%;
+
+    @include media("small") {
+      width: rem(140);
+    }
+
+    @include media("medium") {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 125%;
+    }
+  }
+
+  .giving-feed__desc__desc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    flex: 1 1 0px;
+    padding: 0;
+
+    @include media("medium") {
+      padding: rem(15);
+    }
+
+    p {
+      color: $charcoal;
+      width: 100%;
+      margin-top: 0;
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+        @include media("small") {
+          margin-bottom: rem(15);
+        }
+        @include media("medium") {
+          margin-bottom: rem(8);
+        }
+      }
+    }
+  }
+
+  .giving-feed__title {
+    @extend %serif-regular;
+    width: 100%;
+    font-size: 1.3rem;
+    color: $navy;
+    margin-top: rem(15);
+    margin-bottom: rem(10);
+    transition: 0.3s color ease-in-out;
+    @include media("medium") {
+      line-height: (25/21) !important;
+      margin-bottom: rem(20) !important;
+    }
+  }
+
+  p {
+    color: $charcoal;
+  }
+
+  .giving-feed__date {
+    @extend %sans-extra-bold;
+    display: block;
+    font-size: rem(12);
+    line-height: rem(16);
+    color: $skyblue;
+    text-transform: uppercase;
+    letter-spacing: rem(1.8);
+    margin-bottom: rem(3);
+    transition: 0.3s color ease-in-out;
+
+    @include media("medium") {
+      font-size: rem(14);
+      line-height: rem(18);
+      margin-bottom: rem(5);
+    }
+  }
+
+ 
+
+  .silc-grid {
+    &:not(.silc-grid--collapse) {
+      &:last-child {
+        margin-bottom: -$silc-grid--gutter;
+      }
+    }
+  }
+
+

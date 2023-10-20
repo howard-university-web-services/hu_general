@@ -343,7 +343,7 @@ body.nav-toggled {
 
     &__nav nav ul li a {
       @include media('large') {
-        color: $navy;
+        color: $white;
       }
     }
 
