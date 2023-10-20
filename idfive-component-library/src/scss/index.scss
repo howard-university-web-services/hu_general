@@ -32,6 +32,8 @@
 @import "../components/ks/button/button";
 @import "../components/ks/events/events";
 @import "../components/ks/news/news";
+@import "../components/ks/giving-feed/giving-feed";
+@import "../components/ks/data-point/data-point";
 @import "../components/ks/carousel/carousel";
 @import "../components/ks/photoshelter-grid/photoshelter-grid";
 @import "../components/ks/table/table";
@@ -48,7 +50,7 @@
 @import "../components/ks/sponsors/sponsors";
 @import "../components/article/article";
 @import "~tablesaw/dist/tablesaw";
-@import '~luminous-lightbox/dist/luminous-basic';
+@import "~luminous-lightbox/dist/luminous-basic";
 @import "../components/modal/modal";
 @import "../components/pages/pages";
 @import "../components/pagination/pagination";

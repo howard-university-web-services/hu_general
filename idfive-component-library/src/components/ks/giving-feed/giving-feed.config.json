@@ -1,0 +1,17 @@
+{
+    "context": {
+        "fancyLinktext": "Link to Page",
+        "blockTitle": "Giving Stories",
+        "titleIcon": "calendar"
+    },
+    "variants": [
+        {
+          "name": "featured",
+          "context": {
+            "fancyLinktext": "Link to Page",
+            "blockTitle": "Giving Stories",
+            "titleIcon": "calendar"
+          }
+        }
+    ]
+}
