@@ -1,0 +1,70 @@
+{
+  "context":{
+      "businessList":[
+          {
+              "title":"Business Name Lorem Ipsum Dolor Sit",
+              "url":"#",
+              "description":"Industry Lorem Ipsum Dolor",
+              "streetAddress":"12345 Street Address Lorem Ipsum",
+              "city":"City Lorem Ipsum",
+              "state":"ST",
+              "zip":"#####",
+              "country":"Country Lorem Ipsum",
+              "email":"email@email.com",
+              "phone":"(XXX) XXX-XXXX", 
+              "firstname":"firstname",
+              "lastname":"lastnnme",
+              "year":"XX",
+              "perks":"Special/Perk Lorem Ipsum Dolor Sit Amet Consecteteur"
+          },
+          {
+              "title":"Business Name Lorem Ipsum Dolor Sit",
+              "url":"#",
+              "description":"Industry Lorem Ipsum Dolor",
+              "streetAddress":"12345 Street Address Lorem Ipsum",
+              "city":"City Lorem Ipsum",
+              "state":"ST",
+              "zip":"#####",
+              "country":"Country Lorem Ipsum",
+              "email":"email@email.com",
+              "phone":"(XXX) XXX-XXXX", 
+              "firstname":"firstname",
+              "lastname":"lastnnme",
+              "year":"XX",
+              "perks":"Special/Perk Lorem Ipsum Dolor Sit Amet Consecteteur"
+          },
+          {
+              "title":"Business Name Lorem Ipsum Dolor Sit",
+              "url":"#",
+              "description":"Industry Lorem Ipsum Dolor",
+              "streetAddress":"12345 Street Address Lorem Ipsum",
+              "city":"City Lorem Ipsum",
+              "state":"ST",
+              "zip":"#####",
+              "country":"Country Lorem Ipsum",
+              "email":"email@email.com",
+              "phone":"(XXX) XXX-XXXX", 
+              "firstname":"firstname",
+              "lastname":"lastnnme",
+              "year":"XX",
+              "perks":"Special/Perk Lorem Ipsum Dolor Sit Amet Consecteteur"
+          },
+          {
+              "title":"Business Name Lorem Ipsum Dolor Sit",
+              "url":"#",
+              "description":"Industry Lorem Ipsum Dolor",
+              "streetAddress":"12345 Street Address Lorem Ipsum",
+              "city":"City Lorem Ipsum",
+              "state":"ST",
+              "zip":"#####",
+              "country":"Country Lorem Ipsum",
+              "email":"email@email.com",
+              "phone":"(XXX) XXX-XXXX", 
+              "firstname":"firstname",
+              "lastname":"lastnnme",
+              "year":"XX",
+              "perks":"Special/Perk Lorem Ipsum Dolor Sit Amet Consecteteur"
+          }
+      ]
+  }
+}

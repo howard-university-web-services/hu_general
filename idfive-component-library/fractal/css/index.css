@@ -4269,7 +4269,7 @@ body.clean_light .contact-box span, body.clean_light .news-and-events__date, bod
   font-style: normal;
   font-family: "Open Sans", sans-serif; }
 
-label, .mobile-nav .silc-nav__link, .main-footer ul li, .main-nav .silc-nav__item--home, .main-nav .silc-nav__link, .main-nav .silc-nav__items .silc-nav__items .silc-nav__link, .no-display-menu-mobile.main-header__nav nav ul li--home, .no-display-menu-mobile.main-header__nav nav ul li a, .main-header__nav nav ul li--home, .main-header__nav nav ul li a, .breadcrumb__item--active, .utility__menu a, .sidebar-nav a, .sidebar-nav .silc-nav .silc-nav__items .silc-nav__items .silc-nav__link, table th, .faculty-profile h3, .faculty-profile h4, .our-people h4, .alumni-profile h4, body.clean_light h5,
+label, .mobile-nav .silc-nav__link, .main-footer ul li, .main-nav .silc-nav__item--home, .main-nav .silc-nav__link, .main-nav .silc-nav__items .silc-nav__items .silc-nav__link, .no-display-menu-mobile.main-header__nav nav ul li--home, .no-display-menu-mobile.main-header__nav nav ul li a, .main-header__nav nav ul li--home, .main-header__nav nav ul li a, .breadcrumb__item--active, .utility__menu a, .sidebar-nav a, .sidebar-nav .silc-nav .silc-nav__items .silc-nav__items .silc-nav__link, table th, .faculty-profile h3, .faculty-profile h4, .our-people h4, .alumni-profile h4, .giving-bbd__text-and-card__card-optional-link, body.clean_light h5,
 body.clean_light .h5, body.clean_light .contact-box a, body.clean_light .alumni-profile__caption h4, body.clean_light blockquote, body.clean_light span.fieldset-legend {
   font-weight: 700;
   font-style: normal;
@@ -4280,7 +4280,9 @@ body.clean_light .h5, body.clean_light .contact-box a, body.clean_light .alumni-
 .webform-button--submit,
 .button .button--primary, .js-form-submit, .form-submit,
 .webform-button--reset, .js-webform-novalidate, .news-and-events__date, .giving-feed__tag, .giving-feed__date, .giving__data-point__stat, table.tablesaw-stack td .tablesaw-cell-label,
-table.tablesaw-stack th .tablesaw-cell-label, .alumni-profile h3, .campus-communications__announcement-title, body.clean_light h2,
+table.tablesaw-stack th .tablesaw-cell-label, .alumni-profile h3, .campus-communications__announcement-title, .giving-bbd__text-and-card__text-title,
+h2.sidebar-title, .giving-bbd__text-and-card__card-title, .giving-bbd__business-list__labels-business p,
+.giving-bbd__business-list__labels-perks p, .giving-bbd__business-list__item-business-title, .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger, .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger p, body.clean_light h2,
 body.clean_light .h2, body.clean_light h3,
 body.clean_light .h3, body.clean_light .checkboxes--wrapper span.fieldset-legend, .checkboxes--wrapper body.clean_light span.fieldset-legend,
 body.clean_light .radios--wrapper span.fieldset-legend, .radios--wrapper body.clean_light span.fieldset-legend, body.clean_light table caption, table body.clean_light caption, body.clean_light body.classic_editorial .news-and-events__title, body.classic_editorial body.clean_light .news-and-events__title, body.clean_light body.classic_editorial .announcements__block--featured .announcements__title, body.classic_editorial .announcements__block--featured body.clean_light .announcements__title, body.clean_light h4,
@@ -11561,6 +11563,236 @@ ul.js-pager__items {
       text-decoration: underline; }
   .facebook-twitter-feed .social--error {
     color: #fff; }
+
+body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title {
+  font-size: 1.0625rem;
+  line-height: 1.35; }
+
+.giving-bbd__text-and-card {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+  margin-bottom: 3.125rem; }
+  @media (min-width: 1099px) {
+    .giving-bbd__text-and-card {
+      flex-direction: row; } }
+
+.giving-bbd__text-and-card__text-title,
+h2.sidebar-title {
+  font-size: 1.5rem;
+  line-height: 1.375;
+  color: #002A47; }
+
+.giving-bbd__text-and-card__text-body {
+  font-size: 1.125rem;
+  line-height: 1.75; }
+
+.giving-bbd__text-and-card__card {
+  padding: 1.875rem;
+  box-shadow: 0px 2px 25px rgba(0, 42, 71, 0.2);
+  border-top: 0.3125rem solid #EDC054; }
+
+.giving-bbd__text-and-card__card-title {
+  font-size: 1.0625rem;
+  line-height: 1.325;
+  color: #002A47; }
+
+.giving-bbd__text-and-card__card-body {
+  font-size: 0.875rem;
+  line-height: 1.428; }
+
+.giving-bbd__text-and-card__card-optional-link {
+  font-size: 0.875rem;
+  line-height: 1.428; }
+  .giving-bbd__text-and-card__card-optional-link a {
+    text-decoration: underline; }
+
+.giving-bbd__search-form form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.25rem;
+  flex-direction: column; }
+  @media (min-width: 1099px) {
+    .giving-bbd__search-form form {
+      flex-direction: row; } }
+  .giving-bbd__search-form form .js-form-item {
+    width: 100%; }
+    @media (min-width: 1099px) {
+      .giving-bbd__search-form form .js-form-item.form-item-field-hc-bd-location-state-value {
+        max-width: 7.125rem; } }
+  .giving-bbd__search-form form .form-actions {
+    width: 100%; }
+  .giving-bbd__search-form form .btn {
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: 1.875rem;
+    width: 100% !important;
+    justify-content: center;
+    font-size: 1.125rem;
+    line-height: 1.9444; }
+    @media (min-width: 1099px) {
+      .giving-bbd__search-form form .btn {
+        margin-top: inherit;
+        line-height: 0.9444; } }
+
+.giving-bbd__search-form__block {
+  width: 100%; }
+  @media (min-width: 1099px) {
+    .giving-bbd__search-form__block {
+      width: inherit; } }
+  .giving-bbd__search-form__block label {
+    font-size: 1rem;
+    color: #003A63;
+    line-height: 1.375; }
+  .giving-bbd__search-form__block select {
+    position: relative; }
+    .giving-bbd__search-form__block select:after {
+      content: "";
+      width: 0.75rem;
+      height: 0.75rem;
+      border-right: 0.125rem solid #003A63;
+      border-bottom: 0.125rem solid #003A63;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      position: absolute;
+      right: 0.625rem;
+      bottom: 0.625rem; }
+
+@media (min-width: 1099px) {
+  .giving-bbd__search-form__block:nth-child(1) {
+    width: 37%; } }
+
+.giving-bbd__business-list-container {
+  overflow-x: auto; }
+
+.giving-bbd__business-list {
+  overflow-x: auto;
+  margin: 3.125rem 0;
+  min-width: 40.625rem; }
+
+.giving-bbd__business-list__labels {
+  display: flex;
+  flex-direction: row;
+  gap: 1.875rem; }
+
+.giving-bbd__business-list__labels-business,
+.giving-bbd__business-list__labels-perks {
+  border-bottom: 0.1875rem solid #002A47; }
+  .giving-bbd__business-list__labels-business p,
+  .giving-bbd__business-list__labels-perks p {
+    font-size: 1.0625rem;
+    line-height: 1.375;
+    color: #002A47; }
+
+.giving-bbd__business-list__labels-business {
+  width: 55%; }
+  @media (min-width: 1099px) {
+    .giving-bbd__business-list__labels-business {
+      width: 66%; } }
+
+.giving-bbd__business-list__labels-perks {
+  width: 45%; }
+  @media (min-width: 1099px) {
+    .giving-bbd__business-list__labels-perks {
+      width: 33%; } }
+
+.giving-bbd__business-list__item {
+  display: flex;
+  flex-direction: row;
+  gap: 1.875rem;
+  border-bottom: 0.1875rem solid #d6e0e7; }
+
+.giving-bbd__business-list__item-business-info {
+  width: 55%;
+  padding-left: 2rem;
+  padding-top: 2.5rem; }
+  @media (min-width: 1099px) {
+    .giving-bbd__business-list__item-business-info {
+      width: 66%; } }
+
+.giving-bbd__business-list__item-perks {
+  width: 45%;
+  padding-top: 2.5rem; }
+  @media (min-width: 1099px) {
+    .giving-bbd__business-list__item-perks {
+      width: 33%; } }
+  .giving-bbd__business-list__item-perks p {
+    font-weight: 600 !important;
+    font-size: 1rem;
+    font-weight: 1.625; }
+
+.giving-bbd__business-list__item-business-title {
+  font-size: 1.5rem;
+  line-height: 1.375; }
+  .giving-bbd__business-list__item-business-title a {
+    color: #002A47;
+    text-decoration: none;
+    transition: color .2s ease-in-out; }
+    .giving-bbd__business-list__item-business-title a .icon-arrow-right:before {
+      transition: color .2s ease-in-out; }
+    .giving-bbd__business-list__item-business-title a:hover {
+      color: #2A6EBB; }
+      .giving-bbd__business-list__item-business-title a:hover .icon-arrow-right:before {
+        color: #2A6EBB; }
+
+.giving-bbd__business-list__item-business-description {
+  font-size: 1.0625rem;
+  line-height: 1.529; }
+
+.giving-bbd__business-list__item-business-details .silc-accordion__section {
+  box-shadow: none !important; }
+
+.giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #002A47; }
+  .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger p {
+    padding-left: 1.875rem;
+    padding-top: 1.125rem;
+    background-color: #fff;
+    box-shadow: none !important; }
+    .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger p:hover {
+      background-color: #fff; }
+    .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger p:before, .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger p:after {
+      left: 0.625rem !important; }
+    .silc-accordion__section--active .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger p:after {
+      display: none; }
+
+.giving-bbd__business-list__item-business-details-content {
+  box-shadow: none !important;
+  padding-left: 0; }
+  @media (min-width: 800px) {
+    body.clean_light.js .giving-bbd__business-list__item-business-details-content.silc-accordion__content--visible {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.875rem; } }
+  .silc-accordion__section--active .giving-bbd__business-list__item-business-details-content {
+    display: flex;
+    gap: 1.875rem;
+    justify-content: space-between; }
+
+.giving-bbd__business-details-label {
+  color: #275677;
+  font-size: 1.0625rem;
+  line-height: 1.176;
+  font-weight: 700; }
+
+.giving-bbd__business-list__item-business-details-content__contact p:not(.giving-bbd__business-details-label):not(.giving-bbd__business-details-email):not(.giving-bbd__business-details-phone) {
+  margin-bottom: 0; }
+
+.giving-bbd__business-details-phone {
+  font-weight: 700; }
+
+.givng-bbd__terms-of-use__title {
+  font-weight: 700;
+  font-size: 16;
+  line-height: 1.625;
+  margin-top: 2.5rem; }
+
+.givng-bbd__terms-of-use__body {
+  font-size: 16;
+  line-height: 1.625; }
 
 body.clean_light {
   background-color: #FFF;

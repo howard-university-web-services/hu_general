@@ -1,0 +1,282 @@
+body.clean_light.path--alias--browse-bison-business {
+  .contact-box {
+    .sidebar-title {
+      font-size: rem(17);
+      line-height: 1.35;
+    }
+  }
+}
+
+.giving-bbd__text-and-card {
+  display: flex;
+  gap: rem(40);
+  flex-direction: column;
+  margin-bottom: rem(50);
+  @include media("large-s") {
+    flex-direction: row;
+  }
+}
+.giving-bbd__text-and-card__text-title,
+h2.sidebar-title {
+  font-size: rem(24);
+  line-height: 1.375;
+  color: $mblue;
+  @extend %sans-extra-bold;
+}
+.giving-bbd__text-and-card__text-body {
+  font-size: rem(18);
+  line-height: 1.75;
+}
+.giving-bbd__text-and-card__card {
+  padding: rem(30);
+  box-shadow: 0px 2px 25px rgba(0, 42, 71, 0.2);
+  border-top: rem(5) solid $yellow;
+}
+.giving-bbd__text-and-card__card-title {
+  font-size: rem(17);
+  line-height: 1.325;
+  color: $mblue;
+  @extend %sans-extra-bold;
+}
+.giving-bbd__text-and-card__card-body {
+  font-size: rem(14);
+  line-height: 1.428;
+}
+.giving-bbd__text-and-card__card-optional-link {
+  font-size: rem(14);
+  line-height: 1.428;
+  @extend %sans-bold;
+  a {
+    text-decoration: underline;
+  }
+}
+.giving-bbd__search-form {
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: rem(20);
+    flex-direction: column;
+    @include media("large-s") {
+      flex-direction: row;
+    }
+    .js-form-item {
+      width: 100%;
+      &.form-item-field-hc-bd-location-state-value {
+        @include media("large-s") {
+          max-width: rem(114);
+        }
+      }
+    }
+    .form-actions {
+      width: 100%;
+    }
+    .btn {
+      margin-bottom: 0;
+      margin-right: 0;
+      margin-top: rem(30);
+      width: 100% !important;
+      justify-content: center;
+      font-size: rem(18);
+      line-height: 1.9444;
+      @include media("large-s") {
+        margin-top: inherit;
+        line-height: 0.9444;
+      }
+    }
+  }
+}
+.giving-bbd__search-form__block {
+  width: 100%;
+  @include media("large-s") {
+    width: inherit;
+  }
+  label {
+    font-size: rem(16);
+    color: $navy;
+    line-height: 1.375;
+  }
+  select {
+    position: relative;
+    &:after {
+      content: "";
+      width: rem(12);
+      height: rem(12);
+      border-right: rem(2) solid $navy;
+      border-bottom: rem(2) solid $navy;
+      transform: rotate(45deg);
+      position: absolute;
+      right: rem(10);
+      bottom: rem(10);
+    }
+  }
+}
+.giving-bbd__search-form__block:nth-child(1) {
+  @include media("large-s") {
+    width: 37%;
+  }
+}
+.giving-bbd__business-list-container {
+  overflow-x: auto;
+}
+.giving-bbd__business-list {
+  overflow-x: auto;
+  margin: rem(50) 0;
+  min-width: rem(650);
+}
+.giving-bbd__business-list__labels {
+  display: flex;
+  flex-direction: row;
+  gap: rem(30);
+}
+.giving-bbd__business-list__labels-business,
+.giving-bbd__business-list__labels-perks {
+  border-bottom: rem(3) solid $mblue;
+  p {
+    font-size: rem(17);
+    line-height: 1.375;
+    color: $mblue;
+    @extend %sans-extra-bold;
+  }
+}
+.giving-bbd__business-list__labels-business {
+  width: 55%;
+  @include media("large-s") {
+    width: 66%;
+  }
+}
+.giving-bbd__business-list__labels-perks {
+  width: 45%;
+  @include media("large-s") {
+    width: 33%;
+  }
+}
+.giving-bbd__business-list__item {
+  display: flex;
+  flex-direction: row;
+  gap: rem(30);
+  border-bottom: rem(3) solid #d6e0e7;
+}
+.giving-bbd__business-list__item-business-info {
+  width: 55%;
+  padding-left: rem(32);
+  padding-top: rem(40);
+  @include media("large-s") {
+    width: 66%;
+  }
+}
+.giving-bbd__business-list__item-perks {
+  width: 45%;
+  padding-top: rem(40);
+  @include media("large-s") {
+    width: 33%;
+  }
+  p {
+    font-weight: 600 !important;
+    font-size: rem(16);
+    font-weight: 1.625;
+  }
+}
+.giving-bbd__business-list__item-business-title {
+  font-size: rem(24);
+  line-height: 1.375;
+  @extend %sans-extra-bold;
+  a {
+    color: $mblue;
+    text-decoration: none;
+    transition:color .2s ease-in-out;
+    .icon-arrow-right{
+        &:before{
+            transition:color .2s ease-in-out;
+        }
+    }
+    &:hover{
+        color: $lightblue;
+        .icon-arrow-right{
+            &:before{
+                color:$lightblue;
+            }
+        }
+    }
+  }
+}
+.giving-bbd__business-list__item-business-description {
+  font-size: rem(17);
+  line-height: 1.529;
+}
+.giving-bbd__business-list__item-business-details {
+  .silc-accordion__section {
+    box-shadow: none !important;
+  }
+  .giving-bbd__business-list__item-business-details-trigger {
+    font-size: rem(16);
+    line-height: 1.75;
+    @extend %sans-extra-bold;
+    color: $mblue;
+    p {
+      padding-left: rem(30);
+      padding-top: rem(18);
+      background-color: #fff;
+      box-shadow: none !important;
+      &:hover {
+        background-color: #fff;
+      }
+      @extend %sans-extra-bold;
+      &:before,
+      &:after {
+        left: rem(10) !important;
+      }
+      &:after {
+        .silc-accordion__section--active & {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.giving-bbd__business-list__item-business-details-content {
+  box-shadow: none !important;
+  padding-left: 0;
+  @include media("medium") {
+    &.silc-accordion__content--visible {
+      body.clean_light.js & {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: rem(30);
+      }
+    }
+  }
+
+  .silc-accordion__section--active & {
+    display: flex;
+    gap: rem(30);
+    justify-content: space-between;
+  }
+}
+
+.giving-bbd__business-details-label {
+  color: #275677;
+  font-size: rem(17);
+  line-height: 1.176;
+  font-weight: 700;
+}
+.giving-bbd__business-list__item-business-details-content__contact {
+  p:not(.giving-bbd__business-details-label):not(.giving-bbd__business-details-email):not(.giving-bbd__business-details-phone) {
+    margin-bottom: 0;
+  }
+}
+
+.giving-bbd__business-details-phone {
+  font-weight: 700;
+}
+.givng-bbd__terms-of-use__title {
+  font-weight: 700;
+  font-size: 16;
+  line-height: 1.625;
+  margin-top: rem(40);
+}
+.givng-bbd__terms-of-use__body {
+  font-size: 16;
+  line-height: 1.625;
+}
