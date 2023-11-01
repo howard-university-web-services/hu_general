@@ -7,16 +7,18 @@
     max-width: 100%;
   }
   a{
+    transition: background-color .3s ease-in-out;
     &:hover{
       text-decoration: none;
+      background-color:$yellow;
+      .clean_light &{
+        background-color: $lightblue !important;
+      }
+      .classic_editorial &{
+        background-color: #f9f9f9 !important;
+      }
       .giving-feed__desc {
-        background-color:$yellow;
-        .clean_light &{
-          background-color: $lightblue !important;
-        }
-        .classic_editorial &{
-          background-color: #f9f9f9 !important;
-        }
+        
         .giving-feed__title, .giving-feed__tag{
           color:#000;
           .clean_light &{
@@ -40,12 +42,9 @@
   &.giving-feed--featured{
     a{
       &:hover{
-        .giving-feed__desc {
-          background-color:#fff;
-          .clean_light &{
-            background-color: #fff !important;
-          }
-          
+        background-color:#fff;
+        .clean_light &{
+          background-color: #fff !important;
         }
         .giving-feed__title{
           color: $navy !important;
@@ -142,7 +141,7 @@
     align-content: center;
     flex: 1 1 0px;
     padding: rem(30) rem(25);
-    background-color:#fff;
+    //background-color:#fff;
     transition: background-color .3s ease-in-out;
     .giving-feed--featured &{
       @include media("medium") {
