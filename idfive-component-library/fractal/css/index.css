@@ -8869,8 +8869,16 @@ p {
       .giving__data-point__description .fancy-link {
         text-align: left;
         margin: inherit; } }
+    .giving__data-point__description .fancy-link .icon-arrow-right:before {
+      color: white !important; }
+      .clean_light .giving__data-point__description .fancy-link .icon-arrow-right:before {
+        color: #2A6EBB !important; }
+      .classic_editorial .giving__data-point__description .fancy-link .icon-arrow-right:before {
+        color: #2A6EBB !important; }
     .giving__data-point__description .fancy-link:hover {
-      color: #2A6EBB; }
+      color: #2A6EBB !important; }
+      .giving__data-point__description .fancy-link:hover .icon-arrow-right:before {
+        color: #002A47 !important; }
 
 .carousel {
   background: #EEE;

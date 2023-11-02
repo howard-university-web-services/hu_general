@@ -83,8 +83,24 @@
           text-align: left;
           margin:inherit;
       }
+      .icon-arrow-right{
+        &:before{
+          color:white !important;
+          .clean_light &{
+            color:$lightblue !important;
+          }
+          .classic_editorial &{
+            color:$lightblue !important;
+          }
+        }
+      }
       &:hover{
-          color:$lightblue;
+          color:$lightblue !important;
+          .icon-arrow-right{
+            &:before{
+              color:$mblue !important;
+            }
+          }
       }
   }
 }
