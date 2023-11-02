@@ -60,6 +60,13 @@
       }
     }
   }
+  .block-header__btn{
+    .fancy-link{
+      .icon-arrow-right{
+        border:none !important;
+      }
+    }
+  }
 }
 
 .giving-feed__block {
@@ -294,5 +301,7 @@
       }
     }
   }
+
+
 
 

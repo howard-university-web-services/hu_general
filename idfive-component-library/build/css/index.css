@@ -8613,6 +8613,8 @@ a.news-and-events__block {
       color: #4C7290 !important; }
       .clean_light .giving-feed.giving-feed--featured a.giving-feed__block:hover .giving-feed__tag {
         color: #4C7290 !important; }
+  .giving-feed .block-header__btn .fancy-link .icon-arrow-right {
+    border: none !important; }
 
 .giving-feed__block {
   align-items: flex-start;
@@ -8869,12 +8871,14 @@ p {
       .giving__data-point__description .fancy-link {
         text-align: left;
         margin: inherit; } }
-    .giving__data-point__description .fancy-link .icon-arrow-right:before {
-      color: white !important; }
-      .clean_light .giving__data-point__description .fancy-link .icon-arrow-right:before {
-        color: #2A6EBB !important; }
-      .classic_editorial .giving__data-point__description .fancy-link .icon-arrow-right:before {
-        color: #2A6EBB !important; }
+    .giving__data-point__description .fancy-link .icon-arrow-right {
+      border: none; }
+      .giving__data-point__description .fancy-link .icon-arrow-right:before {
+        color: white !important; }
+        .clean_light .giving__data-point__description .fancy-link .icon-arrow-right:before {
+          color: #2A6EBB !important; }
+        .classic_editorial .giving__data-point__description .fancy-link .icon-arrow-right:before {
+          color: #2A6EBB !important; }
     .giving__data-point__description .fancy-link:hover {
       color: #2A6EBB !important; }
       .giving__data-point__description .fancy-link:hover .icon-arrow-right:before {
