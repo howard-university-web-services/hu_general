@@ -25,6 +25,9 @@
       border-bottom: none;
       border-right:rem(2) solid $navy;
       padding-right:rem(60);
+      .clean_light &{
+        border-color:#D6E0E7;
+      }
   }
 }
 .giving__data-point__stat{
@@ -49,10 +52,15 @@
   color:$mblue;
   margin-bottom:rem(30);
   padding-inline:rem(40);
+  @extend %serif-regular;
+  font-weight:500;
   @include media('large-s') {
       font-size:rem(25);
-      line-height:1.2; 
+      line-height:1.2;
       padding-inline:rem(0);
+  }
+  .clean_light &{
+    @extend %sans-bold;
   }
 }
 .giving__data-point__description{

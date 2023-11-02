@@ -6,41 +6,40 @@
   @include media("medium") {
     max-width: 100%;
   }
-  a{
-    transition: background-color .3s ease-in-out;
-    &:hover{
-      text-decoration: none;
-      background-color:$yellow;
-      .clean_light &{
-        background-color: $lightblue !important;
-      }
-      .classic_editorial &{
-        background-color: #f9f9f9 !important;
-      }
-      .giving-feed__desc {
-        
-        .giving-feed__title, .giving-feed__tag{
-          color:#000;
-          .clean_light &{
+  a.giving-feed__block{
+      transition: background-color .3s ease-in-out;
+      &:hover{
+        text-decoration: none;
+        background-color:$yellow;
+        .clean_light &{
+          background-color: $lightblue !important;
+          .giving-feed__title, .giving-feed__tag{
             color: #fff !important;
           }
-          .classic_editorial &{
+        }
+        .classic_editorial &{
+          background-color: #f9f9f9 !important;
+          .giving-feed__title, .giving-feed__tag{
             color: $lightblue !important;
           }
         }
-        
+        .giving-feed__desc {
+          .giving-feed__title, .giving-feed__tag{
+            color:#000;
+          }
+          
+        }
+        .classic_editorial &{
+          box-shadow: rem(1) rem(5) rem(24) rgba(0, 0, 0, 0.3);
+          border:rem(2) solid $lightblue;
+        }
       }
       .classic_editorial &{
-         box-shadow: rem(1) rem(5) rem(24) rgba(0, 0, 0, 0.3);
-         border:rem(2) solid $lightblue;
+        transition: box-shadow .3s ease-in-out, border .3s ease-in-out;
       }
-    }
-    .classic_editorial &{
-      transition: box-shadow .3s ease-in-out, border .3s ease-in-out;
-    }
   }
   &.giving-feed--featured{
-    a{
+    a.giving-feed__block{
       &:hover{
         background-color:#fff;
         .clean_light &{
@@ -86,8 +85,8 @@
       .classic_editorial &{
         padding:0;
         &:hover{
-          border:rem(2) solid #E9E9E9;
-          box-shadow:none;
+          border:rem(2) solid #E9E9E9 !important;
+          box-shadow:none !important;
         }
       }
     }
@@ -174,17 +173,20 @@
       padding:rem(20) rem(35);
       font-size:rem(18);
       transition: color .3s ease-in-out, background-color .3s ease-in-out;
-      .btn__text{
-      }
       .icon-arrow-right{
         &::before{
-          color:#fff;
+          color:$yellow;
+          .clean_light &{
+            color:#fff;
+          }
         }
       }
       &:hover{
-        background-color:$lightblue;
-        color:#fff;
-        text-decoration:underline;
+        .clean_light &{
+          background-color:$lightblue;
+          color:#fff;
+        }
+        text-decoration:none;
       }
     }
     .classic_editorial &{
@@ -201,6 +203,7 @@
     color: $navy;
     margin-top: rem(15);
     margin-bottom: rem(10);
+    text-transform: capitalize;
     transition: 0.3s color ease-in-out;
     @include media("medium") {
       line-height: (25/21) !important;
