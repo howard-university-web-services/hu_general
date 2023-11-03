@@ -696,7 +696,7 @@ body.classic_editorial {
       letter-spacing: normal;
       margin: 0;
       padding: 0 !important;
-      text-transform: none;
+      text-transform: capitalize;
 
       @include media("large") {
         font-size: rem(26);
@@ -706,11 +706,11 @@ body.classic_editorial {
 
   .block-header__title {
     margin: rem(4) rem(24) 0 0;
-    padding: 0 0 0 rem(30);
+    padding: 0 0 0 rem(45);
     position: relative;
 
     @include media("medium") {
-      padding-left: rem(48);
+      padding-left: rem(60);
       float: left;
     }
     h2,

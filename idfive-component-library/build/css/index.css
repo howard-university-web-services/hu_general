@@ -6903,6 +6903,8 @@ body.nav-toggled {
       font-size: 1.125rem;
       letter-spacing: 0.09375rem;
       margin: 0 0 1.125rem 0; } }
+  .clean_light .sidebar-title, .sidebar-title .classic_editorial {
+    letter-spacing: normal; }
 
 .department-title {
   width: 100%;
@@ -13524,18 +13526,18 @@ body.classic_editorial {
       letter-spacing: normal;
       margin: 0;
       padding: 0 !important;
-      text-transform: none; }
+      text-transform: capitalize; }
       @media (min-width: 1250px) {
         body.classic_editorial .block-header h2,
         body.classic_editorial .block-header .h2 {
           font-size: 1.625rem; } }
   body.classic_editorial .block-header__title {
     margin: 0.25rem 1.5rem 0 0;
-    padding: 0 0 0 1.875rem;
+    padding: 0 0 0 2.8125rem;
     position: relative; }
     @media (min-width: 800px) {
       body.classic_editorial .block-header__title {
-        padding-left: 3rem;
+        padding-left: 3.75rem;
         float: left; } }
     body.classic_editorial .block-header__title h2,
     body.classic_editorial .block-header__title .h2 {
