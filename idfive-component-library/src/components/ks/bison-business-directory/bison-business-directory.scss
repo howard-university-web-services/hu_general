@@ -16,13 +16,6 @@ body.clean_light.path--alias--browse-bison-business {
     flex-direction: row;
   }
 }
-.giving-bbd__text-and-card__text-title,
-h2.sidebar-title {
-  font-size: rem(24);
-  line-height: 1.375;
-  color: $mblue;
-  @extend %sans-extra-bold;
-}
 .giving-bbd__text-and-card__text-body {
   font-size: rem(18);
   line-height: 1.75;
@@ -184,19 +177,19 @@ h2.sidebar-title {
   a {
     color: $mblue;
     text-decoration: none;
-    transition:color .2s ease-in-out;
-    .icon-arrow-right{
-        &:before{
-            transition:color .2s ease-in-out;
-        }
+    transition: color 0.2s ease-in-out;
+    .icon-arrow-right {
+      &:before {
+        transition: color 0.2s ease-in-out;
+      }
     }
-    &:hover{
-        color: $lightblue;
-        .icon-arrow-right{
-            &:before{
-                color:$lightblue;
-            }
+    &:hover {
+      color: $lightblue;
+      .icon-arrow-right {
+        &:before {
+          color: $lightblue;
         }
+      }
     }
   }
 }

@@ -53,7 +53,7 @@ body.clean_light {
   %h2 {
     @extend %sans-extra-bold;
 
-    &:not(.main-header__dept):not(.silc-accordion__label) {
+    &:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
       font-size: rem(28);
       letter-spacing: em(-0.3, 34);
       line-height: (44 / 34);

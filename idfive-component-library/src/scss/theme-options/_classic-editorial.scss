@@ -80,7 +80,7 @@ body.classic_editorial {
     @extend %serif-regular;
     color: $mblue;
 
-    &:not(.main-header__dept):not(.silc-accordion__label) {
+    &:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
       font-size: rem(28);
       line-height: (46 / 36);
       @include media("medium") {

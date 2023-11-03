@@ -4280,8 +4280,7 @@ body.clean_light .h5, body.clean_light .contact-box a, body.clean_light .alumni-
 .webform-button--submit,
 .button .button--primary, .js-form-submit, .form-submit,
 .webform-button--reset, .js-webform-novalidate, .news-and-events__date, .giving-feed__tag, .giving-feed__date, .giving__data-point__stat, table.tablesaw-stack td .tablesaw-cell-label,
-table.tablesaw-stack th .tablesaw-cell-label, .alumni-profile h3, .campus-communications__announcement-title, .giving-bbd__text-and-card__text-title,
-h2.sidebar-title, .giving-bbd__text-and-card__card-title, .giving-bbd__business-list__labels-business p,
+table.tablesaw-stack th .tablesaw-cell-label, .alumni-profile h3, .campus-communications__announcement-title, .giving-bbd__text-and-card__card-title, .giving-bbd__business-list__labels-business p,
 .giving-bbd__business-list__labels-perks p, .giving-bbd__business-list__item-business-title, .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger, .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger p, body.clean_light h2,
 body.clean_light .h2, body.clean_light h3,
 body.clean_light .h3, body.clean_light .checkboxes--wrapper span.fieldset-legend, .checkboxes--wrapper body.clean_light span.fieldset-legend,
@@ -11596,12 +11595,6 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
     .giving-bbd__text-and-card {
       flex-direction: row; } }
 
-.giving-bbd__text-and-card__text-title,
-h2.sidebar-title {
-  font-size: 1.5rem;
-  line-height: 1.375;
-  color: #002A47; }
-
 .giving-bbd__text-and-card__text-body {
   font-size: 1.125rem;
   line-height: 1.75; }
@@ -11747,9 +11740,9 @@ h2.sidebar-title {
   .giving-bbd__business-list__item-business-title a {
     color: #002A47;
     text-decoration: none;
-    transition: color .2s ease-in-out; }
+    transition: color 0.2s ease-in-out; }
     .giving-bbd__business-list__item-business-title a .icon-arrow-right:before {
-      transition: color .2s ease-in-out; }
+      transition: color 0.2s ease-in-out; }
     .giving-bbd__business-list__item-business-title a:hover {
       color: #2A6EBB; }
       .giving-bbd__business-list__item-business-title a:hover .icon-arrow-right:before {
@@ -12073,14 +12066,14 @@ body.clean_light {
       body.clean_light .silc-accordion__content h5,
       body.clean_light .cke_editable_themed h5 {
         font-size: 1rem; } }
-  body.clean_light h2:not(.main-header__dept):not(.silc-accordion__label),
-  body.clean_light .h2:not(.main-header__dept):not(.silc-accordion__label) {
+  body.clean_light h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title),
+  body.clean_light .h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
     font-size: 1.75rem;
     letter-spacing: -0.00882em;
     line-height: 1.29412; }
     @media (min-width: 800px) {
-      body.clean_light h2:not(.main-header__dept):not(.silc-accordion__label),
-      body.clean_light .h2:not(.main-header__dept):not(.silc-accordion__label) {
+      body.clean_light h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title),
+      body.clean_light .h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
         font-size: 2.125rem; } }
   body.clean_light h3,
   body.clean_light .h3,
@@ -13149,13 +13142,13 @@ body.classic_editorial {
   body.classic_editorial h2,
   body.classic_editorial .h2 {
     color: #002A47; }
-    body.classic_editorial h2:not(.main-header__dept):not(.silc-accordion__label),
-    body.classic_editorial .h2:not(.main-header__dept):not(.silc-accordion__label) {
+    body.classic_editorial h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title),
+    body.classic_editorial .h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
       font-size: 1.75rem;
       line-height: 1.27778; }
       @media (min-width: 800px) {
-        body.classic_editorial h2:not(.main-header__dept):not(.silc-accordion__label),
-        body.classic_editorial .h2:not(.main-header__dept):not(.silc-accordion__label) {
+        body.classic_editorial h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title),
+        body.classic_editorial .h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
           font-size: 2.25rem; } }
   body.classic_editorial h3,
   body.classic_editorial .h3,
