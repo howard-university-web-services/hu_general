@@ -4281,7 +4281,7 @@ body.clean_light .h5, body.clean_light .contact-box a, body.clean_light .alumni-
 .button .button--primary, .js-form-submit, .form-submit,
 .webform-button--reset, .js-webform-novalidate, .news-and-events__date, .giving-feed__tag, .giving-feed__date, .giving__data-point__stat, table.tablesaw-stack td .tablesaw-cell-label,
 table.tablesaw-stack th .tablesaw-cell-label, .alumni-profile h3, .campus-communications__announcement-title, .giving-bbd__text-and-card__card-title, .giving-bbd__business-list__labels-business p,
-.giving-bbd__business-list__labels-perks p, .giving-bbd__business-list__item-business-title, .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger, .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger p, body.clean_light h2,
+.giving-bbd__business-list__labels-perks p, .giving-bbd__business-list__item-business-title, .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger, .giving-bbd__business-list__item-business-details .giving-bbd__business-list__item-business-details-trigger p, .clean_light .countdown-sequence-title, .countdown-sequence-text, body.clean_light h2,
 body.clean_light .h2, body.clean_light h3,
 body.clean_light .h3, body.clean_light .checkboxes--wrapper span.fieldset-legend, .checkboxes--wrapper body.clean_light span.fieldset-legend,
 body.clean_light .radios--wrapper span.fieldset-legend, .radios--wrapper body.clean_light span.fieldset-legend, body.clean_light table caption, table body.clean_light caption, body.clean_light body.classic_editorial .news-and-events__title, body.classic_editorial body.clean_light .news-and-events__title, body.clean_light body.classic_editorial .announcements__block--featured .announcements__title, body.classic_editorial .announcements__block--featured body.clean_light .announcements__title, body.clean_light h4,
@@ -4298,7 +4298,7 @@ body.clean_light .no-display-menu-mobile.main-header__nav nav ul li a, body.clea
   font-family: "Open Sans", sans-serif; }
 
 .body-text--social-media, .full-width-cta h2, h3, .h3, .checkboxes--wrapper span.fieldset-legend,
-.radios--wrapper span.fieldset-legend, table caption, body.classic_editorial .news-and-events__title, body.classic_editorial .announcements__block--featured .announcements__title, .lead-in, .lead-in-large, blockquote, .nav-toggled .main-header__nav ul li li a, .contact-box span, .contact-box p, .department-title__desc, .announcements__title, .news-and-events__title, .classic_editorial .giving-feed__tag, .data-point__stat-subtext, .faculty-profile h5, .faculty-profile h6, .faculty-profile__link, body.classic_editorial, body.classic_editorial h2,
+.radios--wrapper span.fieldset-legend, table caption, body.classic_editorial .news-and-events__title, body.classic_editorial .announcements__block--featured .announcements__title, .lead-in, .lead-in-large, blockquote, .nav-toggled .main-header__nav ul li li a, .contact-box span, .contact-box p, .department-title__desc, .announcements__title, .news-and-events__title, .classic_editorial .giving-feed__tag, .data-point__stat-subtext, .faculty-profile h5, .faculty-profile h6, .faculty-profile__link, .countdown-sequence-title, .countdown-sequence-label, body.classic_editorial, body.classic_editorial h2,
 body.classic_editorial .h2, body.classic_editorial h3,
 body.classic_editorial .h3, body.classic_editorial table caption, table body.classic_editorial caption, body.classic_editorial h4,
 body.classic_editorial .h4, body.classic_editorial .silc-accordion__label, body.classic_editorial h5,
@@ -4334,7 +4334,7 @@ body.classic_editorial .full-width-image-banner h2, body.classic_editorial .body
   font-style: italic;
   font-family: "Serif12Beta", serif; }
 
-.classic_editorial .giving__data-point__stat, body.classic_editorial .sidebar-title {
+.classic_editorial .giving__data-point__stat, .classic_editorial .countdown-sequence-text, body.classic_editorial .sidebar-title {
   font-weight: bold;
   font-style: italic;
   font-family: "Serif12Beta", serif; }
@@ -11807,6 +11807,200 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
 .givng-bbd__terms-of-use__body {
   font-size: 16;
   line-height: 1.625; }
+
+.countdown {
+  background-color: #003A63;
+  padding: 2.8125rem 2.25rem; }
+  @media (min-width: 1099px) {
+    .countdown {
+      padding: 3.75rem 0 3.75rem 2.5rem; } }
+  .clean_light .countdown {
+    background-color: #2A6EBB; }
+    @media (min-width: 1099px) {
+      .clean_light .countdown {
+        padding: 4.0625rem 0 4.0625rem 3.3125rem; } }
+  @media (min-width: 1099px) {
+    .classic_editorial .countdown {
+      padding: 4.0625rem 0 4.0625rem 3.3125rem; } }
+
+@media (min-width: 1099px) {
+  .countdown-container {
+    padding-right: 2.5rem; }
+    .classic_editorial .countdown-container, .clean_light .countdown-container {
+      padding-right: 3.3125rem; } }
+
+.countdown-container.has-image {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 1099px) {
+    .countdown-container.has-image {
+      flex-direction: row;
+      align-items: center;
+      padding-right: 0; } }
+  .clean_light .countdown-container.has-image:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 7.625rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; }
+    @media (min-width: 1099px) {
+      .clean_light .countdown-container.has-image:after {
+        height: 8.875rem; } }
+
+.countdown-image-canvas {
+  position: relative;
+  width: 100%;
+  z-index: 2; }
+  .countdown-image-canvas:before {
+    content: "";
+    display: block;
+    padding-top: 66.28%; }
+  .countdown-image-canvas img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  @media (min-width: 1099px) {
+    .countdown-image-canvas {
+      width: 46%; } }
+  @media (min-width: 1099px) {
+    .clean_light .countdown-image-canvas, .classic_editorial .countdown-image-canvas {
+      width: 48%; } }
+  @media (min-width: 1099px) {
+    .classic_editorial .countdown-image-canvas {
+      width: 48.8%; } }
+
+.countdown-sequence-container {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 1099px) {
+    .has-image .countdown-sequence-container {
+      width: 55%; }
+      .clean_light .has-image .countdown-sequence-container {
+        width: 54%;
+        padding-top: 8.875rem; } }
+
+.countdown-sequence-title {
+  color: white;
+  font-size: 1.75rem;
+  line-height: 1.214;
+  text-align: center;
+  width: 100%;
+  margin-inline: auto;
+  padding-bottom: 0.9375rem;
+  padding-top: 2rem; }
+  @media (min-width: 1099px) {
+    .countdown-sequence-title {
+      width: 69%;
+      padding-top: 0;
+      font-size: 2.25rem;
+      line-height: 1.2222;
+      letter-spacing: -0.02rem; } }
+  @media (min-width: 1099px) {
+    .clean_light .countdown-sequence-title {
+      font-size: 1.75rem;
+      line-height: 1.2142;
+      letter-spacing: -0.01562rem; } }
+  .classic_editorial .countdown-sequence-title {
+    font-family: "Serif12Beta", serif;
+    font-weight: 300; }
+
+.countdown-sequence {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 0.625rem; }
+  @media (min-width: 1099px) {
+    .countdown-sequence {
+      padding-inline: 2.5rem;
+      max-width: 61.25rem;
+      margin-inline: auto; }
+      .classic_editorial .countdown-sequence {
+        max-width: 56.25rem; }
+      .clean_light .countdown-sequence {
+        max-width: 61.25rem; } }
+
+.countdown-sequence-text {
+  font-size: clamp(2.625rem, 8.5vw, 7.75rem);
+  line-height: clamp(2.3125rem, 8.5vw, 6.875rem);
+  text-align: center;
+  color: white;
+  position: relative; }
+  .has-image .countdown-sequence-text {
+    font-size: clamp(2.625rem, 8.5vw, 4.3125rem);
+    line-height: clamp(2.3125rem, 8.5vw, 3.8125rem); }
+  .countdown-sequence-text span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+
+.time-sep {
+  color: #fff;
+  font-size: clamp(1.8125rem, 8.5vw, 5.875rem);
+  line-height: clamp(2.1875rem, 8.5vw, 3.25rem);
+  padding-top: 0rem; }
+  @media (min-width: 1099px) {
+    .time-sep {
+      padding-top: 1.25rem; } }
+  .has-image .time-sep {
+    font-size: clamp(1.8125rem, 8.5vw, 3.25rem);
+    padding-top: 0rem; }
+    .clean_light .has-image .time-sep {
+      padding-top: 0; }
+  .clean_light .time-sep {
+    padding-top: 0rem; }
+    @media (min-width: 1099px) {
+      .clean_light .time-sep {
+        padding-top: 1.25rem; } }
+  .classic_editorial .time-sep {
+    padding-top: 0; }
+
+.countdown-sequence-label {
+  width: 2.8125rem;
+  font-size: 1rem;
+  line-height: 1.0625;
+  border-top: 0.1875rem solid #2A6EBB;
+  margin-inline: auto;
+  text-align: center;
+  color: #fff;
+  padding-top: 0.9375rem;
+  margin-top: 8.125rem; }
+  .has-image .countdown-sequence-label {
+    margin-top: 5rem; }
+    @media (min-width: 1099px) {
+      .has-image .countdown-sequence-label {
+        width: 4.6875rem; } }
+  @media (min-width: 1099px) {
+    .countdown-sequence-label {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      width: 5.9375rem; } }
+  .clean_light .countdown-sequence-label {
+    border-top: 0.1875rem solid #003A63; }
+  .classic_editorial .countdown-sequence-label {
+    border-top: 0.1875rem solid #E51937; }
+
+.countdown-link {
+  text-align: center; }
+  .countdown-link a {
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.428;
+    text-decoration: underline; }
 
 body.clean_light {
   background-color: #FFF;
