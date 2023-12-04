@@ -42,7 +42,7 @@ body.clean_light {
       letter-spacing: 0;
       line-height: rem(24);
       font-size: rem(17);
-      @include media('medium') {
+      @include media("medium") {
         font-size: rem(16);
       }
     }
@@ -53,7 +53,7 @@ body.clean_light {
   %h2 {
     @extend %sans-extra-bold;
 
-    &:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
+    &:not(.main-header__dept):not(.silc-accordion__label) {
       font-size: rem(28);
       letter-spacing: em(-0.3, 34);
       line-height: (44 / 34);
@@ -500,7 +500,6 @@ body.clean_light {
     }
 
     .block-header__title {
-
       margin: rem(13) rem(24) 0 0;
       padding-left: rem(30);
       position: relative;
@@ -1196,7 +1195,6 @@ body.clean_light {
       color: $white;
     }
   }
-
 
   /* Video Embed */
 

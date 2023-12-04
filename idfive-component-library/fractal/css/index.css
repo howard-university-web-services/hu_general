@@ -12264,14 +12264,14 @@ body.clean_light {
       body.clean_light .silc-accordion__content h5,
       body.clean_light .cke_editable_themed h5 {
         font-size: 1rem; } }
-  body.clean_light h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title),
-  body.clean_light .h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
+  body.clean_light h2:not(.main-header__dept):not(.silc-accordion__label),
+  body.clean_light .h2:not(.main-header__dept):not(.silc-accordion__label) {
     font-size: 1.75rem;
     letter-spacing: -0.00882em;
     line-height: 1.29412; }
     @media (min-width: 800px) {
-      body.clean_light h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title),
-      body.clean_light .h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
+      body.clean_light h2:not(.main-header__dept):not(.silc-accordion__label),
+      body.clean_light .h2:not(.main-header__dept):not(.silc-accordion__label) {
         font-size: 2.125rem; } }
   body.clean_light h3,
   body.clean_light .h3,
@@ -13340,13 +13340,13 @@ body.classic_editorial {
   body.classic_editorial h2,
   body.classic_editorial .h2 {
     color: #002A47; }
-    body.classic_editorial h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title),
-    body.classic_editorial .h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
+    body.classic_editorial h2:not(.main-header__dept):not(.silc-accordion__label),
+    body.classic_editorial .h2:not(.main-header__dept):not(.silc-accordion__label) {
       font-size: 1.75rem;
       line-height: 1.27778; }
       @media (min-width: 800px) {
-        body.classic_editorial h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title),
-        body.classic_editorial .h2:not(.main-header__dept):not(.silc-accordion__label):not(.sidebar-title) {
+        body.classic_editorial h2:not(.main-header__dept):not(.silc-accordion__label),
+        body.classic_editorial .h2:not(.main-header__dept):not(.silc-accordion__label) {
           font-size: 2.25rem; } }
   body.classic_editorial h3,
   body.classic_editorial .h3,
