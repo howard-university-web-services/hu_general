@@ -8583,39 +8583,47 @@ a.news-and-events__block {
     .giving-feed {
       max-width: 100%; } }
   .giving-feed a.giving-feed__block {
-    transition: background-color .3s ease-in-out; }
+    transition: background-color 0.3s ease-in-out; }
     .giving-feed a.giving-feed__block:hover {
       text-decoration: none;
       background-color: #EDC054; }
       .clean_light .giving-feed a.giving-feed__block:hover {
         background-color: #2A6EBB !important; }
-        .clean_light .giving-feed a.giving-feed__block:hover .giving-feed__title, .clean_light .giving-feed a.giving-feed__block:hover .giving-feed__tag {
+        .clean_light .giving-feed a.giving-feed__block:hover .giving-feed__title,
+        .clean_light .giving-feed a.giving-feed__block:hover .giving-feed__tag {
           color: #fff !important; }
       .classic_editorial .giving-feed a.giving-feed__block:hover {
         background-color: #f9f9f9 !important; }
-        .classic_editorial .giving-feed a.giving-feed__block:hover .giving-feed__title, .classic_editorial .giving-feed a.giving-feed__block:hover .giving-feed__tag {
+        .classic_editorial .giving-feed a.giving-feed__block:hover .giving-feed__title,
+        .classic_editorial .giving-feed a.giving-feed__block:hover .giving-feed__tag {
           color: #2A6EBB !important; }
-      .giving-feed a.giving-feed__block:hover .giving-feed__desc .giving-feed__title, .giving-feed a.giving-feed__block:hover .giving-feed__desc .giving-feed__tag {
+      .giving-feed a.giving-feed__block:hover .giving-feed__desc .giving-feed__title,
+      .giving-feed a.giving-feed__block:hover .giving-feed__desc .giving-feed__tag {
         color: #000; }
       .classic_editorial .giving-feed a.giving-feed__block:hover {
         box-shadow: 0.0625rem 0.3125rem 1.5rem rgba(0, 0, 0, 0.3);
         border: 0.125rem solid #2A6EBB; }
     .classic_editorial .giving-feed a.giving-feed__block {
-      transition: box-shadow .3s ease-in-out, border .3s ease-in-out; }
+      transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out; }
   .giving-feed.giving-feed--featured a.giving-feed__block:hover {
     background-color: #fff; }
     .clean_light .giving-feed.giving-feed--featured a.giving-feed__block:hover {
       background-color: #fff !important; }
     .giving-feed.giving-feed--featured a.giving-feed__block:hover .giving-feed__title {
       color: #003A63 !important; }
-      .clean_light .giving-feed.giving-feed--featured a.giving-feed__block:hover .giving-feed__title, .classic_editorial .giving-feed.giving-feed--featured a.giving-feed__block:hover .giving-feed__title {
+      .clean_light .giving-feed.giving-feed--featured a.giving-feed__block:hover .giving-feed__title,
+      .classic_editorial .giving-feed.giving-feed--featured a.giving-feed__block:hover .giving-feed__title {
         color: #002A47 !important; }
     .giving-feed.giving-feed--featured a.giving-feed__block:hover .giving-feed__tag {
       color: #4C7290 !important; }
       .clean_light .giving-feed.giving-feed--featured a.giving-feed__block:hover .giving-feed__tag {
-        color: #4C7290 !important; }
+        color: #4c7290 !important; }
   .giving-feed .block-header__btn .fancy-link .icon-arrow-right {
     border: none !important; }
+  .giving-feed p {
+    color: #2F2F2F; }
+  .giving-feed .silc-grid:not(.silc-grid--collapse):last-child {
+    margin-bottom: -24px; }
 
 .giving-feed__block {
   align-items: flex-start;
@@ -8640,14 +8648,14 @@ a.news-and-events__block {
     .classic_editorial .giving-feed--featured .giving-feed__block {
       padding: 0; }
       .classic_editorial .giving-feed--featured .giving-feed__block:hover {
-        border: 0.125rem solid #E9E9E9 !important;
+        border: 0.125rem solid #e9e9e9 !important;
         box-shadow: none !important; }
   .clean_light .giving-feed__block {
     box-shadow: 0.0625rem 0.3125rem 1.5rem rgba(0, 0, 0, 0.3); }
   .classic_editorial .giving-feed__block {
     padding: 1.5625rem;
     background-color: #f9f9f9;
-    border: 0.125rem solid #E9E9E9; }
+    border: 0.125rem solid #e9e9e9; }
 
 .giving-feed__img {
   margin-right: 0.9375rem;
@@ -8681,7 +8689,7 @@ a.news-and-events__block {
   align-content: center;
   flex: 1 1 0px;
   padding: 1.875rem 1.5625rem;
-  transition: background-color .3s ease-in-out; }
+  transition: background-color 0.3s ease-in-out; }
   @media (min-width: 800px) {
     .giving-feed--featured .giving-feed__desc {
       padding: 1.875rem 1.5625rem 1.875rem 3.75rem; } }
@@ -8707,7 +8715,7 @@ a.news-and-events__block {
     margin-block: 1.5625rem;
     padding: 1.25rem 2.1875rem;
     font-size: 1.125rem;
-    transition: color .3s ease-in-out, background-color .3s ease-in-out; }
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; }
     .giving-feed__desc .btn .icon-arrow-right::before {
       color: #EDC054; }
       .clean_light .giving-feed__desc .btn .icon-arrow-right::before {
@@ -8752,9 +8760,6 @@ a.news-and-events__block {
     line-height: 1.2211;
     font-family: "Serif12Beta", serif; }
 
-p {
-  color: #2F2F2F; }
-
 .giving-feed__tag {
   display: block;
   font-size: 1rem;
@@ -8793,9 +8798,6 @@ p {
       line-height: 1.125rem;
       margin-bottom: 0.3125rem; } }
 
-.silc-grid:not(.silc-grid--collapse):last-child {
-  margin-bottom: -24px; }
-
 .giving__data-point {
   padding: 2.5rem 1.875rem;
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.3);
@@ -8816,7 +8818,7 @@ p {
 
 .giving__data-point__stat-container {
   width: 100%;
-  border-bottom: 0.125rem solid #D6E0E7;
+  border-bottom: 0.125rem solid #d6e0e7;
   padding-right: 0; }
   @media (min-width: 1099px) {
     .giving__data-point__stat-container {
@@ -8825,7 +8827,7 @@ p {
       border-right: 0.125rem solid #003A63;
       padding-right: 3.75rem; }
       .clean_light .giving__data-point__stat-container {
-        border-color: #D6E0E7; } }
+        border-color: #d6e0e7; } }
 
 .giving__data-point__stat {
   font-size: 5.3125rem;
@@ -8867,7 +8869,7 @@ p {
     color: #002A47;
     text-align: center;
     margin: 0 auto;
-    transition: color .2s ease-in-out; }
+    transition: color 0.2s ease-in-out; }
     @media (min-width: 1099px) {
       .giving__data-point__description .fancy-link {
         text-align: left;

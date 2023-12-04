@@ -1,107 +1,107 @@
-.giving__data-point{
-  padding:rem(40) rem(30);
-  box-shadow:0 2px 25px rgba(0, 0, 0, 0.3);
-  margin-block:rem(70);
-  @include media('large-s') {
-      padding:rem(100);
+.giving__data-point {
+  padding: rem(40) rem(30);
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.3);
+  margin-block: rem(70);
+  @include media("large-s") {
+    padding: rem(100);
   }
 }
-.giving__data-point__container{
-  display:flex;
-  gap:rem(30);
+.giving__data-point__container {
+  display: flex;
+  gap: rem(30);
   align-items: center;
-  flex-direction:column;
-  @include media('large-s') {
-      flex-direction: row;
-      gap:rem(60);
+  flex-direction: column;
+  @include media("large-s") {
+    flex-direction: row;
+    gap: rem(60);
   }
 }
-.giving__data-point__stat-container{
-  width:100%;
-  border-bottom:rem(2) solid #D6E0E7;
+.giving__data-point__stat-container {
+  width: 100%;
+  border-bottom: rem(2) solid #d6e0e7;
   padding-right: 0;
-  @include media('large-s') {
-      width:50%;
-      border-bottom: none;
-      border-right:rem(2) solid $navy;
-      padding-right:rem(60);
-      .clean_light &{
-        border-color:#D6E0E7;
-      }
+  @include media("large-s") {
+    width: 50%;
+    border-bottom: none;
+    border-right: rem(2) solid $navy;
+    padding-right: rem(60);
+    .clean_light & {
+      border-color: #d6e0e7;
+    }
   }
 }
-.giving__data-point__stat{
-  font-size:rem(85);
-  line-height:1.3647;
-  color:$mblue;
-  text-align:center;
-  margin:0;
-  @include media('1440') {
-      font-size:rem(135);
-      line-height:1.1185;
+.giving__data-point__stat {
+  font-size: rem(85);
+  line-height: 1.3647;
+  color: $mblue;
+  text-align: center;
+  margin: 0;
+  @include media("1440") {
+    font-size: rem(135);
+    line-height: 1.1185;
   }
   @extend %sans-extra-bold;
-  .classic_editorial &{
+  .classic_editorial & {
     @extend %serif-italic-bold;
   }
 }
-.data-point__stat-subtext{
-  font-size:rem(20);
-  line-height:1.4;
+.data-point__stat-subtext {
+  font-size: rem(20);
+  line-height: 1.4;
   text-align: center;
-  color:$mblue;
-  margin-bottom:rem(30);
-  padding-inline:rem(40);
+  color: $mblue;
+  margin-bottom: rem(30);
+  padding-inline: rem(40);
   @extend %serif-regular;
-  font-weight:500;
-  @include media('large-s') {
-      font-size:rem(25);
-      line-height:1.2;
-      padding-inline:rem(0);
+  font-weight: 500;
+  @include media("large-s") {
+    font-size: rem(25);
+    line-height: 1.2;
+    padding-inline: rem(0);
   }
-  .clean_light &{
+  .clean_light & {
     @extend %sans-bold;
   }
 }
-.giving__data-point__description{
-  width:100%;
-  font-size:rem(17);
-  line-height:1.5294;
+.giving__data-point__description {
+  width: 100%;
+  font-size: rem(17);
+  line-height: 1.5294;
   text-align: center;
-  @include media('large-s') {
-      width:50%;
-      text-align: left;
+  @include media("large-s") {
+    width: 50%;
+    text-align: left;
   }
-  .fancy-link{
-      font-size:rem(18);
-      line-height:1.333;
-      color:$mblue;
-      text-align: center;
-      margin:0 auto;
-      transition:color .2s ease-in-out;
-      @include media('large-s') {
-          text-align: left;
-          margin:inherit;
-      }
-      .icon-arrow-right{
-        border:none;
-        &:before{
-          color:white !important;
-          .clean_light &{
-            color:$lightblue !important;
-          }
-          .classic_editorial &{
-            color:$lightblue !important;
-          }
+  .fancy-link {
+    font-size: rem(18);
+    line-height: 1.333;
+    color: $mblue;
+    text-align: center;
+    margin: 0 auto;
+    transition: color 0.2s ease-in-out;
+    @include media("large-s") {
+      text-align: left;
+      margin: inherit;
+    }
+    .icon-arrow-right {
+      border: none;
+      &:before {
+        color: white !important;
+        .clean_light & {
+          color: $lightblue !important;
+        }
+        .classic_editorial & {
+          color: $lightblue !important;
         }
       }
-      &:hover{
-          color:$lightblue !important;
-          .icon-arrow-right{
-            &:before{
-              color:$mblue !important;
-            }
-          }
+    }
+    &:hover {
+      color: $lightblue !important;
+      .icon-arrow-right {
+        &:before {
+          color: $mblue !important;
+        }
       }
+    }
   }
 }
