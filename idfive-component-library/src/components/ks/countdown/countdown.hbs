@@ -1,0 +1,34 @@
+<div class="countdown" data-enddate="{{countdown-date.year}}-{{countdown-date.month}}-{{countdown-date.day}}T{{countdown-date.hour}}:{{countdown-date.minute}}:{{countdown-date.second}}">
+    <div class="countdown-container{{#if countdown-image.src}} has-image{{/if}}">
+        {{#if countdown-image.src}}
+        <div class="countdown-image-canvas">
+            <img src="{{path '{{countdown-image.src}}'}}" alt="{{path '{{countdown-image.alt}}'}}" />
+        </div>
+        {{/if}}
+        <div class="countdown-sequence-container">
+            <p class="countdown-sequence-title">{{countdown-title}}</p>
+            <div class="countdown-sequence">
+                <div class="countdown-sequence_days">
+                    <p class="countdown-sequence-text"><span id="countdown-days">100</span></p>
+                    <p class="countdown-sequence-label">Days</p>
+                </div>
+                <span class="time-sep">:</span>
+                <div class="countdown-sequence_hours">
+                    <p class="countdown-sequence-text"><span id="countdown-hours">23</span></p>
+                    <p class="countdown-sequence-label">Hours</p>
+                </div>
+                <span class="time-sep">:</span>
+                <div class="countdown-sequence_mins">
+                    <p class="countdown-sequence-text"><span id="countdown-mins">59</span></p>
+                    <p class="countdown-sequence-label">Mins</p>
+                </div>
+                <span class="time-sep">:</span>
+                <div class="countdown-sequence_secs">
+                    <p class="countdown-sequence-text"><span id="countdown-secs">59</span></p>
+                    <p class="countdown-sequence-label">Secs</p>
+                </div>
+            </div>
+            <p class="countdown-link"><a href="{{path '{{countdown-link.url}}'}}">{{path '{{countdown-link.text}}'}}</a></p>
+        </div>
+    </div>
+</div>

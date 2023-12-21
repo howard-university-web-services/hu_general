@@ -49,4 +49,7 @@
     letter-spacing: rem(1.5);
     margin: 0 0 rem(18) 0;
   }
+  .clean_light &, .classic_editorial{
+    letter-spacing: normal;
+  }
 }

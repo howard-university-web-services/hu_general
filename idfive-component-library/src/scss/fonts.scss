@@ -79,6 +79,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-giving-stories:before {
+  content: "\e90b";
+}
 .icon-our-people-line:before {
   content: "\e90a";
 }
@@ -239,7 +242,7 @@
   content: "\ea92";
 }
 .icon-twitter:before {
-  content: "\ea96";
+  content: "\e90c";
 }
 .icon-rss:before {
   content: "\ea9b";

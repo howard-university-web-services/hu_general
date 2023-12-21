@@ -1054,6 +1054,9 @@ label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-giving-stories:before {
+  content: "\E90B"; }
+
 .icon-our-people-line:before {
   content: "\E90A"; }
 
@@ -1214,7 +1217,7 @@ label {
   content: "\EA92"; }
 
 .icon-twitter:before {
-  content: "\EA96"; }
+  content: "\E90C"; }
 
 .icon-rss:before {
   content: "\EA9B"; }

@@ -23,12 +23,13 @@ import ourPeople from "../components/ks/our-people/our-people";
 import SlideDistance from "../js/SlideDistance";
 import * as Tablesaw from "tablesaw";
 import { JumpTo } from "../js/smooth-scroll";
-import focusWithin from 'focus-within';
-import MicroModal from 'micromodal';
-import Player from '@vimeo/player';
+import focusWithin from "focus-within";
+import MicroModal from "micromodal";
+import Player from "@vimeo/player";
 import initProgramFinder from "../components/program-finder/program-finder";
 import ThemeOptionSelect from "./theme-option-select";
 import youtubePlaylist from "../components/ks/video/video";
+import countdownInit from "../components/ks/countdown/countdown";
 
 focusWithin(document);
 JumpTo();
@@ -53,27 +54,27 @@ function insertHomepageHeroVimeoEmbed() {
       autoplay: true,
       background: true,
       controls: false,
-      responsive: true
+      responsive: true,
     };
-    var hcsh_hero_video = new Player('hcsh-hero-video', options);
+    var hcsh_hero_video = new Player("hcsh-hero-video", options);
     let hcsc_pause = document.querySelector(".hcsc_hero_video_pause_control");
     let hcsc_play = document.querySelector(".hcsc_hero_video_play_control");
-    hcsc_pause.addEventListener("click", function (event) {
+    hcsc_pause.addEventListener("click", function(event) {
       hcsh_hero_video.pause();
-      hcsc_pause.classList.toggle('visually-hidden');
-      hcsc_play.classList.toggle('visually-hidden');
+      hcsc_pause.classList.toggle("visually-hidden");
+      hcsc_play.classList.toggle("visually-hidden");
     });
-    hcsc_play.addEventListener("click", function (event) {
+    hcsc_play.addEventListener("click", function(event) {
       hcsh_hero_video.play();
-      hcsc_play.classList.toggle('visually-hidden');
-      hcsc_pause.classList.toggle('visually-hidden');
+      hcsc_play.classList.toggle("visually-hidden");
+      hcsc_pause.classList.toggle("visually-hidden");
     });
   }
 }
 function sidebarNavInit() {
   [].forEach.call(
     document.querySelectorAll(".sidebar-nav .silc-nav__item--parent"),
-    el => {
+    (el) => {
       new sidebarNav(el);
     }
   );
@@ -85,48 +86,51 @@ function mainNavInit() {
   }
 }
 function carouselInit() {
-  [].forEach.call(document.querySelectorAll(".carousel"), el => {
+  [].forEach.call(document.querySelectorAll(".carousel"), (el) => {
     new carousel(el);
   });
 }
 function photoshelterGridInit() {
-  [].forEach.call(document.querySelectorAll(".photoshelter-grid"), el => {
+  [].forEach.call(document.querySelectorAll(".photoshelter-grid"), (el) => {
     new photoshelterGrid(el);
   });
 }
 function youtubePlaylistInit() {
-  [].forEach.call(document.querySelectorAll(".hp-yp-pip"), el => {
+  [].forEach.call(document.querySelectorAll(".hp-yp-pip"), (el) => {
     new youtubePlaylist(el);
   });
 }
 
 function modalPlaylistInit() {
-  [].forEach.call(document.querySelectorAll(".modal--playlist"), el => {
+  [].forEach.call(document.querySelectorAll(".modal--playlist"), (el) => {
     new ModalPlaylist(el);
   });
 }
 function ourPeopleInit() {
-  [].forEach.call(document.querySelectorAll(".our-people"), el => {
+  [].forEach.call(document.querySelectorAll(".our-people"), (el) => {
     new ourPeople(el);
   });
 }
 function SliderDistanceInit() {
-  [].forEach.call(document.querySelectorAll(".slideshow"), el => {
+  [].forEach.call(document.querySelectorAll(".slideshow"), (el) => {
     new SlideDistance(el);
   });
 }
 function featuredImageInit() {
-  [].forEach.call(document.querySelectorAll(".slideshow"), el => {
+  [].forEach.call(document.querySelectorAll(".slideshow"), (el) => {
     new featuredImage(el);
   });
 }
 function themeOptionSelectInit() {
-  [].forEach.call(document.querySelectorAll(".theme-option-select"), (el: HTMLSelectElement) => {
-    new ThemeOptionSelect(el);
-  });
+  [].forEach.call(
+    document.querySelectorAll(".theme-option-select"),
+    (el: HTMLSelectElement) => {
+      new ThemeOptionSelect(el);
+    }
+  );
 }
 
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
   let navToggle = document.querySelector(".main-header__trigger-menu");
   let mainHeader = document.querySelector(".main-header");
   let mainContent = document.querySelector(".main-content");
@@ -146,20 +150,20 @@ window.addEventListener("load", function () {
 
   if (navToggle) {
     for (let i = 0; i < navClose.length; i++) {
-      navClose[i].addEventListener("click", function (event) {
+      navClose[i].addEventListener("click", function(event) {
         mainHeader.classList.remove("nav-toggled");
         mainContent.classList.remove("nav-toggled");
         body.classList.remove("nav-toggled");
       });
     }
 
-    navToggle.addEventListener("click", function () {
+    navToggle.addEventListener("click", function() {
       if (!mainHeader.classList.contains("nav-toggled")) {
         mainHeader.classList.add("nav-toggled");
         mainContent.classList.add("nav-toggled");
         body.classList.add("nav-toggled");
       } else {
-        setTimeout(function () {
+        setTimeout(function() {
           mainHeader.classList.remove("nav-toggled");
           mainContent.classList.remove("nav-toggled");
           body.classList.remove("nav-toggled");
@@ -167,8 +171,12 @@ window.addEventListener("load", function () {
       }
     });
 
-    window.addEventListener("resize", function () {
-      if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+    window.addEventListener("resize", function() {
+      if (
+        !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        )
+      ) {
         if (mainHeader.classList.contains("nav-toggled")) {
           mainHeader.classList.remove("nav-toggled");
           mainContent.classList.remove("nav-toggled");
@@ -177,13 +185,12 @@ window.addEventListener("load", function () {
       }
       SliderDistanceInit();
     });
-
   }
   if (sidebarClose) {
     for (let i = 0; i < sidebarClose.length; i++) {
       const sidebarCloseLink = sidebarClose[i] as HTMLAnchorElement;
       sidebarCloseLink.href = "";
-      sidebarClose[i].addEventListener("click", function (event) {
+      sidebarClose[i].addEventListener("click", function(event) {
         sidebarClose[i].classList.toggle("sidebar-open");
       });
     }
@@ -202,6 +209,7 @@ window.addEventListener("load", function () {
   ourPeopleInit();
   themeOptionSelectInit();
   youtubePlaylistInit();
+  countdownInit();
 
   if (body.classList.contains("classic_editorial")) {
     convertToLineIcons();

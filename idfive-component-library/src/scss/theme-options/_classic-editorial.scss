@@ -384,17 +384,32 @@ body.classic_editorial {
   }
   .show-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
   .show-menu-mobile.main-header__nav nav ul li a,
-  .show-menu-mobile.no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
+  .show-menu-mobile.no-display-menu-mobile.main-header__nav
+    nav
+    ul
+    li
+    > .nav__lists__container
+    > a,
   .show-menu-mobile.no-display-menu-mobile.main-header__nav nav ul li a {
     color: white;
   }
   .main-header__nav nav ul li > .nav__lists__container > a,
   .main-header__nav nav ul li a,
-  .no-display-menu-mobile.main-header__nav nav ul li > .nav__lists__container > a,
-  .no-display-menu-mobile.main-header__nav nav ul li a{
+  .no-display-menu-mobile.main-header__nav
+    nav
+    ul
+    li
+    > .nav__lists__container
+    > a,
+  .no-display-menu-mobile.main-header__nav nav ul li a {
     color: white;
   }
-  .display-menu-mobile.nav-toggled .main-header__nav > ul > li:hover > .nav__lists__container a {
+  .display-menu-mobile.nav-toggled
+    .main-header__nav
+    > ul
+    > li:hover
+    > .nav__lists__container
+    a {
     @media screen and (min-width: 1250px) {
       background-color: $red !important;
     }
@@ -434,7 +449,13 @@ body.classic_editorial {
       }
     }
   }
-  .display-menu-mobile .main-header__nav nav > ul > li:hover > .nav__lists__container > a{
+  .display-menu-mobile
+    .main-header__nav
+    nav
+    > ul
+    > li:hover
+    > .nav__lists__container
+    > a {
     @media (min-width: $silc-nav--options--expands) {
       background-color: $red;
       color: $white;
@@ -696,7 +717,7 @@ body.classic_editorial {
       letter-spacing: normal;
       margin: 0;
       padding: 0 !important;
-      text-transform: none;
+      text-transform: capitalize;
 
       @include media("large") {
         font-size: rem(26);
@@ -706,11 +727,11 @@ body.classic_editorial {
 
   .block-header__title {
     margin: rem(4) rem(24) 0 0;
-    padding: 0 0 0 rem(30);
+    padding: 0 0 0 rem(45);
     position: relative;
 
     @include media("medium") {
-      padding-left: rem(48);
+      padding-left: rem(60);
       float: left;
     }
     h2,
@@ -1220,13 +1241,13 @@ body.classic_editorial {
     }
   }
 
-    /* Table */
-    table {
-        @extend %serif-regular;
-        @include media('table-max') {
-            border-bottom: rem(2) solid #E9E9E9 !important;
-        }
-      }
+  /* Table */
+  table {
+    @extend %serif-regular;
+    @include media("table-max") {
+      border-bottom: rem(2) solid #e9e9e9 !important;
+    }
+  }
   .silc-accordion__content {
     background-color: $gray5;
     box-shadow: inset rem(2) 0 0 $mblue, inset 0 rem(2) 0 0 $mblue,
@@ -1671,7 +1692,6 @@ body.classic_editorial {
       color: $white;
     }
   }
-
 
   /* Program Finder */
 
