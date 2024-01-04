@@ -8,10 +8,10 @@ export class Countdown {
     constructor(element: HTMLElement) {
       if (!!element) {
         this.element = element;
-        this.countdownDays = document.getElementById("countdown-days");
-        this.countdownHours = document.getElementById("countdown-hours");
-        this.countdownMins = document.getElementById("countdown-mins");
-        this.countdownSecs = document.getElementById("countdown-secs");
+        this.countdownDays = this.element.querySelector(".countdown-days");
+        this.countdownHours = this.element.querySelector(".countdown-hours");
+        this.countdownMins = this.element.querySelector(".countdown-mins");
+        this.countdownSecs = this.element.querySelector(".countdown-secs");
         this.countdownTime = this.element.getAttribute("data-enddate");
         this.init();
       }
@@ -48,7 +48,7 @@ export class Countdown {
             // If the count down is over, write some text 
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown-days").innerHTML = "EXPIRED";
+                document.querySelector(".countdown-sequence").innerHTML = "EXPIRED";
             }
         }, 1000);
     }

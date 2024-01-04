@@ -6,6 +6,7 @@
     }
     .clean_light &{
         background-color:$lightblue;
+        position:relative;
         @include media("large-s") {
             padding:rem(65) 0 rem(65) rem(53);
         }
@@ -131,9 +132,10 @@
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
+    // gap:rem(27);
     padding-bottom:rem(10);
     @include media("large-s") {
-        padding-inline:rem(40);
+        padding-inline:rem(56);
         max-width:rem(980);
         margin-inline:auto;
         .classic_editorial &{
@@ -142,6 +144,12 @@
         .clean_light &{
             max-width:rem(980);
         }
+    }
+}
+.countdown-sequence_days{
+    width:rem(75);
+    @include media("large-s") {
+        width:rem(120);
     }
 }
 .countdown-sequence-text{
@@ -202,7 +210,10 @@
     padding-top:rem(15);
     margin-top:rem(130);
     .has-image &{
-        margin-top:rem(80);
+        margin-top:rem(50);
+        @include media("medium-s"){
+            margin-top:rem(80);
+        }
         @include media("large-s"){
             width:rem(75);
         }

@@ -11817,7 +11817,8 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
     .countdown {
       padding: 3.75rem 0 3.75rem 2.5rem; } }
   .clean_light .countdown {
-    background-color: #2A6EBB; }
+    background-color: #2A6EBB;
+    position: relative; }
     @media (min-width: 1099px) {
       .clean_light .countdown {
         padding: 4.0625rem 0 4.0625rem 3.3125rem; } }
@@ -11926,13 +11927,19 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
   padding-bottom: 0.625rem; }
   @media (min-width: 1099px) {
     .countdown-sequence {
-      padding-inline: 2.5rem;
+      padding-inline: 3.5rem;
       max-width: 61.25rem;
       margin-inline: auto; }
       .classic_editorial .countdown-sequence {
         max-width: 56.25rem; }
       .clean_light .countdown-sequence {
         max-width: 61.25rem; } }
+
+.countdown-sequence_days {
+  width: 4.6875rem; }
+  @media (min-width: 1099px) {
+    .countdown-sequence_days {
+      width: 7.5rem; } }
 
 .countdown-sequence-text {
   font-size: clamp(2.625rem, 8.5vw, 7.75rem);
@@ -11982,7 +11989,10 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
   padding-top: 0.9375rem;
   margin-top: 8.125rem; }
   .has-image .countdown-sequence-label {
-    margin-top: 5rem; }
+    margin-top: 3.125rem; }
+    @media (min-width: 600px) {
+      .has-image .countdown-sequence-label {
+        margin-top: 5rem; } }
     @media (min-width: 1099px) {
       .has-image .countdown-sequence-label {
         width: 4.6875rem; } }
