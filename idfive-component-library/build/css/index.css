@@ -11825,6 +11825,9 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
   @media (min-width: 1099px) {
     .classic_editorial .countdown {
       padding: 4.0625rem 0 4.0625rem 3.3125rem; } }
+  @media (min-width: 1099px) {
+    .clean_light .silc-grid__col--10-large .countdown {
+      padding: 1.875rem 0 1.875rem 3.3125rem; } }
 
 @media (min-width: 1099px) {
   .countdown-container {
@@ -11852,7 +11855,7 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
     z-index: 0; }
     @media (min-width: 1099px) {
       .clean_light .countdown-container.has-image:after {
-        height: 8.875rem; } }
+        min-height: 8.875rem; } }
 
 .countdown-image-canvas {
   position: relative;
@@ -11935,10 +11938,17 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
       .clean_light .countdown-sequence {
         max-width: 61.25rem; } }
 
-.countdown-sequence_days {
-  width: 4.6875rem; }
+.above100 {
+  width: 4.6875rem;
+  flex: 0 0 auto; }
   @media (min-width: 1099px) {
-    .countdown-sequence_days {
+    .above100 {
+      width: 7.5rem; } }
+  @media (min-width: 1099px) {
+    .classic_editorial .above100 {
+      width: 11.25rem; } }
+  @media (min-width: 1099px) {
+    .classic_editorial .has-image .above100 {
       width: 7.5rem; } }
 
 .countdown-sequence-text {
@@ -11950,6 +11960,14 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
   .has-image .countdown-sequence-text {
     font-size: clamp(2.625rem, 8.5vw, 4.3125rem);
     line-height: clamp(2.3125rem, 8.5vw, 3.8125rem); }
+    .silc-grid__col--10-large .has-image .countdown-sequence-text {
+      font-size: clamp(2.625rem, 8.5vw, 3rem);
+      line-height: clamp(2.3125rem, 8.5vw, 3.8125rem); }
+  .silc-grid__col--10-large .countdown-sequence-text {
+    font-size: clamp(2.625rem, 8.5vw, 5.5rem);
+    line-height: clamp(2.3125rem, 8.5vw, 6.875rem); }
+  .classic_editorial .countdown-sequence-text {
+    line-height: clamp(2.3125rem, 8.5vw, 5rem); }
   .countdown-sequence-text span {
     position: absolute;
     top: 0;
@@ -11987,15 +12005,24 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
   text-align: center;
   color: #fff;
   padding-top: 0.9375rem;
-  margin-top: 8.125rem; }
+  margin-top: 4.375rem; }
   .has-image .countdown-sequence-label {
-    margin-top: 3.125rem; }
+    margin-top: 3.75rem; }
     @media (min-width: 600px) {
       .has-image .countdown-sequence-label {
         margin-top: 5rem; } }
     @media (min-width: 1099px) {
       .has-image .countdown-sequence-label {
         width: 4.6875rem; } }
+    @media (min-width: 600px) {
+      .classic_editorial .silc-grid__col--10-large .has-image .countdown-sequence-label {
+        margin-top: 5rem; } }
+  @media (min-width: 600px) {
+    .countdown-sequence-label {
+      margin-top: 5rem; } }
+  @media (min-width: 1000px) {
+    .countdown-sequence-label {
+      margin-top: 8.125rem; } }
   @media (min-width: 1099px) {
     .countdown-sequence-label {
       font-size: 1.25rem;
@@ -12005,6 +12032,12 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
     border-top: 0.1875rem solid #003A63; }
   .classic_editorial .countdown-sequence-label {
     border-top: 0.1875rem solid #E51937; }
+  @media (min-width: 600px) {
+    .classic_editorial .silc-grid__col--10-large .countdown-sequence-label {
+      margin-top: 5rem; } }
+  @media (min-width: 1000px) {
+    .classic_editorial .silc-grid__col--10-large .countdown-sequence-label {
+      margin-top: 6.25rem; } }
 
 .countdown-link {
   text-align: center; }

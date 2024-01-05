@@ -16,6 +16,13 @@
             padding:rem(65) 0 rem(65) rem(53);
         }
     }
+    .silc-grid__col--10-large &{
+        .clean_light &{
+            @include media("large-s") {
+                padding:rem(30) 0 rem(30) rem(53);
+            }
+        }
+    }
 }
 .countdown-container{
     @include media("large-s") {
@@ -44,7 +51,7 @@
                 left:0;
                 z-index:0;
                 @include media("large-s") {
-                    height: rem(142);
+                    min-height: rem(142);
                 }
             }
         }
@@ -146,10 +153,23 @@
         }
     }
 }
-.countdown-sequence_days{
+.above100{
     width:rem(75);
+    flex:0 0 auto;
     @include media("large-s") {
         width:rem(120);
+    }
+    .classic_editorial &{
+        @include media("large-s") {
+            width:rem(180);
+        }
+    }
+    .has-image &{
+        .classic_editorial &{
+            @include media("large-s") {
+                width:rem(120);
+            }
+        }
     }
 }
 .countdown-sequence-text{
@@ -162,9 +182,18 @@
     .has-image &{
         font-size:clamp(#{rem(42)}, 8.5vw, #{rem(69)});
         line-height: clamp(#{rem(37)}, 8.5vw, #{rem(61)});
+        .silc-grid__col--10-large &{
+            font-size:clamp(#{rem(42)}, 8.5vw, #{rem(48)});
+            line-height: clamp(#{rem(37)}, 8.5vw, #{rem(61)});
+        }
+    }
+    .silc-grid__col--10-large &{
+        font-size:clamp(#{rem(42)}, 8.5vw, #{rem(88)});
+        line-height: clamp(#{rem(37)}, 8.5vw, #{rem(110)});
     }
     .classic_editorial &{
         @extend %serif-italic-bold;
+        line-height: clamp(#{rem(37)}, 8.5vw, #{rem(80)});
     }
     span{
         position:absolute;
@@ -208,15 +237,28 @@
     text-align: center;
     color:#fff;
     padding-top:rem(15);
-    margin-top:rem(130);
+    margin-top:rem(70);
     .has-image &{
-        margin-top:rem(50);
+        margin-top:rem(60);
         @include media("medium-s"){
             margin-top:rem(80);
         }
         @include media("large-s"){
             width:rem(75);
         }
+        .silc-grid__col--10-large &{
+            .classic_editorial &{
+                @include media("medium-s"){
+                    margin-top:rem(80);
+                }
+            }
+        }
+    }
+    @include media("medium-s"){
+        margin-top:rem(80);
+    }
+    @include media("medium-l"){
+        margin-top:rem(130);
     }
     @include media("large-s") {
         font-size:rem(20);
@@ -228,6 +270,17 @@
     }
     .classic_editorial &{
         border-top:rem(3) solid $red;
+        
+    }
+    .silc-grid__col--10-large &{
+        .classic_editorial &{
+            @include media("medium-s"){
+                margin-top:rem(80);
+            }
+            @include media("medium-l"){
+                margin-top:rem(100);
+            }
+        }
     }
 }
 .countdown-link{
