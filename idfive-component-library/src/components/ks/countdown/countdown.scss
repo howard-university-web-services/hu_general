@@ -8,6 +8,9 @@
         background-color:$lightblue;
         position:relative;
         @include media("large-s") {
+            padding:rem(45) rem(36);
+        }
+        @include media("1250") {
             padding:rem(65) 0 rem(65) rem(53);
         }
     }
@@ -19,16 +22,36 @@
     .silc-grid__col--10-large &{
         .clean_light &{
             @include media("large-s") {
-                padding:rem(30) 0 rem(30) rem(53);
+                padding:rem(30) rem(53) rem(30) rem(53);
             }
+        }
+    }
+    .silc-grid__col--12-large &{
+        margin-inline:rem(-20);
+        @include media("medium"){
+            margin-inline:rem(-60);
+        }
+        @include media("medium-l"){
+            margin-inline:rem(-120);
+        }
+        @include media("1220"){
+            margin-inline:auto;
+        }
+    }
+    .section--padded-top &{
+        .home &{
+            margin-top:rem(-42);
         }
     }
 }
 .countdown-container{
     @include media("large-s") {
         padding-right:rem(40);
-        .classic_editorial &, .clean_light &{
+        .classic_editorial &{
             padding-right:rem(53);
+        }
+        .clean_light &{
+            padding-right:0;
         }
     }
     &.has-image{
@@ -40,6 +63,13 @@
             padding-right:0;
         }
         .clean_light &{
+            align-items: flex-start;
+            @include media("large-s") {
+                flex-direction: column;
+            }
+            @include media("1250") {
+                flex-direction: row;
+            }
             &:after{
                 content:'';
                 display: block;
@@ -75,12 +105,22 @@
     position: absolute;
     top: 0;
     left: 0;
+    .silc-grid__col--10-large &{
+        @include media("1250"){
+            .clean_light &{
+                top:rem(65);
+            }
+        }
+    }
     }
     @include media("large-s") {
         width:46%;
     }
-    .clean_light &, .classic_editorial &{
+    .clean_light &{
         @include media("large-s") {
+            width:100%;
+        }
+        @include media("1250") {
             width:48%;
         }
     }
@@ -98,6 +138,14 @@
     @include media("large-s") {
         .has-image &{
             width:55%;
+            .clean_light &{
+                width:100%;
+                padding-top:0;
+            }
+        }
+    }
+    @include media("1250") {
+        .has-image &{
             .clean_light &{
                 width:54%;
                 padding-top:rem(142);
@@ -125,14 +173,34 @@
     .clean_light &{
         @extend %sans-extra-bold;
         @include media("large-s") {
-            font-size:rem(28);
-            line-height:1.2142;
+            font-size:rem(34);
+            line-height:1.2941;
+            padding-top:rem(32);
+        }
+        @include media("1250") {
+            font-size:rem(34);
+            line-height:1.2941;
             letter-spacing: rem(-0.25);
         }
     }
     .classic_editorial &{
         font-family: $serif;
         font-weight:300;
+        padding-bottom:rem(40);
+    }
+    .has-image &{
+        .clean_light &{
+            @include media("large-s") {
+                font-size:rem(28);
+                line-height:1.214;
+                padding-top:rem(32);
+            }
+            @include media("1250") {
+                font-size:rem(28);
+                line-height:1.2142;
+                letter-spacing: rem(-0.25);
+            }
+        }
     }
 }
 .countdown-sequence{
