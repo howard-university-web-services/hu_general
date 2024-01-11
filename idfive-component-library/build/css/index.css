@@ -11821,19 +11821,37 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
     position: relative; }
     @media (min-width: 1099px) {
       .clean_light .countdown {
+        padding: 2.8125rem 2.25rem; } }
+    @media (min-width: 1250px) {
+      .clean_light .countdown {
         padding: 4.0625rem 0 4.0625rem 3.3125rem; } }
   @media (min-width: 1099px) {
     .classic_editorial .countdown {
       padding: 4.0625rem 0 4.0625rem 3.3125rem; } }
   @media (min-width: 1099px) {
     .clean_light .silc-grid__col--10-large .countdown {
-      padding: 1.875rem 0 1.875rem 3.3125rem; } }
+      padding: 1.875rem 3.3125rem 1.875rem 3.3125rem; } }
+  .silc-grid__col--12-large .countdown {
+    margin-inline: -1.25rem; }
+    @media (min-width: 800px) {
+      .silc-grid__col--12-large .countdown {
+        margin-inline: -3.75rem; } }
+    @media (min-width: 1000px) {
+      .silc-grid__col--12-large .countdown {
+        margin-inline: -7.5rem; } }
+    @media (min-width: 1220px) {
+      .silc-grid__col--12-large .countdown {
+        margin-inline: auto; } }
+  .home .section--padded-top .countdown {
+    margin-top: -2.625rem; }
 
 @media (min-width: 1099px) {
   .countdown-container {
     padding-right: 2.5rem; }
-    .classic_editorial .countdown-container, .clean_light .countdown-container {
-      padding-right: 3.3125rem; } }
+    .classic_editorial .countdown-container {
+      padding-right: 3.3125rem; }
+    .clean_light .countdown-container {
+      padding-right: 0; } }
 
 .countdown-container.has-image {
   display: flex;
@@ -11843,19 +11861,27 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
       flex-direction: row;
       align-items: center;
       padding-right: 0; } }
-  .clean_light .countdown-container.has-image:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 7.625rem;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0; }
+  .clean_light .countdown-container.has-image {
+    align-items: flex-start; }
     @media (min-width: 1099px) {
-      .clean_light .countdown-container.has-image:after {
-        min-height: 8.875rem; } }
+      .clean_light .countdown-container.has-image {
+        flex-direction: column; } }
+    @media (min-width: 1250px) {
+      .clean_light .countdown-container.has-image {
+        flex-direction: row; } }
+    .clean_light .countdown-container.has-image:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 7.625rem;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0; }
+      @media (min-width: 1099px) {
+        .clean_light .countdown-container.has-image:after {
+          min-height: 8.875rem; } }
 
 .countdown-image-canvas {
   position: relative;
@@ -11876,11 +11902,17 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
     position: absolute;
     top: 0;
     left: 0; }
+    @media (min-width: 1250px) {
+      .clean_light .silc-grid__col--10-large .countdown-image-canvas img {
+        top: 4.0625rem; } }
   @media (min-width: 1099px) {
     .countdown-image-canvas {
       width: 46%; } }
   @media (min-width: 1099px) {
-    .clean_light .countdown-image-canvas, .classic_editorial .countdown-image-canvas {
+    .clean_light .countdown-image-canvas {
+      width: 100%; } }
+  @media (min-width: 1250px) {
+    .clean_light .countdown-image-canvas {
       width: 48%; } }
   @media (min-width: 1099px) {
     .classic_editorial .countdown-image-canvas {
@@ -11895,8 +11927,12 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
     .has-image .countdown-sequence-container {
       width: 55%; }
       .clean_light .has-image .countdown-sequence-container {
-        width: 54%;
-        padding-top: 8.875rem; } }
+        width: 100%;
+        padding-top: 0; } }
+  @media (min-width: 1250px) {
+    .clean_light .has-image .countdown-sequence-container {
+      width: 54%;
+      padding-top: 8.875rem; } }
 
 .countdown-sequence-title {
   color: white;
@@ -11916,12 +11952,28 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
       letter-spacing: -0.02rem; } }
   @media (min-width: 1099px) {
     .clean_light .countdown-sequence-title {
-      font-size: 1.75rem;
-      line-height: 1.2142;
+      font-size: 2.125rem;
+      line-height: 1.2941;
+      padding-top: 2rem; } }
+  @media (min-width: 1250px) {
+    .clean_light .countdown-sequence-title {
+      font-size: 2.125rem;
+      line-height: 1.2941;
       letter-spacing: -0.01562rem; } }
   .classic_editorial .countdown-sequence-title {
     font-family: "Serif12Beta", serif;
-    font-weight: 300; }
+    font-weight: 300;
+    padding-bottom: 2.5rem; }
+  @media (min-width: 1099px) {
+    .clean_light .has-image .countdown-sequence-title {
+      font-size: 1.75rem;
+      line-height: 1.214;
+      padding-top: 2rem; } }
+  @media (min-width: 1250px) {
+    .clean_light .has-image .countdown-sequence-title {
+      font-size: 1.75rem;
+      line-height: 1.2142;
+      letter-spacing: -0.01562rem; } }
 
 .countdown-sequence {
   display: flex;
