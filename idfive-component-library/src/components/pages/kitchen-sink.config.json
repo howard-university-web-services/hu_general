@@ -36,7 +36,24 @@
                 "title": "Accordion 2",
                 "content": "<p>This is the content area of accordion 2</p>"
             }
-        ]
+        ],
+        "countdown-date":{
+            "year":"2024",
+            "month":"07",
+            "day":"24",
+            "hour":"13",
+            "minute":"00",
+            "second":"00"
+        },
+        "countdown-title":"Countdown Title Lorem Ipsum Dolor Sit Amen",
+        "countdown-image":{
+            "src":"/img/graduates_talking.jpg",
+            "alt":"graduates talking"
+        },
+        "countdown-link":{
+            "text":"View Full Schedule Lorem",
+            "url":"#"
+        }
 
     }
 

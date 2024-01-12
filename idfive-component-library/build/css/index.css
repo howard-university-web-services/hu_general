@@ -11861,27 +11861,6 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
       flex-direction: row;
       align-items: center;
       padding-right: 0; } }
-  .clean_light .countdown-container.has-image {
-    align-items: flex-start; }
-    @media (min-width: 1099px) {
-      .clean_light .countdown-container.has-image {
-        flex-direction: column; } }
-    @media (min-width: 1250px) {
-      .clean_light .countdown-container.has-image {
-        flex-direction: row; } }
-    .clean_light .countdown-container.has-image:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 7.625rem;
-      background-color: #fff;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0; }
-      @media (min-width: 1099px) {
-        .clean_light .countdown-container.has-image:after {
-          min-height: 8.875rem; } }
 
 .countdown-image-canvas {
   position: relative;
@@ -11902,18 +11881,9 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
     position: absolute;
     top: 0;
     left: 0; }
-    @media (min-width: 1250px) {
-      .clean_light .silc-grid__col--10-large .countdown-image-canvas img {
-        top: 4.0625rem; } }
   @media (min-width: 1099px) {
     .countdown-image-canvas {
       width: 46%; } }
-  @media (min-width: 1099px) {
-    .clean_light .countdown-image-canvas {
-      width: 100%; } }
-  @media (min-width: 1250px) {
-    .clean_light .countdown-image-canvas {
-      width: 48%; } }
   @media (min-width: 1099px) {
     .classic_editorial .countdown-image-canvas {
       width: 48.8%; } }
@@ -11925,14 +11895,7 @@ body.clean_light.path--alias--browse-bison-business .contact-box .sidebar-title 
   align-items: center; }
   @media (min-width: 1099px) {
     .has-image .countdown-sequence-container {
-      width: 55%; }
-      .clean_light .has-image .countdown-sequence-container {
-        width: 100%;
-        padding-top: 0; } }
-  @media (min-width: 1250px) {
-    .clean_light .has-image .countdown-sequence-container {
-      width: 54%;
-      padding-top: 8.875rem; } }
+      width: 55%; } }
 
 .countdown-sequence-title {
   color: white;

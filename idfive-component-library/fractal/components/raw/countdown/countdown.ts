@@ -8,17 +8,16 @@ export class Countdown {
     constructor(element: HTMLElement) {
       if (!!element) {
         this.element = element;
-        this.countdownDays = document.getElementById("countdown-days");
-        this.countdownHours = document.getElementById("countdown-hours");
-        this.countdownMins = document.getElementById("countdown-mins");
-        this.countdownSecs = document.getElementById("countdown-secs");
+        this.countdownDays = this.element.querySelector(".countdown-days");
+        this.countdownHours = this.element.querySelector(".countdown-hours");
+        this.countdownMins = this.element.querySelector(".countdown-mins");
+        this.countdownSecs = this.element.querySelector(".countdown-secs");
         this.countdownTime = this.element.getAttribute("data-enddate");
         this.init();
       }
     }
   
     private init() {
-      console.log(this.countdownTime);
         // Set the date we're counting down to
         const dateObject: Date = new Date(this.countdownTime);
         let countDownDate = new Date(this.countdownTime).getTime();
@@ -44,11 +43,20 @@ export class Countdown {
             this.countdownHours.innerHTML = hours.toString();
             this.countdownMins.innerHTML = minutes.toString();
             this.countdownSecs.innerHTML = seconds.toString();
-                
+            // If number of days is above 100 add class="above100" to .countdown-sequence_days 
+            if(days.toString().length > 2){
+              if(!this.element.querySelector(".countdown-sequence_days").classList.contains("above100")){
+                this.element.querySelector(".countdown-sequence_days").classList.add("above100");
+              }
+            } else {
+              if(this.element.querySelector(".countdown-sequence_days").classList.contains("above100")){
+                this.element.querySelector(".countdown-sequence_days").classList.remove("above100");
+              }
+            }
             // If the count down is over, write some text 
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("countdown-days").innerHTML = "EXPIRED";
+                document.querySelector(".countdown-sequence").innerHTML = "EXPIRED";
             }
         }, 1000);
     }
