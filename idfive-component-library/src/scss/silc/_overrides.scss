@@ -29,3 +29,8 @@ $silc-utilities--margin: (
   ("4", "1rem"),
   ("5", "1.25rem")
 );
+
+.block-header__description {
+  margin-top: -1rem;
+  margin-bottom: 1.875rem;
+}

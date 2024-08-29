@@ -3,6 +3,10 @@
  * silc variable overrides
  *
  */
+.block-header__description {
+  margin-top: -1rem;
+  margin-bottom: 1.875rem; }
+
 html {
   font-size: 16px; }
 
