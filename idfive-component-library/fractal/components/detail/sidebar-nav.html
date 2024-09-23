@@ -251,15 +251,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-a0c017c9561c1613cecadf778ba3cabf">sidebar-nav.scss</option>
+                <option value="file-85008b1fe9916bfcfd939cb9e4100b8a">sidebar-nav.scss</option>
                 
-                <option value="file-93a4ebe7439045cf128fae7df047d3e6">sidebar-nav.ts</option>
+                <option value="file-c7def182d675e07ab131e877a0896517">sidebar-nav.ts</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-a0c017c9561c1613cecadf778ba3cabf" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-85008b1fe9916bfcfd939cb9e4100b8a" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -272,11 +272,13 @@
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">margin-bottom</span>: rem(<span class="hljs-number">20</span>);
 
-  <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-selector-tag">button</span> {
     <span class="hljs-keyword">@extend</span> %sans-bold;
     <span class="hljs-attribute">font-size</span>: rem(<span class="hljs-number">14</span>);
     <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">line-height</span>: rem(<span class="hljs-number">19</span>);
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">text-align</span>: left;
   }
 
   <span class="hljs-selector-class">.sidebar-nav__parent</span> {
@@ -353,7 +355,7 @@
         <span class="hljs-attribute">line-height</span>: rem(<span class="hljs-number">18</span>);
         <span class="hljs-attribute">color</span>: <span class="hljs-variable">$navy</span>;
         <span class="hljs-attribute">border</span>: none;
-      
+
         <span class="hljs-attribute">padding</span>: <span class="hljs-number">6px</span> <span class="hljs-number">8px</span> <span class="hljs-number">6px</span> <span class="hljs-number">15px</span> <span class="hljs-meta">!important</span>;
 
         &amp;<span class="hljs-selector-pseudo">::before</span>{
@@ -411,7 +413,7 @@
     }
   }
 
-  
+
 
   .silc-offcanvas__trigger {
     border-radius: rem(<span class="hljs-number">4</span>);
@@ -420,6 +422,7 @@
     <span class="hljs-attribute">text-decoration</span>: none;
     <span class="hljs-attribute">position</span>: relative;
     <span class="hljs-attribute">padding</span>: rem(<span class="hljs-number">18</span>) rem(<span class="hljs-number">18</span>) rem(<span class="hljs-number">18</span>) rem(<span class="hljs-number">50</span>);
+    <span class="hljs-attribute">border</span>: none;
     <span class="hljs-keyword">@include</span> media(<span class="hljs-string">&#x27;medium&#x27;</span>) {
         <span class="hljs-attribute">display</span>:block <span class="hljs-meta">!important</span>;
     }
@@ -462,13 +465,13 @@
     <span class="hljs-selector-class">.silc-nav__items</span> {
         <span class="hljs-selector-class">.silc-nav__item</span> {
           &amp;<span class="hljs-selector-pseudo">:first</span>-of-type {
-            <span class="hljs-attribute">display</span>: none
+            <span class="hljs-attribute">display</span>: none;
           }
         }
       }
-  }
+    }
 
-  position: relative;
+  <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">display</span>: none;
   <span class="hljs-attribute">transform</span>: none;
 
@@ -480,7 +483,68 @@
     display: block
   }
 }
-</pre>
+
+.js .sidebar-open + .silc-offcanvas {
+  display:block;
+  <span class="hljs-attribute">visibility</span>: visible;
+}
+
+<span class="hljs-selector-tag">html</span><span class="hljs-selector-pseudo">:not</span>(.js){
+  <span class="hljs-selector-class">.silc-offcanvas__trigger</span> {
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
+    <span class="hljs-attribute">cursor</span>: pointer;
+  }
+  <span class="hljs-selector-class">.silc-offcanvas--sidebar-nav</span> {
+    <span class="hljs-attribute">display</span>: none;
+    &amp;<span class="hljs-selector-pseudo">:target</span> {
+      <span class="hljs-attribute">display</span>: block;
+    }
+  }
+  <span class="hljs-selector-tag">nav</span><span class="hljs-selector-class">.silc-nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span>, <span class="hljs-selector-class">.nojs-close-menu</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.625rem</span> <span class="hljs-number">0.625rem</span> <span class="hljs-number">0.625rem</span> <span class="hljs-number">0.625rem</span>;
+    <span class="hljs-attribute">text-decoration</span>: none;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">0.0625rem</span> solid <span class="hljs-number">#D8D8D8</span>;
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
+    <span class="hljs-attribute">font-style</span>: normal;
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Open Sans&quot;</span>, sans-serif;
+  }
+  <span class="hljs-selector-tag">nav</span><span class="hljs-selector-class">.silc-nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span>, <span class="hljs-selector-class">.nojs-close-menu</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#002A47</span>;
+  }
+  <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:has</span>(&gt; ul) {
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">800</span> <span class="hljs-meta">!important</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span>;
+    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0.625rem</span> <span class="hljs-meta">!important</span>;
+  }
+  <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:has</span>(&gt; ul) <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.625rem</span>;
+  }
+  <span class="hljs-selector-tag">nav</span><span class="hljs-selector-class">.silc-nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:first</span>-child {
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">0.0625rem</span> solid <span class="hljs-number">#D8D8D8</span>;
+  }
+  <span class="hljs-selector-tag">nav</span><span class="hljs-selector-class">.silc-nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">ul</span> {
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0.625rem</span>;
+  }
+  <span class="hljs-selector-tag">nav</span><span class="hljs-selector-class">.silc-nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:last-child</span> {
+    <span class="hljs-attribute">border-bottom</span>: none;
+  }
+  <span class="hljs-selector-tag">nav</span><span class="hljs-selector-class">.silc-nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#F2F2F2</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.8125rem</span>;
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.125rem</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#003A63</span>;
+    <span class="hljs-attribute">border</span>: none;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">6px</span> <span class="hljs-number">8px</span> <span class="hljs-number">6px</span> <span class="hljs-number">15px</span> <span class="hljs-meta">!important</span>;
+  }
+  <span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.nojs-close-menu</span> {
+    <span class="hljs-attribute">text-align</span>: right;
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">800</span> <span class="hljs-meta">!important</span>;
+}
+}</pre>
                             </code>
                             
                         </div>
@@ -496,12 +560,12 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.7 KB</span>
+                    <span class="Meta-value">5.1 KB</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-93a4ebe7439045cf128fae7df047d3e6" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-c7def182d675e07ab131e877a0896517" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -3863,8 +3927,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2024-08-29T17:56:38.948Z">
-                                8/29/2024
+                            <time datetime="2024-09-23T19:20:14.552Z">
+                                9/23/2024
                             </time>
                         
                     </dd>

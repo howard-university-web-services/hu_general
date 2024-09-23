@@ -3,11 +3,13 @@
   position: relative;
   margin-bottom: rem(20);
 
-  a {
+  button {
     @extend %sans-bold;
     font-size: rem(14);
     letter-spacing: 0;
     line-height: rem(19);
+    width: 100%;
+    text-align: left;
   }
 
   .sidebar-nav__parent {
@@ -84,7 +86,7 @@
         line-height: rem(18);
         color: $navy;
         border: none;
-      
+
         padding: 6px 8px 6px 15px !important;
 
         &::before{
@@ -142,7 +144,7 @@
     }
   }
 
-  
+
 
   .silc-offcanvas__trigger {
     border-radius: rem(4);
@@ -151,6 +153,7 @@
     text-decoration: none;
     position: relative;
     padding: rem(18) rem(18) rem(18) rem(50);
+    border: none;
     @include media('medium') {
         display:block !important;
     }
@@ -193,11 +196,11 @@
     .silc-nav__items {
         .silc-nav__item {
           &:first-of-type {
-            display: none
+            display: none;
           }
         }
       }
-  }
+    }
 
   position: relative;
   display: none;
@@ -210,4 +213,66 @@
   @include media('large') {
     display: block
   }
+}
+
+.js .sidebar-open + .silc-offcanvas {
+  display:block;
+  visibility: visible;
+}
+
+html:not(.js){
+  .silc-offcanvas__trigger {
+    display: block;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .silc-offcanvas--sidebar-nav {
+    display: none;
+    &:target {
+      display: block;
+    }
+  }
+  nav.silc-nav ul li, .nojs-close-menu {
+    padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    border-bottom: 0.0625rem solid #D8D8D8;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Open Sans", sans-serif;
+  }
+  nav.silc-nav ul li a, .nojs-close-menu {
+    color: #002A47;
+  }
+  li:has(> ul) {
+    font-weight: 800 !important;
+    padding: 0 !important;
+    padding-top: 0.625rem !important;
+  }
+  li:has(> ul) a {
+    padding-left: 0.625rem;
+  }
+  nav.silc-nav ul li ul li:first-child {
+    border-top: 0.0625rem solid #D8D8D8;
+  }
+  nav.silc-nav ul li ul {
+    margin-top: 0.625rem;
+  }
+  nav.silc-nav ul li:last-child {
+    border-bottom: none;
+  }
+  nav.silc-nav ul li ul li {
+    background: #F2F2F2;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    color: #003A63;
+    border: none;
+    padding: 6px 8px 6px 15px !important;
+  }
+  a.nojs-close-menu {
+    text-align: right;
+    font-weight: 800 !important;
+}
 }

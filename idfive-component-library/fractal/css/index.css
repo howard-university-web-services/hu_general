@@ -4273,7 +4273,7 @@ body.clean_light .contact-box span, body.clean_light .news-and-events__date, bod
   font-style: normal;
   font-family: "Open Sans", sans-serif; }
 
-label, .mobile-nav .silc-nav__link, .main-footer ul li, .main-nav .silc-nav__item--home, .main-nav .silc-nav__link, .main-nav .silc-nav__items .silc-nav__items .silc-nav__link, .no-display-menu-mobile.main-header__nav nav ul li--home, .no-display-menu-mobile.main-header__nav nav ul li a, .main-header__nav nav ul li--home, .main-header__nav nav ul li a, .breadcrumb__item--active, .utility__menu a, .sidebar-nav a, .sidebar-nav .silc-nav .silc-nav__items .silc-nav__items .silc-nav__link, .clean_light .data-point__stat-subtext, table th, .faculty-profile h3, .faculty-profile h4, .our-people h4, .alumni-profile h4, .giving-bbd__text-and-card__card-optional-link, body.clean_light h5,
+label, .mobile-nav .silc-nav__link, .main-footer ul li, .main-nav .silc-nav__item--home, .main-nav .silc-nav__link, .main-nav .silc-nav__items .silc-nav__items .silc-nav__link, .no-display-menu-mobile.main-header__nav nav ul li--home, .no-display-menu-mobile.main-header__nav nav ul li a, .main-header__nav nav ul li--home, .main-header__nav nav ul li a, .breadcrumb__item--active, .utility__menu a, .sidebar-nav button, .sidebar-nav .silc-nav .silc-nav__items .silc-nav__items .silc-nav__link, .clean_light .data-point__stat-subtext, table th, .faculty-profile h3, .faculty-profile h4, .our-people h4, .alumni-profile h4, .giving-bbd__text-and-card__card-optional-link, body.clean_light h5,
 body.clean_light .h5, body.clean_light .contact-box a, body.clean_light .alumni-profile__caption h4, body.clean_light blockquote, body.clean_light span.fieldset-legend {
   font-weight: 700;
   font-style: normal;
@@ -7697,10 +7697,12 @@ a.fancy-link:hover {
   width: 100%;
   position: relative;
   margin-bottom: 1.25rem; }
-  .sidebar-nav a {
+  .sidebar-nav button {
     font-size: 0.875rem;
     letter-spacing: 0;
-    line-height: 1.1875rem; }
+    line-height: 1.1875rem;
+    width: 100%;
+    text-align: left; }
   .sidebar-nav .sidebar-nav__parent {
     background: #003A63;
     color: #FFF;
@@ -7808,7 +7810,8 @@ a.fancy-link:hover {
     color: #003A63;
     text-decoration: none;
     position: relative;
-    padding: 1.125rem 1.125rem 1.125rem 3.125rem; }
+    padding: 1.125rem 1.125rem 1.125rem 3.125rem;
+    border: none; }
     @media (min-width: 800px) {
       .sidebar-nav .silc-offcanvas__trigger {
         display: block !important; } }
@@ -7854,6 +7857,63 @@ a.fancy-link:hover {
   @media (min-width: 1250px) {
     .js .sidebar-nav .silc-offcanvas {
       display: block; } }
+
+.js .sidebar-open + .silc-offcanvas {
+  display: block;
+  visibility: visible; }
+
+html:not(.js) .silc-offcanvas__trigger {
+  display: block;
+  font-weight: 700;
+  cursor: pointer; }
+
+html:not(.js) .silc-offcanvas--sidebar-nav {
+  display: none; }
+  html:not(.js) .silc-offcanvas--sidebar-nav:target {
+    display: block; }
+
+html:not(.js) nav.silc-nav ul li, html:not(.js) .nojs-close-menu {
+  padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  border-bottom: 0.0625rem solid #D8D8D8;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Open Sans", sans-serif; }
+
+html:not(.js) nav.silc-nav ul li a, html:not(.js) .nojs-close-menu {
+  color: #002A47; }
+
+html:not(.js) li:has(> ul) {
+  font-weight: 800 !important;
+  padding: 0 !important;
+  padding-top: 0.625rem !important; }
+
+html:not(.js) li:has(> ul) a {
+  padding-left: 0.625rem; }
+
+html:not(.js) nav.silc-nav ul li ul li:first-child {
+  border-top: 0.0625rem solid #D8D8D8; }
+
+html:not(.js) nav.silc-nav ul li ul {
+  margin-top: 0.625rem; }
+
+html:not(.js) nav.silc-nav ul li:last-child {
+  border-bottom: none; }
+
+html:not(.js) nav.silc-nav ul li ul li {
+  background: #F2F2F2;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #003A63;
+  border: none;
+  padding: 6px 8px 6px 15px !important; }
+
+html:not(.js) a.nojs-close-menu {
+  text-align: right;
+  font-weight: 800 !important; }
 
 .slideshow {
   width: 100%;

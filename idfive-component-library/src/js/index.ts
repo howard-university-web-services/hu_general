@@ -30,6 +30,7 @@ import initProgramFinder from "../components/program-finder/program-finder";
 import ThemeOptionSelect from "./theme-option-select";
 import youtubePlaylist from "../components/ks/video/video";
 import countdownInit from "../components/ks/countdown/countdown";
+import AccessibilityUtilities from "../components/utilities/accessibility";
 
 focusWithin(document);
 JumpTo();
@@ -136,7 +137,8 @@ window.addEventListener("load", function() {
   let mainContent = document.querySelector(".main-content");
   let navClose = document.querySelectorAll(".main-nav a");
   let mainNav = document.querySelector(".main-nav");
-  let sidebarClose = document.querySelectorAll(".silc-offcanvas__trigger");
+  let sidebarClose = AccessibilityUtilities.convertAnchorToButton(
+    document.querySelector(".silc-offcanvas__trigger"));
   let postHeader = document.querySelector(".post-header");
   let heroImage = document.querySelector(".hero-image");
   let body = document.querySelector("body");
@@ -187,13 +189,10 @@ window.addEventListener("load", function() {
     });
   }
   if (sidebarClose) {
-    for (let i = 0; i < sidebarClose.length; i++) {
-      const sidebarCloseLink = sidebarClose[i] as HTMLAnchorElement;
-      sidebarCloseLink.href = "";
-      sidebarClose[i].addEventListener("click", function(event) {
-        sidebarClose[i].classList.toggle("sidebar-open");
+      const sidebarCloseLink = sidebarClose as HTMLButtonElement;
+      sidebarClose.addEventListener("click", function(event) {
+        sidebarClose.classList.toggle("sidebar-open");
       });
-    }
   }
   if (heroImage && postHeader) {
     postHeader.classList.add("post-header--shadow");
