@@ -7,6 +7,18 @@
   margin-top: -1rem;
   margin-bottom: 1.875rem; }
 
+.news-and-events__img img {
+  height: 11rem;
+  width: 100%;
+  max-height: 11rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center; }
+
+.news-and-events__img:before {
+  display: contents !important; }
+
 html {
   font-size: 16px; }
 
