@@ -47,6 +47,10 @@ $silc-utilities--margin: (
   display: contents !important;
 }
 
+.news-and-events__img.news_article:before {
+  display: block !important;
+}
+
 // Profiles Feed Image Styles //
 .faculty-profile__img img {
   width: 10rem;

@@ -19,6 +19,9 @@
 .news-and-events__img:before {
   display: contents !important; }
 
+.news-and-events__img.news_article:before {
+  display: block !important; }
+
 .faculty-profile__img img {
   width: 10rem;
   height: 10rem;
