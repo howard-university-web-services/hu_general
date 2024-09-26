@@ -19,6 +19,48 @@
 .news-and-events__img:before {
   display: contents !important; }
 
+.faculty-profile__img img {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto 1.125rem auto; }
+
+.section-content__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.news-and-events__img.news-and-events__img_portrait img {
+  width: 100%;
+  height: 21rem;
+  max-height: 33.75rem; }
+
+.news-and-events__block.news-and-events__block_feat_3up div.news-and-events__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  max-height: 33.75rem; }
+
+.news-and-events__block.news-and-events__block_feat_4up div.news-and-events__img img {
+  height: 100%;
+  max-height: 38.75rem; }
+
+.image-type-1.silc-grid__col.silc-grid__col--4-medium img, .image-type-2.silc-grid__col.silc-grid__col--4-medium img, .image-type-3.silc-grid__col.silc-grid__col--4-medium img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute; }
+
+.full-width-cta img {
+  width: 100%; }
+
 html {
   font-size: 16px; }
 
