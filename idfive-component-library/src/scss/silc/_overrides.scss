@@ -100,3 +100,19 @@ $silc-utilities--margin: (
 .full-width-cta img {
   width: 100%;
 }
+
+.news-and-events__img.ks_article_img {
+  aspect-ratio:.8;
+  &:before {
+    display: none;
+  }
+}
+
+.news-and-events__img.ks_article_img img {
+  display: block;
+  height: 100%;
+  max-height: fit-content;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}

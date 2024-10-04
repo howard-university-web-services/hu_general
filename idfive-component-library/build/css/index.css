@@ -64,6 +64,23 @@
 .full-width-cta img {
   width: 100%; }
 
+.news-and-events__img.ks_article_img {
+  aspect-ratio: .8; }
+  .news-and-events__img.ks_article_img:before {
+    display: none; }
+
+.news-and-events__img.ks_article_img img {
+  display: block;
+  height: 100%;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center; }
+
 html {
   font-size: 16px; }
 
