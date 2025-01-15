@@ -90,6 +90,29 @@
   -o-object-position: center;
      object-position: center; }
 
+.slideshow__img img {
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: 100%; }
+
+.slideshow__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-height: 436px;
+  padding-bottom: 0 !important; }
+
+div.slideshow button.flickity-button.flickity-prev-next-button.previous, div.slideshow button.flickity-button.flickity-prev-next-button.next {
+  top: 371px; }
+
+a.carousel__link.lightbox img {
+  max-height: 436px;
+  max-width: 100%; }
+
+.js .carousel__cell:after {
+  z-index: 2; }
+
 html {
   font-size: 16px; }
 
