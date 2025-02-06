@@ -122,9 +122,6 @@ a.carousel__link.lightbox img {
 .alumni-profile__img:after {
   left: 0; }
 
-.hero-image-home .hero-image:before, .hero-video .hero-image:before {
-  padding-top: 0 !important; }
-
 .hero-image.hero-image--large img {
   width: 100%;
   height: 100%;
@@ -8224,7 +8221,8 @@ html:not(.js) a.nojs-close-menu {
     height: auto;
     width: 100%;
     max-height: calc(100vh - 115px); }
-    .hero-image-home .hero-image:before, .hero-video .hero-image:before {
+    .hero-image-home .hero-image:before,
+    .hero-video .hero-image:before {
       content: "";
       display: block;
       padding-top: 56.25%; }
