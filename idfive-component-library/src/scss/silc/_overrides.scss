@@ -152,6 +152,7 @@ a.carousel__link.lightbox img {
 
 .js .carousel__cell:after {
   z-index: 2;
+  pointer-events: none;
 }
 
 .alumni-profile__img img {
