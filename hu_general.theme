@@ -33,7 +33,7 @@ function hu_general_preprocess_page(&$variables) {
     $variables['login_block'] = \Drupal::service('renderer')->render($render);
   }
 
-  //implements hamburguer menu
+  // Implements hamburguer menu.
   $variables['h_menu'] = theme_get_setting('hamburguer_desktop');
 
 }
@@ -75,14 +75,15 @@ function hu_general_preprocess_file_link(&$variables) {
   $file_entity = $file instanceof File ? $file : File::load($file->fid);
   $url = \Drupal::service('file_url_generator')->generateAbsoluteString($file_entity->getFileUri());
   $variables['#cache']['contexts'][] = 'url.site';
-  if($file_entity->_referringItem !== NULL) {
+  if ($file_entity->_referringItem !== NULL) {
     $fieldParent = $file_entity->_referringItem->getEntity();
     $fieldParentType = $fieldParent->getEntityTypeId();
   }
   // Use the media name as the link text if available. Ignore if parent is a node, ie a regular file field.
   if (isset($fieldParent) && $fieldParentType !== 'node') {
     $link_text = $fieldParent->getName();
-  } else {
+  }
+  else {
     $link_text = $file_entity->getFilename();
   }
   $variables['link_text'] = $link_text;

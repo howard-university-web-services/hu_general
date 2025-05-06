@@ -81,7 +81,7 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#description' => t('Uses the light menu color scheme for the header menu.'),
     '#default_value' => theme_get_setting('light_header'),
   ];
-    // Show hamburger menu.
+  // Show hamburger menu.
   $form['hu_header_settings']['hamburguer_desktop'] = [
     '#type' => 'checkbox',
     '#title' => t('Show hamburger in Desktop?'),
@@ -111,7 +111,7 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#description' => t('Add a link URL for the featured link.'),
     '#default_value' => theme_get_setting('featured_header_link_url'),
   ];
-  // Search Options
+  // Search Options.
   $form['hu_header_settings']['search_options'] = [
     '#type' => 'details',
     '#title' => t('Search Options'),
