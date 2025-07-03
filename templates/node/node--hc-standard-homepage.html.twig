@@ -1,8 +1,45 @@
 {#
 /**
-* @file
-* Theme override to display an HC Standard Homepage node.
-*/
+ * @file
+ * Theme override to display an HC Standard Homepage node.
+ *
+ * This template renders the homepage content for the Howard University General
+ * theme. It includes flexible hero sections, featured content areas, and
+ * configurable content widgets.
+ *
+ * Variables:
+ * - node: The node entity being displayed.
+ * - content: The rendered content of the node.
+ * - label: The node title.
+ * - url: The node URL.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - view_mode: View mode (e.g., 'full', 'teaser').
+ * - page: Flag indicating if this is a full page display.
+ * - logged_in: Flag indicating if the user is logged in.
+ * - is_admin: Flag indicating if the user has administrative privileges.
+ *
+ * HU General Theme Variables:
+ * - parent_include_directory: Path to the theme directory for template includes.
+ * - hero_display_type: Type of hero section display (media, image, etc.).
+ * - hero_media_display_type: Type of media for hero section (video, image).
+ *
+ * Features:
+ * - Flexible hero section with support for:
+ *   - Hero videos
+ *   - Hero images
+ *   - Text-based heroes
+ * - Featured content areas
+ * - Configurable content widgets
+ * - Kitchen sink widget integration
+ * - Responsive design for all device sizes
+ * - SEO-optimized with proper heading structure
+ * - Accessibility features including hidden H1 for screen readers
+ *
+ * @see template_preprocess_node()
+ * @see hu_general_preprocess_node()
+ */
 #}
 
 <h1 class="visually-hidden">{{ node.title.value }}</h1>

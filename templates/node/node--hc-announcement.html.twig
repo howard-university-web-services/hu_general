@@ -2,6 +2,46 @@
 /**
  * @file
  * Theme override to display an HC Announcement node.
+ *
+ * This template renders announcement content for the Howard University General
+ * theme. Announcements are used for important notices, alerts, events, and
+ * time-sensitive information that needs to be prominently displayed.
+ *
+ * Variables:
+ * - node: The node entity being displayed.
+ * - content: The rendered content of the node.
+ * - label: The node title.
+ * - url: The node URL.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - author_attributes: HTML attributes for the author element.
+ * - title_prefix: Additional output populated by modules.
+ * - title_suffix: Additional output populated by modules.
+ * - view_mode: View mode (e.g., 'full', 'teaser').
+ * - teaser: Flag indicating if this is a teaser display.
+ * - page: Flag indicating if this is a full page display.
+ * - readmore: Flag indicating if a "Read more" link should be displayed.
+ * - logged_in: Flag indicating if the user is logged in.
+ * - is_admin: Flag indicating if the user has administrative privileges.
+ *
+ * HU General Theme Variables:
+ * - parent_include_directory: Path to the theme directory for template includes.
+ *
+ * Features:
+ * - Announcement-specific styling and layout
+ * - Date and time display for time-sensitive content
+ * - Priority/urgency indicators
+ * - Contact information for announcements
+ * - Category and tag display
+ * - Expiration date handling
+ * - Grid-based layout for organized content presentation
+ * - Responsive design for all device sizes
+ * - Content moderation controls for administrators
+ * - Accessibility features for important notices
+ *
+ * @see template_preprocess_node()
+ * @see hu_general_preprocess_node()
  */
 #}
 

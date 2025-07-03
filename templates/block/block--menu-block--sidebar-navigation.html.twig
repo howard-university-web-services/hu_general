@@ -1,3 +1,36 @@
+{#
+/**
+ * @file
+ * Theme override for sidebar navigation menu block.
+ *
+ * This template provides custom styling for sidebar navigation menu blocks in
+ * the Howard University General theme. It creates an off-canvas sidebar navigation
+ * that's responsive and accessible.
+ *
+ * Available variables:
+ * - content: The block content.
+ * - label: The block label.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - configuration: The block configuration.
+ * - plugin_id: The block plugin ID.
+ * - label_display: The block label display setting.
+ * - provider: The block provider.
+ * - Block: The block plugin instance.
+ *
+ * Features:
+ * - Off-canvas sidebar navigation
+ * - Responsive design with mobile-friendly interface
+ * - Accessible markup with proper ARIA labels
+ * - Expandable/collapsible menu sections
+ * - Consistent styling with Howard University brand guidelines
+ * - Touch-friendly navigation controls
+ * - Proper semantic markup
+ *
+ * @see template_preprocess_block()
+ */
+#}
 <div class="sidebar-nav" aria-label="Sidebar Navigation">
     <h3><a class="silc-offcanvas__trigger" href="#sidebar-nav">Section Menu</a></h3>
     <div class="silc-offcanvas silc-offcanvas--sidebar-nav" id="sidebar-nav">

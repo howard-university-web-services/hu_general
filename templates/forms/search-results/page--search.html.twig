@@ -1,3 +1,36 @@
+{#
+/**
+ * @file
+ * Theme override for search results page.
+ *
+ * This template provides custom styling for search results pages in the Howard
+ * University General theme. It displays search results in a consistent format
+ * with proper pagination and filtering options.
+ *
+ * Variables:
+ * - messages: Status and error messages to display to users.
+ * - logged_in: A flag indicating if the user is logged in.
+ * - page: The rendered page content broken down into regions:
+ *   - page.admin_tabs: Administrative tabs for content management.
+ *   - page.help: Help text and contextual assistance.
+ *   - page.content: Main content region containing search results.
+ *
+ * HU General Theme Variables:
+ * - parent_include_directory: Path to the theme directory for template includes.
+ *
+ * Features:
+ * - Clean search results layout
+ * - Proper pagination for multiple result pages
+ * - Responsive design for all device sizes
+ * - Consistent styling with Howard University brand guidelines
+ * - Administrative controls for logged-in users
+ * - Search refinement and filtering options
+ * - Accessible markup with proper headings and landmarks
+ *
+ * @see template_preprocess_page()
+ * @see hu_general_preprocess_page()
+ */
+#}
 {% include parent_include_directory ~ '/templates/_includes/global/header.html.twig' %}
 
 <main class="main-content">

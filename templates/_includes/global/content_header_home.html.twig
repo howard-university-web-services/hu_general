@@ -1,3 +1,42 @@
+{#
+/**
+ * @file
+ * Homepage content header template for Howard University General theme.
+ *
+ * This template provides the homepage-specific header section with customizable
+ * intro content, background image, and call-to-action elements. It's designed
+ * to create an impactful first impression for visitors.
+ *
+ * Available variables:
+ * - content: The rendered content of the homepage node.
+ * - node: The homepage node entity.
+ *
+ * HU General Theme Variables:
+ * - home_intro_image: Path to the homepage intro background image.
+ *
+ * Content Fields:
+ * - field_hc_intro_title: Homepage intro title.
+ * - field_hc_intro_text: Homepage intro text/description.
+ * - field_hc_header_image: Header background image.
+ * - field_hc_intro_link: Call-to-action link.
+ * - field_hc_intro_link_title: Link title text.
+ *
+ * Features:
+ * - Full-width background image with overlay
+ * - Customizable intro title and text
+ * - Call-to-action button/link
+ * - Blue blend overlay for brand consistency
+ * - Grid-based responsive layout
+ * - White text styling for contrast over images
+ * - Accessible markup with proper alt text
+ * - Large padding for visual impact
+ * - SEO-friendly heading structure
+ * - Mobile-responsive design
+ *
+ * @see hu_general_preprocess_page()
+ * @see hu_general_preprocess_node()
+ */
+#}
 {# Homepage Hero (standard) #}
 <div class="department-title section--blue-blend section--padded-large">
     <div class="background" style="background-image:url('{{ home_intro_image }}')" alt="{{content.field_hc_header_image['#items'].entity.field_media_image.alt }}"></div>

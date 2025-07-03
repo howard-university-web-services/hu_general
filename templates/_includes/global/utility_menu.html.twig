@@ -1,3 +1,35 @@
+{#
+/**
+ * @file
+ * Utility menu template for Howard University General theme.
+ *
+ * This template provides the utility menu functionality for the header area,
+ * including secondary navigation, featured links, and search functionality.
+ * It's designed to work with the main header and provide additional user tools.
+ *
+ * Available variables:
+ * - menu: The utility menu content.
+ * - fid: Form ID for the search form.
+ *
+ * HU General Theme Variables:
+ * - featured_header_link_show: Flag to show/hide featured header link.
+ * - featured_header_link_url: URL for the featured header link.
+ * - featured_header_link_title: Title text for the featured header link.
+ * - featured_header_hide_search: Flag to show/hide search functionality.
+ *
+ * Features:
+ * - Utility navigation menu display
+ * - Featured header link with customizable URL and title
+ * - Integrated search form with proper form handling
+ * - Responsive design for desktop and mobile
+ * - Accessible markup with proper form labels
+ * - Consistent styling with Howard University brand guidelines
+ * - Conditional display based on theme settings
+ *
+ * @see hu_general_preprocess_page()
+ * @see _hu_general_extend_theme_variables()
+ */
+#}
 <div class="utility">
 	<div class="utility__menu">
 		{{ menu }}

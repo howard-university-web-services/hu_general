@@ -1,3 +1,34 @@
+{#
+/**
+ * @file
+ * Theme override for user login page.
+ *
+ * This template provides the layout for the user login page in the Howard
+ * University General theme. It includes a hero image, login form, and
+ * optional OpenID Connect integration.
+ *
+ * Variables:
+ * - messages: Status and error messages to display to users.
+ * - page: The rendered page content broken down into regions:
+ *   - page.help: Help text and contextual assistance.
+ *   - page.content: Main content region containing the login form.
+ *
+ * HU General Theme Variables:
+ * - parent_include_directory: Path to the theme directory for template includes.
+ * - hero_image: Path to the hero image displayed on the login page.
+ * - login_block: OpenID Connect login block (if available).
+ *
+ * Features:
+ * - Hero image background
+ * - Custom login form styling
+ * - OpenID Connect integration (if module is enabled)
+ * - Responsive design for all device sizes
+ * - Accessible form markup
+ *
+ * @see template_preprocess_page()
+ * @see hu_general_preprocess_page()
+ */
+#}
 {% include parent_include_directory ~ '/templates/_includes/global/header.html.twig' %}
 
 <main class="main-content" id="main-content">

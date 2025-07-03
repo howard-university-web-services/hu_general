@@ -1,3 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override for user profile pages.
+ *
+ * This template provides the layout for user profile pages in the Howard
+ * University General theme. It includes the standard page structure with
+ * an internal page hero and content area.
+ *
+ * Variables:
+ * - messages: Status and error messages to display to users.
+ * - logged_in: A flag indicating if the user is logged in.
+ * - page: The rendered page content broken down into regions:
+ *   - page.admin_tabs: Administrative tabs for content management.
+ *   - page.help: Help text and contextual assistance.
+ *   - page.content: Main content region for user profile information.
+ *
+ * HU General Theme Variables:
+ * - parent_include_directory: Path to the theme directory for template includes.
+ *
+ * Features:
+ * - Internal page hero section
+ * - Standard page structure with admin tabs for authenticated users
+ * - Consistent styling with other Howard University pages
+ *
+ * @see template_preprocess_page()
+ * @see hu_general_preprocess_page()
+ */
+#}
 {% include parent_include_directory ~ '/templates/_includes/global/header.html.twig' %}
 
 	<main class="main-content" id="main-content">

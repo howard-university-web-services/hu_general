@@ -3,6 +3,10 @@
  * @file
  * Theme override for main view template.
  *
+ * This template provides custom styling for views in the Howard University
+ * General theme. It handles the overall structure and layout of views including
+ * headers, content, footers, and pagination.
+ *
  * Available variables:
  * - attributes: Remaining HTML attributes for the element.
  * - css_name: A css-safe version of the view name.
@@ -13,6 +17,25 @@
  * - empty: The content to display if there are no rows.
  * - pager: The optional pager next/prev links to display.
  * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: Optional link to view more results.
+ * - title: The view title.
+ * - attachment_before: Optional content to display before the view.
+ * - attachment_after: Optional content to display after the view.
+ *
+ * Features:
+ * - Responsive layout that adapts to different screen sizes
+ * - Accessible markup with proper headings and landmarks
+ * - Consistent styling with Howard University brand guidelines
+ * - Support for exposed filters and search functionality
+ * - Proper pagination controls
+ * - Empty state handling with helpful messaging
+ * - Feed icon integration for RSS/XML feeds
+ * - Flexible header and footer sections
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
  * - feed_icons: Optional feed icons to display.
  * - more: An optional link to the next page of results.
  * - title: Title of the view, only used when displaying in the admin preview.

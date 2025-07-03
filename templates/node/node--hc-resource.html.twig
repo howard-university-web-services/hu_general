@@ -2,6 +2,45 @@
 /**
  * @file
  * Theme override to display an HC Resource node.
+ *
+ * This template renders resource content for the Howard University General theme.
+ * Resources can include documents, guides, forms, policies, and other downloadable
+ * or reference materials.
+ *
+ * Variables:
+ * - node: The node entity being displayed.
+ * - content: The rendered content of the node.
+ * - label: The node title.
+ * - url: The node URL.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - author_attributes: HTML attributes for the author element.
+ * - title_prefix: Additional output populated by modules.
+ * - title_suffix: Additional output populated by modules.
+ * - view_mode: View mode (e.g., 'full', 'teaser').
+ * - teaser: Flag indicating if this is a teaser display.
+ * - page: Flag indicating if this is a full page display.
+ * - readmore: Flag indicating if a "Read more" link should be displayed.
+ * - logged_in: Flag indicating if the user is logged in.
+ * - is_admin: Flag indicating if the user has administrative privileges.
+ *
+ * HU General Theme Variables:
+ * - parent_include_directory: Path to the theme directory for template includes.
+ * - show_hero_image: Flag to conditionally display hero image.
+ *
+ * Features:
+ * - Conditional hero image display
+ * - Resource metadata (type, date, categories)
+ * - Download links for files
+ * - Resource description and usage information
+ * - Related resources suggestions
+ * - Structured content layout
+ * - Responsive design for all device sizes
+ * - Accessible file links with proper descriptions
+ *
+ * @see template_preprocess_node()
+ * @see hu_general_preprocess_node()
  */
 #}
 

@@ -1,3 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override for the 404 error page template.
+ *
+ * This template provides a custom 404 error page for the Howard University
+ * General theme. It includes helpful navigation and search functionality
+ * to assist users in finding the content they're looking for.
+ *
+ * Variables:
+ * - page: The rendered page content broken down into regions:
+ *   - page.alerts: Site-wide alerts and notifications.
+ *   - page.primary_menu: Primary navigation menu for site structure.
+ *
+ * HU General Theme Variables:
+ * - parent_include_directory: Path to the theme directory for template includes.
+ *
+ * Features:
+ * - Custom 404 error message
+ * - Primary navigation menu display for easy site navigation
+ * - Integrated search form to help users find content
+ * - Accessible markup with proper ARIA labels
+ * - Responsive design for all device sizes
+ *
+ * Structure:
+ * - Global header
+ * - Main content area with:
+ *   - Site alerts
+ *   - 404 error message
+ *   - Primary navigation menu
+ *   - Search form
+ * - Global footer
+ *
+ * @see template_preprocess_page()
+ * @see hu_general_theme_suggestions_page_alter()
+ */
+#}
 {% include parent_include_directory ~ '/templates/_includes/global/header.html.twig' %}
 
 <main class="main-content" id="main-content">

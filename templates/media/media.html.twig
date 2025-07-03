@@ -3,9 +3,28 @@
  * @file
  * Theme override to display a media item.
  *
+ * This template provides custom styling for media items in the Howard University
+ * General theme. It handles various media types including images, videos, and
+ * documents with consistent styling and accessibility features.
+ *
  * Available variables:
  * - name: Name of the media.
  * - content: Media content.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - media: The media entity.
+ * - view_mode: View mode (e.g., 'full', 'teaser').
+ * - logged_in: Flag indicating if the user is logged in.
+ * - is_admin: Flag indicating if the user has administrative privileges.
+ *
+ * Features:
+ * - Responsive media display for all device sizes
+ * - Accessible markup with proper alt text and captions
+ * - Consistent styling with Howard University brand guidelines
+ * - Support for multiple media types (images, videos, documents)
+ * - Proper semantic markup for screen readers
+ * - Optimized loading for performance
  *
  * @see template_preprocess_media()
  *

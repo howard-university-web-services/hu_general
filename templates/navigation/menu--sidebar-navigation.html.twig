@@ -1,7 +1,11 @@
 {#
 /**
  * @file
- * Default theme implementation to display a menu.
+ * Theme override to display a sidebar navigation menu.
+ *
+ * This template provides custom styling for sidebar navigation menus in the
+ * Howard University General theme. It supports multi-level navigation with
+ * proper accessibility markup.
  *
  * Available variables:
  * - menu_name: The machine name of the menu.
@@ -13,6 +17,22 @@
  *   - localized_options: Menu link localized options.
  *   - is_expanded: TRUE if the link has visible children within the current
  *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *
+ * Features:
+ * - Hierarchical navigation with support for multiple levels
+ * - Active trail indication for current page context
+ * - Responsive design that adapts to different screen sizes
+ * - Accessible markup with proper ARIA attributes
+ * - Consistent styling with Howard University brand guidelines
+ * - Expandable/collapsible menu sections
+ * - Proper semantic markup using nav and ul elements
+ *
+ * @see template_preprocess_menu()
+ */
+#}
  *   - is_collapsed: TRUE if the link has children within the current menu tree
  *     that are not currently visible.
  *   - in_active_trail: TRUE if the link is in the active trail.

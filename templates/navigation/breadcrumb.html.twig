@@ -3,8 +3,24 @@
  * @file
  * Theme override for a breadcrumb trail.
  *
+ * This template provides custom breadcrumb navigation for the Howard University
+ * General theme. It includes proper accessibility markup and responsive styling.
+ *
  * Available variables:
- * - breadcrumb: Breadcrumb trail items.
+ * - breadcrumb: Breadcrumb trail items, each containing:
+ *   - text: The breadcrumb text.
+ *   - url: The breadcrumb URL (if applicable).
+ *   - attributes: HTML attributes for the breadcrumb item.
+ *
+ * Features:
+ * - Accessible breadcrumb navigation with proper ARIA labels
+ * - Responsive design that adapts to different screen sizes
+ * - Consistent styling with Howard University brand guidelines
+ * - Proper semantic markup using nav and ol elements
+ * - Current page indication (last item without link)
+ * - Breadcrumb separator styling
+ *
+ * @see template_preprocess_breadcrumb()
  */
 #}
 

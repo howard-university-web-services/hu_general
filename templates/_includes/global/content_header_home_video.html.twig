@@ -1,3 +1,43 @@
+{#
+/**
+ * @file
+ * Homepage content header with video for Howard University General theme.
+ *
+ * This template provides a homepage header section featuring a background video
+ * with overlay text and interactive elements. It creates a dynamic, engaging
+ * homepage experience with multimedia content.
+ *
+ * Available variables:
+ * - content: The rendered content of the homepage node.
+ * - node: The homepage node entity.
+ *
+ * HU General Theme Variables:
+ * - hide_overlay: Flag to show/hide the blue overlay.
+ * - hero_media_video: Vimeo video ID for the background video.
+ *
+ * Content Fields:
+ * - field_hc_intro_video_text: Text overlay for the hero video.
+ * - field_hc_intro_link: Call-to-action link.
+ * - field_hc_intro_link_title: Link title text.
+ * - field_hc_video_controls: Video playback controls settings.
+ *
+ * Features:
+ * - Full-width background video (Vimeo integration)
+ * - Optional blue overlay for brand consistency and text readability
+ * - Overlay text with customizable content
+ * - Call-to-action button integration
+ * - Deferred video loading for performance
+ * - Accessible video controls and ARIA labels
+ * - Mobile-responsive fallback options
+ * - Grid-based responsive layout
+ * - SEO-friendly content structure
+ * - High engagement multimedia experience
+ * - Video playback optimization
+ *
+ * @see hu_general_preprocess_page()
+ * @see hu_general_preprocess_node()
+ */
+#}
 {# Homepage Hero (video) #}
 <section class="hero-video section--blue-blend" aria-label="Howard University">
     {% if not hide_overlay %}

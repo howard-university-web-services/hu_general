@@ -1,7 +1,39 @@
 {#
 /**
  * @file
- * Theme override to display an HC Person node Teaser.
+ * Theme override to display an HC Person node teaser.
+ *
+ * This template renders person/faculty profile content in teaser format for the
+ * Howard University General theme. It's used in faculty directory listings,
+ * department pages, and other contexts where a condensed person profile is needed.
+ *
+ * Variables:
+ * - node: The node entity being displayed.
+ * - content: The rendered content of the node.
+ * - label: The node title (person's name).
+ * - url: The node URL.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - view_mode: View mode (always 'teaser' for this template).
+ * - teaser: Flag indicating this is a teaser display (always true).
+ * - page: Flag indicating if this is a full page display (always false).
+ * - readmore: Flag indicating if a "Read more" link should be displayed.
+ * - logged_in: Flag indicating if the user is logged in.
+ * - is_admin: Flag indicating if the user has administrative privileges.
+ *
+ * Features:
+ * - Person's name as heading
+ * - Brief biography or summary
+ * - Profile photo (if available)
+ * - Job title and department
+ * - Contact information
+ * - Link to full profile page
+ * - Responsive grid layout
+ * - Content moderation controls for administrators
+ *
+ * @see template_preprocess_node()
+ * @see hu_general_preprocess_node()
  */
 #}
 

@@ -1,3 +1,35 @@
+{#
+/**
+ * @file
+ * Content header template with image for Howard University General theme.
+ *
+ * This template provides the content header section for pages that include
+ * a hero image background. It displays the page title, breadcrumbs, and
+ * a full-width background image for visual impact.
+ *
+ * Available variables:
+ * - node: The current node entity.
+ * - content: The rendered content of the node.
+ * - breadcrumbs: The breadcrumb navigation.
+ *
+ * HU General Theme Variables:
+ * - hero_image: Path to the hero background image.
+ *
+ * Features:
+ * - Full-width hero image background
+ * - Page title display with proper heading hierarchy
+ * - Breadcrumb navigation integration
+ * - Responsive image scaling for all device sizes
+ * - Accessible markup with proper alt text handling
+ * - Overlay text styling for readability over images
+ * - Consistent styling with Howard University brand guidelines
+ * - Optimized image loading for performance
+ * - SEO-friendly heading structure
+ *
+ * @see hu_general_preprocess_page()
+ * @see hu_general_preprocess_node()
+ */
+#}
 <div class="hero-image" style="background-image:url('{{ hero_image }}')" alt="{{content.field_hc_header_image['#items'].entity.field_media_image.alt }}"></div>
 <header class="post-header">
   <div class="compartment">

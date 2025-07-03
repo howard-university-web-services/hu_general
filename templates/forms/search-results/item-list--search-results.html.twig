@@ -3,6 +3,10 @@
  * @file
  * Theme override for a search results list.
  *
+ * This template provides custom styling for search results lists in the Howard
+ * University General theme. It handles the overall container and structure
+ * for displaying multiple search results.
+ *
  * Available variables:
  * - items: A list of items. Each item contains:
  *   - attributes: HTML attributes to be applied to each list item.
@@ -13,6 +17,21 @@
  * - attributes: HTML attributes to be applied to the list.
  * - empty: A message to display when there are no items. Allowed value is a
  *   string or render array.
+ * - context: Additional context about the list.
+ *
+ * Features:
+ * - Consistent search results list formatting
+ * - Proper semantic markup with appropriate list elements
+ * - Accessible markup with proper headings and landmarks
+ * - Responsive design for all device sizes
+ * - Empty state handling with helpful messaging
+ * - Support for result count and pagination context
+ * - Consistent styling with Howard University brand guidelines
+ * - Proper spacing and typography for search results
+ *
+ * @see template_preprocess_item_list()
+ */
+#}
  * - context: A list of contextual data associated with the list. May contain:
  *   - list_style: The custom list style.
  *

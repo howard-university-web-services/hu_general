@@ -3,6 +3,10 @@
  * @file
  * Theme override to display all the fields in a row.
  *
+ * This template provides custom styling for views field display in the Howard
+ * University General theme. It handles the rendering of individual fields
+ * within view rows with proper formatting and accessibility.
+ *
  * Available variables:
  * - view: The view in use.
  * - fields: A list of fields, each one contains:
@@ -13,6 +17,28 @@
  *   - inline: Whether or not the field should be inline.
  *   - wrapper_element: An HTML element for a wrapper.
  *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element.
+ *   - has_label_colon: A flag indicating whether to display a colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - label_element: An HTML element for the label.
+ *   - label_attributes: List of attributes for label element.
+ *   - label: The label for the field.
+ *   - label_suffix: Colon after the label.
+ *
+ * Features:
+ * - Flexible field display with support for various field types
+ * - Proper label and content separation
+ * - Accessible markup with appropriate semantic elements
+ * - Responsive design that adapts to different screen sizes
+ * - Consistent styling with Howard University brand guidelines
+ * - Support for inline and block field display
+ * - Proper handling of field wrappers and attributes
+ * - Clean separation of field content and metadata
+ *
+ * @see template_preprocess_views_view_fields()
+ */
+#}
  *   - separator: An optional separator that may appear before a field.
  *   - label: The field's label text.
  *   - label_element: An HTML element for a label wrapper.

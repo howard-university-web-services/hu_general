@@ -3,11 +3,27 @@
  * @file
  * Theme override for a link to a file.
  *
+ * This template provides custom styling for file links in the Howard University
+ * General theme. It uses the theme's custom file link preprocessing to display
+ * appropriate link text (media names when available, filenames otherwise).
+ *
  * Available variables:
  * - attributes: The HTML attributes for the containing element.
- * - link: A link to the file.
+ * - link: A link to the file (original Drupal variable).
+ *
+ * HU General Theme Variables:
+ * - link_url: The absolute URL to the file.
+ * - link_text: The display text for the link (media name or filename).
+ *
+ * Features:
+ * - Custom link styling with "fancy-link" class
+ * - Opens files in new tab/window for better user experience
+ * - Intelligent link text selection (media names preferred over filenames)
+ * - Absolute URLs for consistency and CDN compatibility
+ * - Accessible markup with proper link context
  *
  * @see template_preprocess_file_link()
+ * @see hu_general_preprocess_file_link()
  */
 #}
 

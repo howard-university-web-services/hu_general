@@ -2,6 +2,44 @@
 /**
  * @file
  * Theme override to display an HC Person node.
+ *
+ * This template renders person/faculty profile content for the Howard University
+ * General theme. It includes profile information, contact details, biography,
+ * and other relevant person-specific content.
+ *
+ * Variables:
+ * - node: The node entity being displayed.
+ * - content: The rendered content of the node.
+ * - label: The node title (person's name).
+ * - url: The node URL.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - author_attributes: HTML attributes for the author element.
+ * - title_prefix: Additional output populated by modules.
+ * - title_suffix: Additional output populated by modules.
+ * - view_mode: View mode (e.g., 'full', 'teaser').
+ * - teaser: Flag indicating if this is a teaser display.
+ * - page: Flag indicating if this is a full page display.
+ * - readmore: Flag indicating if a "Read more" link should be displayed.
+ * - logged_in: Flag indicating if the user is logged in.
+ * - is_admin: Flag indicating if the user has administrative privileges.
+ *
+ * HU General Theme Variables:
+ * - parent_include_directory: Path to the theme directory for template includes.
+ *
+ * Features:
+ * - Profile photo display
+ * - Contact information (email, phone, office location)
+ * - Biography and professional information
+ * - Educational background
+ * - Publications and research interests
+ * - Grid-based layout for organized content presentation
+ * - Responsive design for all device sizes
+ * - Content moderation controls for administrators
+ *
+ * @see template_preprocess_node()
+ * @see hu_general_preprocess_node()
  */
 #}
 

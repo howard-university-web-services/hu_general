@@ -1,7 +1,39 @@
 {#
 /**
  * @file
- * Theme override to display an HC Resource node Teaser.
+ * Theme override to display an HC Resource node teaser.
+ *
+ * This template renders resource content in teaser format for the Howard University
+ * General theme. It's used in resource listings, search results, and other contexts
+ * where a condensed resource representation is needed.
+ *
+ * Variables:
+ * - node: The node entity being displayed.
+ * - content: The rendered content of the node.
+ * - label: The node title.
+ * - url: The node URL.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - view_mode: View mode (always 'teaser' for this template).
+ * - teaser: Flag indicating this is a teaser display (always true).
+ * - page: Flag indicating if this is a full page display (always false).
+ * - readmore: Flag indicating if a "Read more" link should be displayed.
+ * - logged_in: Flag indicating if the user is logged in.
+ * - is_admin: Flag indicating if the user has administrative privileges.
+ *
+ * Features:
+ * - Resource title and description
+ * - Resource type indicator
+ * - Brief summary or excerpt
+ * - File format and size information
+ * - Link to full resource page
+ * - Download links (if applicable)
+ * - Responsive grid layout
+ * - Content moderation controls for administrators
+ *
+ * @see template_preprocess_node()
+ * @see hu_general_preprocess_node()
  */
 #}
 

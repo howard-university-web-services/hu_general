@@ -1,3 +1,37 @@
+{#
+/**
+ * @file
+ * Theme override for the page template.
+ *
+ * This is the main page template for the Howard University General theme.
+ * It defines the overall page structure and includes the global header and footer.
+ *
+ * Variables:
+ * - messages: Status and error messages to display to users.
+ * - logged_in: A flag indicating if the user is logged in.
+ * - page: The rendered page content broken down into regions:
+ *   - page.admin_tabs: Administrative tabs for content management.
+ *   - page.alerts: Site-wide alerts and notifications.
+ *   - page.help: Help text and contextual assistance.
+ *   - page.content: Main content region.
+ *
+ * HU General Theme Variables:
+ * - parent_include_directory: Path to the theme directory for template includes.
+ *
+ * Structure:
+ * - Global header (includes navigation, branding, and user interface elements)
+ * - Main content area with:
+ *   - Status messages
+ *   - Administrative tabs (for logged-in users)
+ *   - Site alerts
+ *   - Help text
+ *   - Primary content
+ * - Global footer (includes footer navigation, contact info, and social links)
+ *
+ * @see template_preprocess_page()
+ * @see hu_general_preprocess_page()
+ */
+#}
 {% include parent_include_directory ~ '/templates/_includes/global/header.html.twig' %}
 
 <main class="main-content" id="main-content">

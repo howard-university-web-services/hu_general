@@ -1,3 +1,42 @@
+{#
+/**
+ * @file
+ * Homepage content header with large image for Howard University General theme.
+ *
+ * This template provides a homepage header section featuring a large hero image
+ * with overlay text and call-to-action elements. It's designed for maximum
+ * visual impact on the homepage.
+ *
+ * Available variables:
+ * - content: The rendered content of the homepage node.
+ * - node: The homepage node entity.
+ *
+ * HU General Theme Variables:
+ * - home_hero_image: Path to the large homepage hero image.
+ * - hide_overlay: Flag to show/hide the blue overlay.
+ *
+ * Content Fields:
+ * - field_hc_intro_image_text: Text overlay for the hero image.
+ * - field_hc_header_image: Header background image entity.
+ * - field_hc_intro_link: Call-to-action link.
+ * - field_hc_intro_link_title: Link title text.
+ *
+ * Features:
+ * - Large, full-width hero image
+ * - Optional blue overlay for brand consistency and text readability
+ * - Overlay text with customizable content
+ * - Call-to-action button integration
+ * - Blue blend section styling
+ * - Grid-based responsive layout
+ * - Accessible markup with proper alt text
+ * - Mobile-responsive image scaling
+ * - SEO-friendly content structure
+ * - High visual impact design
+ *
+ * @see hu_general_preprocess_page()
+ * @see hu_general_preprocess_node()
+ */
+#}
 {# Homepage Hero (image) #}
 <section class="hero-image-home section--blue-blend">
     <div class="hero-image hero-image--large" style="background-image:url('{{home_hero_image}}')" alt="{{content.field_hc_header_image['#items'].entity.field_media_image.alt }}"></div>

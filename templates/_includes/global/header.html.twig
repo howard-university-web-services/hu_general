@@ -1,4 +1,39 @@
- {% if h_menu == 1 %}
+{#
+/**
+ * @file
+ * Global header template for Howard University General theme.
+ *
+ * This template provides the main header structure for all pages in the Howard
+ * University General theme. It includes the university branding, navigation,
+ * search functionality, and responsive mobile menu controls.
+ *
+ * Features:
+ * - Howard University branding and logo
+ * - Primary navigation menu
+ * - Responsive mobile menu (hamburger menu)
+ * - Search functionality
+ * - Utility menu for secondary navigation
+ * - Featured header link display
+ * - Light/dark header theme variants
+ * - Accessible markup with proper ARIA labels
+ * - OpenID Connect login integration
+ *
+ * HU General Theme Variables:
+ * - h_menu: Hamburger menu setting (1 = show, 0 = hide)
+ * - light_header: Light header theme setting
+ * - featured_header_link_show: Featured link display setting
+ * - featured_header_link_title: Featured link title text
+ * - featured_header_link_url: Featured link URL
+ * - hide_search: Search functionality display setting
+ * - login_block: OpenID Connect login block (if available)
+ * - parent_school_college: Parent organization name
+ * - parent_school_college_link: Parent organization URL
+ * - department: Department/site name
+ *
+ * @see hu_general_preprocess_page()
+ */
+#}
+{% if h_menu == 1 %}
     {% set h_menu = 'show-menu-mobile' %}
     {% set c_menu = 'display-menu-mobile' %}
 {% else %}

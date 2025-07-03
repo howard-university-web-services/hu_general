@@ -1,7 +1,26 @@
 {#
 /**
  * @file
- * Default theme implementation to display an oEmbed resource in an iframe.
+ * Theme override to display an oEmbed resource in an iframe.
+ *
+ * This template provides custom styling for oEmbed iframe content in the Howard
+ * University General theme. It ensures proper responsive behavior and accessibility
+ * for embedded media content like YouTube videos, Vimeo videos, and other third-party
+ * media resources.
+ *
+ * Available variables:
+ * - media: The oEmbed media content to be displayed.
+ * - attributes: HTML attributes for the iframe element.
+ *
+ * Features:
+ * - Responsive iframe sizing that adapts to container
+ * - Accessibility considerations for embedded content
+ * - Consistent styling with Howard University brand guidelines
+ * - Proper positioning and layout for embedded media
+ * - Cross-browser compatibility
+ * - Performance optimization for embedded content
+ *
+ * @see template_preprocess_media_oembed_iframe()
  *
  * @ingroup themeable
  */
