@@ -242,6 +242,12 @@ When contributing to the theme:
 3. Test across different browsers and devices
 4. Update documentation as needed
 
+## Documentation
+
+- [DEVELOPER.md](DEVELOPER.md) - Developer documentation and customization guide
+- [TEMPLATES.md](TEMPLATES.md) - Complete template documentation
+- [SECURITY.md](SECURITY.md) - Security review and best practices
+
 ## Resources
 
 - [idfive Component Library D8 Theme](https://bitbucket.org/idfivellc/idfive-component-library-d8-theme)
