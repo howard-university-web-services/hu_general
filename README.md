@@ -1,78 +1,253 @@
-# This project
+# Howard University General Theme (hu_general)
 
-Howard University General (hu_general), is a child theme of the general idfive Drupal 8 theme. Setup for use with the idfive Component Library (icl).
+A comprehensive Drupal theme built specifically for Howard University websites, providing a robust and customizable foundation for university departments, schools, and organizations.
 
-- [About](#about)
-- [Install](#install)
-- [Setup](#setup)
-- [Additional Setup Steps](#additional_setup)
-- [Resources](#resources)
+## Overview
 
-## About
+The HU General theme is designed to maintain Howard University's brand identity while providing flexibility for different departments and schools. It includes extensive customization options, responsive design, and integration with various Drupal modules commonly used in university websites.
 
-This theme is designed to be the master theme for Howard University D8 websites. It is a child of the idfive Component Library D8 Theme, so it inherits some standard functionality there. This theme may be used on its own, or as a base theme for any custom themes needed. It is HIGHLY recommended that custom child themes not be made for Howard sites unless absolutely necessary. When creating a custom child theme, only override what is absolutely necessary in order to keep standard functionality across sites.
+This theme is a child of the idfive Component Library D8 Theme, inheriting standard functionality while adding Howard University-specific features and customizations.
 
-## Install/Update
+## Features
 
-### Install Via Composer
+### Theme Variants
+- **Default**: Standard Howard University styling
+- **Clean & Light**: Minimalist design with lighter color scheme
+- **Classic Editorial**: Traditional academic styling optimized for content-heavy sites
 
-- `composer install howard/hu_general`
+### Header Configuration
+- Light header menu option for better contrast
+- Desktop hamburger menu support for simplified navigation
+- Featured header link for promotional content
+- Configurable search functionality
 
-### Update Via Composer
+### Footer Customization
+- Social media links (Twitter, Facebook, YouTube, Instagram)
+- Complete address and contact information
+- Institutional branding display
 
-- `composer update howard/hu_general`
+### School/Department Branding
+- Parent school/college organization display
+- Department-specific branding options
+- Customizable institutional hierarchy
 
-## Setup
+### Administrative Features
+- Site-wide script injection for tracking codes
+- Theme variant switcher for authenticated users
+- Comprehensive caching support
 
-Enable and set default as you normally would for any D8 theme.
+## Installation
 
-## Additional Setup Steps
+### Via Composer (Recommended)
+```bash
+composer install howard/hu_general
+```
 
-Additional options available on the /appearance/settings/hu_general page:
+### Manual Installation
+1. Extract the theme to your Drupal themes directory: `/themes/contrib/hu_general`
+2. Enable the theme in the Drupal admin interface
+3. Configure theme settings at: `Administration > Appearance > Settings > HU General`
 
-### Howard School/Department Settings
+### Updates
+```bash
+composer update howard/hu_general
+```
 
-- Parent School/College/Organization: Add the parent school or college, for example "College of Arts and Sciences".
-- Parent School/College/Organization URL: Add the URL to parent school or college, for example "http://coas.howard.edu".
-- Department/Site: Add the department or site, for example "Department of English".
+## Configuration
 
-### Howard Header Settings
+### Theme Settings
 
-- Show light header menu: Uses the light menu color scheme for the header menu throughout the site.
-- Featured Header Link: Show a featured link in the header, and set text and URL.
-- Hie Search: Hides the search function on desktop and mobile, if you wish to not have search functionality on the site.
-- Hamburger menu in desktop: If checked, the menu for the site will be hambrger (mobile view full time).
+The theme provides extensive configuration options accessible through the Drupal admin interface at `/admin/appearance/settings/hu_general`:
 
-### Howard footer Settings, Social Links
+#### Theme Variant Settings
+- Select from available theme variants
+- Enable theme variant switcher for authenticated users
 
-These links will show as icons in the footer throughout the site.
+#### Howard School/Department Settings
+- **Parent School/College/Organization**: Add the parent school or college, for example "College of Arts and Sciences"
+- **Parent School/College/Organization URL**: Add the URL to parent school or college, for example "http://coas.howard.edu"
+- **Department/Site**: Add the department or site, for example "Department of English"
 
-- Twitter Link
-- Facebook Link
-- Youtube Links
-- Instagram Link
+#### Howard Header Settings
+- **Show light header menu**: Uses the light menu color scheme for the header menu
+- **Show hamburger in Desktop**: Display hamburger menu on desktop for simplified navigation
+- **Featured Header Link**: Show a featured link in the header with custom text and URL
+- **Hide Search**: Hide search functionality if not needed
 
-### Howard footer Settings, Address
+#### Howard Footer Settings
+- **Social Links**: Configure links for Twitter, Facebook, YouTube, and Instagram
+- **Address Information**: Set up complete address and contact information for the footer
 
-These fields set the footer address throughout the site.
+#### Admin Settings
+- **Site-wide Scripts or Embeds**: Add custom JavaScript snippets, tracking codes, or other embeds (Admin only)
 
-### Admin settings
+## Template Files
 
-- Site-wide Scripts or Embeds. Allows admins to add JS snippets/etc, when needed.
+The theme includes customized templates for:
 
-### Development
+### Layout Templates
+- `html.html.twig` - Base HTML structure with theme variants and admin scripts
+- `page.html.twig` - Page layout and regions with OpenID Connect integration
+- `page--404.html.twig` - Custom 404 error page
 
-This theme is built on the [idfive component library (ICL)](https://bitbucket.org/idfivellc/idfive-component-library/src/master/).
-CSS/JS in folder idfive-component-library
-From idfive-component-library run the following:
+### Content Templates
+- `node--hc-page.html.twig` - Standard page content
+- `node--hc-article.html.twig` - Article content display
+- `node--hc-person.html.twig` - Person/faculty profiles
+- `node--hc-resource.html.twig` - Resource content
+- `node--hc-standard-homepage.html.twig` - Homepage layout
 
-- Run `nvm use 10`
-- Run `npm install`
-- Run `npm run fractal` to preview CSS?JS changes
-- Run `npm run build:production` for production builds.
+### Navigation Templates
+- `menu--sidebar-navigation.html.twig` - Sidebar navigation
+- `breadcrumb.html.twig` - Breadcrumb navigation
+- `block--menu-block--sidebar-navigation.html.twig` - Menu block template
+
+### Field Templates
+- `file-link.html.twig` - Custom file link display with media name support
+
+### View Templates
+- `views-view.html.twig` - Views display
+- `views-view-fields.html.twig` - Individual field display
+- `views-view-unformatted.html.twig` - Unformatted view display
+
+## PHP Functions
+
+### Theme Hooks
+
+#### `hu_general_preprocess_html(&$variables)`
+Preprocesses HTML template variables, adding theme variant and admin scripts settings.
+
+#### `hu_general_preprocess_page(&$variables)`
+Preprocesses page template variables, extending theme settings, configuring hero images, and setting up OpenID Connect integration.
+
+#### `hu_general_preprocess_node(&$variables)`
+Preprocesses node template variables, making theme path available to node templates.
+
+#### `hu_general_preprocess_file_link(&$variables)`
+Customizes file link display, using media names when available and generating absolute URLs.
+
+#### `hu_general_theme_suggestions_page_alter(&$suggestions, $variables, $hook)`
+Adds custom page template suggestions, particularly for 404 error pages.
+
+### Helper Functions
+
+#### `_hu_general_extend_theme_variables(&$variables)`
+Extends template variables with all theme settings and handles proper caching dependencies.
+
+## Dependencies
+
+### Required Modules
+- Core Drupal modules (minimal requirements)
+
+### Optional Modules
+- **OpenID Connect**: For SSO integration and login block functionality
+- **Block**: For custom block placement
+- **Views**: For content listing and display
+
+## Component Library
+
+The theme includes the idfive-component-library for consistent styling and components:
+- Located in `/idfive-component-library/`
+- Contains build tools and assets
+- Provides standardized UI components
+
+### Development Workflow
+
+From the `idfive-component-library` directory:
+
+1. **Setup Environment**:
+   ```bash
+   nvm use 10
+   npm install
+   ```
+
+2. **Development Preview**:
+   ```bash
+   npm run fractal
+   ```
+
+3. **Production Build**:
+   ```bash
+   npm run build:production
+   ```
+
+## Customization
+
+### Adding Custom Styles
+1. Modify files in `/idfive-component-library/src/`
+2. Run the build process to compile assets
+3. Custom styles are automatically loaded
+
+### Creating Custom Templates
+1. Copy template files to your theme directory
+2. Modify as needed
+3. Clear Drupal cache
+
+### Extending Theme Settings
+1. Modify `theme-settings.php` to add new form elements
+2. Update `hu_general.theme` to handle new settings
+3. Create corresponding template variables
+
+## File Structure
+
+```
+hu_general/
+├── composer.json                 # Composer dependencies
+├── hu_general.info.yml          # Theme information
+├── hu_general.libraries.yml     # Asset libraries
+├── hu_general.theme             # Theme hooks and functions
+├── theme-settings.php           # Theme settings form
+├── config/                      # Configuration files
+│   └── install/
+│       └── hu_general.settings.yml
+├── templates/                   # Twig templates
+│   ├── block/
+│   ├── fields/
+│   ├── forms/
+│   ├── layout/
+│   ├── media/
+│   ├── navigation/
+│   ├── node/
+│   ├── page/
+│   └── views/
+└── idfive-component-library/    # Component library
+    ├── build/                   # Compiled assets
+    ├── src/                     # Source files
+    └── fractal/                 # Component documentation
+```
+
+## Best Practices
+
+### Custom Child Themes
+It is **HIGHLY recommended** that custom child themes not be made for Howard sites unless absolutely necessary. When creating a custom child theme, only override what is absolutely necessary in order to keep standard functionality across sites.
+
+### Theme Customization
+- Use the theme settings form for configuration rather than hardcoding values
+- Leverage the component library for consistent styling
+- Follow Drupal coding standards for any custom code
+- Test across different browsers and devices
+
+## Support
+
+For support and questions about the HU General theme:
+- Check the theme documentation
+- Review the component library documentation
+- Contact the Howard University web development team
+
+## Contributing
+
+When contributing to the theme:
+1. Follow Drupal coding standards
+2. Document all functions and significant code blocks
+3. Test across different browsers and devices
+4. Update documentation as needed
 
 ## Resources
 
 - [idfive Component Library D8 Theme](https://bitbucket.org/idfivellc/idfive-component-library-d8-theme)
 - [Silc Framework](https://silc.io/)
 - [idfive Component Library Source Files](https://bitbucket.org/idfivellc/idfive-component-library/src/master/)
+
+## License
+
+See LICENSE file for licensing information.

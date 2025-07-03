@@ -3,12 +3,35 @@
 /**
  * @file
  * Howard University General (hu_general), add custom theme settings options.
+ *
+ * This file implements custom theme settings for the Howard University General theme.
+ * It provides administrators with options to configure:
+ * - Theme variants (Default, Clean & Light, Classic Editorial)
+ * - School/Department branding information
+ * - Header configuration (light header, hamburger menu, featured links, search)
+ * - Footer settings (social media links, address information)
+ * - Administrative settings (site-wide scripts and embeds)
+ *
+ * All settings are configurable through the theme settings form at:
+ * Administration > Appearance > Settings > HU General
  */
 
 use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_form_system_theme_settings_alter().
+ *
+ * Alters the theme settings form to add custom configuration options
+ * specific to the Howard University General theme.
+ *
+ * This function removes unused default theme settings and adds custom
+ * fieldsets for theme variants, school/department settings, header
+ * configuration, footer settings, and administrative options.
+ *
+ * @param array $form
+ *   The form array structure for the theme settings form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The current state of the form.
  */
 function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
 
@@ -19,7 +42,7 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
   unset($form['search']);
   unset($form['other']);
 
-  // Theme variant.
+  // Theme variant settings - Controls overall theme appearance and styling.
   $form['theme_variant_settings'] = [
     '#type' => 'details',
     '#title' => t('Theme Variant Settings'),
@@ -45,7 +68,7 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#default_value' => theme_get_setting('show_switcher'),
   ];
 
-  // School/Department/Organization.
+  // School/Department/Organization settings - Configure institutional branding.
   $form['hu_school_settings'] = [
     '#type' => 'details',
     '#title' => t('Howard School/Department Settings'),
@@ -69,26 +92,26 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#description' => t('Add the department or site, for example "Department of English".'),
   ];
 
-  // Header.
+  // Header configuration - Controls header appearance and functionality.
   $form['hu_header_settings'] = [
     '#type' => 'details',
     '#title' => t('Howard Header Settings'),
   ];
-  // Show light header.
+  // Header appearance options.
   $form['hu_header_settings']['light_header'] = [
     '#type' => 'checkbox',
     '#title' => t('Show light header menu'),
     '#description' => t('Uses the light menu color scheme for the header menu.'),
     '#default_value' => theme_get_setting('light_header'),
   ];
-  // Show hamburger menu.
+  // Mobile/responsive menu options.
   $form['hu_header_settings']['hamburguer_desktop'] = [
     '#type' => 'checkbox',
     '#title' => t('Show hamburger in Desktop?'),
     '#description' => t('Used for display hamburger menu in Desktop Site.'),
     '#default_value' => theme_get_setting('hamburguer_desktop'),
   ];
-  // Featured Header Link.
+  // Featured Header Link - Promotional link displayed prominently in header.
   $form['hu_header_settings']['featured_link'] = [
     '#type' => 'details',
     '#title' => t('Featured Header Link'),
@@ -111,7 +134,7 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#description' => t('Add a link URL for the featured link.'),
     '#default_value' => theme_get_setting('featured_header_link_url'),
   ];
-  // Search Options.
+  // Search functionality configuration.
   $form['hu_header_settings']['search_options'] = [
     '#type' => 'details',
     '#title' => t('Search Options'),
@@ -123,12 +146,12 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#default_value' => theme_get_setting('hide_search'),
   ];
 
-  // Footer.
+  // Footer configuration - Social media links and contact information.
   $form['hu_footer_settings'] = [
     '#type' => 'details',
     '#title' => t('Howard Footer Settings'),
   ];
-  // Social media.
+  // Social media links configuration.
   $form['hu_footer_settings']['social_links'] = [
     '#type' => 'fieldset',
     '#title' => t('Social Links'),
@@ -160,7 +183,7 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#default_value' => theme_get_setting('instagram_link'),
     '#description' => t('Add the URL to your instagram profile.'),
   ];
-  // Address/contact.
+  // Contact information and address fields.
   $form['hu_footer_settings']['address'] = [
     '#type' => 'fieldset',
     '#title' => t('Address'),
@@ -193,7 +216,7 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#description' => t('Add a phone number.'),
   ];
 
-  // Admin only settings.
+  // Administrative settings - Restricted to admin users for security.
   $form['hu_admin_settings'] = [
     '#type' => 'details',
     '#title' => t('Admin Settings'),
