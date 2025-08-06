@@ -132,6 +132,11 @@ a.carousel__link.lightbox img {
 span.giving-home__link_block_bgimage img {
   display: none; }
 
+label::after {
+  content: "*";
+  position: relative;
+  top: rem(-5); }
+
 html {
   font-size: 16px; }
 
