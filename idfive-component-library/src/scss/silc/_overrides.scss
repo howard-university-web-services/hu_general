@@ -179,7 +179,7 @@ span.giving-home__link_block_bgimage img {
     display: none;
 }
 
-label::after {
+label.form-required::after {
 content: "\002A";
 position: relative;
 top: rem(-5);
