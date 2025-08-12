@@ -26,11 +26,17 @@
  * - Integration with Howard University brand guidelines
  *
  * @see template_preprocess_views_view_unformatted()
- */
+{#
+Theme override for the unformatted view row template.
+
+Available variables:
+- row: The row data.
+- view: The view object.
+
+Features:
+- Custom row rendering for search results
+- Consistent styling with Howard University brand guidelines
+- Accessible markup
+
+@see template_preprocess_views_view_unformatted()
 #}
-
-{% for row in rows %}
-
-    {{- row.content -}}
-
-{% endfor %}
