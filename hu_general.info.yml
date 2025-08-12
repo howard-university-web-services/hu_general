@@ -4,8 +4,9 @@ name: Howard University General
 description: 'Howard University General (hu_general), is the theme to be used for all Howard University Drupal Sites.'
 package: Howard University
 
+
 core_version_requirement: ^10 || ^11
-version: '11.0.1'
+version: '11.0.5'
 
 libraries:
   - hu_general/global
