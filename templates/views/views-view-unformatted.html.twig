@@ -16,10 +16,9 @@
  */
 #}
 
-{% if rows %}
-  {% for row in rows %}
-    <div{{ row.attributes.addClass('views-row') }}>
-      {{ row.content }}
-    </div>
-  {% endfor %}
-{% endif %}
+{% for row in rows %}
+
+    {{- row.content -}}
+
+{% endfor %}
+
