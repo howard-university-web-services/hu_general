@@ -1,7 +1,7 @@
 {
     "name": "howard/hu_general",
     "type": "drupal-theme",
-    "description": "Base Drupal 8 theme for Howard University.",
+    "description": "Base Drupal theme for Howard University.",
     "keywords": ["Drupal"],
     "license": "GPL-2.0+",
     "homepage": "https://github.com/howard-university-web-services/hu_general",
