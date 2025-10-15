@@ -22,6 +22,7 @@
  * - address_line_two: Second line of address
  * - address_line_three: Third line of address
  * - phone: Phone number
+ * - email: Email address
  * - twitter_link: Twitter profile URL
  * - facebook_link: Facebook profile URL
  * - youtube_link: YouTube profile URL
@@ -51,6 +52,11 @@
 					<span>Phone:
 						{{ phone }}</span>
 				{% endif %}
+				{% if email %}
+					<span>Email:
+						{{ email }}</span>
+				{% endif %}
+
 			</address>
 		</div>
 		<div class="main-footer__nav">
@@ -109,12 +115,12 @@
 							<a href="https://howard.edu/accessibility-statement" title="Web Accessibility Support">Web Accessibility Support</a>
 						</li>
 						{# <li>
-							<a href="https://howard.edu/privacy" title="Privacy &amp; Security Notice">Privacy &amp; Security Notice</a>
-						</li>
-						<li>
-							<a href="https://howard.edu/terms" title="Terms &amp; Conditions of Use">Terms &amp; Conditions of Use</a>
-						</li> #}
-        			</ul>
+																			<a href="https://howard.edu/privacy" title="Privacy &amp; Security Notice">Privacy &amp; Security Notice</a>
+																		</li>
+																		<li>
+																			<a href="https://howard.edu/terms" title="Terms &amp; Conditions of Use">Terms &amp; Conditions of Use</a>
+																		</li> #}
+					</ul>
 				</nav>
 			</div>
 

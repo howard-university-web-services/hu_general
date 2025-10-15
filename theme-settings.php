@@ -215,6 +215,12 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#default_value' => theme_get_setting('phone'),
     '#description' => t('Add a phone number.'),
   ];
+  $form['hu_footer_settings']['address']['email'] = [
+  '#type' => 'email',
+  '#title' => t('Email Address'),
+  '#default_value' => theme_get_setting('email'),
+  '#description' => t('Add an email address.'),
+];
 
   // Administrative settings - Restricted to admin users for security.
   $form['hu_admin_settings'] = [
