@@ -51,13 +51,13 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Announcement",
-  {% if label %}"name": "{{ label|striptags }}",{% endif %}
-  {% if content.field_hc_summary|render %}"text": "{{ content.field_hc_summary|render|striptags }}",{% endif %}
-  {% if node.created.value %}"datePublished": "{{ node.created.value|date('c') }}",{% endif %}
-  {% if node.changed.value %}"dateModified": "{{ node.changed.value|date('c') }}",{% endif %}
-  {% if content.field_hc_start_date %}"startDate": "{{ content.field_hc_start_date['#items'].value|date('c') }}",{% endif %}
-  {% if content.field_hc_end_date %}"endDate": "{{ content.field_hc_end_date['#items'].value|date('c') }}",{% endif %}
+  "@type": "Announcement"{% if node.title.value %},
+  "name": {{ node.title.value|json_encode|raw }}{% endif %}{% if node.field_hc_summary.value %},
+  "text": {{ node.field_hc_summary.value|json_encode|raw }}{% endif %}{% if node.created.value %},
+  "datePublished": {{ node.created.value|date('c')|json_encode|raw }}{% endif %}{% if node.changed.value %},
+  "dateModified": {{ node.changed.value|date('c')|json_encode|raw }}{% endif %}{% if node.field_hc_start_date.value %},
+  "startDate": {{ node.field_hc_start_date.value|date('c')|json_encode|raw }}{% endif %}{% if node.field_hc_end_date.value %},
+  "endDate": {{ node.field_hc_end_date.value|date('c')|json_encode|raw }}{% endif %},
   "publisher": {
     "@type": "Organization",
     "name": "Howard University",

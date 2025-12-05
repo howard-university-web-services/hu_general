@@ -44,7 +44,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Announcement",
-  {% if label %}"name": "{{ label|striptags }}",{% endif %}
+  {% if node.title.value %}"name": "{{ node.title.value|striptags|raw }}",{% endif %}
   {% if url %}"url": "{{ url }}",{% endif %}
   "publisher": {
     "@type": "Organization",

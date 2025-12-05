@@ -42,7 +42,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  {% if label %}"headline": "{{ label|striptags }}",{% endif %}
+  {% if node.title.value %}"headline": "{{ node.title.value|striptags|raw }}",{% endif %}
   {% if url %}"url": "{{ url }}",{% endif %}
   "publisher": {
     "@type": "Organization",

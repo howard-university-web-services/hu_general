@@ -55,21 +55,23 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  {% if label %}"headline": "{{ label|striptags }}",{% endif %}
-  {% if content.field_hc_lead_in|render %}"description": "{{ content.field_hc_lead_in|render|striptags }}",{% endif %}
-  {% if node.body.value %}"articleBody": "{{ node.body.value|striptags|slice(0, 500) }}...",{% endif %}
-  {% if node.created.value %}"datePublished": "{{ node.created.value|date('c') }}",{% endif %}
-  {% if node.changed.value %}"dateModified": "{{ node.changed.value|date('c') }}",{% endif %}
-  {% if node.getOwner() %}"author": {
+  "@type": "Article"{% if node.title.value %},
+  "headline": {{ node.title.value|striptags|json_encode|raw }}{% endif %}{% set lead_in_text = content.field_hc_lead_in|render %}{% if lead_in_text and lead_in_text is not iterable %},
+  "description": {{ lead_in_text|striptags|json_encode|raw }}{% endif %}{% if node.body.value %},
+  "articleBody": {{ node.body.value|striptags|slice(0, 500)|json_encode|raw }}{% endif %}{% if node.created.value %},
+  "datePublished": "{{ node.created.value|date('c') }}"{% endif %}{% if node.changed.value %},
+  "dateModified": "{{ node.changed.value|date('c') }}"{% endif %}{% if node.getOwner() %},
+  "author": {
     "@type": "Person",
-    "name": "{{ node.getOwner().getAccountName() }}"
-  },{% endif %}
+    "name": {{ node.getOwner().getAccountName()|json_encode|raw }}
+  }{% endif %},
   "publisher": {
     "@type": "Organization",
     "name": "Howard University",
     "url": "https://www.howard.edu"
-  }
+  }{% if content.field_hc_resource_category|render %},
+  "about": {{ content.field_hc_resource_category|render|striptags|json_encode|raw }}{% endif %}{% if url %},
+  "url": "{{ url }}"{% endif %}
 }
 </script>
 

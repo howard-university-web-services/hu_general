@@ -1,5 +1,25 @@
 # Changelog
 
+## 11.1.1 - 2025-12-05
+
+### Fixed
+- **Schema.org Data Quality**: Improved field access patterns in all node templates
+- **Template Variables**: Changed from `label` to `node.title.value` for more reliable title access
+- **JSON Validation**: Enhanced JSON encoding with proper escaping to prevent malformed structured data
+- **Field Access**: Direct node property access instead of rendered content for better data integrity
+
+### Enhanced
+- **HC Person Template**: Added comprehensive professional data including job title, organization, and contact information
+- **HC Article Template**: Improved article body handling and metadata extraction
+- **HC Resource Template**: Enhanced author information and categorization data
+- **Template Consistency**: Standardized conditional field checking across all templates
+
+### Technical
+- **Error Prevention**: Added proper null checking to prevent PHP warnings
+- **Data Reliability**: Improved field value extraction patterns
+- **SEO Optimization**: Better structured data quality for search engines
+- **Maintenance**: Cleaner template code with more robust field handling
+
 ## 11.1.0 - 2025-12-05
 
 ### Added - Schema.org Implementation

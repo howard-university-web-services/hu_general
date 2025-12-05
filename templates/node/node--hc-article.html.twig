@@ -55,7 +55,7 @@
 {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  {% if label %}"headline": "{{ label|striptags }}",{% endif %}
+  {% if node.title.value %}"headline": "{{ node.title.value|striptags|raw }}",{% endif %}
   {% if url %}"url": "{{ url }}",{% endif %}
   {% if node.body.value %}"articleBody": "{{ node.body.value|striptags|slice(0, 500) }}...",{% endif %}
   {% if node.created.value %}"datePublished": "{{ node.created.value|date('c') }}",{% endif %}

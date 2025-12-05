@@ -50,21 +50,24 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  {% if node.getTitle() %}"name": "{{ node.getTitle()|striptags }}",{% endif %}
-  {% if content.field_hc_person_title|render %}"jobTitle": "{{ content.field_hc_person_title|render|striptags }}",{% endif %}
-  {% if content.field_hc_person_organization|render %}"worksFor": {
+  "@type": "Person"{% if node.getTitle() %},
+  "name": {{ node.getTitle()|striptags|json_encode|raw }}{% endif %}{% if node.field_hc_person_title.value %},
+  "jobTitle": {{ node.field_hc_person_title.value|striptags|json_encode|raw }}{% endif %}{% if node.field_hc_person_organization.value %},
+  "worksFor": {
     "@type": "Organization",
-    "name": "{{ content.field_hc_person_organization|render|striptags }}"
-  },{% endif %}
-  {% if node.body.value %}"description": "{{ node.body.value|striptags|slice(0, 300) }}...",{% endif %}
-  {% if content.field_hc_person_link|render %}"url": "{{ content.field_hc_person_link|render|striptags }}",{% endif %}
-  {% if content.field_hc_person_image %}"image": "{{ file_url(content.field_hc_person_image['#items'].entity.uri.value) }}",{% endif %}
+    "name": {{ node.field_hc_person_organization.value|striptags|json_encode|raw }}
+  }{% endif %}{% if node.body.value %},
+  "description": {{ node.body.value|striptags|slice(0, 300)|json_encode|raw }}{% endif %}{% if node.field_hc_person_link.0.uri %},
+  "url": {{ node.field_hc_person_link.0.uri|json_encode|raw }}{% endif %}{% if node.field_hc_person_image.entity %},
+  "image": "{{ file_url(node.field_hc_person_image.entity.uri.value) }}"{% endif %}{% if node.field_hc_person_email.0.uri %},
+  "email": {{ node.field_hc_person_email.0.uri|replace({'mailto:': ''})|json_encode|raw }}{% endif %}{% if node.field_hc_person_phone.value %},
+  "telephone": {{ node.field_hc_person_phone.value|striptags|json_encode|raw }}{% endif %},
   "affiliation": {
-    "@type": "Organization",
+    "@type": "EducationalOrganization",
     "name": "Howard University",
     "url": "https://www.howard.edu"
-  }
+  }{% if url %},
+  "mainEntityOfPage": "{{ url }}"{% endif %}
 }
 </script>
 
