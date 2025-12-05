@@ -39,6 +39,21 @@
  */
 #}
 
+{# Schema.org structured data for Announcement Teaser #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Announcement",
+  {% if label %}"name": "{{ label|striptags }}",{% endif %}
+  {% if url %}"url": "{{ url }}",{% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "Howard University",
+    "url": "https://www.howard.edu"
+  }
+}
+</script>
+
 <section class="section--padded-top{{not node.isPublished() ? ' node--unpublished'}}">
   <div class="compartment">
   {{ content.content_moderation_control }}

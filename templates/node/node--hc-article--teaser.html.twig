@@ -37,6 +37,21 @@
  */
 #}
 
+{# Schema.org structured data for Article Teaser #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  {% if label %}"headline": "{{ label|striptags }}",{% endif %}
+  {% if url %}"url": "{{ url }}",{% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "Howard University",
+    "url": "https://www.howard.edu"
+  }
+}
+</script>
+
 <section class="section--padded-top">
 	<div class="compartment">
 		{{ content.content_moderation_control }}

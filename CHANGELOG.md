@@ -1,5 +1,36 @@
 # Changelog
 
+## 11.1.0 - 2025-12-05
+
+### Added - Schema.org Implementation
+
+#### Enhanced Node Templates (6 templates)
+- **Article Template**: Added `NewsArticle` schema with proper metadata, author, and publication data
+- **Person Template**: Added `Person` schema with Howard University affiliation and educational context
+- **Page Template**: Added `WebPage` schema with proper organization and content structure
+- **Announcement Template**: Added `Announcement` schema with event-like properties
+- **Resource Template**: Added `Article` schema for resource content with educational context
+- **Standard Homepage Template**: Added `WebPage` schema optimized for institutional homepage
+
+### Technical Improvements
+- **Safe JSON Encoding**: All Schema.org fields use `json_encode|raw` to prevent syntax errors
+- **Conditional Rendering**: All schema fields check for existence before output
+- **Educational Context**: All templates reference Howard University as `EducationalOrganization`
+- **Publisher Information**: Complete organization metadata with URLs
+- **Cross-template Consistency**: Standardized schema patterns across all node templates
+
+### SEO Benefits
+- **Rich Snippets**: Enabled for articles, person profiles, announcements, and institutional content
+- **Enhanced Discovery**: Better content categorization and relationship understanding
+- **Educational Institution**: Proper academic and institutional content markup
+- **Technical SEO**: Structured data validation compliance, no JSON syntax errors
+
+### Documentation
+- Added comprehensive Schema.org implementation documentation (`docs/schema-org-implementation.md`)
+- Created complete documentation structure with installation, theming, and development guides
+- Added best practices and maintenance guidelines
+- Updated all cross-references and navigation
+
 ## 11.0.6 - 2025-08-12
 
 - Remove duplicated and unclosed PHPDoc-style comments from Twig templates

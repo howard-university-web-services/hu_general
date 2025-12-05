@@ -42,6 +42,32 @@
  */
 #}
 
+{# Schema.org structured data for Homepage #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ url }}",
+  {% if label %}"name": "{{ label|striptags }}",{% endif %}
+  {% if url %}"url": "{{ url }}",{% endif %}
+  {% if node.created.value %}"datePublished": "{{ node.created.value|date('c') }}",{% endif %}
+  {% if node.changed.value %}"dateModified": "{{ node.changed.value|date('c') }}",{% endif %}
+  "mainContentOfPage": {
+    "@type": "WebPageElement"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Howard University",
+    "url": "https://www.howard.edu"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Howard University",
+    "url": "https://www.howard.edu"
+  }
+}
+</script>
+
 <h1 class="visually-hidden">{{ node.title.value }}</h1>
 
 {# Full width image or video #}

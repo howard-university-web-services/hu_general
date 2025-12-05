@@ -6,7 +6,7 @@ package: Howard University
 
 
 core_version_requirement: ^10 || ^11
-version: '11.0.12'
+version: '11.1.0'
 
 libraries:
   - hu_general/global

@@ -46,6 +46,28 @@
 {# Internal Page Hero #}
 {% include parent_include_directory ~ '/templates/_includes/global/content_header_no_image.html.twig' %}
 
+{# Schema.org structured data for Person #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  {% if node.getTitle() %}"name": "{{ node.getTitle()|striptags }}",{% endif %}
+  {% if content.field_hc_person_title|render %}"jobTitle": "{{ content.field_hc_person_title|render|striptags }}",{% endif %}
+  {% if content.field_hc_person_organization|render %}"worksFor": {
+    "@type": "Organization",
+    "name": "{{ content.field_hc_person_organization|render|striptags }}"
+  },{% endif %}
+  {% if node.body.value %}"description": "{{ node.body.value|striptags|slice(0, 300) }}...",{% endif %}
+  {% if content.field_hc_person_link|render %}"url": "{{ content.field_hc_person_link|render|striptags }}",{% endif %}
+  {% if content.field_hc_person_image %}"image": "{{ file_url(content.field_hc_person_image['#items'].entity.uri.value) }}",{% endif %}
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Howard University",
+    "url": "https://www.howard.edu"
+  }
+}
+</script>
+
 <section class="section--padded-top{{not node.isPublished() ? ' node--unpublished'}}">
   <div class="compartment">
     {{ content.content_moderation_control }}
