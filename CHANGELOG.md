@@ -1,5 +1,25 @@
 # Changelog
 
+## 11.1.3 - 2025-12-11
+
+### Enhanced Image Handling
+
+#### Improved Template Variable Usage
+- **HC Article**: Enhanced image handling using `hero_image` variable from theme preprocessing instead of direct field access
+- **HC Page**: Simplified image access using `hero_image` variable for better consistency and reliability
+- **HC Person**: Enhanced person image handling with fallback logic for media image entities vs direct file entities
+- **HC Resource**: Streamlined Schema.org markup by removing header image property
+
+#### Technical Improvements
+- **Template Consistency**: Standardized image variable usage across node templates
+- **Preprocessing Integration**: Better integration with theme preprocessing for image handling
+- **Field Access Optimization**: More reliable image URL generation using theme variables
+- **Schema.org Cleanup**: Simplified resource markup for better validation
+
+### Bug Fixes
+- **Syntax Error**: Fixed missing closing tag in HC Article template
+- **Image Fallback**: Improved person profile image handling for different media entity structures
+
 ## 11.1.2 - 2025-12-11
 
 ### Schema.org Validation Fixes

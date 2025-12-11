@@ -64,14 +64,13 @@
     "@type": "Organization",
     "name": "Howard University",
     "url": "https://www.howard.edu"
-  }{% if node.field_hc_featured_image.entity %},
-  "image": "{{ file_url(node.field_hc_featured_image.entity.uri.value) }}"{% elseif node.field_hc_header_image.entity %},
-  "image": "{{ file_url(node.field_hc_header_image.entity.uri.value) }}"{% endif %}
+  }{% if hero_image %},
+  "image": "{{ hero_image }}"{% endif %}
 }
 </script>
 
 {# Main content #}
-<section class="section--padded-top{{not node.isPublished() ? ' node--unpublished'}}"
+<section class="section--padded-top{{not node.isPublished() ? ' node--unpublished'}}">
 
   <div class="compartment">
     {{ content.content_moderation_control }}

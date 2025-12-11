@@ -1,4 +1,4 @@
-# Schema.org Implementation - Enhanced v11.1.2
+# Schema.org Implementation - Enhanced v11.1.3
 
 This document outlines the comprehensive Schema.org structured data implementation across Howard University node templates. These enhancements improve SEO performance, enable rich snippets in search results, and provide better content understanding for search engines.
 
@@ -12,6 +12,7 @@ The Schema.org implementation provides structured data markup for all major node
 - **Rich Snippets**: Enables enhanced search result displays with images, ratings, and metadata
 - **Better Content Discovery**: Improved categorization and relationship understanding
 - **Educational Context**: Proper markup for academic and institutional content
+- **Optimized Image Handling**: Enhanced image processing for better structured data integration
 - **Future-Proof**: Follows latest Schema.org specifications with valid types and properties
 
 ## Implementation Summary
@@ -29,7 +30,7 @@ The following node content type templates have been enhanced with Schema.org str
 - Article headline and description
 - Author information with Howard affiliation
 - Publication date and last modified date
-- Enhanced featured image support with fallback to header image
+- Enhanced image handling using theme preprocessing variables
 - Complete publisher information
 
 **SEO Benefits**: Enhanced article discovery, rich snippets with author and date
@@ -55,22 +56,22 @@ The following node content type templates have been enhanced with Schema.org str
 **Key Features**:
 - Page name and URL
 - Publication and modification dates
-- Primary image support for header images
+- Enhanced image handling using theme preprocessing variables
 - WebSite context for institutional pages
 - Complete publisher information
 
 **SEO Benefits**: Enhanced page discovery, institutional context
 
-#### Person Template (`node--person.html.twig`)
+#### HC Person Template (`node--hc-person.html.twig`)
 
 **Schema Type**: `Person` with `EducationalOrganization` affiliation  
-**Template Location**: `templates/node/node--person.html.twig`
+**Template Location**: `templates/node/node--hc-person.html.twig`
 
 **Key Features**:
 - Person name, title, and description
 - Affiliation with Howard University
-- Contact information when available
-- Profile image with proper metadata
+- Contact information (email, phone) when available
+- Enhanced profile image handling with fallback support for different media entity types
 - Educational organization context
 
 **SEO Benefits**: Rich person profile snippets, institutional association
@@ -110,7 +111,7 @@ The following node content type templates have been enhanced with Schema.org str
 
 **Key Features**:
 - Resource title and description
-- Enhanced image support for header images
+- Streamlined Schema.org markup for better validation
 - Educational content categorization
 - Author information
 - Publisher and organization information
