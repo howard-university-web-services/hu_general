@@ -64,8 +64,9 @@
     "@type": "Organization",
     "name": "Howard University",
     "url": "https://www.howard.edu"
-  }{% if content.field_hc_featured_image %},
-  "image": "{{ file_url(content.field_hc_featured_image['#items'].entity.uri.value) }}"{% endif %}
+  }{% if node.field_hc_featured_image.entity %},
+  "image": "{{ file_url(node.field_hc_featured_image.entity.uri.value) }}"{% elseif node.field_hc_header_image.entity %},
+  "image": "{{ file_url(node.field_hc_header_image.entity.uri.value) }}"{% endif %}
 }
 </script>
 

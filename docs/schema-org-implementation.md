@@ -1,4 +1,4 @@
-# Schema.org Implementation
+# Schema.org Implementation - Enhanced v11.1.2
 
 This document outlines the comprehensive Schema.org structured data implementation across Howard University node templates. These enhancements improve SEO performance, enable rich snippets in search results, and provide better content understanding for search engines.
 
@@ -8,11 +8,11 @@ The Schema.org implementation provides structured data markup for all major node
 
 ### Benefits
 
-- **Enhanced SEO Performance**: Structured data helps search engines understand content better
+- **Enhanced SEO Performance**: Structured data helps search engines understand content better with validation-compliant markup
 - **Rich Snippets**: Enables enhanced search result displays with images, ratings, and metadata
 - **Better Content Discovery**: Improved categorization and relationship understanding
 - **Educational Context**: Proper markup for academic and institutional content
-- **Future-Proof**: Follows latest Schema.org specifications for long-term compatibility
+- **Future-Proof**: Follows latest Schema.org specifications with valid types and properties
 
 ## Implementation Summary
 
@@ -20,19 +20,46 @@ The Schema.org implementation provides structured data markup for all major node
 
 The following node content type templates have been enhanced with Schema.org structured data:
 
-#### Article Template (`node--article.html.twig`)
+#### HC Article Template (`node--hc-article.html.twig`)
 
 **Schema Type**: `NewsArticle`  
-**Template Location**: `templates/node/node--article.html.twig`
+**Template Location**: `templates/node/node--hc-article.html.twig`
 
 **Key Features**:
 - Article headline and description
 - Author information with Howard affiliation
 - Publication date and last modified date
-- Featured image with proper alt text
+- Enhanced featured image support with fallback to header image
 - Complete publisher information
 
 **SEO Benefits**: Enhanced article discovery, rich snippets with author and date
+
+#### HC Announcement Template (`node--hc-announcement.html.twig`)
+
+**Schema Type**: `Article` (Updated from invalid `Announcement` type)
+**Template Location**: `templates/node/node--hc-announcement.html.twig`
+
+**Key Features**:
+- Announcement headline and description (updated property names)
+- Publication and expiration dates
+- Howard University publisher information
+- Proper Article schema compliance
+
+**SEO Benefits**: Valid structured data for announcements, better search indexing
+
+#### HC Page Template (`node--hc-page.html.twig`)
+
+**Schema Type**: `WebPage`  
+**Template Location**: `templates/node/node--hc-page.html.twig`
+
+**Key Features**:
+- Page name and URL
+- Publication and modification dates
+- Primary image support for header images
+- WebSite context for institutional pages
+- Complete publisher information
+
+**SEO Benefits**: Enhanced page discovery, institutional context
 
 #### Person Template (`node--person.html.twig`)
 
@@ -76,17 +103,18 @@ The following node content type templates have been enhanced with Schema.org str
 
 **SEO Benefits**: Enhanced announcement discovery, institutional announcements
 
-#### Resource Template (`node--resource.html.twig`)
+#### HC Resource Template (`node--hc-resource.html.twig`)
 
 **Schema Type**: `Article` with educational context  
-**Template Location**: `templates/node/node--resource.html.twig`
+**Template Location**: `templates/node/node--hc-resource.html.twig`
 
 **Key Features**:
 - Resource title and description
+- Enhanced image support for header images
 - Educational content categorization
+- Author information
 - Publisher and organization information
 - Access information when applicable
-- Download metadata
 
 **SEO Benefits**: Better resource discovery, educational content classification
 

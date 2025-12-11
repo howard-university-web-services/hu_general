@@ -1,5 +1,29 @@
 # Changelog
 
+## 11.1.2 - 2025-12-11
+
+### Schema.org Validation Fixes
+
+#### Fixed Invalid Schema.org Types
+- **HC Announcement**: Changed invalid `Announcement` type to valid `Article` type in both full and teaser templates
+- **Invalid Properties**: Updated property names to match Article schema (name → headline, text → description, startDate → datePublished, endDate → expires)
+
+#### Enhanced Image Support  
+- **HC Article**: Enhanced featured image support in Schema.org markup with fallback to header image
+- **HC Page**: Added `primaryImageOfPage` property for header images in WebPage schema
+- **HC Resource**: Added image property support for header images in Article schema
+
+#### Improved Data Quality
+- **Field Access**: Improved field value extraction using direct node property access
+- **Date Formatting**: Enhanced date handling with proper ISO 8601 formatting for Schema.org
+- **Content Safety**: Better handling of field values to prevent empty or malformed structured data
+
+### Technical Improvements
+- **Schema.org Compliance**: All node templates now use valid Schema.org types and properties
+- **SEO Enhancement**: Better structured data quality improves search engine understanding
+- **Content Recognition**: Proper article and webpage markup for enhanced search results
+- **Image Metadata**: Complete image support across all content types for rich snippets
+
 ## 11.1.1 - 2025-12-05
 
 ### Fixed

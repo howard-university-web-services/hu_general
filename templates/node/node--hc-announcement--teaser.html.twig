@@ -43,9 +43,11 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Announcement",
-  {% if node.title.value %}"name": "{{ node.title.value|striptags|raw }}",{% endif %}
+  "@type": "Article",
+  {% if node.title.value %}"headline": "{{ node.title.value|striptags|raw }}",{% endif %}
   {% if url %}"url": "{{ url }}",{% endif %}
+  {% if node.field_hc_summary.value %}"description": "{{ node.field_hc_summary.value|striptags|raw }}",{% endif %}
+  {% if node.created.value %}"datePublished": "{{ node.created.value|date('c') }}",{% endif %}
   "publisher": {
     "@type": "Organization",
     "name": "Howard University",

@@ -10,11 +10,11 @@ This theme is a child of the idfive Component Library D8 Theme, inheriting stand
 
 ## Features
 
-### Schema.org & SEO Optimization (New in v11.1.1)
-- **Rich Structured Data**: Comprehensive Schema.org markup for all content types
+### Schema.org & SEO Optimization (Enhanced in v11.1.2)
+- **Rich Structured Data**: Comprehensive Schema.org markup for all content types with validation compliance
 - **Educational Institution Context**: Proper academic and institutional content markup
 - **Enhanced Search Results**: Rich snippets for articles, person profiles, and announcements
-- **Technical SEO**: Validated structured data with error prevention
+- **Technical SEO**: Validated structured data with error prevention and proper image support
 - **Content Type Support**: Optimized markup for Articles, Pages, People, Resources, and Announcements
 
 ### Theme Variants
