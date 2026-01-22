@@ -9,7 +9,7 @@
  *
  * Features:
  * - Contact information and address display
- * - Social media links (Twitter, Facebook, YouTube, Instagram)
+ * - Social media links (Twitter, Facebook, YouTube, Instagram, LinkedIn)
  * - Footer navigation menus (primary and secondary)
  * - University-wide links and resources
  * - Responsive design for all device sizes
@@ -27,6 +27,8 @@
  * - facebook_link: Facebook profile URL
  * - youtube_link: YouTube profile URL
  * - instagram_link: Instagram profile URL
+ * - instagram_link: Instagram profile URL
+ * - linkedin_link: LinkedIn profile URL
  * - parent_school_college: Parent organization name
  * - parent_school_college_link: Parent organization URL
  * - department: Department/site name
@@ -99,6 +101,17 @@
 							</a>
 						</li>
 					{% endif %}
+					{% if linkedin_link %}
+						<li>
+							<a class="social-links__item" href="{{ linkedin_link }}" target="_blank">
+
+								<i class="icon-linkedin2">
+									<span class="visible-for-screen-readers">LinkedIn</span>
+								</i>
+							</a>
+						</li>
+					{% endif %}
+
 				</ul>
 			</div>
 
@@ -115,11 +128,11 @@
 							<a href="https://howard.edu/accessibility-statement" title="Web Accessibility Support">Web Accessibility Support</a>
 						</li>
 						{# <li>
-																			<a href="https://howard.edu/privacy" title="Privacy &amp; Security Notice">Privacy &amp; Security Notice</a>
-																		</li>
-																		<li>
-																			<a href="https://howard.edu/terms" title="Terms &amp; Conditions of Use">Terms &amp; Conditions of Use</a>
-																		</li> #}
+																									<a href="https://howard.edu/privacy" title="Privacy &amp; Security Notice">Privacy &amp; Security Notice</a>
+																								</li>
+																								<li>
+																									<a href="https://howard.edu/terms" title="Terms &amp; Conditions of Use">Terms &amp; Conditions of Use</a>
+																								</li> #}
 					</ul>
 				</nav>
 			</div>

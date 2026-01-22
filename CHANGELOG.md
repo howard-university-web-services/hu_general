@@ -1,5 +1,11 @@
 # Changelog
 
+## 11.1.4 - 2026-01-22 
+
+### Enhanced
+-  **Footer**: Added LinkedIn social link to social links list
+-  **Theme Settings Form**:  Added inputs for LinkedIn URL to the theme settings
+ 
 ## 11.1.3 - 2025-12-11
 
 ### Enhanced Image Handling

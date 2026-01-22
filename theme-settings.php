@@ -183,6 +183,12 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#default_value' => theme_get_setting('instagram_link'),
     '#description' => t('Add the URL to your instagram profile.'),
   ];
+    $form['hu_footer_settings']['social_links']['linkedin_link'] = [
+    '#type' => 'textfield',
+    '#title' => t('LinkedIn Link'),
+    '#default_value' => theme_get_setting('linkedin_link'),
+    '#description' => t('Add the URL to your linkedin profile.'),
+  ];
   // Contact information and address fields.
   $form['hu_footer_settings']['address'] = [
     '#type' => 'fieldset',
