@@ -1,5 +1,33 @@
 # Changelog
 
+## 11.2.0 - 2026-02-09
+
+### Added - New Artistic Theme
+- **Artistic Theme**: Complete new theme option with custom styling and visual design
+- **Theme Option Integration**: Added "Artistic" option to theme selector with dedicated SCSS implementation
+- **Visual Design System**: Custom typography, color palette, and component styling for artistic variant
+
+### Enhanced Component Library
+- **TypeScript Configuration**: Updated tsconfig.json with modern ES2015 target and improved module resolution
+- **Type Declarations**: Added timing-object.d.ts for better TypeScript support with Vimeo dependencies
+- **Import Improvements**: Fixed SmoothScroll import to use default import pattern
+- **Build Process**: Enhanced package-lock.json with updated dependencies
+
+### Component Improvements  
+- **Data Point Component**: Cleaned up unused icon-arrow-right styling and streamlined CSS
+- **Parallax Component**: Fixed text color inheritance issues and improved overlay styling
+- **Theme Variables**: Added new color variables for artistic theme support (purple, ablue, lblue, gray6)
+
+### Technical Improvements
+- **SCSS Architecture**: Enhanced theme options structure with new artistic theme integration
+- **CSS Organization**: Better separation of theme-specific styles and improved maintainability  
+- **Build Output**: Updated compiled CSS and JavaScript files with latest changes
+
+### Bug Fixes
+- **Style Conflicts**: Resolved text color inheritance issues in parallax components
+- **Arrow Icons**: Removed redundant styling that was causing visual inconsistencies
+- **TypeScript Compilation**: Fixed import errors and improved type safety
+
 ## 11.1.4 - 2026-01-22 
 
 ### Enhanced

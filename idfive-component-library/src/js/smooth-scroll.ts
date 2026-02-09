@@ -1,6 +1,6 @@
 
 // import * as SmoothScroll from 'smooth-scroll';
-import * as SmoothScroll from 'smooth-scroll';
+import SmoothScroll from 'smooth-scroll';
 export function JumpTo(){
 
 // document.querySelector('.nav-brace').addEventListener('click', function() {

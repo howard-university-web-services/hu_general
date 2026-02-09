@@ -83,18 +83,6 @@
       text-align: left;
       margin: inherit;
     }
-    .icon-arrow-right {
-      border: none;
-      &:before {
-        color: white !important;
-        .clean_light & {
-          color: $lightblue !important;
-        }
-        .classic_editorial & {
-          color: $lightblue !important;
-        }
-      }
-    }
     &:hover {
       color: $lightblue !important;
       .icon-arrow-right {

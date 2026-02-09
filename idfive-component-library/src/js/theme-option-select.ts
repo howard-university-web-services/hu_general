@@ -15,7 +15,8 @@ export default class ThemeOptionSelect {
             this.options = [
                 { "name": "Default", "classname": "" },
                 { "name": "Clean & Light", "classname": "clean_light" },
-                { "name": "Classic Editorial", "classname": "classic_editorial" }
+                { "name": "Classic Editorial", "classname": "classic_editorial" },
+                { "name": "Artistic", "classname": "artistic" }
             ];
 
             this.init();

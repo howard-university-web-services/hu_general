@@ -1752,7 +1752,6 @@ span.fieldset-legend {
 select {
   display: inline-block;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border-radius: 0;
   border: none;
@@ -1770,7 +1769,6 @@ input,
 textarea {
   display: inline-block;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border-radius: 0;
   border: none;
@@ -1788,14 +1786,12 @@ textarea {
 
 input[type="radio"] {
   width: auto;
-  -moz-appearance: radio;
-       appearance: radio;
+  appearance: radio;
   -webkit-appearance: radio;
   width: auto; }
 
 input[type="checkbox"] {
-  -moz-appearance: checkbox;
-       appearance: checkbox;
+  appearance: checkbox;
   -webkit-appearance: checkbox;
   width: auto; }
 
@@ -1839,7 +1835,6 @@ select::-ms-expand {
 
 .js-form-type-select select {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   display: block;
   width: 100%;

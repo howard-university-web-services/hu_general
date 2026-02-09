@@ -42,19 +42,19 @@ image field when viewed on devices with a screen size of 767px and below
 	.parallax_text {
 		width: 100%;
     	position: absolute;
-    	color: $white;
+    	//color: $white;
     	text-align: center;
     	z-index: 9;
 		top: 50%;
 		left:50%;
 		padding: 0 15px;
 		transform: translate(-50%,-50%);
-		.lead-in{
-			color:$white;
-		}
-		*{
-			color: $white !important;
-		}
+		//.lead-in{
+		//	color:$white;
+		//}
+		//*{
+		//	color: $white !important;
+		//}
 	}
 }
 @include media('medium'){
@@ -96,7 +96,6 @@ image field when viewed on devices with a screen size of 767px and below
 			height: 100%;
 			position: absolute;
 			z-index: 9;
-			color: inherit;
 			-webkit-transform: none;
 			transform: none;
 			right: 0 !important;
@@ -116,9 +115,9 @@ image field when viewed on devices with a screen size of 767px and below
 			.lead-in{
 				color:$navy !important;
 			}
-			*{
-				color:initial !important;
-			}
+			//*{
+				
+			//}
 		}
 	}
 }
