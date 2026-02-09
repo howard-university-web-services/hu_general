@@ -182,5 +182,5 @@ span.giving-home__link_block_bgimage img {
 label.form-required::after {
 content: "\002A";
 position: relative;
-top: rem(-5);
+top: -0.3125rem; // -5px converted to rem
 }

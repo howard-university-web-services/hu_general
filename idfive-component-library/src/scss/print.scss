@@ -147,7 +147,7 @@
 
     .silc-accordion__label {
         border: none !important;
-        margin-bottom: rem(8);
+        margin-bottom: 0.5rem; // 8px converted to rem
         padding: 0 !important;
 
         &:before {

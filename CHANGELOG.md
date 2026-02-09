@@ -1,5 +1,21 @@
 # Changelog
 
+## 11.2.1 - 2026-02-09
+
+### Fixed
+- **Build System**: Complete modernization of webpack build pipeline from v2 to v4
+- **Dependencies**: Updated all build dependencies to latest stable versions for ARM64 compatibility
+- **JavaScript Components**: Fixed component initialization timing and Flickity import issues
+- **Font Loading**: Resolved font URL path issues causing 404 errors
+- **Production Ready**: Removed debug logging and optimized for production deployment
+
+### Technical Improvements
+- **Webpack**: Upgraded from 2.7.0 to 4.47.0 with modern configuration
+- **Sass**: Migrated from node-sass to modern dart-sass implementation
+- **TypeScript**: Updated to v4.9.5 with improved type definitions
+- **Vue**: Updated Vue ecosystem to 2.7.x with latest loader compatibility
+- **Babel**: Modernized with @babel/core 7.22.0 and optional chaining support
+
 ## 11.2.0 - 2026-02-09
 
 ### Added - New Artistic Theme

@@ -131,6 +131,28 @@ function themeOptionSelectInit() {
   );
 }
 
+window.addEventListener("DOMContentLoaded", () => {
+  mainNavInit();
+  MicroModal.init();
+  
+  // Initialize components as soon as DOM is ready
+  carouselInit();
+  photoshelterGridInit();
+  modalPlaylistInit();
+  sidebarNavInit();
+  searchToggle();
+  featuredImageInit();
+  SliderDistanceInit();
+  ourPeopleInit();
+  themeOptionSelectInit();
+  youtubePlaylistInit();
+  countdownInit();
+
+  if (document.body.classList.contains("classic_editorial")) {
+    convertToLineIcons();
+  }
+});
+
 window.addEventListener("load", function() {
   let navToggle = document.querySelector(".main-header__trigger-menu");
   let mainHeader = document.querySelector(".main-header");
@@ -185,6 +207,7 @@ window.addEventListener("load", function() {
           body.classList.remove("nav-toggled");
         }
       }
+      // Re-initialize slider on resize
       SliderDistanceInit();
     });
   }
@@ -197,25 +220,4 @@ window.addEventListener("load", function() {
   if (heroImage && postHeader) {
     postHeader.classList.add("post-header--shadow");
   }
-
-  carouselInit();
-  photoshelterGridInit();
-  modalPlaylistInit();
-  sidebarNavInit();
-  searchToggle();
-  featuredImageInit();
-  SliderDistanceInit();
-  ourPeopleInit();
-  themeOptionSelectInit();
-  youtubePlaylistInit();
-  countdownInit();
-
-  if (body.classList.contains("classic_editorial")) {
-    convertToLineIcons();
-  }
-});
-
-window.addEventListener("DOMContentLoaded", () => {
-  mainNavInit();
-  MicroModal.init();
 });

@@ -1,4 +1,4 @@
-import * as Flickity from "flickity";
+import Flickity from "flickity";
 import { LuminousGallery } from 'luminous-lightbox';
 export default class carousel {
   protected element: HTMLElement;

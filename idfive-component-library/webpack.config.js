@@ -1,18 +1,23 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 const babelLoaderExcludeNodeModulesExcept = require('babel-loader-exclude-node-modules-except');
 
-const extractSass = new ExtractTextPlugin({
+const extractSass = new MiniCssExtractPlugin({
     filename: "css/[name].css"
 });
 
-const copyImages = new CopyWebpackPlugin([{
-    from: 'src/img',
-    to: 'img'
-}]);
+const copyImages = new CopyWebpackPlugin({
+    patterns: [
+        {
+            from: 'src/img',
+            to: 'img'
+        }
+    ]
+});
 
 const config = {
     entry: {
@@ -42,14 +47,25 @@ const config = {
             {
                 test: /\.js$/,
                 exclude: babelLoaderExcludeNodeModulesExcept([
-                    "micromodal"
+                    "micromodal",
+                    "@vimeo/player"
                 ]),
                 use: {
                     loader: "babel-loader",
                     options: {
                         presets: [
-                            "babel-preset-env"
-                        ].map(require.resolve)
+                            [require.resolve("@babel/preset-env"), {
+                                "targets": {
+                                    browsers: ['last 2 versions'],
+                                    node: '14'
+                                },
+                                modules: false
+                            }]
+                        ],
+                        plugins: [
+                            require.resolve("@babel/plugin-transform-optional-chaining"),
+                            require.resolve("@babel/plugin-transform-nullish-coalescing-operator")
+                        ]
                     }
                 }
             },
@@ -59,10 +75,23 @@ const config = {
             },
             {
                 test: /\.scss$/,
-                loader: extractSass.extract({
-                    use: ['css-loader', 'postcss-loader', 'sass-loader'],
-                    fallback: 'style-loader'
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader', 
+                    'postcss-loader', 
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require('sass'),
+                            sassOptions: {
+                                includePaths: [
+                                    path.resolve(__dirname, 'node_modules'),
+                                    path.resolve(__dirname, 'src')
+                                ]
+                            }
+                        }
+                    }
+                ]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
@@ -71,7 +100,7 @@ const config = {
                     limit: 1000,
                     name: '[name].[ext]',
                     outputPath: 'fonts/',
-                    publicPath: '../'
+                    publicPath: '../fonts/'
                 },
                 exclude: [path.resolve(__dirname, 'img')]
             },
@@ -96,10 +125,15 @@ const config = {
             }
         ]
     },
+    optimization: {
+        minimizer: [
+            new UglifyJSPlugin()
+        ]
+    },
     plugins: [
+        new VueLoaderPlugin(),
         extractSass,
-        copyImages,
-        new UglifyJSPlugin()
+        copyImages
     ]
 };
 
