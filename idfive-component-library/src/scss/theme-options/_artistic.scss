@@ -1615,7 +1615,7 @@ body.artistic {
       }
       @media (min-width: 1200px) {
         flex-direction: row;
-        gap: rem(60);
+        gap: 40px;
       }
 
       .giving__data-point__stat-container {
@@ -1632,12 +1632,12 @@ body.artistic {
           width: 50%;
           border-bottom: none;
           border-right: rem(2) solid #edc054;
-          padding-right: rem(60);
+          padding-right: 40px;
         }
 
         .giving__data-point__stat {
           @media (min-width: 1440px) {
-            font-size: 90px;
+            font-size: 70px;
             padding-bottom: 30px;
           }
         }
@@ -1658,6 +1658,12 @@ body.artistic {
         @media (min-width: 1200px) {
           width: 50%;
           text-align: left;
+        }
+        
+        .fancy-link {
+          @media (min-width: 1200px) {
+            text-align: left;
+          }
         }
       }
     }

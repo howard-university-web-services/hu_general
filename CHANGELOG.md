@@ -1,5 +1,14 @@
 # Changelog
 
+## 11.2.2 - 2026-02-11
+
+### Updated
+- **Data Points Component**: Adjusted font-size from 90px to 70px for better visual hierarchy
+- **Data Points Layout**: Reduced spacing and padding for improved responsive design
+  - Gap reduced from 60px to 40px at 1200px+ breakpoints
+  - Padding-right reduced from 60px to 40px for stat containers
+- **Data Points Links**: Added left-aligned text styling for fancy-link elements
+
 ## 11.2.1 - 2026-02-09
 
 ### Fixed
