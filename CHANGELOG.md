@@ -1,5 +1,10 @@
 # Changelog
 
+## 11.2.4 - 2026-03-20
+
+### Updated
+- **Gin admin menu**: Adjusted styles to stop gin admin toolbar from not working
+
 ## 11.2.3 - 2026-03-20
 
 ### Updated

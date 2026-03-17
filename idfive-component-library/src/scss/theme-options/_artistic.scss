@@ -99,11 +99,11 @@ body.artistic {
 
   //bullets
 
-  ul li {
+  ul li:not(.gin-toolbar ul li):not(.toolbar ul li):not(.gin-toolbar-menu ul li) {
     position: relative;
   }
 
-  ul li::before {
+  ul li::before:not(.gin-toolbar ul li::before):not(.toolbar ul li::before):not(.gin-toolbar-menu ul li::before) {
     top: 0.6em;
     transform: translateY(-50%);
     line-height: 1;
@@ -444,7 +444,7 @@ body.artistic {
       line-height: (24 / 15);
     }
 
-    ul li {
+    ul li:not(.gin-toolbar ul li):not(.toolbar ul li) {
       @extend %sans-regular;
     }
 
