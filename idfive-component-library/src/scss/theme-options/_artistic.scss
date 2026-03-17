@@ -783,7 +783,7 @@ body.artistic {
     overflow: hidden;
   }
 
-  a.news-and-events__block {
+  a.news-and-events__block, .news-and-events__block {
     transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out,
       box-shadow 0.3s ease-in-out;
 

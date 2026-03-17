@@ -1,5 +1,11 @@
 # Changelog
 
+## 11.2.3 - 2026-03-20
+
+### Updated
+- **Cards**: Adjusted styles to include non link P's
+
+
 ## 11.2.2 - 2026-02-11
 
 ### Updated
