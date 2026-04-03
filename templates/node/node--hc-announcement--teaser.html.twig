@@ -50,7 +50,7 @@
   {% if node.created.value %}"datePublished": "{{ node.created.value|date('c') }}",{% endif %}
   "publisher": {
     "@type": "Organization",
-    "name": "Howard University",
+    "name": {{ site_name|json_encode|raw }},
     "url": "https://www.howard.edu"
   }
 }
