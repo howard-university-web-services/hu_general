@@ -56,7 +56,9 @@
 				{% endif %}
 				{% if email %}
 					<span>Email:
-						{{ email }}</span>
+						<a href="mailto:{{ email|e('html_attr') }}">{{ email }}</a>
+					</span>
+
 				{% endif %}
 
 			</address>
@@ -128,11 +130,11 @@
 							<a href="https://howard.edu/accessibility-statement" title="Web Accessibility Support">Web Accessibility Support</a>
 						</li>
 						{# <li>
-																									<a href="https://howard.edu/privacy" title="Privacy &amp; Security Notice">Privacy &amp; Security Notice</a>
-																								</li>
-																								<li>
-																									<a href="https://howard.edu/terms" title="Terms &amp; Conditions of Use">Terms &amp; Conditions of Use</a>
-																								</li> #}
+																															<a href="https://howard.edu/privacy" title="Privacy &amp; Security Notice">Privacy &amp; Security Notice</a>
+																														</li>
+																														<li>
+																															<a href="https://howard.edu/terms" title="Terms &amp; Conditions of Use">Terms &amp; Conditions of Use</a>
+																														</li> #}
 					</ul>
 				</nav>
 			</div>
