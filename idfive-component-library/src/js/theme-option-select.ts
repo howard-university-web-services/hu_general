@@ -16,7 +16,8 @@ export default class ThemeOptionSelect {
                 { "name": "Default", "classname": "" },
                 { "name": "Clean & Light", "classname": "clean_light" },
                 { "name": "Classic Editorial", "classname": "classic_editorial" },
-                { "name": "Artistic", "classname": "artistic" }
+                { "name": "Artistic", "classname": "artistic" },
+                { "name": "Modern", "classname": "modern" }
             ];
 
             this.init();

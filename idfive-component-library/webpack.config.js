@@ -84,6 +84,16 @@ const config = {
                         options: {
                             implementation: require('sass'),
                             sassOptions: {
+                                importer: (url) => {
+                                    // Support legacy imports inside silc packages that assume nested node_modules.
+                                    if (url.startsWith('../../node_modules/')) {
+                                        return {
+                                            file: path.resolve(__dirname, url.replace('../../node_modules/', 'node_modules/'))
+                                        };
+                                    }
+
+                                    return null;
+                                },
                                 includePaths: [
                                     path.resolve(__dirname, 'node_modules'),
                                     path.resolve(__dirname, 'src')

@@ -54,6 +54,7 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
       'artistic' => t('Artistic'),
       'clean_light' => t('Clean & Light'),
       'classic_editorial' => t('Classic Editorial'),
+      'modern' => t('Modern'),
     ],
   ];
   $form['theme_variant_settings']['theme_variant'] = [
