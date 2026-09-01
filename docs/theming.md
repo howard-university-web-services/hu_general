@@ -4,7 +4,7 @@ This guide covers how to customize the appearance and behavior of the Howard Uni
 
 ## Overview
 
-The Howard University General theme is built on the idfive Component Library and provides extensive customization options while maintaining brand consistency and accessibility standards.
+The Howard University General theme uses a bundled component library and provides extensive customization options while maintaining brand consistency and accessibility standards.
 
 ## Theme Architecture
 
@@ -203,7 +203,7 @@ function my_howard_subtheme_theme_suggestions_node_alter(array &$suggestions, ar
 
 ### Component Library Integration
 
-The theme integrates with the idfive Component Library. Customize through:
+The theme integrates with the bundled component library. Customize through:
 
 ```scss
 // themes/custom/my_howard_subtheme/scss/custom.scss

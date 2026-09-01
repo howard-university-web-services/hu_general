@@ -1,5 +1,20 @@
 # Changelog
 
+## 11.3.0 - 2026-09-01
+
+### Changed
+
+- **Theme Architecture**: Removed the Drupal base-theme dependency so `hu_general` is now declared as a standalone theme with `base theme: false`
+- **Theme Settings**: Removed base-theme-specific settings form cleanup and aligned the header search checkbox to `featured_header_hide_search`
+- **Default Configuration**: Removed the unused `idfive_search_block_placeholder` default setting
+- **Modern Theme Variant**: Pulled `_modern.scss` updates from a downstream site copy back into theme master
+- **Frontend Assets**: Rebuilt production component-library CSS from theme master after syncing the Modern variant source
+
+### Documentation
+
+- **Standalone Theme Docs**: Updated README and docs to describe `hu_general` as a standalone Drupal theme rather than an `idfive` child theme
+- **Version Metadata**: Aligned docs and theme metadata for the 11.3.0 release
+
 ## 11.2.4 - 2026-03-20
 
 ### Updated

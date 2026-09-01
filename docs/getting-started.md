@@ -4,7 +4,7 @@ This guide will help you get up and running with the Howard University General t
 
 ## What is HU General?
 
-The Howard University General theme is the official Drupal theme for Howard University digital properties. Built on the idfive Component Library, it provides a comprehensive design system that ensures brand consistency, accessibility, and performance across all university websites.
+The Howard University General theme is the official Drupal theme for Howard University digital properties. It provides a comprehensive design system that ensures brand consistency, accessibility, and performance across all university websites.
 
 ## Prerequisites
 
@@ -18,8 +18,8 @@ Before installing HU General, ensure you have:
 
 ## Core Concepts
 
-### Base Theme Architecture
-HU General is built on the idfive base theme, which provides:
+### Theme Architecture
+HU General is a standalone Drupal theme that provides:
 - Modern component library integration
 - Responsive grid system
 - Accessibility-first design patterns
@@ -33,7 +33,7 @@ The theme includes comprehensive template coverage:
 - **Page Templates**: Layout templates for different page types
 
 ### Component Library Integration
-The theme integrates with the idfive Component Library:
+The theme integrates with its bundled component library:
 - **Modern UI Patterns**: Cards, modals, carousels, and interactive elements
 - **Brand Guidelines**: Official Howard University visual identity
 - **Responsive Components**: Mobile-first design approach
@@ -131,7 +131,7 @@ After setup, verify your installation:
 
 ### Styling Issues
 - Check browser console for CSS/JS errors
-- Verify idfive base theme is installed
+- Verify compiled component-library assets are present
 - Clear aggregated CSS/JS caches
 
 ### Template Issues

@@ -28,9 +28,9 @@ hu_general/
 
 The theme is defined with the following key properties:
 
-- **Base Theme**: `idfive` - Inherits from the idfive component library theme
+- **Theme Type**: Standalone Drupal theme with bundled component-library assets
 - **Core Compatibility**: Drupal 10 and 11
-- **Version**: 11.0.1
+- **Version**: 11.3.0
 - **Package**: Howard University
 
 #### Regions
@@ -54,10 +54,10 @@ The theme defines the following regions:
 The theme defines a global library that includes:
 
 - **CSS Assets**:
-  - `idfive-component-library/build/css/index.css`: Main stylesheet
-  - `idfive-component-library/build/css/print.css`: Print-specific styles
+   - `idfive-component-library/build/css/index.css`: Main stylesheet
+   - `idfive-component-library/build/css/print.css`: Print-specific styles
 - **JavaScript Assets**:
-  - `idfive-component-library/build/js/index.js`: Main JavaScript bundle
+   - `idfive-component-library/build/js/index.js`: Main JavaScript bundle
 
 ## Theme Hooks and Functions
 
@@ -270,7 +270,7 @@ All templates have access to standard Drupal variables plus theme-specific addit
 
 ### idfive Component Library
 
-The theme integrates with the idfive component library for consistent styling and components:
+The theme integrates with a bundled component library for consistent styling and components:
 
 - **Location**: `/idfive-component-library/`
 - **Build System**: Webpack + PostCSS

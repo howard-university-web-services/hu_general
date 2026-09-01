@@ -205,7 +205,7 @@ ls -la build/js/
 Verify the theme is active:
 - Visit `/admin/appearance`
 - Confirm "HU General" is set as default
-- Check that idfive base theme is also enabled
+- Check that HU General is enabled and set as the default theme
 
 ### 2. Asset Loading Verification
 

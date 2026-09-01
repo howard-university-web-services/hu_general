@@ -19,11 +19,11 @@ Welcome to the comprehensive documentation for the Howard University General the
 
 ## Quick Overview
 
-The Howard University General theme provides a comprehensive, responsive design system built on the idfive Component Library. It serves as the foundation for all Howard University Drupal sites, ensuring brand consistency, accessibility, and performance.
+The Howard University General theme provides a comprehensive, responsive design system built with a bundled component library. It serves as the foundation for all Howard University Drupal sites, ensuring brand consistency, accessibility, and performance.
 
 ### Key Features
 
-- **idfive Component Library Integration**: Built-in component library with modern UI patterns
+- **Component Library Integration**: Built-in component library with modern UI patterns
 - **Schema.org SEO Enhancement**: Comprehensive structured data for better search engine optimization
 - **Responsive Design**: Mobile-first approach with flexible grid system
 - **Accessibility Focused**: WCAG 2.1 AA compliant design patterns
@@ -35,22 +35,20 @@ The Howard University General theme provides a comprehensive, responsive design 
 
 - **Drupal**: 10.x or 11.x ✅
 - **PHP**: 8.1+ (8.2+ recommended for Drupal 11)
-- **Base Theme**: idfive theme (automatically installed)
 - **Node.js**: 16+ (for component library development)
 - **Recommended**: Modern browser support (Chrome 90+, Firefox 88+, Safari 14+)
 
 ## Quick Start
 
 1. **Install the theme**: `composer require howard/hu_general`
-2. **Install base theme**: The idfive base theme will be installed automatically
-3. **Enable the theme**: Visit `/admin/appearance` and set as default
-4. **Configure settings**: Visit `/admin/appearance/settings/hu_general`
+2. **Enable the theme**: Visit `/admin/appearance` and set as default
+3. **Configure settings**: Visit `/admin/appearance/settings/hu_general`
 
 ## Architecture Overview
 
 The theme follows a modular architecture with clear separation of concerns:
 
-- **Base Theme**: Built on idfive for core functionality
+- **Drupal Theme Layer**: Standalone theme implementation owned by hu_general
 - **Component Library**: Modern UI components in `idfive-component-library/`
 - **Template System**: Comprehensive Twig templates for all content types
 - **Asset Management**: Optimized CSS/JS through libraries system
@@ -65,7 +63,7 @@ The theme follows a modular architecture with clear separation of concerns:
 
 ---
 
-**Version**: 11.1.0  
+**Version**: 11.3.0  
 **Maintainer**: Howard University Web Services  
 **License**: GPL-2.0+  
-**Base Theme**: idfive Component Library
+**Drupal Theme Type**: Standalone theme with bundled component library

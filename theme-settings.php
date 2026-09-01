@@ -35,13 +35,6 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
 
-  // Remove some stock idfive stuff we aren't using.
-  unset($form['page_elements']);
-  unset($form['styles_scripts']);
-  unset($form['theme_ui']);
-  unset($form['search']);
-  unset($form['other']);
-
   // Theme variant settings - Controls overall theme appearance and styling.
   $form['theme_variant_settings'] = [
     '#type' => 'details',
@@ -145,7 +138,7 @@ function hu_general_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#type' => 'checkbox',
     '#title' => t('Hide Search'),
     '#description' => t('Choose whether to hide the search functionality in the header.'),
-    '#default_value' => theme_get_setting('hide_search'),
+    '#default_value' => theme_get_setting('featured_header_hide_search'),
   ];
 
   // Footer configuration - Social media links and contact information.

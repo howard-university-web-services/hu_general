@@ -95,7 +95,7 @@ The theme adds the following custom variables:
 - `featured_header_link_show` - Featured link display
 - `featured_header_link_title` - Featured link title
 - `featured_header_link_url` - Featured link URL
-- `hide_search` - Search functionality setting
+- `featured_header_hide_search` - Search functionality setting
 - `parent_school_college` - Parent organization name
 - `parent_school_college_link` - Parent organization URL
 - `department` - Department/site name
@@ -141,11 +141,11 @@ Templates include:
 
 ## Template Inheritance
 
-### Base Theme Integration
-The HU General theme extends the idfive base theme:
-- Inherits base functionality
-- Overrides specific templates as needed
-- Maintains compatibility with base theme updates
+### Theme Ownership
+The HU General theme owns its Twig layer directly:
+- Provides its own page, node, navigation, and include templates
+- Uses Drupal's template suggestion system for specialization
+- Loads styling and behavior from the bundled component-library assets
 
 ### Template Suggestions
 The theme uses Drupal's template suggestion system:
