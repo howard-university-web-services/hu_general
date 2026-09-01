@@ -1,12 +1,12 @@
 type: theme
-base theme: false
+base theme: idfive
 name: Howard University General
 description: 'Howard University General (hu_general), is the theme to be used for all Howard University Drupal Sites.'
 package: Howard University
 
 
 core_version_requirement: ^10 || ^11
-version: '11.3.0'
+version: '11.3.1'
 
 libraries:
   - hu_general/global
