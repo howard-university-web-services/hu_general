@@ -1,0 +1,68 @@
+// Intentionally loose/unopinionated - FE team to finalize visual design.
+// Not scoped to a theme variant (unlike theme-options/*.scss) so it applies
+// regardless of which variant (Modern, Artistic, Classic Editorial) is active.
+
+.hp-statistics__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hp-statistics--side-by-side .hp-statistics__inner {
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.hp-statistics__intro {
+    flex: 0 0 auto;
+}
+
+.hp-statistics--side-by-side .hp-statistics__intro {
+    @media (min-width: 768px) {
+        flex-basis: 40%;
+    }
+}
+
+.hp-statistics__eyebrow {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hp-statistics__items {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hp-statistics--stacked .hp-statistics__items {
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+// 2 stats get more room each than 3, per design.
+.hp-statistics__items--count-2 .hp-statistics__item {
+    @media (min-width: 768px) {
+        flex: 1 1 45%;
+    }
+}
+
+.hp-statistics__items--count-3 .hp-statistics__item {
+    @media (min-width: 768px) {
+        flex: 1 1 30%;
+    }
+}
+
+.hp-statistics__item-stat {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hp-statistics__item-suffix {
+    font-size: 1.25rem;
+}

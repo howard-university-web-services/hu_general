@@ -1,5 +1,11 @@
 # Changelog
 
+## 11.3.4 - 2026-09-18
+
+### Added
+
+- **Statistics Widget**: New `statistics` SCSS component (paired with `hp_statistics` in `howard_paragraphs`) providing layout styles for the Statistics widget - side-by-side/stacked layout modifiers and 2/3-item count variants. Registered in `src/scss/index.scss` as a base-level (non-theme-variant-scoped) partial. Rebuilt production CSS.
+
 ## 11.3.3 - 2026-09-18
 
 ### Changed
