@@ -1,5 +1,11 @@
 # Changelog
 
+## 11.3.3 - 2026-09-18
+
+### Changed
+
+- **Modern Theme Variant**: Ported `_modern.scss` updates from `uxws`'s downstream copy back into theme master (mobile table styles, button hover states, spacing/font-size QC adjustments across accordion, giving, and other components). Rebuilt production CSS.
+
 ## 11.3.2 - 2026-09-18
 
 ### Added
