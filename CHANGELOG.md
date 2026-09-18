@@ -1,5 +1,11 @@
 # Changelog
 
+## 11.3.2 - 2026-09-18
+
+### Added
+
+- **Deadlines Widget**: New `deadlines-widget` Vue component (paired with `hp_deadlines_feed` in `howard_paragraphs`) rendering the Dates & Deadlines feed. Fetches through a same-origin Drupal proxy route rather than calling `deadlines.howard.edu` directly, supports Category/Audience/School prefilters, a configurable item count, and displays Academic Term as informational text (not a filter). Registered in `src/js/index.ts` (`initDeadlinesWidget`) and `src/scss/index.scss`.
+
 ## 11.3.0 - 2026-09-01
 
 ### Changed

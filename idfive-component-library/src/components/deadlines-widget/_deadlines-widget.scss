@@ -1,0 +1,55 @@
+.deadlines-widget-app {
+    display: block;
+}
+
+// Intentionally loose/unopinionated - FE team to finalize visual design.
+.deadlines-widget {
+    .deadlines-widget__loader {
+        font-style: italic;
+    }
+
+    .deadlines-widget__no-results {
+        p {
+            margin: 0 0 0.5rem;
+        }
+    }
+
+    .deadlines-widget__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .deadlines-widget__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .deadlines-widget__item-badge {
+        flex: 0 0 auto;
+        min-width: 6rem;
+        font-weight: 700;
+        background: #f0f0f0;
+        padding: 0.25rem 0.5rem;
+        text-align: center;
+    }
+
+    .deadlines-widget__item-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .deadlines-widget__item-title {
+        margin: 0;
+    }
+
+    .deadlines-widget__item-term {
+        color: #666;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+}

@@ -27,6 +27,7 @@ import focusWithin from "focus-within";
 import MicroModal from "micromodal";
 import Player from "@vimeo/player";
 import initProgramFinder from "../components/program-finder/program-finder";
+import initDeadlinesWidget from "../components/deadlines-widget/deadlines-widget";
 import ThemeOptionSelect from "./theme-option-select";
 import youtubePlaylist from "../components/ks/video/video";
 import countdownInit from "../components/ks/countdown/countdown";
@@ -45,6 +46,7 @@ silcOffcanvasInit();
 insertHomepageHeroVimeoEmbed();
 Tablesaw.init();
 initProgramFinder();
+initDeadlinesWidget();
 
 function insertHomepageHeroVimeoEmbed() {
   const hero_vid = document.querySelector(".hero-video");
