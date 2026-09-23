@@ -1,5 +1,11 @@
 # Changelog
 
+## 11.3.5 - 2026-09-23
+
+### Changed
+
+- **Modern Theme Variant**: Further `_modern.scss` QC adjustments - hero video controls, department/page-intro header spacing, promotional space and feature article layout/graph fixes, table border-radius and stacked-table cleanup, and countdown widget (has-image) spacing/font-size refinements. Rebuilt production CSS.
+
 ## 11.3.4 - 2026-09-18
 
 ### Added
