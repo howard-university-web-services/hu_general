@@ -9,18 +9,16 @@
             <li class="deadlines-widget__item" v-for="deadline in deadlines" :key="deadline.id">
                 <span class="deadlines-widget__item-badge">{{ formatBadge(deadline) }}</span>
                 <div class="deadlines-widget__item-body">
-                    <h3 class="deadlines-widget__item-title header--h3-small">
-                        <a v-if="deadline.links[0]" :href="deadline.links[0].href">{{ deadline.title }}</a>
-                        <template v-else>{{ deadline.title }}</template>
-                    </h3>
+                    <h3 class="deadlines-widget__item-title header--h3-small">{{ deadline.title }}</h3>
 
                     <!-- Fulfills the wireframe's "subtitle" slot (e.g. "Summer
                          Session 1") - display-only, not a filter, per the
                          widget spec. -->
                     <span v-if="deadline.academicTerm" class="deadlines-widget__item-term">{{ deadline.academicTerm }}</span>
 
-                    <!-- FLAGGED: the wireframe shows what looks like two links per
-                         item, but field_hc_deadline_link only carries one value. -->
+                    <!-- Title intentionally never links - the fancy-link below is
+                         the only clickable link per item, avoiding a duplicate link
+                         to the same destination. -->
                     <a v-for="(link, i) in deadline.links" :key="i" :href="link.href" class="fancy-link fancy-link--dark">
                         <span>{{ link.title || "Learn more" }}</span>
                         <span class="icon-arrow-right"></span>

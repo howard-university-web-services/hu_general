@@ -1,5 +1,11 @@
 # Changelog
 
+## 11.3.6 - 2026-09-29
+
+### Fixed
+
+- **Deadlines Widget**: Each item's title no longer wraps in a link. Previously, when a deadline had a link, both the title and the separate "Learn more" fancy-link pointed to the same destination - a duplicate link to the same target. The title is now always plain text; the fancy-link remains the only clickable link per item. Rebuilt `build/js/index.js`.
+
 ## 11.3.5 - 2026-09-23
 
 ### Changed
