@@ -1,5 +1,11 @@
 # Changelog
 
+## 11.3.7 - 2026-09-30
+
+### Added
+
+- **Footer**: Enabled the Privacy & Security Notice and Terms & Conditions of Use links in the footer accessibility navigation, alongside the existing Web Accessibility Support link.
+
 ## 11.3.6 - 2026-09-29
 
 ### Fixed
